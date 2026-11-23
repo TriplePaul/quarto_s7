@@ -3,12 +3,12 @@
     "listing": "/index.html",
     "items": [
       "/about.html",
-      "/neuro_adulte/neuro_adulte.html",
-      "/cognition_visuelle/cognition_visuelle_dup.html",
-      "/cognition_visuelle/cognition_visuelle_mermillod.html",
-      "/dev_cog/dev_cog.html",
-      "/modele_memoire/modele_memoire_cours.html",
-      "/modele_memoire/modele_memoire_moulin.html"
+      "/matieres/neuro_adulte.html",
+      "/matieres/cognition_visuelle_dup.html",
+      "/matieres/cognition_visuelle_mermillod.html",
+      "/matieres/dev_cog.html",
+      "/matieres/modele_memoire_cours.html",
+      "/matieres/modele_memoire_moulin.html"
     ]
   }
 ]
