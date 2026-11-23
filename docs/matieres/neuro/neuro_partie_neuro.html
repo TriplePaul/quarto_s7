@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>neuro_partie_neuro – S7</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../matieres/neuro/neuro_partie_psycho.html" rel="next">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-cbed20f07cd0a3452a6886fe8d146970.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-181d6909a009fe39f73b5212012c69f5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-cbed20f07cd0a3452a6886fe8d146970.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
+        setTimeout(() => {
+          window.scrollTo(0, scrollY);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">S7</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../.././matieres/neuro_adulte.qmd"> 
+<span class="menu-text">Neuro</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../.././matieres/cognition_visuelle_mermillod.qmd"> 
+<span class="menu-text">Mermillod</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../.././matieres/dev_cog.qmd"> 
+<span class="menu-text">Dupierrix</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../.././matieres/modele_memoire_cours.qmd"> 
+<span class="menu-text">Sémantique</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../.././matieres/modele_memoire_moulin.qmd"> 
+<span class="menu-text">Épisodique</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
+</div>
+            <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../matieres/neuro/neuro_partie_neuro.html">EC07 Neurologie de l’adulte</a></li><li class="breadcrumb-item"><a href="../../matieres/neuro/neuro_partie_neuro.html">Partie I - Neurologie</a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Section">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Index</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-1-label">EC07 Neurologie de l’adulte</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-1" aria-labelledby="quarto-sidebar-section-1-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../matieres/neuro/neuro_partie_neuro.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Partie I - Neurologie</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../matieres/neuro/neuro_partie_psycho.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Partie II - Neuropsychologie</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-controls="quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-2-label">EC08 Cognition Visuelle</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-2" aria-labelledby="quarto-sidebar-section-2-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../matieres/cog_visu/cognition_visuelle_mermillod.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Partie I - M. Mermillod</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../matieres/cog_visu/cognition_visuelle_dup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Partie II - E. Dupierrix</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-controls="quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-3-label">EC09 Développement Cognitif</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-3" aria-labelledby="quarto-sidebar-section-3-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../matieres/dev/dev_cog.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Partie I - Imitation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../matieres/dev/dev_cog_nombre.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Partie II - Développement du Nombre</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-controls="quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text" id="quarto-sidebar-section-4-label">EC10 Modèles de la Mémoire</span><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      </div>
+      <ul id="quarto-sidebar-section-4" aria-labelledby="quarto-sidebar-section-4-label" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../matieres/memoire/modele_memoire_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Partie I - Mémoire Sémantique</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../matieres/memoire/modele_memoire_moulin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Partie II - Mémoire Épisodique</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#partie-i---neurologie" id="toc-partie-i---neurologie" class="nav-link active" data-scroll-target="#partie-i---neurologie">Partie I - Neurologie</a>
+  <ul class="collapse">
+  <li><a href="#notions-générales" id="toc-notions-générales" class="nav-link" data-scroll-target="#notions-générales">1. Notions Générales</a></li>
+  <li><a href="#atteintes-motrices" id="toc-atteintes-motrices" class="nav-link" data-scroll-target="#atteintes-motrices">2. Atteintes motrices</a>
+  <ul class="collapse">
+  <li><a href="#sémiologie-et-syndrome-neurologique-primaire" id="toc-sémiologie-et-syndrome-neurologique-primaire" class="nav-link" data-scroll-target="#sémiologie-et-syndrome-neurologique-primaire">2.1. Sémiologie et syndrome neurologique primaire</a></li>
+  <li><a href="#sémiologie-et-syndrome-neurologique-périphérique-neurogène" id="toc-sémiologie-et-syndrome-neurologique-périphérique-neurogène" class="nav-link" data-scroll-target="#sémiologie-et-syndrome-neurologique-périphérique-neurogène">2.2. Sémiologie et syndrome neurologique périphérique (neurogène)</a></li>
+  </ul></li>
+  <li><a href="#épilepsie" id="toc-épilepsie" class="nav-link" data-scroll-target="#épilepsie">3. Épilepsie</a>
+  <ul class="collapse">
+  <li><a href="#historique-et-définitions" id="toc-historique-et-définitions" class="nav-link" data-scroll-target="#historique-et-définitions">3.1. Historique et définitions</a></li>
+  <li><a href="#crises-focales-et-généralisées" id="toc-crises-focales-et-généralisées" class="nav-link" data-scroll-target="#crises-focales-et-généralisées">3.2. Crises focales et généralisées</a></li>
+  <li><a href="#différentes-formes" id="toc-différentes-formes" class="nav-link" data-scroll-target="#différentes-formes">3.3. Différentes formes</a></li>
+  <li><a href="#diagnostics-et-traitements" id="toc-diagnostics-et-traitements" class="nav-link" data-scroll-target="#diagnostics-et-traitements">3.4. Diagnostics et traitements</a></li>
+  <li><a href="#troubles-cognitifs-et" id="toc-troubles-cognitifs-et" class="nav-link" data-scroll-target="#troubles-cognitifs-et">Troubles cognitifs et ???</a></li>
+  </ul></li>
+  <li><a href="#notions-généalres-des-maladies-neurodégénératives-cognitives-mndc" id="toc-notions-généalres-des-maladies-neurodégénératives-cognitives-mndc" class="nav-link" data-scroll-target="#notions-généalres-des-maladies-neurodégénératives-cognitives-mndc">1. Notions généalres des maladies neurodégénératives cognitives (MNDC)</a></li>
+  <li><a href="#triade-diagnostique-stade-clinique" id="toc-triade-diagnostique-stade-clinique" class="nav-link" data-scroll-target="#triade-diagnostique-stade-clinique">2. Triade diagnostique : stade (clinique)</a></li>
+  <li><a href="#triade-diagnostique-syndrome-clinique" id="toc-triade-diagnostique-syndrome-clinique" class="nav-link" data-scroll-target="#triade-diagnostique-syndrome-clinique">3. Triade diagnostique: syndrome (clinique)</a></li>
+  <li><a href="#triade-diagnostique-maladie-étiologie" id="toc-triade-diagnostique-maladie-étiologie" class="nav-link" data-scroll-target="#triade-diagnostique-maladie-étiologie">4. Triade diagnostique : maladie (étiologie)</a></li>
+  <li><a href="#classification-mndc-quelques-exemples-de-mndc" id="toc-classification-mndc-quelques-exemples-de-mndc" class="nav-link" data-scroll-target="#classification-mndc-quelques-exemples-de-mndc">5. Classification MNDC, quelques exemples de MNDC</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../matieres/neuro/neuro_partie_neuro.html">EC07 Neurologie de l’adulte</a></li><li class="breadcrumb-item"><a href="../../matieres/neuro/neuro_partie_neuro.html">Partie I - Neurologie</a></li></ol></nav></header>
+
+
+
+
+
+<section id="partie-i---neurologie" class="level1">
+<h1>Partie I - Neurologie</h1>
+<blockquote class="blockquote">
+<p>4 cours neurologie, 8 cours de neuropsychologie. Chacun présenté par des spécialistes en leur domaine du CHU de Grenoble, pour nous familiariser aux notions importantes de neurologie, et faire la différence entre partie médicale et psychologique. Prof d’aujourd’hui clinicienne, recherche clinique, surtout sur maladies du SNC et inflammatoires auto-immunes. Examen 1h, questions ouvertes, neuro couvrant tous les cours.</p>
+</blockquote>
+<!-- CM1 -->
+<!-- source: 4_syndromes_cognitifs.md -->
+<section id="notions-générales" class="level2">
+<h2 class="anchored" data-anchor-id="notions-générales">1. Notions Générales</h2>
+<p>Neurologues et neuropsychologues regardent même chose avec approche différente : les premiers ont une vision très “maladie” mais n’ont pas de prise en compte ou mesures de choses pas “évidentes”. La neurologie est la discipline médicale qui étudie l’ensemble des maladies du SNC et SNP.</p>
+<section id="lanamnèse-ou-lentretien-clinique" class="level4">
+<h4 class="anchored" data-anchor-id="lanamnèse-ou-lentretien-clinique">1.1. L’anamnèse ou l’entretien clinique</h4>
+<p>Sa base est la <strong>sémiologie</strong> <em>(signe + parole, car on voit des signes et utiliser notre parole pour avancer)</em>, qu’on étudie beaucoup avant de voir les maladies. On cherche à recueillir les <strong>sypmtômes</strong> (subjectifs) par anamnèse et les <strong>signes cliniques</strong> (objectifs) recuillis par l’examen neurologique. L’objectif est de <strong>formuler un diagnostique analytique/fonctionnel et topographique</strong>.</p>
+<p>SN nous permet de nous retrouver dans l’environnement et d’avoir des fonctions cognitives de haut niveau. Des gens viennent en neurologie avec des plaintes et on doit faire des <strong>diagnostics de syndromes</strong> : ensemble de signes et symptômes pouvant être expliqués par plusieurs maladies, il a une dimension fonctionnelle et topographique. L’<strong>anamnèse</strong> est “pourquoi le patient vient” : car il a des symptômes qui le.a gêne. Une fois la plainte identifiée, il faut savoir depuis quand (pour différencier les causes probables), puis l’<strong>examen clinique</strong> donne les signes. Ici,</p>
+<p><span class="math display">\[
+  \text{Symptômes} + \text{Signes} = \text{Syndrome}
+\]</span></p>
+<p>L’<strong>anamnèse</strong> peut être vue comme plus important (c’est controversé de dire ça), car si on part sur une mauvaise piste, on peut être très biaisé. Les signes suffisent rarement à cerner une cause, donc poser des questions est vraiment important. Il est aussi de fouiller l’entourage, le statut social du patient… Il faut sortir de la prétention, et il faut savoir que tous les patients ne parlent pas autant.</p>
+<p>Le but est :</p>
+<ul>
+<li>Identifier la plainte</li>
+<li>Recueillir les symptômes ou signes fonctionnels et les caractériser fonctionnellement &amp; topographiquement</li>
+<li>Permettre une expression libre au patient, en gardant un entretien ciblé et dirigé</li>
+</ul>
+<p>Ce n’est donc pas facile, une maladie à différents symptômes, un symptôme s’applique à plusieurs maladie. Peu de relations directes entre ces notions. Il faut donc poser les bonnes questions en comprenant correctement quelle est la plainte. Cette étape peut être utile pour clarifier l’attribution des symptômes à des causes particulières.</p>
+</section>
+<section id="lexamen-clinique" class="level4">
+<h4 class="anchored" data-anchor-id="lexamen-clinique">1.2. L’examen clinique</h4>
+<p>Le but de l’<strong>examen clinique</strong> est de recenser les signes neurologiques. Il faut débrouiller l’histoire pour en avoir un ensemble logique. On voit plein de choses :</p>
+<ul>
+<li>État de vigilance</li>
+<li>Marche, équilibre</li>
+<li>motricité</li>
+<li>Sensibilité</li>
+<li>Sensorialité</li>
+<li>Nerfs crâniens</li>
+<li>Cognition</li>
+</ul>
+<p>La sémiologie peut être :</p>
+<ul>
+<li>Centrale</li>
+<li>Périphérique</li>
+<li>Fonctionnelle</li>
+<li>Musculaire</li>
+</ul>
+</section>
+</section>
+<section id="atteintes-motrices" class="level2">
+<h2 class="anchored" data-anchor-id="atteintes-motrices">2. Atteintes motrices</h2>
+<section id="sémiologie-et-syndrome-neurologique-primaire" class="level3">
+<h3 class="anchored" data-anchor-id="sémiologie-et-syndrome-neurologique-primaire">2.1. Sémiologie et syndrome neurologique primaire</h3>
+<p>Le diagnostic du syndrome clinique a 2 composantes :</p>
+<ul>
+<li>Fonctionnel : quelle fonction est perturbée ?</li>
+<li>Topographique : quel niveau anatomo-fonctionnel du système est atteint ?</li>
+</ul>
+<p><img src="../../assets/Pasted image 20261111112210.png" class="img-fluid"></p>
+<p>Il existe 2 types de syndrome neurologique moteur :</p>
+<ul>
+<li>Syndrome Pyramidal (neurone moteur central)</li>
+<li>Syndrome neurogène (neurone moteur périphérique)</li>
+</ul>
+<section id="syndrome-pyramidal" class="level4">
+<h4 class="anchored" data-anchor-id="syndrome-pyramidal">2.1.1. Syndrome Pyramidal</h4>
+<p>Anamnèse (signes) :</p>
+<ul>
+<li>Plainte de <strong>faiblesse motrice de muscles squelettiques</strong>, lourdeur, lors des activités courantes (parfois paralysie)
+<ul>
+<li>Claudication motrice intermittente : faiblesse indolor de membres inférieurs, survenant après un temps de marche, disparaissant ua repos</li>
+</ul></li>
+<li>Faiblesse <strong>motrice des muscles extrémité céphalique</strong> : trouble de mastication, phonation, parole, etc., par altération de fibres cortico-nucléaires</li>
+<li>Sensations de contracture ou raideur parfois douloureuses (spasticité ou hyper réflexie)</li>
+</ul>
+<p>On explore 4 domaines au cours de l’examen neurologique :</p>
+<ul>
+<li>Force musculaire</li>
+<li>Tonus musculaire</li>
+<li>Activité réflexe- reflexes ostéotendineux (<strong>ROT</strong>)</li>
+<li>Trophicité muculaire</li>
+</ul>
+<section id="force-musculaire" class="level5">
+<h5 class="anchored" data-anchor-id="force-musculaire">Force musculaire</h5>
+<p>On peut constater <strong>parésie / paralysie</strong> qui est une difficulté à contracter ses muscles et mobiliser ses membres par baisse ou absence de génération de ou transmission de la commande motrice volontaire. De manière globale, on peut observer un déficit moteur en marche ou station debout (fauchée). Si la lésion responsable est aiguë et étendue (SNC), <strong>hémiplégie/parésie</strong> ou paraplégie/paraparésie.</p>
+<p>Épreuves et manœuvres d’examen motricité :</p>
+<p>Membres supérieurs (MS) :</p>
+<ol type="1">
+<li>Bras tendus à l’horizontale : chute progressive et pronation du MS</li>
+<li>Épreuve Garcin : bras fléchis/extensions des doigts fortement écartés, déficit musculaire sur les extenseus (main creuse)</li>
+<li>Mouvements alternatifs rapides : marionnettes</li>
+</ol>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Membres inférieurs (MI)</p>
+<ol type="1">
+<li>Épreuve Mingazzini : décubitus dorsal, “chute” progressive du membre inférieur affecté</li>
+<li>Épreuve Barré : décubitus ventral jambes fléchies à 90º, “chute” progressive du membre affecté</li>
+</ol>
+</div><div class="column" style="width:50%;">
+<p><img src="../../assets/Pasted image 20260911113437.png" class="img-fluid" width="100"></p>
+</div>
+</div>
+<p>Muscles visage-cou :</p>
+<ol type="1">
+<li>Facial (VII) :
+<ul>
+<li>Au repos : effacement du pli naso-géninen, affaissement de l’hémi-face</li>
+<li>En action : asymétrie quand on demande au patient de découvrir les dents</li>
+</ul></li>
+<li>Trijumeau (V), glossopharyngien (IX), et vague (X) : muscles masséters et mandibulaires, dégultation et phonation</li>
+<li>Hypoglosse (XII) paralysie de la langue</li>
+</ol>
+<p>On utilise une <strong>échelle globale de cotation de 0 à 5</strong> :</p>
+<ul>
+<li>0 - Aucune contraction musculaire</li>
+<li>1 - Frémissement/ébauche/tentative de contraction sans mouvement actif</li>
+<li>2 - Mouvement actif d’une partie du membre</li>
+<li>3 - Mouvement actif contre la pesanteur</li>
+<li>4 - Mouvement actif contre la pesanteur et contre résistance</li>
+<li>5 - Mouvement contre une résistance complète sans fatigue = force musculaire normale</li>
+</ul>
+</section>
+<section id="tonus-musculaire-et-activité-réflexe" class="level5">
+<h5 class="anchored" data-anchor-id="tonus-musculaire-et-activité-réflexe">Tonus Musculaire et activité réflexe</h5>
+<p>La <strong>boucle gamma</strong> est contrôlée par la voie pyramidale d’une manière inhibitrice, le cortex inhibe la boucle gamme, retirer cette inhibition fait qu’elle se contracte ce qui cause une <strong>spasticité</strong> (exagération du tonus). On va le faire en examinant les réflexes myotatiques et l’adaptation du corps au cours du temps. Ça permet vraiment de savoir où se situe une lésion.</p>
+<p>On inspecte les muscles de chaque hémicorps de manière comparative :</p>
+<ul>
+<li>Tonus musculaire du muscle en activité, en station debout puis marche, observation de l’attitude corporelle du patient</li>
+<li>Tonus musculaire de repos : mobilisation passive des segments du corps les uns par rapport aux autres (où on peut rencontrer la spasticité par résistance à des mobilisations d’amplitude et de rapidité variées)</li>
+</ul>
+<p>Mouvements sous commande :</p>
+<ul>
+<li>Pianoter le plus vite possible</li>
+<li>Battre la mesure avec le pied</li>
+<li>Rotation main/poignet</li>
+</ul>
+<p>Les réflexes ostéo-tendieux (ROT) sont évalués sur une échelle de 4 à 0</p>
+<ul>
+<li>4 -Très vifs, hyperactifs +/- clonus</li>
+<li>3 - Plus vifs que la moyenne</li>
+<li>2 - Moyens, normaux</li>
+<li>1 - Diminués/faibles</li>
+<li>0 - Pas de réponse (aréflexie OT)</li>
+</ul>
+<p><img src="../../assets/Pasted image 20260910155018.png" class="img-fluid"></p>
+<p>Le tonus musculaire dans le syndrome pyramidal est exagéré, mais si la lésion est aiguë (&lt; 2 semaines), une hypotonie se manifeste, ce qui est complémentaire. Au bout de 3 semaines, la <strong>spasticité</strong> apparait, augmentation progressive du tonus jusqu’à une contraction trop importante. Elle peut être constatée sur :</p>
+<ul>
+<li>MS : fléchisseurs en flexion du coude poignet et doigts</li>
+<li>MI : extenseurs : jambe en extension, démarche en fauchant</li>
+<li>Pendant l’action et après un certain temps de marche (claudication motrice intermittente)</li>
+<li>“Élastique” : quand on tire sur les membres ça cède et fléchit d’un coup</li>
+</ul>
+</section>
+<section id="réflexes-ostéotendineux-rot" class="level5">
+<h5 class="anchored" data-anchor-id="réflexes-ostéotendineux-rot">Réflexes ostéotendineux (ROT)</h5>
+<p>Les <strong>ROT</strong> sont des contractions réflexes d’un muscle en réponse à son propre étirement avec relâchement du muscle antagoniste. C’est une conséquence de la lésion pyramidale par l’exagération du réflexe myotatique par diminution de l’inhibition de la boucle.</p>
+<p>Comme vu pour le tonus, la temporalité de la lésion impacte les signes :</p>
+<ul>
+<li>Lésion aiguë : hypo-réflexie OT (ROT abolis)</li>
+<li>Lésion progressive : hyper-réflexie OT (ROT vis, poly-cinétiques), parfois jusqu’à clonus inépuisable d’un membre par exagération du réflexe</li>
+</ul>
+<p>Le <strong>clonus</strong> est le signe le plus fiable de spasticité :</p>
+<ul>
+<li>Clonus du pied : exercer une dorsiflexion brusque du pied e maintenir dans cette position : le pied est animé de mouvements brefs et rythmés inépuisables</li>
+<li>Clonus de la jambe : on percute le tendon du quadriceps : la jembe est entrainée par des mouvements brefs et rythmés de flexion/extension</li>
+</ul>
+</section>
+<section id="trophicité-musculaire" class="level5">
+<h5 class="anchored" data-anchor-id="trophicité-musculaire">Trophicité musculaire</h5>
+<p>On va venir inspecter les groupes musculaires et comparer les membres systématiquement. On n’est pas sensé découvrir d’amyotrophie dans le syndrôme pyramidal.</p>
+</section>
+<section id="signes-pathologiques" class="level5">
+<h5 class="anchored" data-anchor-id="signes-pathologiques">Signes pathologiques</h5>
+<ul>
+<li>Signe de Babinski : lors de l’exploration du réflxe cutané plantaire, extension du gros orteil ou des orteils en éventail, pathgnomonique d’une atteinte pyramidale</li>
+<li>Signe de Hoffman est l’équivalent de Babinsky au niveau de la main : on pince au niveau du pouce, les doigts se conractent un peu.</li>
+</ul>
+<!-- source: 3_avc.md -->
+</section>
+</section>
+<section id="caractérisation-topographique-et-fonctionnelle-des-avc" class="level4">
+<h4 class="anchored" data-anchor-id="caractérisation-topographique-et-fonctionnelle-des-avc">2.1.2. Caractérisation topographique et fonctionnelle des AVC</h4>
+<p><strong>Diagnostic topographique</strong> : l’objectif est de formuler un diagnostic clinique fonctionnel et topographique, c’est-à-dire d’identifier la fonction perturbée et le niveau anatomo-fonctionnel atteint (cortex, moelle épinière, nerf périphérique…).</p>
+<p>On peut plus ou moins placer sur la partie anatomique les lésions maintenant. Le modèle le plus classique et simple de l’atteinte nerveuse est l’AVC, et quand on parle d’ischémique, on parle de territoires extrêmement précis. Bien garder en tête que les parties antérieures et postérieures sont irriguées par différentes artères, ce qui va affecter les conséquences d’un AVC.</p>
+<p><img src="../../assets/Pasted image 20260924141937.png" class="img-fluid"></p>
+<p><img src="../../assets/Pasted image 20260924142150.png" class="img-fluid"></p>
+<p><strong>Artères à retenir</strong> : les carotides, l’artère cérébrale antérieure (ACA), l’artère cérébrale moyenne (ACM) et l’artère cérébrale postérieure (ACP). Il y a des artères communicantes entre l’antérieur et le postérieur. L’ACM vient de l’ACI (artère carotide interne) ; son territoire est étendu, souvent le tronc principal. Atteinte : motrice (NMC), sensitive, trouble visuel.</p>
+<section id="acm-superficiel-antérieur" class="level5">
+<h5 class="anchored" data-anchor-id="acm-superficiel-antérieur">ACM superficiel antérieur</h5>
+<ul>
+<li>Syndrome pyramidal : neurone moteur central. Déficit moteur controlatéral à prédominance brachio-faciale, anomalies du tonus et des ROT, signes pathologiques.</li>
+<li>Syndrome sensitif central, même topographie.</li>
+<li>Atteinte corticale : HG troubles du langage de type aphasie expressive (Broca) ; HD pas d’aphasie, mais trouble de l’attention et de la perception.</li>
+</ul>
+</section>
+<section id="acm-superficiel-postérieur" class="level5">
+<h5 class="anchored" data-anchor-id="acm-superficiel-postérieur">ACM superficiel postérieur</h5>
+<ul>
+<li>Sensitif et moteur : même chose que l’antérieur.</li>
+<li>HG : troubles du langage, aphasie réceptive (Wernicke).</li>
+<li>HD : similaire à gauche, trouble de la perception et de l’attention-négligence.</li>
+</ul>
+<p>Exemple : infarctus sylvien total droit → hémiplégie gauche proportionnelle, hypo/anesthésie gauche, HLH gauche, syndrome d’Anton-Babinski (héminegligence, anosognosie, hémissomatognosie).</p>
+<p><img src="../../assets/Pasted image 20261114083500.png" class="img-fluid"></p>
+</section>
+<section id="artère-carrotide-antérieure" class="level5">
+<h5 class="anchored" data-anchor-id="artère-carrotide-antérieure">Artère Carrotide Antérieure</h5>
+<p>Surtout la jambe :</p>
+<ul>
+<li>Syndrome pyramidal (NMC) : déficit moteur controlatéral à prédominance crurale, anomalies du tonus et des ROT, signes pathologiques.</li>
+<li>Syndrome sensitif central, même topographie.</li>
+<li>Signes frontaux : grasping, troubles de la planification et de la programmation des actes moteurs, troubles du comportement.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="sémiologie-et-syndrome-neurologique-périphérique-neurogène" class="level3">
+<h3 class="anchored" data-anchor-id="sémiologie-et-syndrome-neurologique-périphérique-neurogène">2.2. Sémiologie et syndrome neurologique périphérique (neurogène)</h3>
+<section id="caractérisation-clinique" class="level4">
+<h4 class="anchored" data-anchor-id="caractérisation-clinique">2.2.1. Caractérisation clinique</h4>
+<p>On appelle “<strong>syndromes alternes</strong>” les syndromes avec un trouble moteur d’un côté au visage et de l’autre à la jambe. Les troubles de la moelle épinière n’ont aucun effet sur le visage.</p>
+<p>Le syndrome neurologique moteur comprend le syndrome pyramidal, mais pour le périphérique, il y a aussi une topographie précise, bien plus détaillée. Dans la moelle épinière, les neurones moteurs passent par des plexus et arrivent jusqu’à notre peau. On va faire un examen comme pour le syndrome pyramidal.</p>
+<p><strong>Diagnostic différentiel de syndrome central</strong> :</p>
+<ul>
+<li>Maladresse, sensation de gêne, de lourdeur…</li>
+<li>L’atteinte des nerfs périphériques fait que la topographie est plus complexe et la plainte peut être plus dispersée. À l’examen, le déficit moteur est plus localisé et s’accompagne d’une hypotonie. Le tonus est diminué.</li>
+<li>ROTs abolis (aréflexie ostéo-tendineuse).</li>
+<li>Diminution du volume musculaire, atrophie (amyotrophie).</li>
+<li>On peut aussi avoir des crampes et des fasciculations : le contact muscle/nerf n’est plus direct, le muscle échappe au nerf et va avoir une activité réflexe indépendante. Ce sont donc des petites contractions causées par la dénervation, réagissant par exemple à la chaleur. Elles commencent souvent par les petits muscles.</li>
+</ul>
+<p><strong>Électromyographie (ENMG)</strong> : on met des électrodes, on stimule les nerfs et on capte la vitesse de transmission pour voir si des nerfs dans certains territoires sont endommagés ou non.</p>
+<p>Autres symptômes associés :</p>
+<ul>
+<li><strong>Sensitif</strong> : douleurs (décharges électriques, brûlures, douleurs dues aux crampes au repos), fourmillements, picotements.</li>
+<li><strong>SN autonome/végétatif</strong> : téguments froids, tuméfiés, coloration violacée ; troubles urinaires ou de la sphère génitale ; hypotension orthostatique.</li>
+<li><strong>Troubles trophiques et signes végétatifs</strong> : peau sèche, amincie, troubles vasomoteurs, œdèmes, ulcères perforants plantaires.</li>
+</ul>
+<p>L’anesthésie/hypoesthésie n’apparaît pas dans l’atteinte de la corne antérieure et de la racine antérieure, car elles s’occupent de la proprioception, pas de la sensibilité.</p>
+<p><strong>Donc le syndrome moteur périphérique</strong> :</p>
+<ul>
+<li>déficit moteur plus localisé + hypotonie ;</li>
+<li>amyotrophie ;</li>
+<li>aréflexie ostéo-tendineuse / ROT abolis ;</li>
+<li>contractures / fasciculations ;</li>
+<li>+/- troubles sensitifs « subjectifs » (douleurs, paresthésies) et « objectifs » (hypo- ou anesthésie) ;</li>
+<li>+/- troubles végétatifs.</li>
+</ul>
+</section>
+<section id="lexexemple-de-la-sla" class="level4">
+<h4 class="anchored" data-anchor-id="lexexemple-de-la-sla">2.2.2. L’exexemple de la SLA</h4>
+<p>La <strong>sclérose latérale amyotrophique</strong> (SLA ; maladie de Charcot, maladie de Lou Gehrig) est une maladie neurodégénérative motrice incurable, de cause inconnue.</p>
+<p>Oui amyotrophie typique. La main prend un aspect creux, puis une main simienne, et l’atteinte motrice se généralise. Plein de choses sur les doigts et même la langue qui cause du problème pour parler et avaler. Il y a des muscles qui entourent les vaisseaux sanguins qui vont donc, eux aussi, souffrir.</p>
+<ul>
+<li>5 % de formes héréditaires à transmission autosomique dominante (SLA familiale, « gènes de susceptibilité »), mais la majorité est sporadique.</li>
+<li>Hypothèses : excès de glutamate, stress oxydatif, modification des canaux potassiques.</li>
+<li>Âge moyen de début : 55 à 60 ans (des cas &lt; 40 ans).</li>
+<li>Pas de traitement.</li>
+<li>Peut être associée à une dégénérescence frontotemporale (DLFT).</li>
+<li>Lésions : dégénérescence progressive des structures motrices du SNC (M1, plus ou moins faisceau pyramidal) et du SNP (motoneurones spinaux et noyaux moteurs des nerfs crâniens).</li>
+</ul>
+<p><strong>Symptomatologie (SNMC + SNMP)</strong> : SNMC = syndrome du neurone moteur central (pyramidal), SNMP = syndrome du neurone moteur périphérique.</p>
+<p>Forme spinale (la plus fréquente) :</p>
+<ul>
+<li>début : déficit musculaire des petits muscles d’une main ;</li>
+<li>ensuite : fasciculations, crampes ;</li>
+<li>amyotrophie typique (SNP) : main creuse, main simienne → l’atteinte motrice se généralise ;</li>
+<li>membres inférieurs également touchés, mais c’est surtout le syndrome pyramidal qui prédomine.</li>
+</ul>
+<p>Formes les plus graves à début et évolution bulbaire : généralement ça traîne avant le diagnostic. L’atteinte du bulbe rachidien induit la gravité de la maladie et reflète la diffusion du processus pathologique : paralysie des muscles de la langue, des lèvres et du pharynx avec troubles de la phonation et de la déglutition. Pas de troubles sensitifs. « Amaigrissement » par atrophie musculaire massive. Fonctions cognitives intactes dans la plupart des formes, soit des troubles cognitifs dans les formes associées DLFT + SLA. Évolution de la maladie très rapide.</p>
+<p><strong>SLA = atteinte motrice pure</strong> : association d’un syndrome pyramidal et neurogène. Clinique : ROT vifs, hypertonie et Babinski contrastent avec une amyotrophie très importante.</p>
+<!-- source: 2_epilepsie.md -->
+</section>
+</section>
+</section>
+<section id="épilepsie" class="level2">
+<h2 class="anchored" data-anchor-id="épilepsie">3. Épilepsie</h2>
+<section id="historique-et-définitions" class="level3">
+<h3 class="anchored" data-anchor-id="historique-et-définitions">3.1. Historique et définitions</h3>
+<p>Avant très stigmatisé, encore aujourd’hui beaucoup de patients attendent pendant longtemps avant de faire un diagnostic en cachant les symptômes, ce qui est grâce car les crises font un apprentissage pour le cerveau et chaque crise augmente les risques d’en avoir.</p>
+<p>C’est une maladie chronique avec différentes formes, pouvant soit durer toute la vie du patient, ou que durant l’adolescence. Dans le développement normal le cerveau se construit pour les arrêter, c’est la forme auto-limitée. C’est la deuxième maladie chronique après la migraine, avec un pic à la naissance et après 60 ans dû à des accidents et chutes. Coût très important, car c’est une contre-indication pour énormément d’activités.</p>
+<p>Lors d’une crise d’épilepsie généralisée, <strong>il y a toujours une même suite d’événements</strong> : décharge neuronale d’abord localisée puis va accaparer tout le cerveau par réseaux, avec perte de conscience, convulsions, etc, et récupération lente. La région démarrant les crises donne les symptômes cliniques du début, et peut servir d’indicateur.</p>
+<p>Une <strong>crise généralisée commence donc en crise focale</strong>. Certains patients ne font que des focales durant plusieurs années, mais se développe ensuite vers une généralisation, mais ce n’est pas l’épilepsie qui change en soi.</p>
+<p>Dans le cerveau, il y a toujours un équilibre entre excitation et inhibition. La première hypothèse explicative et qu’on perd une partie d’inhibition, ou que notre partie d’excitation est trop forte et dépasse la capacité des mécanismes d’inhibition. Dans cette perspective, on a développé des traitements pour contrôler les crises, mais il faut garder en tête qu’<strong>on ne sait pas traiter l’épilepsie</strong>, mais seulement les crises. Cette condition est un spectre sur lequel tout le monde se place et varie en gravité selon les seuils de la lutte excitation/inhibition. Ces crises sont stéréotypées, elles font toujours la même chose, ce qui explique d’ailleurs que c’est le même réseau qui en est responsable.</p>
+<p>En d’autres termes :</p>
+<ul>
+<li>Dynamiques spatio-temporelles</li>
+<li>Suite à des décharges excessives localisées qui se propagent</li>
+<li>Symptômes différents selon :
+<ul>
+<li>Topographie de la décharge</li>
+<li>Réseau auquel elle s’étend</li>
+<li>Type de décharge</li>
+</ul></li>
+</ul>
+<p>![[2_epilepsie 2026-10-07 09.43.09.excalidraw]]</p>
+<p>Bonus (question) : la crise s’arrête dans les généralisées, car les excitatrices sont consommées. Pour localiser, autres parties du cerveau peut inhiber, manifestant chez les patients par penser à autre chose etc. Les autres réseaux interviennent.</p>
+</section>
+<section id="crises-focales-et-généralisées" class="level3">
+<h3 class="anchored" data-anchor-id="crises-focales-et-généralisées">3.2. Crises focales et généralisées</h3>
+<p>On peut même nous-même provoquer des crises, ces <strong>crises provoquées</strong> sont causées par l’épilepsie, et si on a 2 crises non provoquées en 2 jours alors le patient est épileptique. Pour les provoquées, on peut les rencontrer par hypoglycémie ou hyper-trucs, sevrage alcoolique, donc métaboliques, toxiques ou cérébrales locales. On peut développer une épilepsie après un apprentissage par exemple après longue période de consommation de stimulants.</p>
+<p>Une épilepsie-maladie nécessite un traitement. La meilleure à avoir est l’idiopathique (sans cause externe visible) généralisée qui existe dès la naissance et peut faire des crises à partir de l’adolescence et progresser après 40 ans. Dans ce cas le cerveau fait un apprentissage bénéfique.</p>
+<p>Les crises généralisées sont des dysfonctionnement spontanées des deux hémisphères, sans prévenir peut donc provoquer des chutes, et causes convulsions etc. Les régions profondes ne sont pas impliquées, si c’était le cas on mourrait d’un coup, et ça n’existe pas. La <strong>morte subite en épilepsie</strong> est un risque qui dure toute la vie des patients, qu’un court-circuit cortical trouve un réseau pour glisser dans le TC et arrêter le cœur, ce qui est absolument iréversible (arrive à 1 patient sur 1000, arrive plus dans pays en difficulté).</p>
+<p>Les crises focales touchent 80% des adultes (plutôt au-delà de 60 ans à cause de lésions). La symptomatologie dépend de la localisation de la zone épileptogène. Crises focales simples se font sans perte de connaissance (comme clonus d’une bras), complexes ont une altération de la conscience.</p>
+</section>
+<section id="différentes-formes" class="level3">
+<h3 class="anchored" data-anchor-id="différentes-formes">3.3. Différentes formes</h3>
+<section id="formes-généralisées" class="level4">
+<h4 class="anchored" data-anchor-id="formes-généralisées">3.3.1. Formes généralisées</h4>
+<p><img src="../../assets/Pasted image 20260917145221.png" class="img-fluid"></p>
+<p><strong>Épilepsie d’absence de l’enfant</strong></p>
+<ul>
+<li>Idiopathique et généralisée</li>
+<li>Débute entre 3-4 ans et 8 ans</li>
+<li>Jusqu’à une centaine d’absence de durée variable (<strong>pyknolepsie</strong>), génant pour l’éducation, souvent cause de consultation</li>
+<li>Très sensible à l’hyperventilation : en EEG, on demande une hyperventilation de 3 minutes et on provoque des absences, ou stimluation lumineuse intermittente</li>
+<li>Pronostique favorable sous traitement, qui peut être cessé pendant l’adolescence</li>
+<li>Traitement : sirop qui arrête immédiatement l’absence</li>
+</ul>
+<p><strong>Épilepsie myoclonique juvénile</strong></p>
+<ul>
+<li>Idiopathique et généralisée</li>
+<li>Débute de l’adolescence entre 13 et 20 ans</li>
+<li>Crises myocloniques au matin en général dans l’heure du réveil, en secousses musculaires brèves</li>
+<li>Pas de perte de connaissance</li>
+<li>Très sensible à dette de sommeil et alcool</li>
+<li>N’impacte pas le développement et dure toute la vie</li>
+</ul>
+<blockquote class="blockquote">
+<p>WARN: pas faire d’EEG si y’a pas de raisons de faire un EEG car erreur de type 1 très haute, détecter quelque chose alors qu’en vrai y’a rien</p>
+</blockquote>
+<p><strong>Épilepsie “Grand Mal”</strong></p>
+<ul>
+<li>Idiopathique et généralisée</li>
+<li>Adolescence et jeune adulte</li>
+<li>Antécédents familiaux fréquents</li>
+<li>Crises tonico-cloniques le matin, perte de connaissance puis 3 phases en 5-10 minute :
+<ul>
+<li>Tonique : contraction intense et généralisée des muscles</li>
+<li>Clonique : secousses musculaires brusques et généralisées</li>
+<li>Phase résolutive : hypotonie généralisée</li>
+</ul></li>
+<li>Sensible aux stimulations lumineuses intermittents, dette de sommeil et prise d’alcool</li>
+<li>Répond bien dans 90% des cas, mais pharmaco-dépendance et pharmaco-résistance en 30-40% de cas</li>
+</ul>
+<p>Que faire ? Pas bouger la personne et la protéger, rien mettre dans la bouche. Après la crise, LPS, rassurer, pas de médicament et à boire, appeler les secours si crise dure plus de 5 minutes et s’il y a 2 crises.</p>
+</section>
+<section id="formes-focales" class="level4">
+<h4 class="anchored" data-anchor-id="formes-focales">3.3.2. Formes focales</h4>
+<p><img src="../../assets/Pasted image 20260917152411.png" class="img-fluid"></p>
+<p><strong>Épilepsie focale frontale</strong></p>
+<ul>
+<li>Symptomatique le + souvent</li>
+<li>Crises noctures, courtes et sans prodrome (crise en train d’arriver)</li>
+<li>Pendant la crise :
+<ul>
+<li>Phénomènes dystoniques/dyskinétiques</li>
+<li>Parfois comportements moteurs complexes et bizarres</li>
+<li>Automatismes moteurs, salivation, arrêt/libération parole, crise de salves</li>
+</ul></li>
+<li>Pas de confusion post-critique</li>
+<li>Fréquent</li>
+<li>Tendance à généraliser facilement</li>
+</ul>
+<p><strong>Épilepsie focale temporale</strong></p>
+<ul>
+<li>Symptomatique le + souvent</li>
+<li>Crises diurnes assez longues avec prodrome</li>
+<li>Pendant la crise :
+<ul>
+<li>Altératin du contact</li>
+<li>Automatismes</li>
+<li>Parfois automatismes verbaux</li>
+</ul></li>
+<li>Confusion post-critique ++</li>
+<li>Fréquent</li>
+<li>Généralisation peu fréquente</li>
+</ul>
+<p>Autres types :</p>
+<ul>
+<li>Crises occipiptales ou pariétales</li>
+<li>Épilepsies réflèxes, stimulo-dépendantes</li>
+</ul>
+</section>
+<section id="autres-formes" class="level4">
+<h4 class="anchored" data-anchor-id="autres-formes">3.3.3. Autres formes</h4>
+<p><strong>Etat de mal épileptique</strong></p>
+<ul>
+<li>Crises généralisées ou focales qui durent et ne semblent pas s’interrompre, pas à la consceince entre les crises pendant + de 30 minutes</li>
+<li>Dangereux et risque vital, mortalité de 5 à 10% des cas, 40% en cas de crises tonico-cloniques, moins grave pour l’épilepsie de type absence</li>
+<li>Souvent à cause d’arrêt brutal des antiépileptiques</li>
+<li>Traitement par anticonvulsivant puissant IV</li>
+</ul>
+<p><strong>Épilepsie Psychogène</strong></p>
+<ul>
+<li>Crise non-épileptique d’origine psychologique : diagnostique différentiel avec d’autres troubles</li>
+<li>Devient très grave s’il y a des vraies crises épileptiques en même temps, et les traitements augmentent les chances de crises, prise en charge difficile</li>
+<li>Signes évocateurs :
+<ul>
+<li>Crises non stéréotypées</li>
+<li>Pas de respiration stertoreuse après crise</li>
+<li>Paupière fermées impossible à lever</li>
+<li>Activité EEG normale</li>
+</ul></li>
+<li>Fréquent, plus chez les femmes que les hommes</li>
+<li>Se dépalce souvent vers d’autres registres (fibromyalgie)</li>
+</ul>
+</section>
+</section>
+<section id="diagnostics-et-traitements" class="level3">
+<h3 class="anchored" data-anchor-id="diagnostics-et-traitements">3.4. Diagnostics et traitements</h3>
+<section id="diagnostidcs-et-investigations" class="level4">
+<h4 class="anchored" data-anchor-id="diagnostidcs-et-investigations">3.4.1. Diagnostidcs et investigations</h4>
+<ul>
+<li><p>Examens de routine</p>
+<ul>
+<li>Examen neurologique clinique : dg. syndrome</li>
+<li>EEG</li>
+<li>IRM anat, CT, PET</li>
+<li>Prise de sang</li>
+</ul></li>
+<li><p>Examens complémentaires</p>
+<ul>
+<li>Viéo-EEG longue gurée</li>
+<li>EEG privaiton de osmmeil</li>
+<li>Neuropsychologie</li>
+</ul></li>
+<li><p>Examens avancés (si chirurgie envisagée)</p></li>
+<li><p>Données cliniques</p>
+<ul>
+<li>Antécédents personnels et familiaux</li>
+<li>État neurologique et psychologie</li>
+<li>Type / sévérité / récurrence</li>
+<li>Facteurs déclenchants</li>
+</ul></li>
+<li><p>Signes évocateurs</p>
+<ul>
+<li>Caractère stéréotypé</li>
+<li>Brièveté (&lt; 3 mins)</li>
+<li>Confusion post-critique</li>
+<li>Ouverture oculaire pendant l’épisode</li>
+<li>Rythmes et salves</li>
+</ul></li>
+</ul>
+<p>Signes cliniques (souvent recherche d’activité unilatérale) :</p>
+<ul>
+<li>Monitoring EEG</li>
+<li>Imagerie en IRM</li>
+<li>PET scan pour métabolisme cérébral</li>
+</ul>
+</section>
+<section id="traitements-et-pharmaco-résisatnce" class="level4">
+<h4 class="anchored" data-anchor-id="traitements-et-pharmaco-résisatnce">3.4.2. Traitements et pharmaco-résisatnce</h4>
+<p>Lévétiracétam est toujours le premier choix, puis lamotrigine. Noter que chaque médicament cible un récépteur pour limiter la propagation.</p>
+<p><img src="../../assets/Pasted image 20260917162411.png" class="img-fluid"></p>
+<p>3/10 patients sont résistants aux traitements</p>
+<p><img src="../../assets/Pasted image 20260917162750.png" class="img-fluid"></p>
+<p>Que faire si notre patient ne répond pas au traitement ? On va enlever la région de manière chirurgicale, puis diminuer voire arréter le traitement. Mais risque que la cicatrice de l’opération soit épileptogène au long terme. Opération s’appele exérèse je crois.</p>
+<p>Le psychologue fait un bilan neuropsychologique (pour vérifier qu’il y a pas un déclin, car il va arriver après la chirurgie et il faut limiter le dégat car il pourrait ne pas tout récupérer, donc la qualité de vie serai trop diminuée) avant la procédure, puis bilan EEG, puis tests fonctionnels pour savoir si la lésion est proche d’une région fonctionnelle cruciale à ne pas opérer, et si tout est OK alors on opère. On peut enlever un lobe ou des petites parties. En manque d’informations, sEEG. On peut aussi faire une chirurgie palliative.</p>
+<p><img src="../../assets/Pasted image 20260917163545.png" class="img-fluid"></p>
+<p>Chirurgies palliatives :</p>
+<ul>
+<li>Callosotomies pour arrêter la communication et éviter les crises généralisées</li>
+<li>Neurostimulation avec des électrodes
+<ul>
+<li>Ajustable et réversible</li>
+<li>Réduit la survenue de crises</li>
+<li>Limiter propagation</li>
+<li>Différent moyens d’action</li>
+</ul></li>
+</ul>
+</section>
+<section id="neuropsychologie-de-lépilepsie" class="level4">
+<h4 class="anchored" data-anchor-id="neuropsychologie-de-lépilepsie">3.4.3. Neuropsychologie de l’épilepsie</h4>
+<p>Complications de l’épilepsie :</p>
+<ul>
+<li>Amnésie post-critique</li>
+<li>Confusion post-critique</li>
+<li>Psychose post-critique (psychose de normalisation, choc au moment où on passe à un traitement qui fonctionne après plusieurs années)</li>
+</ul>
+<p>Conséquences des crises : troubles d’apprentissages etc</p>
+<p><img src="../../assets/Pasted image 20260917164849.png" class="img-fluid"></p>
+<p>Pour les anti-épileptiques :</p>
+<p><img src="../../assets/Pasted image 20260917164918.png" class="img-fluid"></p>
+<p>Effets des pointes :</p>
+<ul>
+<li>DMN affecté, disconnexion fronto-temporale, perte de créativité</li>
+<li>Beaucoup de comorbidités, dépression</li>
+<li>Apnée du sommeil</li>
+<li>TDAH surtout chez les enfants</li>
+</ul>
+<p>Chirurgie est un succès quand on améliore la qualité de vie du patient. Et adaptation spatiale plus dure. Très grave pour sans-abri car on dort pas pour se protéger.</p>
+<p>Expérience de Marcela sur la symptomatologie après stimulation, et à trouvé plein d’effets :</p>
+<ul>
+<li>NPP: naming phonological paraphasia</li>
+<li>NSA: naming speech arrest</li>
+<li>NSMP: naming semantic and morphological paraphasia</li>
+<li>RCD: reading comprehension disorder</li>
+<li>RPA: reading paralexia</li>
+<li>RSA: reading speech arrest</li>
+</ul>
+<p>Test de Wada aussi</p>
+</section>
+</section>
+<section id="troubles-cognitifs-et" class="level3">
+<h3 class="anchored" data-anchor-id="troubles-cognitifs-et">Troubles cognitifs et ???</h3>
+<p>Il faut pas savoir examen complémentaire, les crtières diangostiques aussi, les tests c’est important, qu’est ce qu’ils mesurent, qu’est ce qu’on s’attend à retrouver comme profil.</p>
+<p>On commence par état de vigilance des patients et on va évaluer sa xognitino avec des tests cognitifs. On va utiliser des des tests de <strong>dépistage</strong> qui donnent un aperçu bref pour savoir s’il y a une pathologie.</p>
+</section>
+</section>
+<section id="notions-généalres-des-maladies-neurodégénératives-cognitives-mndc" class="level2">
+<h2 class="anchored" data-anchor-id="notions-généalres-des-maladies-neurodégénératives-cognitives-mndc">1. Notions généalres des maladies neurodégénératives cognitives (MNDC)</h2>
+<p>Plusieurs facteurs :</p>
+<ul>
+<li>Causaux : génétiques</li>
+<li>Réserve cognitif et le capital vasculaire qui renforcent cette dernière</li>
+<li>Protecteurs : bonne reserve etc</li>
+</ul>
+<p>Tous les facteurs qui causent des inflammations du cerveau vont diminuer la réserve cognitive et vont exlpiquer la hausse de troubles avec l’âge et explique la différence entre des patients qui vont avoir des conséquences plus ou moins graves pour une même lésion.</p>
+<p>Le <strong>veillissement</strong> normal est le fait qu’il est naturel d’observer une baisse de plein de fonctions et atrophie du cortex cérébral avec l’âge. Démence est un terme plus trop utilisé car stigmatisant est pas très clair. Maintenant on parle de “trouble neurocognitif mineur ou majeur”. La prévalence est de 5% et de plus en plus grande.</p>
+<p>On distingue les formes sporadiques (Alzheimer) et neurodégénératives, donc origine génétique. Ces dernières sont des anomalies protéiques qui causent des morts neuronales et progressent souvent trop avant qu’on les remarque. Résultent souvent en une baisse d’autonomie du patient. Fort rôle des proches aidants</p>
+<p>Dans Alzheimer, accumulation de <span class="math inline">\(\beta\)</span>-amyltoïde (plaques extracellulaires) et va empêcher communication entre jsp quoi et qui va inflammer les neurones et conduire à des morts neuronales. Deuxième type d’anomalie proétique concerne protéine Tau qui sert à la communication entre neurones, trop de phosphore s’y connectent et on ne peut plus assurer le transport stable entre les cellules qui entraîne des dégenérescences.</p>
+<p><img src="../../assets/Pasted image 20261001143151.png" class="img-fluid"></p>
+</section>
+<section id="triade-diagnostique-stade-clinique" class="level2">
+<h2 class="anchored" data-anchor-id="triade-diagnostique-stade-clinique">2. Triade diagnostique : stade (clinique)</h2>
+<p>Il est imporant d’avancer dans le diagnostique de ces maladies car il est important de pouvoir identifier l’efficacité de traitements, ainsi qu’identifier les sypmtômes pour mieux expliquer aux patients.</p>
+<p>4 stades :</p>
+<ul>
+<li>Pré-symptomatique : sans plainte, biochimie modifiée</li>
+<li>Plainte cognitive isolée : remarque un changement dans le domaine cognitif, subjective car on ne retrouve rien sur un bilan</li>
+<li>Trouble cognitif mineur ou TCm : congitif léger, phase prodromale, altération objectivée chez un patient autonome dans la vie quotidienne</li>
+<li>Trouble cognitif majeur : altération avec autonomie altérée</li>
+</ul>
+<p>On utilise stade et le score MMSE qui est une évaluation générale.</p>
+<p><img src="../../assets/Pasted image 20261001144036.png" class="img-fluid"></p>
+</section>
+<section id="triade-diagnostique-syndrome-clinique" class="level2">
+<h2 class="anchored" data-anchor-id="triade-diagnostique-syndrome-clinique">3. Triade diagnostique: syndrome (clinique)</h2>
+<p>Basée sur anamnèse, examen neurologie cognitif (tests) +/- BNPO selon sévérité MMSE</p>
+<ul>
+<li>La présentation clinique est-elle à dominante cognitive ou comportementale ?</li>
+<li>Si présentation cognitive : quel domaine ? isolé, mixte, diffus? Idem pour comportementale</li>
+</ul>
+<p>Entre clinique peut être plus ou moins dur selon le stade de la maladie et peut nécessiter d’avoir un proche pour avoir des informations extérieures.</p>
+<p>Entretien clinique : mode de vie/antécédents, anamnèse, autonomie et tests cognitifs de dépistage</p>
+<ul>
+<li>Interroger patient et entourage (anosognosie, perte d’information du fait des troubles)</li>
+<li>Habitus :</li>
+<li>Entourage familial</li>
+<li>Logement</li>
+<li>Profession précédente si retraité, NSPINSC</li>
+<li>Antécédents personnels</li>
+<li>Facteurs de risque toxiques</li>
+<li>Antécédents familiaux neurologiques, psychiatriques et arbre généalogique</li>
+<li>Traitements actuels</li>
+</ul>
+<p><img src="../../assets/Pasted image 20261001144724.png" class="img-fluid"></p>
+<p><img src="../../assets/Pasted image 20261001145733.png" class="img-fluid"></p>
+<p><img src="../../assets/Pasted image 20261001150112.png" class="img-fluid"></p>
+<blockquote class="blockquote">
+<p>WARN: Juste aller voire le diapo</p>
+</blockquote>
+</section>
+<section id="triade-diagnostique-maladie-étiologie" class="level2">
+<h2 class="anchored" data-anchor-id="triade-diagnostique-maladie-étiologie">4. Triade diagnostique : maladie (étiologie)</h2>
+</section>
+<section id="classification-mndc-quelques-exemples-de-mndc" class="level2">
+<h2 class="anchored" data-anchor-id="classification-mndc-quelques-exemples-de-mndc">5. Classification MNDC, quelques exemples de MNDC</h2>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle dark mode");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle dark mode");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+<nav class="page-navigation" aria-label="Page">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../matieres/neuro/neuro_partie_psycho.html" class="pagination-link" aria-label="Partie II - Neuropsychologie">
+        <span class="nav-page-text">Partie II - Neuropsychologie</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
