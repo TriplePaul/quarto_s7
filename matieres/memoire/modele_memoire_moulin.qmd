@@ -63,7 +63,7 @@ session 2. Cependant son apprentissage est beaucoup plus lent. Il peut tout de
 même maîtriser la liste que le montre les prochaines sessions. Et 5 ans plus
 tard, il se souvient beaucoup mieux que sa sœur.
 
-![sdfsadfsadf](../..../../assets/2026-10-21-12-20-39.png)
+![sdfsadfsadf](/assets/2026-10-21-12-20-39.png)
 
 Si on a pas les infos de la phase d'encodage, on va prendre les items comme
 jsute des connaissances, qui donne un maintien très stable car c'est de la
@@ -82,7 +82,7 @@ réfutation de ce modèle, car il existe une double dissociation de patient.es
 ayant des troubles de la MLT pouvant faire tests de MCT mais pas MLT et
 inversement.
 
-![dfasdf](..../../assets/2026-10-21-12-23-39.png)
+![dfasdf](/assets/2026-10-21-12-23-39.png)
 
 - HM: MCT intacte, mais pas MLT, ce qui correspond très bien avec transfert
   d'informations, car il pourrait pas mettre dans le stock permanent
@@ -124,7 +124,7 @@ rappel différé est altéré, et surtout la proportion de MCT utilisée par ces
 patients est forte, et il y a un plafond à l'utilisation de la MLT qui est
 autant utilisée dans les tˆåches mixtes que dans les tâches de MLT pure.
 
-![](../../assets/Pasted image 20261021143902.png)
+![](/assets/Pasted image 20261021143902.png)
 
 **La mémoire de travail**
 
@@ -136,7 +136,7 @@ aurait donc un stockage des informations temporaires multimodales, épisodiques
 car dans un moment spécifique, stocké quelque part entre MCT et MLT. Buffer car
 temporaire.
 
-![](../../assets/Pasted image 20261021144544.png){width=400}
+![](/assets/Pasted image 20261021144544.png){width=400}
 
 ## 4. L'encodage et le contexte
 
@@ -284,7 +284,7 @@ Boucher-dans-le-bus est dû à rencontrer quelqu'un en dehors de son contexte, e
 retrouver le bon contexte est très très dûr. C'est une expression de la
 **spécificité de l'encodage**.
 
-![](../../assets/Pasted image 20261110145513.png)
+![](/assets/Pasted image 20261110145513.png)
 
 On fait une étude où on voulait tester qu'est-ce qui change dans la spécificité
 d'encodage avec le vieillissement, sachant que les capacités évoquées déclinent
@@ -620,7 +620,7 @@ clés de la formation d'identité, quelque soit l'âge.
 
 ### 2.2. SMS de Conway (système de mémore du soi)
 
-![](../../assets/Pasted image 20261121110608.png)
+![](/assets/Pasted image 20261121110608.png)
 
 **Modèle self-memory systeme de Conway** : on a une base de données
 autobiographiques, et le "soi de travail" en ref blague à Baddeley. Ça serait un
@@ -635,7 +635,7 @@ très proche de ce qu'on a vécu, et du Self à Long Terme. Il y aurait un sché
 d'organisation des mémoires autobiographiques, sur les périodes de vie (j'étais
 en thèse, en couple avec Tess...).
 
-![](../../assets/Pasted image 20261121105824.png)
+![](/assets/Pasted image 20261121105824.png)
 
 **Comment lire les deux figures** (même modèle, deux niveaux : l'architecture à
 gauche, la récupération à droite).
@@ -715,7 +715,7 @@ rapport avec une tâche en cours. Ces dernières comprennent fluence, déjà-vu.
 
 Modèle très connu de la métamémoire :
 
-![](../../assets/Pasted image 20261123082300.png)
+![](/assets/Pasted image 20261123082300.png)
 
 Entre les deux niveaux de mémoire, ce sont les processus représentants les flux
 d'informations entre les niveaux de traitements. Cette boucle a donc la capacité
@@ -734,7 +734,7 @@ lors de l'apprentissage. JOLs peuvent se faire immédiatement après l'encodage
 (Immediate JOLs) ou après un délai (delayed JOL). Généralement, on le fait item
 par item en paires de mots
 
-![](../../assets/Pasted image 20261123082803.png)
+![](/assets/Pasted image 20261123082803.png)
 
 Nos prédictions avec les JOLs sont beaucoup plus précises après un délai. Et cet
 effet est la base de beaucoup de théories en métamémoire. Donc pour la mesurer
@@ -755,7 +755,7 @@ FOK est la prédiction de reconnaissance d'items non récupérés en mémoire. /
 mot sur le bout de la langue en est un cas extrême. Elle nous aide à orienter
 une recherche pour pouvoir retrouver l'item.
 
-![](../../assets/Pasted image 20261123083826.png)
+![](/assets/Pasted image 20261123083826.png)
 
 Mode de prédiction : échelle de pourcentage, ou prédiction binaire. C'est une
 bonne mesure car ça représente quelque chose de la vie quotidienne, mais on
@@ -792,7 +792,7 @@ deux, on a des jOL immédiats qui se basent surtout sur les petits facteusr, mai
 si on met du délai elle va réflechir ou jsp quoi et passer pa mnémonique. Le but
 c'est d'encourage les participants à utiliser les indices mnémoniques.
 
-![](../../assets/Pasted image 20261123084858.png)
+![](/assets/Pasted image 20261123084858.png)
 
 Les indices mnémoniques :
 
@@ -853,7 +853,7 @@ juste de récupérer certaines informations.
 
 FIX: j'écoute pas la tâche demander à tess
 
-![](../../assets/Pasted image 20261123092311.png)
+![](/assets/Pasted image 20261123092311.png)
 
 ???????????////////////
 

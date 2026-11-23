@@ -138,9 +138,9 @@ mois, la mémoire fail si :
 
 Donc très sensible au contexte
 
-![](../../assets/Pasted image 20260918092206.png)
+![](/assets/Pasted image 20260918092206.png)
 
-![](../../assets/Pasted image 20260918092453.png)
+![](/assets/Pasted image 20260918092453.png)
 
 --------------------------------------------------------------------------------
 
@@ -238,7 +238,7 @@ probabilité de faire bouger des doigts.
 
 FIX: je copmrends pas l'intérêt de cette étude
 
-![](../../assets/Pasted image 20260923143736.png)
+![](/assets/Pasted image 20260923143736.png)
 
 On remarque que l'imitation prend la forme d'échanges, de proto-conversations,
 et que l'imitation aurait une fonction sociale dans cet aspect, et l'acte
@@ -305,7 +305,7 @@ Viviani fait la théorie de résonateurs (penser à la propagation de vibrations
 physiques) : des résonateurs perceptifs font une forme de couplage et j'ai pas
 trop copmris.
 
-![](../../assets/Pasted image 20261001082940.png)
+![](/assets/Pasted image 20261001082940.png)
 
 Pour en revenir à l'imitation, la plupart des actions produites par les enfants
 à la naissance sont très simples. L'imitation comme mécanisme d'apprentissage
@@ -346,7 +346,7 @@ d'apprentissage :
   l'inverse du mimicking, l'apprenant fait ça avec une compréhension du but du
   démonstrateur
 
-![](../../assets/Pasted image 20261001084814.png)
+![](/assets/Pasted image 20261001084814.png)
 
 Thèse de K. Prepin en sciences cognitives qui propose que l'imitation soit un
 espace varié pour définitions multiples avec trois axes : *structure
@@ -354,7 +354,7 @@ temporelle*, *fonctionnalité* et *objet*. Les manifestations de l'imitation
 évoluent au cours du développement de l'enfant, ici au cours des deux premières
 années, au cours d'interaction avec un robot, je crois ?
 
-![](../../assets/Pasted image 20261001085818.png)
+![](/assets/Pasted image 20261001085818.png)
 
 Meltzoff argumente que quand on fait une imitation et qu'on a le résultat, il
 peut être vécu comme un renforcement
@@ -363,7 +363,7 @@ Il est important de considérer que l'imitation peut être différée, car si on
 peut pas imiter une action après longtemps, alors on peut dire que
 l'apprentissage n'a pas vraiment été fait.
 
-![](../../assets/Pasted image 20261001090618.png)
+![](/assets/Pasted image 20261001090618.png)
 
 On s'est donc mis à étudier la force de la trace (dans le temps) des
 apprentissages. On fait un test avec une action d'assemblage d'un petit jouet
@@ -389,7 +389,7 @@ expressions théâtrales par exemple. À 18 mois, une action intentionnelle, mai
 échouée, peut être imitée dans l'intention originelle et donc réussie. À trois
 ans, ils savent compléter nos phrases.
 
-![](../../assets/Pasted image 20261001092046.png)
+![](/assets/Pasted image 20261001092046.png)
 
 Donc, on peut utiliser l'imitation pour comprendre les bases de la compréhension
 d'autrui. Ça nous renseigne aussi sur la structure des relations entre action et

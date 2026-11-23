@@ -455,7 +455,7 @@ dans lesquels on demande lequel de 2 personnages ont plus ou moins de bonbons.
 Réponses bien au-dessus du hasard qui veut dire que ces enfants sont **capables
 de faire du caclul approximatif**.
 
-![](../../assets/Pasted image 20261103095225.png)
+![](/assets/Pasted image 20261103095225.png)
 
 C'est surprenant qu'il y ai ce système de nobmre approximatif qui permet
 d'exprimer des quantités et peut faire du calcul approximatif. Et pourtant,
@@ -524,7 +524,7 @@ Puis nouvelle tâche pour enfants au début du CP. Forme plus classique : positi
 à mettre sur la ligne à partir d'un nombre donné. Que mesure cette épreuve ?
 Magnitude des nombres, mais évolution des stratégies avec l'âge.
 
-![](../../assets/Pasted image 20261115151630.png)
+![](/assets/Pasted image 20261115151630.png)
 
 Il a été mis en valeur que le lien entre la qualité de la ligne numérique (donc
 avoir une représentation linéaire) est associé à la réussite en maths, surtout
@@ -533,7 +533,7 @@ au CP et CE1.
 Représentation unifiée de la genèse et développement de la représentation de la
 quantité et du nombre :
 
-![](../../assets/Pasted image 20261115151847.png)
+![](/assets/Pasted image 20261115151847.png)
 
 ## 8. Modèles développementaux
 
@@ -565,7 +565,7 @@ jeunes, qui disparaissent avec l'âge pour laisser place à des stratégies plus
 chevauchent**. Ici, les stratégies sont en compétition, l'une va dominer les
 autres à un moment donné dans une situation donnée.
 
-![](../../assets/Pasted image 20261115152716.png)
+![](/assets/Pasted image 20261115152716.png)
 
 Ce modèle est applicable au calcul mental, mais pas à d'autres compétences qui
 demandent des stratégies.
@@ -579,7 +579,7 @@ demandent des stratégies.
 - [[i_8_nombres]]
 - [[ii_8_nombres]]
 
-![](../../assets/Pasted image 20261118134452.png)
+![](/assets/Pasted image 20261118134452.png)
 
 Le temps de résolution diminue avec le temps (donc apprentissage) et la
 récupération sollicite beaucoup moins la mémoire de travail que d'autres
@@ -601,7 +601,7 @@ Compter sur les doigts serait très adapté, car ça fait une bonne stratégie q
 est tout le temps accessible. Il faut tout de même passer d'une stratégie
 externalisée à une stratégie internalisée
 
-![](../../assets/Pasted image 20261118140111.png)
+![](/assets/Pasted image 20261118140111.png)
 
 Les enfants entre 4 et 6 ans qui utilisent leurs doigts ont leurs perfs plus
 élevées en calcul et capacité élevée de MdT. À huit ans, c'est le contraire.
@@ -611,9 +611,9 @@ entraîne par 2 stratégies différentes : la stratégie "tout", ou par répéti
 par cœur des mêmes calculs (groupe contrôle actif). Entraînement dure sur 2
 semaines, 6 \* 10 minutes, 15 additions au total.
 
-![](../../assets/Pasted image 20261118140547.png)
+![](/assets/Pasted image 20261118140547.png)
 
-![](../../assets/Pasted image 20261118141357.png)
+![](/assets/Pasted image 20261118141357.png)
 
 Les enfants qui n'utilisaient pas leurs doigts l'utilisent plus, et ont aussi de
 meilleurs performances grâce à l'entraînement.
@@ -634,7 +634,7 @@ tables.
 
 ### Modèle du triple code
 
-![Modèle du Triple code de Dehaene](../../assets/Pasted image 20261118143702.png)
+![Modèle du Triple code de Dehaene](/assets/Pasted image 20261118143702.png)
 
 C'est un modèle très connu et utilisé, provenant de la neuropsy de l'adulte, sur
 des patients cérébro-lésés. On aurait différents codes ayant chacun un substrat

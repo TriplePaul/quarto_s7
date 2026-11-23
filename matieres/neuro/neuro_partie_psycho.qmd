@@ -157,11 +157,11 @@ Troubles de la répétitions :
 
 #### 1.2.1. Production orale
 
-![](../../assets/Pasted image 20261021152528.png)
+![](/assets/Pasted image 20261021152528.png)
 
 En compréhension orale
 
-![](../../assets/Pasted image 20261021152639.png)
+![](/assets/Pasted image 20261021152639.png)
 
 ### 1.3. Différents types d'aphasies de base
 
@@ -236,7 +236,7 @@ d'approche
 La récupération se fait souvent sur la même temporalité que les AVC. Conduction
 , > Broca > Wernicke, et on retrouve les mêmes troubles à l'écrit.
 
-![](../../assets/Pasted image 20261021155346.png)
+![](/assets/Pasted image 20261021155346.png)
 
 ## 2. Les apraxies
 
@@ -357,7 +357,7 @@ Plein de méthodes d'évaluations, procédures empiriques, avec peu de bases
 théoriques très définies, avec grande variabilité inter-individuelle de
 performances chez les sujest normaux.
 
-![](../../assets/Pasted image 20261021162340.png)
+![](/assets/Pasted image 20261021162340.png)
 
 <!-- FIX: diapo Plusieurs types d'erreurs  -->
 
@@ -424,7 +424,7 @@ On décrit différents sous-types selon différents facteurs :
 Donc on parle des négilgenc**es** au pluriel car il y a différentes
 manifestations.
 
-![](../../assets/Pasted image 20261112181601.png)
+![](/assets/Pasted image 20261112181601.png)
 
 Dans les manifestations productives :
 
@@ -479,7 +479,7 @@ types de négligences.
 J'ai pas écouté mais c'est pas grave je pense. En tout cas approche combinée de
 rééducation marche toujours mieux qu'un moyen d'action seul.
 
-![](../../assets/Pasted image 20261112184428.png)
+![](/assets/Pasted image 20261112184428.png)
 
 --------------------------------------------------------------------------------
 
@@ -571,7 +571,7 @@ position dans l'espace. On utilise donc une intégration multisensorielle.
 On a longtemps considéré à tort de système vestibulaire comme l'organe de
 l'orientation ce n'est pas du tout le seul :
 
-![](../../assets/Pasted image 20261120101819.png)
+![](/assets/Pasted image 20261120101819.png)
 
 Toutes les informations sont traitées dans le SNC dans la notion de **cadre de
 référence spatiale** : e sont des systèmes de coordonnées spatiales pour repérer
@@ -584,7 +584,7 @@ permet des réponses posturales et représentations spatiales de l'espace, qui
 permet la posture, qui permet locomotion, navigation, action motrice,
 perception.
 
-![](../../assets/Pasted image 20261120102755.png)
+![](/assets/Pasted image 20261120102755.png)
 
 FIX: sens de verticalité
 

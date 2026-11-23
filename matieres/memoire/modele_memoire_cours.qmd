@@ -347,7 +347,7 @@ On peut différencier 2 types d'explicites : involontaire et intentionnel
 On va maintenant croiser ces deux dichotomies de forme de mémoire et forme de
 test
 
-![](../../assets/Pasted image 20260916204142.png)
+![](/assets/Pasted image 20260916204142.png)
 
 Quand on fait un test direct, on espère qu'il va toujours y avoir une
 contribution que la meemoire implicite intentionnelle. Quand demande qu'est-ce
@@ -400,7 +400,7 @@ On a un niveau de mémoire sémantique, qui est ce "monde réel dupliqué". Il f
 donc avoir une interface entre le monde non oragnisé arrivant sous forme de
 stimulations et ce monde sémantique.
 
-![](../../assets/Pasted image 20260924102806.png)
+![](/assets/Pasted image 20260924102806.png)
 
 Sur la mémoire sémantique, on n'apprend pas de choses nouvelles, mais on
 "*actualise*" nos représentations sémantiques pré-existantes. Mais les épisodes
@@ -496,7 +496,7 @@ permet de tester le reste du modèle.
 > TODO: j'ai pas noté la fin du cours de tessa car je ne sais pas si c'est
 > important ou si ça vient même du cours
 
-![](../../assets/Pasted image 20261001185702.png)
+![](/assets/Pasted image 20261001185702.png)
 
 --------------------------------------------------------------------------------
 
@@ -513,7 +513,7 @@ intramodal, c'est-à-dire qu'il faut repasser pas la même unité dans le même
 modalité pour bénéficier de la baisse de seuil. À partir de là, on peut donc
 proposer une architecture globale dans le domaine des visages.
 
-![](../../assets/Pasted image 20261001190033.png)
+![](/assets/Pasted image 20261001190033.png)
 
 En lecture, on a la particularité de pouvoir lire de mots qu'on ne connaît pas.
 On a donc une voie de traitement qui sera dédiée à notre capacité de production
@@ -549,7 +549,7 @@ Tâche avec 3 réponses possibles en oui/non
 - 2 : sémantique : est-ce que c'est un homme politique ?
 - 3 : nom : est-ce que c'est Charles (à la présentation du visage) ?
 
-![](../../assets/Pasted image 20261001232321.png)
+![](/assets/Pasted image 20261001232321.png)
 
 Le TR est systématiquement plus court sur familiarité, puis sémantique. C'est
 donc un indice fort de la séquentialité. On ne trouvait pas non plus de patient
@@ -573,7 +573,7 @@ que de l'identification. Ça constitue l'autre voie de cette reconnaissance. La
 partie "système cognitif" du modèle est le sac avec lequel l'on met tout ce
 qu'on n'explique pas.
 
-![](../../assets/Pasted image 20261001213126.png)
+![](/assets/Pasted image 20261001213126.png)
 
 Le modèle nous permet de voir les allers-retours entre unités sémantiques et de
 reconnaissance. L'effet d'amorçage sémantique qui est très différent que par
@@ -602,7 +602,7 @@ naturellement amorçage sémantique est sensé être amorce-cible sur un court
 moment. On cherche une diffusion d'activation automatique donc euh mémoire
 sémantique implicite.
 
-![](../../assets/Pasted image 20261001232514.png)
+![](/assets/Pasted image 20261001232514.png)
 
 Mais pour le même phénomène, on pourrait très bien faire la même tache en se
 servant explicitement de notre mémoire sémantique. On se retrouve avec amorce ->
@@ -649,13 +649,13 @@ cas d'interaction, on sait que ce qu'on obtient n'est pas juste la somme des
 deux effets, les deux variables ont donc joué sur le même processus. On observe
 ici une interaction entre flou et relation d'amorce.
 
-![](../../assets/Pasted image 20261001232713.png)
+![](/assets/Pasted image 20261001232713.png)
 
 --------------------------------------------------------------------------------
 
 Diagramme fait par notebooklm :
 
-![](../../assets/Pasted image 20261022120450.png)
+![](/assets/Pasted image 20261022120450.png)
 
 Diagramme Excalidraw :
 
@@ -905,7 +905,7 @@ cycles.
 On a deux ensembles : les NIS en haut, les UIS en bas. On présente un visage :
 tant qu'il est sous les yeux, il active en continu l'URV correspondante.
 
-![](../../assets/Pasted image 20261113174819.png)
+![](/assets/Pasted image 20261113174819.png)
 
 ### 4.1. Cas A : deux unités seulement
 
@@ -959,14 +959,14 @@ légère inhibition (état de repos). Puis l'activation augmente : l'URV envoie 
 l'activation au NIS, qui en envoie aux UIS ; les trois niveaux s'envoient de
 l'activation en aller-retour.
 
-![](../../assets/Pasted image 20261113175532.png)
+![](/assets/Pasted image 20261113175532.png)
 
 Après un certain temps, le NIS « Charles » dépasse le **seuil de conscience**
 (différent du seuil d'activation) : le système répond que le stimulus est
 familier. La latence de base correspond au nombre de cycles nécessaires pour
 atteindre ce seuil. Ensuite, l'activation se stabilise (≈ plafond).
 
-![](../../assets/Pasted image 20261113175922.png)
+![](/assets/Pasted image 20261113175922.png)
 
 L'activation de « Charles » active « noble » et « anglais » dans les UIS, ce qui
 active à son tour « Diana » dans les NIS (elle est noble et anglaise).
@@ -985,7 +985,7 @@ d'informations sémantiques.
 
 ## 6. Simulation d'amorçage sémantique
 
-![](../../assets/Pasted image 20261113180012.png)
+![](/assets/Pasted image 20261113180012.png)
 
 Si on présente le nom de Diana, l'URN « Diana » est activé ; le NIS « Diana »
 augmente et le NIS « Charles » diminue (plus d'inhibition de Diana). Dans la

@@ -91,7 +91,7 @@ Le diagnostic du syndrome clinique a 2 composantes :
 - Fonctionnel : quelle fonction est perturbée ?
 - Topographique : quel niveau anatomo-fonctionnel du système est atteint ?
 
-![](../../assets/Pasted image 20261111112210.png)
+![](/assets/Pasted image 20261111112210.png)
 
 Il existe 2 types de syndrome neurologique moteur :
 
@@ -148,7 +148,7 @@ Membres inférieurs (MI)
 :::::
 
 ::::: {.column width="50%"}
-![](../../assets/Pasted image 20260911113437.png){width=100}
+![](/assets/Pasted image 20260911113437.png){width=100}
 :::::
 :::
 
@@ -201,7 +201,7 @@ Les réflexes ostéo-tendieux (ROT) sont évalués sur une échelle de 4 à 0
 - 1 - Diminués/faibles
 - 0 - Pas de réponse (aréflexie OT)
 
-![](../../assets/Pasted image 20260910155018.png)
+![](/assets/Pasted image 20260910155018.png)
 
 Le tonus musculaire dans le syndrome pyramidal est exagéré, mais si la lésion
 est aiguë (< 2 semaines), une hypotonie se manifeste, ce qui est complémentaire.
@@ -263,9 +263,9 @@ parle d'ischémique, on parle de territoires extrêmement précis. Bien garder e
 tête que les parties antérieures et postérieures sont irriguées par différentes
 artères, ce qui va affecter les conséquences d'un AVC.
 
-![](../../assets/Pasted image 20260924141937.png)
+![](/assets/Pasted image 20260924141937.png)
 
-![](../../assets/Pasted image 20260924142150.png)
+![](/assets/Pasted image 20260924142150.png)
 
 **Artères à retenir** : les carotides, l'artère cérébrale antérieure (ACA),
 l'artère cérébrale moyenne (ACM) et l'artère cérébrale postérieure (ACP). Il y a
@@ -293,7 +293,7 @@ Exemple : infarctus sylvien total droit → hémiplégie gauche proportionnelle,
 hypo/anesthésie gauche, HLH gauche, syndrome d'Anton-Babinski (héminegligence,
 anosognosie, hémissomatognosie).
 
-![](../../assets/Pasted image 20261114083500.png)
+![](/assets/Pasted image 20261114083500.png)
 
 ##### Artère Carrotide Antérieure
 
@@ -491,7 +491,7 @@ bras), complexes ont une altération de la conscience.
 
 #### 3.3.1. Formes généralisées
 
-![](../../assets/Pasted image 20260917145221.png)
+![](/assets/Pasted image 20260917145221.png)
 
 **Épilepsie d'absence de l'enfant**
 
@@ -540,7 +540,7 @@ si crise dure plus de 5 minutes et s'il y a 2 crises.
 
 #### 3.3.2. Formes focales
 
-![](../../assets/Pasted image 20260917152411.png)
+![](/assets/Pasted image 20260917152411.png)
 
 **Épilepsie focale frontale**
 
@@ -637,11 +637,11 @@ Signes cliniques (souvent recherche d'activité unilatérale) :
 Lévétiracétam est toujours le premier choix, puis lamotrigine. Noter que chaque
 médicament cible un récépteur pour limiter la propagation.
 
-![](../../assets/Pasted image 20260917162411.png)
+![](/assets/Pasted image 20260917162411.png)
 
 3/10 patients sont résistants aux traitements
 
-![](../../assets/Pasted image 20260917162750.png)
+![](/assets/Pasted image 20260917162750.png)
 
 Que faire si notre patient ne répond pas au traitement ? On va enlever la région
 de manière chirurgicale, puis diminuer voire arréter le traitement. Mais risque
@@ -656,7 +656,7 @@ lésion est proche d'une région fonctionnelle cruciale à ne pas opérer, et si
 tout est OK alors on opère. On peut enlever un lobe ou des petites parties. En
 manque d'informations, sEEG. On peut aussi faire une chirurgie palliative.
 
-![](../../assets/Pasted image 20260917163545.png)
+![](/assets/Pasted image 20260917163545.png)
 
 Chirurgies palliatives :
 
@@ -678,11 +678,11 @@ Complications de l'épilepsie :
 
 Conséquences des crises : troubles d'apprentissages etc
 
-![](../../assets/Pasted image 20260917164849.png)
+![](/assets/Pasted image 20260917164849.png)
 
 Pour les anti-épileptiques :
 
-![](../../assets/Pasted image 20260917164918.png)
+![](/assets/Pasted image 20260917164918.png)
 
 Effets des pointes :
 
@@ -748,7 +748,7 @@ protéine Tau qui sert à la communication entre neurones, trop de phosphore s'y
 connectent et on ne peut plus assurer le transport stable entre les cellules qui
 entraîne des dégenérescences.
 
-![](../../assets/Pasted image 20261001143151.png)
+![](/assets/Pasted image 20261001143151.png)
 
 ## 2. Triade diagnostique : stade (clinique)
 
@@ -767,7 +767,7 @@ les sypmtômes pour mieux expliquer aux patients.
 
 On utilise stade et le score MMSE qui est une évaluation générale.
 
-![](../../assets/Pasted image 20261001144036.png)
+![](/assets/Pasted image 20261001144036.png)
 
 ## 3. Triade diagnostique: syndrome (clinique)
 
@@ -795,11 +795,11 @@ cognitifs de dépistage
 - Antécédents familiaux neurologiques, psychiatriques et arbre généalogique
 - Traitements actuels
 
-![](../../assets/Pasted image 20261001144724.png)
+![](/assets/Pasted image 20261001144724.png)
 
-![](../../assets/Pasted image 20261001145733.png)
+![](/assets/Pasted image 20261001145733.png)
 
-![](../../assets/Pasted image 20261001150112.png)
+![](/assets/Pasted image 20261001150112.png)
 
 > WARN: Juste aller voire le diapo
 
