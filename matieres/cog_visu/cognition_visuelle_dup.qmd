@@ -4,7 +4,7 @@ aliases: []
 tags: []
 ---
 
-# EC08 Cognition Visuelle Dupierrix
+# Partie II - E. Dupierrix
 
 - [[i_cog_visuelle]]
 - [[ii_oeil]]

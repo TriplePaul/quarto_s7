@@ -5,7 +5,7 @@ tags: []
 ---
 <!-- source: 1_oeil_frequences.md -->
 
-# EC08 Cognition Visuelle Mermillod
+# Partie I - M. Mermillod
 
 ## Présentation
 
@@ -65,7 +65,7 @@ voir la couleur partout. Ça nous montre que tout est reconstruit. C'est au
 moment où on balaye le champs visuel qu'on accumule de l'information qui nous
 permet de percevoir les couleurs.
 
-![test](../assets/Pasted image 20260908135507.png)
+![test](../../assets/Pasted image 20260908135507.png)
 
 **Couche plexiforme externe** : Lieu de connections synaptiques entre les
 photorécepteurs, les cellules horizontales et les cellules bipolaires
@@ -81,7 +81,7 @@ finesse physique des récepteurs. Plus ils sont gros, moins les détails sont
 fins. Il y a environ 130 millions de bâtonnets, soit 95% des récepteurs, et pour
 la plupart des animaux ils ont que des bâtonnets.
 
-![test](../assets/Pasted image 20260908104609.png)
+![test](../../assets/Pasted image 20260908104609.png)
 
 - **Fovéa** : Environ 1.5 mm soit 5 degrés dans le champs visuel. Grande densité
   de cônes, bâtonnets absents du centre de la fovéa (2 degrés).
@@ -114,7 +114,7 @@ par degrés. Deux points sont perçus commet séparés (dits "résolus") si leur
 séparation angulaire est supérieure à $a_s$, avec $\lambda$ longueur d'onde de
 la source et $d$ diamètre de la pupille.
 
-![test](../assets/Pasted image 20260908110848.png)
+![test](../../assets/Pasted image 20260908110848.png)
 
 Jusqu'à où pouvons nous descendre pour voir une différence entre 2 stimulus ? On
 va utiliser des sinusoïdes qui va être définie par une amplitude et une
@@ -123,7 +123,7 @@ d'angles visuels. Le **cycle** est le moment où la sinusoïde passe par le mêm
 point. Notre **acuité maximale** va donc être de 60 cycles par degrés. Celle-ci
 peut être fonction de la distance.
 
-![test](../assets/Pasted image 20260908110926.png)
+![test](../../assets/Pasted image 20260908110926.png)
 
 La différence d'acuité n'est pas seulement fonction de la finesse des détails,
 mais aussi par le **niveau de contraste perceptif** déterminé par la capacité
@@ -149,7 +149,7 @@ différence d'acuité qui dépend de l'excentricité. Celle-là est pour la visi
 centrale, mais plus on est périphérique, plus ça diminue, part un rapport
 $\frac{1}{n}$.
 
-![test](../assets/Pasted image 20260908112037.png)
+![test](../../assets/Pasted image 20260908112037.png)
 
 Cette capcité dépend aussi de la maturation du système visuel, qui continue de
 se développer jusqu'à l'âge adulte.
@@ -163,14 +163,14 @@ des voies neuronales différentes pour des stimuli de différences fréquences
 spatiales. On aurait des **populations de neurones différentes en fonction de la
 résolution de l'image**.
 
-![test](../assets/Pasted image 20260908112839.png)
+![test](../../assets/Pasted image 20260908112839.png)
 
 Ce phénomène existe par fréquence spatiales, mais aussi par orientation : tous
 les 20º d'orientation visuelle : si on passe du A au D on a pas d'effets. Cela
 suggère qu'on a des populations neuronales (colonnes) spécifiques à des
 orientations et fréquences spatiales spécifiques.
 
-![test](../assets/Pasted image 20260908113157.png)
+![test](../../assets/Pasted image 20260908113157.png)
 
 Mais cette preuve est psychologique, on passe par des preuves comportements pour
 supposer un effet. On va donc utiliser de manière complémentaire la neuro et
@@ -202,9 +202,9 @@ des fréquences.
 Mais ça c'est pour les sinusoïdes unidimensionnelles, nous on travaille sur des
 images en 2 dimensions.
 
-![test](../assets/Pasted image 20260908113651.png)
+![test](../../assets/Pasted image 20260908113651.png)
 
-![test](../assets/Pasted image 20260908113748.png)
+![test](../../assets/Pasted image 20260908113748.png)
 
 --------------------------------------------------------------------------------
 
@@ -225,7 +225,7 @@ presque de reconstruire l'image, si on y ajoute la phase. Avec les 3
 informations 3 valeurs définissant les sinusoïdes (amplitude, fréquence, phase)
 on sait reconstruire l'image d'origine.
 
-![test](../assets/Pasted image 20260915101052.png)
+![test](../../assets/Pasted image 20260915101052.png)
 
 On code les barres verticales par des sinusoïdes horizontales (penser aux
 sinusoûdes simples qui font plein de lignes parallèles). On a au centre les
@@ -241,11 +241,11 @@ hautes fréquences
 
 ![[2_approche_neuro_freq 2026-11-16 14.41.59.excalidraw]]
 
-![test](../assets/Pasted image 20260915101636.png)
+![test](../../assets/Pasted image 20260915101636.png)
 
-![test](../assets/Pasted image 20260915101744.png)
+![test](../../assets/Pasted image 20260915101744.png)
 
-![test](../assets/Pasted image 20260915102337.png)
+![test](../../assets/Pasted image 20260915102337.png)
 
 Ici on élargit la gaussienne qui fait office de filtre (pas importande savoir
 comment je crois). Sinon, on peut avoir une "bande", et au lieu avoir un
@@ -268,7 +268,7 @@ Les photorécepteurs sont reliés aux cellulues ganglionnaires par les cellules
 bipolaires, ici une cellule ganglionnaire centre ON contour OFF. Ça explique
 donc la forme de champs récepteur en "cible".
 
-![test](../assets/Pasted image 20260915104114.png)
+![test](../../assets/Pasted image 20260915104114.png)
 
 On se rend compt que les champs récepteurs sont adaptés à la capture des
 contrastes.
@@ -277,11 +277,11 @@ Mais comment est-ce qu'on peut le simuler ? Avec un différence de gaussienne :
 une première activatrice avec forte amplitude (rouge) et une deuxième plus
 étendue, qui donne la représentation 3d
 
-![test](../assets/Pasted image 20260915104606.png)
+![test](../../assets/Pasted image 20260915104606.png)
 
-![test](../assets/Pasted image 20260915104954.png)
+![test](../../assets/Pasted image 20260915104954.png)
 
-![test](../assets/Pasted image 20260915104800.png)
+![test](../../assets/Pasted image 20260915104800.png)
 
 On peut donc représenter une cellule ganglionnaire au niveau computationnel de
 cette manière, et faire des simulations. On peut voir qu'elle réagit de telle ou
@@ -296,7 +296,7 @@ Le filtre centre-périphérie retire les basses fréquences redondantes, ce qui
 égalise l'énergie entre fréquences et fait ressortir les contours (l'image garde
 sa structure, pas sa luminance absolue).
 
-![test](../assets/Pasted image 20260915105217.png)
+![test](../../assets/Pasted image 20260915105217.png)
 
 Les cônes ont une réponse **tonique** : il envoie continuellement du spike tant
 qu'il est stimulé. Cependant, les bâtonnets ont une réponse **phasique**, ils
@@ -311,7 +311,7 @@ reliées aux hautes fréquences soit la foveea, et magnocellulaire, dont la tail
 de la gaine de myéline permet une réponse plus rapide, en lien avec la réponse
 phasique (rapide) qui permet la réactivité de cette voie.
 
-![test](../assets/Pasted image 20260915111851.png)
+![test](../../assets/Pasted image 20260915111851.png)
 
 Toutes les cellules :
 
@@ -320,9 +320,9 @@ Toutes les cellules :
 - Gamma : reliées aux konyocellulaires, beaucoup plus éparses, connecté via Lgn
   et colliculus supérieur, opposition bleu/jaune
 
-![test](../assets/Pasted image 20260915112402.png)
+![test](../../assets/Pasted image 20260915112402.png)
 
-![test](../assets/Pasted image 20260915112612.png)
+![test](../../assets/Pasted image 20260915112612.png)
 
 Plusieurs cellules ganglionnaires forment un nouveau type de champs récepteut
 par **pooling** au niveau des cellules de V1, et forme ici une fonction de
@@ -331,9 +331,9 @@ fonction est une sinusoïde à deux dimensions.
 
 ![[2_approche_neuro_freq 2026-11-16 16.13.13.excalidraw]]
 
-![test](../assets/Pasted image 20260915113341.png)
+![test](../../assets/Pasted image 20260915113341.png)
 
-![test](../assets/Pasted image 20260915200955.png)
+![test](../../assets/Pasted image 20260915200955.png)
 
 Donc les neurones de V1 appliqueraient des Gabor de différentes fréquences et
 orientation (tous les 20º d'angle visuel). Donc on a des pooling par Gabor sur
@@ -347,7 +347,7 @@ plusieurs centres récepteurs qui forment un "filtre allongé", sélectif à une
 orientation car est dans une direction partiuclière et fréquence car la distance
 entre zones ON et OFF détermine la largeur de la barre qu'il peut détacher.
 
-![test](../assets/Pasted image 20260915114154.png)
+![test](../../assets/Pasted image 20260915114154.png)
 
 Il se déroule ensuite un nouveau processus dans pooling dans V1 qui récupère
 pusieurs cellules simples codant pour la mˆ´me fréquence spatiale et orientation
@@ -382,7 +382,7 @@ en ville.
 
 Vision est un quart du cortex.
 
-![test](../assets/Pasted image 20260922113003.png)
+![test](../../assets/Pasted image 20260922113003.png)
 
 Dans le cortex inféro-temporal, on a des neurones qui sont sensibles à des
 formes spécifiques, comme des étoiles avec beaucoup d'angles. On découvre même

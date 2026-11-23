@@ -4,6 +4,7 @@ project:
 
 website:
   title: "S7"
+  page-navigation: true
   navbar:
     left:
       - href: index.qmd
@@ -24,12 +25,26 @@ website:
     contents:
       - href: index.qmd
         text: Index
-      - ./matieres/neuro_adulte.qmd
-      - ./matieres/cognition_visuelle_mermillod.qmd
-      - ./matieres/cognition_visuelle_dup.qmd
-      - ./matieres/dev_cog.qmd
-      - ./matieres/modele_memoire_cours.qmd
-      - ./matieres/modele_memoire_moulin.qmd
+      - text: "---"
+      - section: "EC07 Neurologie de l'adulte"
+        contents:
+          - ./matieres/neuro/neuro_partie_neuro.qmd
+          - ./matieres/neuro/neuro_partie_psycho.qmd
+      - text: "---"
+      - section: "EC08 Cognition Visuelle"
+        contents:
+        - ./matieres/cog_visu/cognition_visuelle_mermillod.qmd
+        - ./matieres/cog_visu/cognition_visuelle_dup.qmd
+      - text: "---"
+      - section: "EC09 Développement Cognitif"
+        contents:
+        - ./matieres/dev/dev_cog.qmd
+        - ./matieres/dev/dev_cog_nombre.qmd
+      - text: "---"
+      - section: "EC10 Modèles de la Mémoire"
+        contents:
+        - ./matieres/memoire/modele_memoire_cours.qmd
+        - ./matieres/memoire/modele_memoire_moulin.qmd
 
 format:
   html:
