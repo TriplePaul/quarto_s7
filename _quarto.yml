@@ -8,15 +8,15 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: ./neuro_adulte/neuro_adulte.qmd
+      - href: ./matieres/neuro_adulte.qmd
         text: Neuro
-      - href: ./cognition_visuelle/cognition_visuelle_mermillod.qmd
+      - href: ./matieres/cognition_visuelle_mermillod.qmd
         text: Mermillod
-      - href: ./dev_cog/dev_cog.qmd
+      - href: ./matieres/dev_cog.qmd
         text: Dupierrix
-      - href: ./modele_memoire/modele_memoire_cours.qmd
+      - href: ./matieres/modele_memoire_cours.qmd
         text: Sémantique
-      - href: ./modele_memoire/modele_memoire_moulin.qmd
+      - href: ./matieres/modele_memoire_moulin.qmd
         text: Épisodique
   sidebar:
     style: "floating"
@@ -24,12 +24,12 @@ website:
     contents:
       - href: index.qmd
         text: Index
-      - ./neuro_adulte/neuro_adulte.qmd
-      - ./cognition_visuelle/cognition_visuelle_mermillod.qmd
-      - ./cognition_visuelle/cognition_visuelle_dup.qmd
-      - ./dev_cog/dev_cog.qmd
-      - ./modele_memoire/modele_memoire_cours.qmd
-      - ./modele_memoire/modele_memoire_moulin.qmd
+      - ./matieres/neuro_adulte.qmd
+      - ./matieres/cognition_visuelle_mermillod.qmd
+      - ./matieres/cognition_visuelle_dup.qmd
+      - ./matieres/dev_cog.qmd
+      - ./matieres/modele_memoire_cours.qmd
+      - ./matieres/modele_memoire_moulin.qmd
 
 format:
   html:
