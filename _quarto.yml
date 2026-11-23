@@ -1,0 +1,41 @@
+project:
+  type: website
+  output-dire: docs
+
+website:
+  title: "S7"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: ./neuro_adulte/neuro_adulte.qmd
+        text: Neuro
+      - href: ./cognition_visuelle/cognition_visuelle_mermillod.qmd
+        text: Mermillod
+      - href: ./dev_cog/dev_cog.qmd
+        text: Dupierrix
+      - href: ./modele_memoire/modele_memoire_cours.qmd
+        text: Sémantique
+      - href: ./modele_memoire/modele_memoire_moulin.qmd
+        text: Épisodique
+  sidebar:
+    style: "floating"
+    search: true
+    contents:
+      - href: index.qmd
+        text: Index
+      - ./neuro_adulte/neuro_adulte.qmd
+      - ./cognition_visuelle/cognition_visuelle_mermillod.qmd
+      - ./cognition_visuelle/cognition_visuelle_dup.qmd
+      - ./dev_cog/dev_cog.qmd
+      - ./modele_memoire/modele_memoire_cours.qmd
+      - ./modele_memoire/modele_memoire_moulin.qmd
+
+format:
+  html:
+    theme:
+      light: litera
+      dark: cyborg
+    css: styles.css
+    toc: true
+    toc-expand: 2

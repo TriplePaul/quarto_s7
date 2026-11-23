@@ -1,0 +1,393 @@
+---
+id: cognition_visuelle_dup
+aliases: []
+tags: []
+---
+
+# EC08 Cognition Visuelle Dupierrix
+
+- [[i_cog_visuelle]]
+- [[ii_oeil]]
+
+## Introduction
+
+### Qu'est-ce que c'est que la perception visuelle ?
+
+Il y a l'expérience phénoménologique consciente immédiate en 3D, riche,
+détaillée, unifiée, continue. Il y a plusieurs processsus qui produisent cette
+expérience, sensoriels, perceptifs, attentionnels, cgonitifs, et décisionnels
+moteurs. On peut donc considérer que c'est le résultat de plusieurs processus
+complexes non conscients.
+
+Il faut donc vraiment faire la distinction expérience phénoménologique,
+processus objectifs, et la mesure (VD). On se demande si la perception est
+modulée par les processus cognitifs. 2 extrêmes : encapsulée (Fodor) ou très tôt
+influencée par les processus cognitifs (perméabilité cognitive). Il faut enfin
+faire la distinction entre processus purs et non perceptifs (e.g. décisionnels
+moteurs). On va donc souvent utiliser des méthodes psychophysiques pour faire la
+différence entre processus sensoriels/perceptifs et des processus décisionnels,
+dont on essaie de s'extraire.
+
+La sensation serait la détection d'une stimualtion visuelle par les récepteurs
+sensoriels. La perception est le produit du traitement de l'information visuelle
+par le système visuel & cognitif. La grosse distinction est que la sensation on
+ne sait pas ce que c'est, c'est juste une détection sans le traitement de
+l'information, l'interprétation. Pas de frontière précise.
+
+Percevoir n'est pas que la reconnaissance des scènes ou objets. Bien que ça
+l'inclut, il y a la lecture, perception des émotions, perception de l'espace
+(3D, taille, distances, positions orientation). De manière plus particulière,
+les processus attentionnels, qui compliquent les choses car ils prennent une
+part inconnue de la perception (et ce n'est pas uniquement la direction du
+regard).
+
+### Intérêt d'étudier la cognition visuelle
+
+//
+
+Pour répondre aux enjeux de neuropsychologie il faut donc qu'on agisse sur la
+vision. On va donc essayer d'isoler les processus importants dans la perception
+visuelle, malgré les contraintes du traitement du signal visuel.
+
+Étapes de traitement :
+
+- Sensation
+  - Traitement sensoriel
+
+- Perception
+- Extraction des primitives visuelles
+
+## Chapitre 1 - Traitement précoce de l'information visuelle : Extraction des caractéristiques visuelles de la scène
+
+Objectifs pédagogiques :
+
+- Comprendre les contraintes biologiques
+- Comprendre les conséquences de ces contraintes sur le traitement du signal et
+  de la fonction visuelle de manière générale
+- Identifier les principales atteintes, précoces, périphériques et centrales et
+  leurs conséquences sur le traitement du signal et la fonction visuelle
+- Atteintes du système visuel sur le fonctionnement du système visuel et le
+  traitement précoce du signal
+
+Quand on voit une pathologie, il faut qu'on se demande en quoi c'est cohérent
+avec les modèles et en quoi ça permet d'expliquer.
+
+FIX: slide plan
+
+### Contraintes anatomo-fonctionnelles du traitement du signal visuel
+
+#### A. Organisation hiérarchique de la voie rétino-géniculo-corticale
+
+Le signal transmis du système optique est assez pauvre, il ne transmet pas une
+scène, et exerce des contarintes sur le système visuel et va participer à une
+sorte de décomposition ou "dégradation" (mais pas au sens négatif, c'est
+vis-à-vis de l'expérience subjective) du signal.
+
+La tâche aveugle va créer une perte d'information à un endroit donné.
+Information compensée par reconstruction grâce au signal de l'autre œil.
+
+Caractéristiques de la rétine :
+
+- Distribution particulière des cônes et bâtonnets (on connaît)
+- Convergence des photorcepteurs différente selon la position (on connaît)
+
+Le **signal va surtout être contraint** en acuité visuelle par différents
+phénomènes :
+
+- Diffraction : du fait quel a lumière traverse un systèm acqueux, elle se
+  transforme en onde au niveau de la rétine, on va donc perdre de l'acuité. Il
+  faut donc un espace minimum entre 2 points pour les différencier.
+- Échantillonnage : espacement entre les photorécepteurs
+- Taille des photorécepteurs
+- Taille du champs récepteur de la celulle ganglionnaire
+- Résolution non homogène de l'œil
+
+Exemple : on a 2 points dans l'environnement, qui doivent stimuler 2 récepteurs
+séparés. Il faut donc 3 photorécepteurs. Quelle est donc l'acuité rétinienne max
+?
+
+Expérience où on présente aux sujets plusieurs dégradations de floutage autour
+d'un élément d'une même scène visuelle. On fait fixer ce point ou non, et si on
+fixe on ne voit pas que l'image n'est pas nette. Ça indique que le floutage
+correspond à la perte naturelle d'acuité visuelle.
+
+Hyper représentation de la vision fovéale-centrale sur 4 facteurs :
+
+- Petitesse des cônes
+- Densité accrue des récepteurs
+- Champs récepteurs plus petits
+- Macula, qui ne fait qu'un pourcent de la surface rétinienne est représentée
+  sur la moitié du cortex strié
+
+Notre système visuel est donc centré sur le traitement du centre du champs
+visuel.
+
+###### 1. L'œil, un organe actif
+
+Il ne fournit pas une copie de l'environnement. C'est un organe "actif" en quête
+constante d'informations. Il explore la scène par plusieurs mouvements :
+
+- Saccades (sélection de l'information)
+- Réflexe opto-cinétique ou nystagmus (stabilité de l'image)
+- Micro saccades de l'œil (légers tremblements)
+
+On va avoir des périodes de "trous informationnels" à cause des saccades de
+l'œil. On a donc pas du tout la scène globale qui est transmise au cerveau.
+
+####### Évaluer l'acuité visuelle
+
+Q'est-ce que la définition légale de ne pas voir ? On a 5 catégories de
+déficiences (la personne doit être évaluée avec ses lunettes ou lentilles de
+contact) :
+
+- Légère
+- Modérée
+- Sévère
+- Cécité
+- Deficience pour la vision de près
+
+L'acuité mesure la capacité de distinguer 2 points FIX: diapo œil dans le noir,
+savoir bien la lire
+
+- **Minimal Angle of Resolution (MAR)** : taille angulaire minimale permettant
+  de distinguer un test.
+- **Acuité visuelle décimale** : inverse de l'angle minimal de résolution
+  exprimé en minutes d'arc, soit $AV = \frac{1}{MAR}$ (référence de normalité :
+  10/10).
+
+**Acuité de Snellen.** Première mesure de l'acuité : on cherche la plus petite
+ligne que le patient est capable de lire à 6 m. La distance est calibrée pour
+que les lettres de cette ligne mesurent 5 minutes d'arc sur sa rétine,
+c'est-à-dire la distance à laquelle une personne sans déficience visuelle
+(10/10) doit pouvoir lire cette ligne (= $D$). Donc à 6m pour un 10/10, 1 cycle
+= 2 MAR, ou 30 c.p.d. Donc 30 cycles sur un degré. $\alpha$ est la taille d'un
+**optotype** (plus petite distance qu'on peut voir sur la charte du médecin je
+pense), donc on le calcule pas sur un cycle, on est pas sur le même
+principe. C'est la distance $\alpha$ entre 2 objets.
+
+Une acuité de 6/18 signifie qu'à 6 m de la ligne, la personne lit une lettre
+qu'une personne normale lit à 18 m (≈ 0,33 en acuité décimale).
+
+<!-- NOTE: connaître le tableau -->
+
+**Limites.** L'acuité mesure la résolution maximale du système visuel dans des
+conditions optimales, mais elle a des limites (non détaillées en cours).
+
+**Sensibilité au contraste.** Un nouveau test répond en partie à ces limites :
+on évalue le contraste, mais toujours en vision centrale. On trace pour cela la
+fonction de sensibilité au contraste, avec :
+
+- X : fréquence spatiale
+- Y : contraste
+
+L'acuité change donc en fonction du contraste.
+
+La fréquence se déduit de la valeur angulaire d'un cycle, $L = \alpha$
+(période), par la formule $F = \frac{1}{\alpha}$. On exprime l'acuité d'un
+patient en cycles par degré (_c.p.d_). (Rappel : une minute d'arc fait 60
+degrés)
+
+Conversion de l'acuité de Snellen en fréquence spatiale : voir la diapo.
+
+###### 2. Atteintes périphériques du système visuel
+
+Pas apprendre les prévalence mais les trucs ognitifs je crois. FIX: pas écouté
+
+DMLA :
+
+Manifestation cliniques :
+
+- Perte de vision centrale
+- 
+
+---
+
+<!-- source: 6_cog_visuelle.md -->
+
+# CM6 Cognition visuelle
+
+- [[i_6_cog_visuelle]]
+
+Ces pathologies ont un impact sur le signal visuel envoyé au cerveau, et on veut
+savoir comment le cortex va s'y adapter et comment le cerveau va changer. (but
+de cette section est juste d'avoir une idée générale)
+
+**DMLA** (dégénérescence maculaire liée à l'âge).
+
+**Dépigmentations rétiniennes** : perte des pigments des récepteurs, bâtonnets
+puis cônes. Se développe par une vision en tunnel puis vision centrale jusqu'à
+cécité. Bilatéral et grande variabilité.
+
+**Glaucome** : pression dans l'œil causé par un manque d'évacuation de l'humeur
+endommage le nerf optique
+
+**Cataracte** : opacification pathologique du cristallin qui réduit
+progressivement la vision. Altération de la vision des couleurs.
+
+**Rétinopathies diabétiques** : 40% des diabétiques, perte de l'étanchéité des
+capillaires rétiniens, ischémie, donc néovascularisation comme en DMLA causant
+des œdèmes oculaires décollant la rétine.
+
+**Syndrome Charles Bonnet** cause des hallucinations visuelles, mais pas de
+psychose. Hallucinations visuelles rétinopathies ou ophtalmopathiques.
+
+Ça fait penser au membre fantôme : déficit à un membre, qui cause des
+perceptions là-dedans. Ça fonctionnerait par rétro-injection sur V1.
+
+Règle de contro-latéralité de la vision : effet de superposition verticale
+médiane visuelle. Dans la figure du haut, la zone de chevauche ?? FIX: diapo
+
+Structure en 6 couches du LGN pour séparer les cellules M et P. P sur les 4
+couches supérieures, M les deux inférieures. Dans V1, il y a un codage **spatial,
+local, et dimensionnel**. On analyse la scène champs récepteur par champs
+récepteur. Les dimensions codées localement sont luminance, couleur,
+orientation, fréquence spatiale, mouvement, disparités. On a donc un codage
+d'une multitude de cartes rétinotopiques.
+
+### Cécité corticale (V1)
+
+FIX: diapo Lésion de V1 --> cécité corticale
+
+Dans la cécité corticale (atteinte de V1) : rétrécissement du champ visuel,
+manifeste phénomène de **blindsight**. Il y en a 2 types dans la littérature.
+**Type 1** est performance supérieure au hasard sans perception. **Type 2**,
+impression vague, expérience subjective floue, et toujours supérieur au hasard.
+
+PJG analyse périmétrique de PJG (qui permet de savoir son champs visuel
+avegule). On présente des baguettes orientées, et il doit donner 3 types de
+réponses : verbalement, réponse manuelle, réponse motrice (attraper la
+baguette).
+
+FIX: 2 diapos anayse périmétrique
+
+Bonne corrélation pour reach mais pas pour les autres. Il y a donc des bonnes
+capacités résiduelles dans la partie aveugle, que dans la tâche motrice. On peut
+revenir sur nos modèles neurofonctionnels. Dans V1, il y a deux grandes voies de
+traitements : voie de perception pour l'**action** (dorsale) et pour
+l'**identification** (ventrale). Il y a des aires spécialisées.
+
+On va faire une tache avec singes lésés à V1. On fait du conditionnement pour
+lui apprendre à réaliser des saccades oculaires après un indice présenté dans
+la partie aveugle.
+
+Puis tâche sur patients blindsight en TMS (ou pas je crois ptet on cause ça par
+TMS) // : première question pour savoir s'il y a eu une perception consciente ou
+pas. Puis, on demande orientation de la barre et à quel point on est confiant
+dans notre réponse. Chez chacun des sujets, réponses au-delà du hasard. Il y a
+donc un traitement implicite.
+
+Implicit visual processing is not restricted to blindsight patients (or V1
+lésions). Amorçage subliminal. FIX: diapo là j'écoute à peine
+
+Si je prends tous mes essais et que je sépare entre amorce supérieure a 5 et
+inférieure à 5. On va voir quand est-ce qu'on a une différence d'activité au
+niveau du cortex moteur. On a bien une différence qui apparaît plus tôt.
+
+---
+
+<!-- source: 7_cog_visuelle.md -->
+
+# CM7 cognition visuelle
+
+## 4. Atteinte des radiation optiques ou du cortex primaires
+
+### 4.3. Modèle pathologique : double rôle de V1 et voies sous-corticales
+
+On reste pour l'instant dans un modèle qu'ascendant. On va essayer d'expliquer
+deux phénomènes :
+
+- "_Sight in blindisght_" : alors qu'il ne sait pas reporter la présence d'un
+  objet dans la partie aveugle, il a des capacités résiduelles. On propose que
+  c'est par les voies sous-corticale, qui vont se projeter sur les aires
+  extra-striées (au-delà de V1).
+- "_Blind in blindsight_" : pas capable de reporter les stimuli qui vont
+  pourtant activer les aires extra-striées
+
+3 hypothèses sur le rôle de V1 dans la conscience visuelle :
+
+1. L'activation des aires extrastriées qui dépend des afférences massives de la
+   voie géniculo-striée
+2. La rétropropagation des signaux issus des aires corticales de niveau
+   supérieur. Donc pas de conscience car l'information n'est pas réinjectée et
+   traitée par V1. Aller de V1 aux aires supérieures n'est pas nécessaire.
+3. Absence d'une double activation de V1 par boucle de rétroinjection avec aller
+   et retour, nécessaire à la conscience.
+
+Cette hypothèse de rétroinjection est défendue par une étude. On présente des
+trigrammes aux sujets au temps 0, puis on perturbe V1 par TMS à un intervalle
+variable au cours de l'étude entre 0 et 200 ms. On va avoir une baisse de
+perofrmance quand la TMS est active entre 800 et 100 ms après le stimulus.
+Sachant que V1 actif de 40 à 60 ms. Cortex inféro-temporal actif à partir de
+100-120 ms. On retrouve donc activité de V1 au même moment qui serait crucial
+pour catégoriser. Mais pour montrer qu'on a une rétro-injection il faudrait
+montrer qu'inhiber les zones supérieures baisse aussi les performances.
+
+### 4.4. Traitement : peut-on restaurer la vision des patients hémianopsiques ?
+
+Il peut y avoir une récupération spontanée après quelques mois, par exemple s'il
+y a eu une hémorragie, mais au-delà de ça on peut la considérer comme
+irréversible. Il y a des thérapies compensatoire, ou de réhabilitation.
+
+Thérapie de compensation :
+
+- Apprendre à mieux explorer le champs visuel. Dans les mesures périmétriques,
+  ça amène à des baisse de TR dans des tâches, élargissement du champs de
+  recherche visuelle, et dans les scores au questionnaire d'évaluatio subjective
+
+**Thérapie de réhabilitation** : on va proposer des tâches dans la partie "zone
+grise" de détection du patient. On va faire des tâches de discrimination de
+formes, etc. Résultats avec récupération variable. Aussi, on va faire des tâches
+pour rendre explicites des traitements implicites. On entraîne à choix forcé, et
+ça se répercute sur les tâches explicites (mais prendre ses gardes assez peu de
+réplications).
+
+## Modèle de Bullier
+
+Il se place dans un contexte de modèles qui tente d'expliquer la reconnaissance
+visuelle. Il défend que les boucles de rétroinjections permet reconnaissance
+d'objet (et non pas conscience comme avant). Il propose un modèle qu'on aura un
+traitement très rapide de l'information qui va faire une première anlyse, qui
+sera rétroinjectée au niveau de V1 et V2, qui agiraient comme des tableaux noirs
+sur lesquels les aires supérieures vont écrire.
+
+Il remet en question les modèles hiéarchiques, traitement du global vers le
+local, de 3D à 2D. Il permet différentes prédictions :
+
+- Global avant local
+- Global 3D module analyse locale
+- Première analyse supprimée par supression de l'information de luminance, et
+  robuste à un faible contraste
+
+Bullier se base sur des études qui montrent la latence d'activité de différentes
+aires. On s'attend à un rôle sur la spécialisation fonctionnelle précoce. Étude
+IRM où on mesure activité des aires visuelles. Que le stimulus soit présent ou
+pas, le pic d'activation n'est pas dépendante de la présence ou non du stimulus.
+Donc ça va à l'encontre de l'idée que l'activité de V1 est uniquement causée par
+le stimulus.
+
+Activité BOLD plus forte quand on perçoit la cible. Donc plus liée à la
+performance qu'à la présence du stimulus. Les auteurs vont donc défendre l'idée
+que ça renvoie à de l'attention descendante.
+
+<!-- FIX: diapos modulations contextuelles avec illussion pac man -->
+
+Truc de V5 pourrait expliquer tous les effets contextuels dans la vision.
+
+Quel rôle de V1 pour la perception visuelle ? Tâche de discrimination
+figure/fond avec des macaques. Différencitaiton du signal à 90 ms. Il y a donc 2
+phases distinctes dans V1 : une réponse précoce liée au traitement ascendant, et
+tardive vers 90ms qui apprait que lorsque l'animal détecte la figure. Montre en
+aucun cas que c'est lié aux rétroinjections, même défaut que toutes les études
+précédentes.
+
+Donc étude qui tente d'y remédier par TMS à la fois sur V5 et V1. Activer V5
+au-dessus du seuil va faire voir une phosphène en mouvement. Ils vont activer
+une activation sur V5 et une pertruvation de V1 à 80% du seuil, au moment où les
+rétroinjections arrivent. Graphique se lit en ms de perturbation de V1 par
+rapport à V5. Ordonnée = rapport de présence de phosphènes.
+
+Expliquer comment c'est possible qu'on puisse continuer de voir un objet
+immobile alors que V1 est inhibé. V5 aurait donc une rétroaction aussi sur
+d'autres zones comme V2. Ou qu'on a perturbé le retour de V5 spécifiquement et
+pas les autres j'ai pas tout compris
+

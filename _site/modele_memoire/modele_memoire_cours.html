@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>modele_memoire_cours – S7</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-cbed20f07cd0a3452a6886fe8d146970.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-181d6909a009fe39f73b5212012c69f5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-cbed20f07cd0a3452a6886fe8d146970.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
+        setTimeout(() => {
+          window.scrollTo(0, scrollY);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">S7</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../neuro_adulte/neuro_adulte.html"> 
+<span class="menu-text">Neuro</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../cognition_visuelle/cognition_visuelle_mermillod.html"> 
+<span class="menu-text">Mermillod</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../dev_cog/dev_cog.html"> 
+<span class="menu-text">Dupierrix</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../modele_memoire/modele_memoire_cours.html"> 
+<span class="menu-text">Sémantique</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../modele_memoire/modele_memoire_moulin.html"> 
+<span class="menu-text">Épisodique</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
+</div>
+            <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modele_memoire/modele_memoire_cours.html">EC10 Mémoire Sémantique</a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Section">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Index</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../neuro_adulte/neuro_adulte.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EC07 Neurologie de l’Adulte</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cognition_visuelle/cognition_visuelle_mermillod.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EC08 Cognition Visuelle Mermillod</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cognition_visuelle/cognition_visuelle_dup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EC08 Cognition Visuelle Dupierrix</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../dev_cog/dev_cog.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EC09 Développement Cognitif</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modele_memoire/modele_memoire_cours.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">EC10 Mémoire Sémantique</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modele_memoire/modele_memoire_moulin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EC10 Mémoire Épisodique</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#ec10-mémoire-sémantique" id="toc-ec10-mémoire-sémantique" class="nav-link active" data-scroll-target="#ec10-mémoire-sémantique">EC10 Mémoire Sémantique</a>
+  <ul class="collapse">
+  <li><a href="#rôle-et-nature-des-modèles-en-psychologie-cognitive" id="toc-rôle-et-nature-des-modèles-en-psychologie-cognitive" class="nav-link" data-scroll-target="#rôle-et-nature-des-modèles-en-psychologie-cognitive">1. Rôle et nature des modèles en Psychologie Cognitive</a>
+  <ul class="collapse">
+  <li><a href="#quelles-contraintes-pour-un-modèle-de-la-mémoire" id="toc-quelles-contraintes-pour-un-modèle-de-la-mémoire" class="nav-link" data-scroll-target="#quelles-contraintes-pour-un-modèle-de-la-mémoire">1.1. Quelles contraintes pour un modèle de la mémoire ?</a></li>
+  <li><a href="#pourquoi-recourir-aux-modèles-et-prédominance-de-la-métaphore-spatiale-représentationnelle" id="toc-pourquoi-recourir-aux-modèles-et-prédominance-de-la-métaphore-spatiale-représentationnelle" class="nav-link" data-scroll-target="#pourquoi-recourir-aux-modèles-et-prédominance-de-la-métaphore-spatiale-représentationnelle">1.2. Pourquoi recourir aux modèles et prédominance de la métaphore spatiale-représentationnelle ?</a></li>
+  <li><a href="#les-trois-manifestations-de-la-mémoire" id="toc-les-trois-manifestations-de-la-mémoire" class="nav-link" data-scroll-target="#les-trois-manifestations-de-la-mémoire">Les trois manifestations de la mémoire</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#cm2-modèles-de-la-mémoire" id="toc-cm2-modèles-de-la-mémoire" class="nav-link" data-scroll-target="#cm2-modèles-de-la-mémoire">CM2 Modèles de la mémoire</a>
+  <ul class="collapse">
+  <li><a href="#comment-faire-appel-à-la-mémoire" id="toc-comment-faire-appel-à-la-mémoire" class="nav-link" data-scroll-target="#comment-faire-appel-à-la-mémoire">2. Comment faire appel à la mémoire ?</a>
+  <ul class="collapse">
+  <li><a href="#le-point-de-vue-de-lexpérimentateur-directindirect" id="toc-le-point-de-vue-de-lexpérimentateur-directindirect" class="nav-link" data-scroll-target="#le-point-de-vue-de-lexpérimentateur-directindirect">2.1. Le point de vue de l’expérimentateur : direct/indirect</a></li>
+  <li><a href="#le-point-de-vue-du-sujet-expliciteimplicite" id="toc-le-point-de-vue-du-sujet-expliciteimplicite" class="nav-link" data-scroll-target="#le-point-de-vue-du-sujet-expliciteimplicite">2.2. Le point de vue du sujet : explicite/implicite</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#cm3-modèles-de-la-mémoire" id="toc-cm3-modèles-de-la-mémoire" class="nav-link" data-scroll-target="#cm3-modèles-de-la-mémoire">CM3 Modèles de la mémoire</a>
+  <ul class="collapse">
+  <li><a href="#les-modèles-de-la-mémoire-sémantique" id="toc-les-modèles-de-la-mémoire-sémantique" class="nav-link" data-scroll-target="#les-modèles-de-la-mémoire-sémantique">3. Les modèles de la mémoire sémantique</a>
+  <ul class="collapse">
+  <li><a href="#contraintes-issues-de-la-métaphore-représentationnelle" id="toc-contraintes-issues-de-la-métaphore-représentationnelle" class="nav-link" data-scroll-target="#contraintes-issues-de-la-métaphore-représentationnelle">3.1. Contraintes issues de la métaphore représentationnelle</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#cm4-modèles-de-la-mémoire" id="toc-cm4-modèles-de-la-mémoire" class="nav-link" data-scroll-target="#cm4-modèles-de-la-mémoire">CM4 Modèles de la mémoire</a></li>
+  <li><a href="#cm5-modèles-de-la-mémoire" id="toc-cm5-modèles-de-la-mémoire" class="nav-link" data-scroll-target="#cm5-modèles-de-la-mémoire">CM5 Modèles de la mémoire</a>
+  <ul class="collapse">
+  <li><a href="#lamorçage-sémantique-chez-les-patients-prosopagnosiques-remise-en-cause-de-la-hiérarchie" id="toc-lamorçage-sémantique-chez-les-patients-prosopagnosiques-remise-en-cause-de-la-hiérarchie" class="nav-link" data-scroll-target="#lamorçage-sémantique-chez-les-patients-prosopagnosiques-remise-en-cause-de-la-hiérarchie">1. L’amorçage sémantique chez les patients prosopagnosiques : remise en cause de la hiérarchie</a>
+  <ul class="collapse">
+  <li><a href="#réapprentissage-de-visages-célèbres" id="toc-réapprentissage-de-visages-célèbres" class="nav-link" data-scroll-target="#réapprentissage-de-visages-célèbres">1.1. Réapprentissage de visages célèbres</a></li>
+  <li><a href="#amorçage-sémantique-implicite" id="toc-amorçage-sémantique-implicite" class="nav-link" data-scroll-target="#amorçage-sémantique-implicite">1.2. Amorçage sémantique implicite</a></li>
+  <li><a href="#conséquence-le-seuil-du-modèle-séquentiel-est-invalidé" id="toc-conséquence-le-seuil-du-modèle-séquentiel-est-invalidé" class="nav-link" data-scroll-target="#conséquence-le-seuil-du-modèle-séquentiel-est-invalidé">1.3. Conséquence : le seuil du modèle séquentiel est invalidé</a></li>
+  </ul></li>
+  <li><a href="#le-modèle-interactif-de-burton-bruce-johnston-1990" id="toc-le-modèle-interactif-de-burton-bruce-johnston-1990" class="nav-link" data-scroll-target="#le-modèle-interactif-de-burton-bruce-johnston-1990">2. Le modèle interactif de Burton, Bruce &amp; Johnston (1990)</a>
+  <ul class="collapse">
+  <li><a href="#une-architecture-en-trois-niveaux" id="toc-une-architecture-en-trois-niveaux" class="nav-link" data-scroll-target="#une-architecture-en-trois-niveaux">2.1. Une architecture en trois niveaux</a></li>
+  <li><a href="#plus-de-seuil-dactivation-mais-un-seuil-de-conscience" id="toc-plus-de-seuil-dactivation-mais-un-seuil-de-conscience" class="nav-link" data-scroll-target="#plus-de-seuil-dactivation-mais-un-seuil-de-conscience">2.2. Plus de seuil d’activation, mais un seuil de conscience</a></li>
+  <li><a href="#le-schéma-du-modèle" id="toc-le-schéma-du-modèle" class="nav-link" data-scroll-target="#le-schéma-du-modèle">2.3. Le schéma du modèle</a></li>
+  <li><a href="#deux-sources-de-gain-répétition-et-sémantique" id="toc-deux-sources-de-gain-répétition-et-sémantique" class="nav-link" data-scroll-target="#deux-sources-de-gain-répétition-et-sémantique">2.4. Deux sources de gain : répétition et sémantique</a></li>
+  </ul></li>
+  <li><a href="#les-principes-du-modèle-iac" id="toc-les-principes-du-modèle-iac" class="nav-link" data-scroll-target="#les-principes-du-modèle-iac">3. Les principes du modèle IAC</a>
+  <ul class="collapse">
+  <li><a href="#unités-ensembles-et-connexions" id="toc-unités-ensembles-et-connexions" class="nav-link" data-scroll-target="#unités-ensembles-et-connexions">3.1. Unités, ensembles et connexions</a></li>
+  <li><a href="#activation-et-inhibition" id="toc-activation-et-inhibition" class="nav-link" data-scroll-target="#activation-et-inhibition">3.2. Activation et inhibition</a></li>
+  <li><a href="#cycles-latence-et-seuil-de-conscience" id="toc-cycles-latence-et-seuil-de-conscience" class="nav-link" data-scroll-target="#cycles-latence-et-seuil-de-conscience">3.3. Cycles, latence et seuil de conscience</a></li>
+  </ul></li>
+  <li><a href="#quelques-phénomènes-basiques-de-iac" id="toc-quelques-phénomènes-basiques-de-iac" class="nav-link" data-scroll-target="#quelques-phénomènes-basiques-de-iac">4. Quelques phénomènes basiques de IAC</a>
+  <ul class="collapse">
+  <li><a href="#cas-a-deux-unités-seulement" id="toc-cas-a-deux-unités-seulement" class="nav-link" data-scroll-target="#cas-a-deux-unités-seulement">4.1. Cas A : deux unités seulement</a></li>
+  <li><a href="#cas-b-plusieurs-uis" id="toc-cas-b-plusieurs-uis" class="nav-link" data-scroll-target="#cas-b-plusieurs-uis">4.2. Cas B : plusieurs UIS</a></li>
+  <li><a href="#cas-c-plusieurs-urv" id="toc-cas-c-plusieurs-urv" class="nav-link" data-scroll-target="#cas-c-plusieurs-urv">4.3. Cas C : plusieurs URV</a></li>
+  <li><a href="#cas-d-plusieurs-uis-et-plusieurs-nis" id="toc-cas-d-plusieurs-uis-et-plusieurs-nis" class="nav-link" data-scroll-target="#cas-d-plusieurs-uis-et-plusieurs-nis">4.4. Cas D : plusieurs UIS et plusieurs NIS</a></li>
+  <li><a href="#le-problème-de-la-dénomination" id="toc-le-problème-de-la-dénomination" class="nav-link" data-scroll-target="#le-problème-de-la-dénomination">4.5. Le problème de la dénomination</a></li>
+  </ul></li>
+  <li><a href="#activation-des-nis-et-structure-des-courbes" id="toc-activation-des-nis-et-structure-des-courbes" class="nav-link" data-scroll-target="#activation-des-nis-et-structure-des-courbes">5. Activation des NIS et structure des courbes</a></li>
+  <li><a href="#simulation-damorçage-sémantique" id="toc-simulation-damorçage-sémantique" class="nav-link" data-scroll-target="#simulation-damorçage-sémantique">6. Simulation d’amorçage sémantique</a>
+  <ul class="collapse">
+  <li><a href="#le-temps-nest-plus-le-facteur-critique" id="toc-le-temps-nest-plus-le-facteur-critique" class="nav-link" data-scroll-target="#le-temps-nest-plus-le-facteur-critique">6.1. Le temps n’est plus le facteur critique</a></li>
+  <li><a href="#prédictions" id="toc-prédictions" class="nav-link" data-scroll-target="#prédictions">6.2. Prédictions</a></li>
+  <li><a href="#interférence" id="toc-interférence" class="nav-link" data-scroll-target="#interférence">6.3. Interférence</a></li>
+  </ul></li>
+  <li><a href="#inférence-dans-un-système-interactif-le-modèle-prosopagnosique" id="toc-inférence-dans-un-système-interactif-le-modèle-prosopagnosique" class="nav-link" data-scroll-target="#inférence-dans-un-système-interactif-le-modèle-prosopagnosique">7. Inférence dans un système interactif : le modèle « prosopagnosique »</a>
+  <ul class="collapse">
+  <li><a href="#v-n-et-n-n-chez-le-sujet-sain" id="toc-v-n-et-n-n-chez-le-sujet-sain" class="nav-link" data-scroll-target="#v-n-et-n-n-chez-le-sujet-sain">7.1. V-N et N-N chez le sujet sain</a></li>
+  <li><a href="#modèle-lésé" id="toc-modèle-lésé" class="nav-link" data-scroll-target="#modèle-lésé">7.2. Modèle lésé</a></li>
+  <li><a href="#conséquence-la-correspondance-anatomo-clinique" id="toc-conséquence-la-correspondance-anatomo-clinique" class="nav-link" data-scroll-target="#conséquence-la-correspondance-anatomo-clinique">7.3. Conséquence : la correspondance anatomo-clinique</a></li>
+  </ul></li>
+  <li><a href="#effet-de-surface-dans-lamorçage-par-répétition-un-problème-en-suspens" id="toc-effet-de-surface-dans-lamorçage-par-répétition-un-problème-en-suspens" class="nav-link" data-scroll-target="#effet-de-surface-dans-lamorçage-par-répétition-un-problème-en-suspens">8. Effet de surface dans l’amorçage par répétition : un problème en suspens</a>
+  <ul class="collapse">
+  <li><a href="#le-renforcement-synaptique" id="toc-le-renforcement-synaptique" class="nav-link" data-scroll-target="#le-renforcement-synaptique">8.1. Le renforcement synaptique</a></li>
+  <li><a href="#le-problème-de-lintramodalité" id="toc-le-problème-de-lintramodalité" class="nav-link" data-scroll-target="#le-problème-de-lintramodalité">8.2. Le problème de l’intramodalité</a></li>
+  <li><a href="#ellis-young-flude-hay-1987" id="toc-ellis-young-flude-hay-1987" class="nav-link" data-scroll-target="#ellis-young-flude-hay-1987">8.3. Ellis, Young, Flude &amp; Hay (1987)</a></li>
+  <li><a href="#bruce-valentine-1985" id="toc-bruce-valentine-1985" class="nav-link" data-scroll-target="#bruce-valentine-1985">8.4. Bruce &amp; Valentine (1985)</a></li>
+  <li><a href="#vers-les-modèles-hybrides" id="toc-vers-les-modèles-hybrides" class="nav-link" data-scroll-target="#vers-les-modèles-hybrides">8.5. Vers les modèles hybrides</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#cm6-modèle-mémoire" id="toc-cm6-modèle-mémoire" class="nav-link" data-scroll-target="#cm6-modèle-mémoire">CM6 modèle mémoire</a>
+  <ul class="collapse">
+  <li><a href="#unités-de-reconnaissance-des-visages" id="toc-unités-de-reconnaissance-des-visages" class="nav-link" data-scroll-target="#unités-de-reconnaissance-des-visages">Unités de reconnaissance des visages ?</a></li>
+  <li><a href="#modèle-hybride" id="toc-modèle-hybride" class="nav-link" data-scroll-target="#modèle-hybride">Modèle hybride</a></li>
+  <li><a href="#le-système-de-représentations-perceptives-prs" id="toc-le-système-de-représentations-perceptives-prs" class="nav-link" data-scroll-target="#le-système-de-représentations-perceptives-prs">Le système de représentations perceptives (PRS)</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<!-- source: 1_modele_memoire.md -->
+<section id="ec10-mémoire-sémantique" class="level1">
+<h1>EC10 Mémoire Sémantique</h1>
+<ul>
+<li>[[i_modele_memoire]]</li>
+<li>[[ii_modele_memoire]]</li>
+</ul>
+<section id="rôle-et-nature-des-modèles-en-psychologie-cognitive" class="level2">
+<h2 class="anchored" data-anchor-id="rôle-et-nature-des-modèles-en-psychologie-cognitive">1. Rôle et nature des modèles en Psychologie Cognitive</h2>
+<p>Qu’est-ce qu’on attend d’un psychologue ? Manière de penser et prendre des problemes et avoir une démarche de curisosité et comprenant enjeux et conséquences à la fois sur la connaissance et le cas qu’on a en face de nous. On ne cherche pas a enseigner des savoirs, qui sont trop changeants, mais du savoir-faire. Pour comprendre le domaine il faut comprendre ses enjeux.</p>
+<p>Fortement conseillé de prendre des notes. Le cours est très lié au cours de l’année dernière. Il y aura des TD qui commencent tard et qui sont très importants.</p>
+<section id="quelles-contraintes-pour-un-modèle-de-la-mémoire" class="level3">
+<h3 class="anchored" data-anchor-id="quelles-contraintes-pour-un-modèle-de-la-mémoire">1.1. Quelles contraintes pour un modèle de la mémoire ?</h3>
+<p>Le concept de mémoire peut s’exprimer de 3 manière différentes :</p>
+<ol type="1">
+<li>Mémoire par apprentissage, en vivant, notre système se modifie, notre comportement est modifié. On a pas besoin de conscience qu’on a vécu cet apprentissage. Marcher est une expression de mémoire. Même une porte à de la mémoire</li>
+<li>Mémoire permettant de comprendre le monde. Demande d’avoir conscience que le monde existe en dehors du moi actuel. On a un sens des choses, c’est-à-dire qu’on sait ce que sont les objets dans le monde et les relations entre eux. Quelles ont été les régularités</li>
+<li>Mémoire des évènements singuliers vécus qui permet d’expérimenter mentalement une situation ancrée dans une situation spatio-temporelle précise, c’est le “remember”</li>
+</ol>
+<p>![[1_modele_memoire 2026-09-10 11.26.39.excalidraw]]</p>
+<p>Ces expressions ne correspondent pas nécéssairement à des systèmes de mémoire différents. On ne connait pas les relations entre les mécanismes les sous-tendant.</p>
+<p>Comment peut-on intervenir dans cette affaire ? On va tenter de remédier le fonctionnement de l’être humain, on doit donc agir dessus et devons alors le comprendre. Mais on a un gros problème : on peut être sur que chaque instant est différent de l’instant passé. Chaque situation est inédite. C’est très important car la mémoire est l’influence du passé sur le présent mais ce dernier est toujours différent du premier. Il faut donc que notre système soit capable de <strong>généralisation</strong> soit ici la capacité de gérer des ressemblances de stimuli présents avec des représentations en mémoire.</p>
+<p>Fun fact campus de Grenoble a été crée pour faire des robots qui se balladaient dans l’environnemnet. Un ordinateur est très performant car il transforme un environnement mouvant en quelque chose de fixe. On a une interface entre le monde et l’ordinateur qui est son utilisateur. Mais si on veut plonger un système directement dans l’environnement, il faut qu’il gère intelligemment cette généralisation.</p>
+</section>
+<section id="pourquoi-recourir-aux-modèles-et-prédominance-de-la-métaphore-spatiale-représentationnelle" class="level3">
+<h3 class="anchored" data-anchor-id="pourquoi-recourir-aux-modèles-et-prédominance-de-la-métaphore-spatiale-représentationnelle">1.2. Pourquoi recourir aux modèles et prédominance de la métaphore spatiale-représentationnelle ?</h3>
+<p>Comment s’y prendre ? De manière scientifique standard, ce qu’on doit expliquer est quelque chose à expliquer et non quelque chose sur quoi j’ai des impulsions non définies ? On doit expliquer quelque chose qu’on ne connait pas. On imagine donc que ça fonctionne comme quelque chose que je connais et qui a les même propriétés de fonctionnement. Par expérimentation on peut voir si humain à les mêmes propriétés de fonctionnement que le modèle.</p>
+<p>Actuellement, 80% des recherches qu’on pourra lire, et 99% des autres recherches qui se servent de la mémoire, partagent le fait d’avoir choisi un certain type de modèle pour réfléchir sur la mémoire. C’est que la <strong>mémoire est un espace</strong>, où on y range des choses. Il est donc important d’être conscient des choix qui ont été faits. Ce sont des paris et non des réalités.</p>
+<p>Cette manière de considérer la mémoire, en tant qu’espace, est la manière standard d’y penser chez nous. Ce consensus permet d’avancer. Une fois qu’on sait ça plein de choses deviennent évidentes : on a une pseudo-définition de la mémoire. Qu’est-ce que la mémoire ? Procédure encodage-stockage-récupération.</p>
+<p>Mais si donc la mémoire est un stocakge, on peut pas tenir le monde extérieur dans la tête. À partir de cet extérieur, on doit faire un <strong>codage</strong> (transformer le stimulus en queqlue chose de même nature que jsp quoi), qui nous donne une objet intérieur. Espace intérieur =/= extérieur. Se servir de la mémoire est retrouver la chose qu’on a mis à un endroit particulier (récupération, réactivation).</p>
+<p>Mais donc si on vit des choses différentes à chaque instant, ça fait que ce modèle résiste très mal au phénomène de généralisation, car rien ne se ressemble vraiment, chaque stimulus est différent. Le système doit être capable de dire que “cette chose qui arrive” ressemble assez à “cette chose stockée”.</p>
+</section>
+<section id="les-trois-manifestations-de-la-mémoire" class="level3">
+<h3 class="anchored" data-anchor-id="les-trois-manifestations-de-la-mémoire">Les trois manifestations de la mémoire</h3>
+<p>La solution conventionnelle a été apportée par Tulving et a restructuré les connaissances. Les 3 comportements de la mémoire correspondent à 3 systèmes différents, définis de plusieurs manières.</p>
+<p>La <strong>première</strong> fait toujours consensus, très philosophique, en termes des “niveaux de conscience”. Ces systèmes sont différents mais emboîtés : procédurale est mémoire de base, puis sémantique sous partie de procédurale, etc.</p>
+<ul>
+<li>La mémoire procédurale s’exprime sans conscience du monde et de soi-même (anoétique).</li>
+<li>La mémoire sémantique permet de connaître le monde, on sait ce qu’est une pomme et que je n’aime pas les pommes. Elle permet de nous faire comprendre que le monde existe indépendament de nous-même (noèse).</li>
+<li>Épisodique est une capacité à revivre un moment passé : dmeande une conscience de nous-même, notre existance permanente, réflexif, qu’on peut appeler voyage mental.</li>
+</ul>
+<p>![[1_modele_memoire 2026-09-10 11.42.00.excalidraw]]</p>
+<dl>
+<dt>La <strong>deuxième</strong> définition est génétique, en suivant les étapes de développement</dt>
+<dd>
+la mémoire épisodique arrive forcément après la sémantique, ce qui peut donner l’impression que les enfants n’en ont pas. Mais ca colle pas trop avec certaines données. Cet emboîtement est plus critiqué que la première définition.
+</dd>
+</dl>
+<p>Cet emboîtement est extrèmement contraint par le type de modèle qu’on a choisi. On a 3 comportements de mémoire : procédural, sémantique, épisodique. Ils ne sont pas tous aussi facilement concilliées avec le modèle sptial.</p>
+<ul>
+<li>La mémoire sémantique a le mécanisme le plus simple à théoriser et définir. On stocke des représentations qu’on connait. C’est donc une mémoire qui va extrêmement bien avec la métaphore spatiale. Elle peut être organisé de plusieurs manières.</li>
+<li>La mémoire procédurale ne colle pas très bien elle, pas demanière très efficace. La conséquence est qu’on a beaucoup de règles de fonctionnemnet mais très peu d’explications.</li>
+<li>La mémoire épisodique elle est définie comme une activation de représentations par la scène actuelle, recodage d’évènements. Pour s’en souvenir, il faut un système capable de très rapidement créer un index qui va relier les choses activées. Elle arrive donc après la mémoire sémantique.</li>
+</ul>
+<p>OK celui la je suis pas sur pas trop prendre au sérieux par pitié ne pas faire trop confiance à ce schéma</p>
+<p>![[1_modele_memoire 2026-09-10 11.49.51.excalidraw]]</p>
+<hr>
+<!-- source: 2_taches_squire.md -->
+</section>
+</section>
+</section>
+<section id="cm2-modèles-de-la-mémoire" class="level1">
+<h1>CM2 Modèles de la mémoire</h1>
+<ul>
+<li>[[i_taches_squire]]</li>
+<li>[[ii_taches_squire]]</li>
+<li>[[iii_taches_squire]]</li>
+</ul>
+<p>Vu que la mémoire sémantique est la base de la mémoire épisodique, si on la perd on doit perdre la mémoire épisodique. Mais donc comment s’assurer qu’il s’agit bel et bien de systèmes distincts et non pas un seul ? Les <strong>agnosies</strong> sont des troubles de la mémoire sémantique. On a 2 types d’agnosies :</p>
+<ul>
+<li>Spécifiques à une modalité : spécifique à une entreée sensorielle</li>
+<li>Catégories spécifiques : perdent le sens de certaines catégories d’objets (animaux, meubles…)</li>
+</ul>
+<p>On a des lourds problèmes à montrer la dépendance de ces deux, qui est recquis pour supporter le modèle de l’emboîtement. Imaginons que nous avons des patients avec une agnosie totale (perdent complètetement le sens des mots objets et choses), on ne pourrait pas falsifier notre hypothèse car on ne peut pas le tester étant donné qu’on ne peut pas communiquer avec lui.</p>
+<p>Imaginons alors qu’on a un patient qui a une amnésie antérograde : il sait reconnaitre un hippopotame mais ne se souvient pas de ses expériences avec. Oublie épisodique, mais pas des connaissances, on peut donc avoir la mémoire épisodique sans mémoire sémantique.</p>
+<p>Déficit dégénératif, particulièrement la démence sémantique, ces patients montrent des énormes difficultées sémantiques mais très peu épisodiques. Ça remet en question l’emboîtement mais argumente vers leur distinctivité.</p>
+<p>Dichotomie de tulving :</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Sémantique</th>
+<th>Épisodique</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Unités</td>
+<td>Concepts<span class="math inline">\(^1\)</span></td>
+<td>Épisode</td>
+</tr>
+<tr class="even">
+<td>Question</td>
+<td>Quoi, Qui</td>
+<td>Quand, où</td>
+</tr>
+<tr class="odd">
+<td>Réponse</td>
+<td>Je sais</td>
+<td>Je me souviens</td>
+</tr>
+<tr class="even">
+<td>Tâche</td>
+<td>Connaissances générales</td>
+<td>Épisodes particuliers<span class="math inline">\(^2\)</span></td>
+</tr>
+<tr class="odd">
+<td>Vérité</td>
+<td>Consensus social</td>
+<td>Croyances personnelles</td>
+</tr>
+<tr class="even">
+<td>Éducation</td>
+<td>Très importante</td>
+<td>Sans rapport</td>
+</tr>
+<tr class="odd">
+<td>Utilité</td>
+<td>Forte</td>
+<td>Faible<span class="math inline">\(^3\)</span></td>
+</tr>
+<tr class="even">
+<td>Récupération</td>
+<td>Activation</td>
+<td>Ecphorie</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\(^1\)</span> Concept implique d’avoir des choses stockées en mémoire et qui peuvent s’activer, alors que notion d’épisode signifie un ensemble de concepts reliés.</p>
+<p><span class="math inline">\(^2\)</span> Mais les tests de mémoire épisodiues anciences sont extrêments durs à faire très du de vérifier des souvenirs. Mais sur les tests à court terme c’est très simple, l’expérimentateur peut être garant de ce qui s’est passé.</p>
+<p><span class="math inline">\(^3\)</span> Jusqu’à qu’on rencontre quelqu’un avec des troubles de la mémoire épisodique</p>
+<p>On va voir :</p>
+<ol type="1">
+<li>Vérification de phrases</li>
+<li>Identification sémantique catégorielle et spécifique</li>
+<li>Décision lexicale</li>
+<li>Identification perceptive</li>
+<li>Complétions dem ots ou fragments</li>
+</ol>
+<ul>
+<li>Tâche très utilisée par le passée de <strong>vérification de phrase</strong> où on demandait de vérifier une phraes, style “Les perroquets ont des plumes”, réponse attendue : “Oui”.</li>
+<li>Tâches d’identification sémantique très différentes :
+<ul>
+<li><strong>Catégorielle</strong> : on peut répondre sans connaître le stimulus particulier. On sait répondre sans connaître l’exemplaire, par exemple on montre un cheval, réponse attendue “cheval”</li>
+<li><strong>Spécifique</strong> : on doit répondre en connaissant l’exemplaire particulier : par xemple on montre l’Autriche, réponse attendue “Autriche”</li>
+</ul></li>
+<li><strong>Décision lexicale</strong> : on cherche à voir si un mot est dans notre lexique interne et nos représentations.</li>
+<li><strong>Identification perceptive</strong> : on va demander d’identifier des items en conditions dégradées, c’est-à-dire très peu longtemps, brouillé, etc…</li>
+<li><strong>Complétion de mots ou de fragments</strong> : il faut compléter des phrases à trous avec la première chose qui vient à l’idée.</li>
+</ul>
+<p>Tests de mémoire épisodique :</p>
+<ol type="1">
+<li>Rappel libre</li>
+<li>Rappel indicé</li>
+<li>Reconnaissances d’occurrence</li>
+</ol>
+<ul>
+<li><strong>Rappel libre</strong> : on pose des questions qui forcent le sujet à revivre un évènement, par exemple la tâche rappel libre, mais on a un gros problème : on est très nuls pour ça. Donc si on a très peu d’items que notre VI peut faire varier, on a une mesure très nulle.</li>
+<li>Le <strong>rappel indicé</strong> remédie à cette limite en donnant des indices comme la catégorie de mots. <strong>Incident intentionnel</strong> est le fait de présenter un truc dont le sujet ne se doute pas qu’il va devoir s’en rappeler et puis lui demander je crois.</li>
+<li><strong>Reconnaissance d’occurence</strong> est la question “est-ce que le stimulus à occuré pendant une phase d’apprentissage”. Y répondre nécessite de revivre l’évènement</li>
+</ul>
+<p>On fait donc un nouveau modèle, qui ressemble beaucoup à l’ancience, mais avec 2 nouveaux sous-systèmes. Entre la mémoire épisodique et sémantique on a rajouté la <strong>mémoire de travail</strong>. Elle gère les représentations sémantiques pour les indexer plus clairement dans la mémoire épisodique (notion de buffer épisodique).</p>
+<p>Le <strong>système de représentation perceptive</strong>, inventé car plus rien ne marchait avec nos prédictions, on l’a rajouté entre mémoire procédural et sémantique. Vivre un épisode change notre manière d’être et va affecter notre mémorisation des choses je crois.</p>
+<p>Ce modèle propose aussi 3 acceptations :</p>
+<ul>
+<li>L’information est encodée de façon <strong>sérielle</strong> dans les différents systèmes (interdépendances)</li>
+<li>L’information est stockée de manière <strong>parallèle</strong> dans les différents systèmes</li>
+<li>L’information peut être récupérée de manière <strong>indépendantes</strong> dans les différents systèmes.</li>
+</ul>
+<p>Modèle plus ancien que Tulving. Ce dernier tentait de comprendre les mécanismes, alors que Squire est seulement descriptif, cherche juste à classifier les comportements :</p>
+<ul>
+<li>Mémoire
+<ul>
+<li>Déclarative
+<ul>
+<li>Sémantique</li>
+<li>Épisodique</li>
+</ul></li>
+<li>Non déclarative (procédurales chez Tulving)
+<ul>
+<li>Habileté (moteur)</li>
+<li>Conditionnement</li>
+<li>Apprentissage non associatif (qui ne nécessite pas d’associer des connaissances en mémoires)</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>De fait, dans les études sur la mémoire sématnique, on se concentre plus sur l’assocations de représentations existantes, on peut donc considérer qu’aucune des mémoires déclaratives ne se base sur autre chose ue l’assocation de connaissances en mémiore (par opposition à l’apprentissage non associatif).</p>
+<p>Ce modèle à donc aucun problème à faire une double dissociation entre mémoire sémantique et épisodique ? Il peut rendre compte sans problème de manière directe qu’on peut avoir des connaissances qui au départ sont purement épisodiques, peuvent par la suite passer en sémantique, soit la <strong>sémantisation des épisodes</strong>. Tulving en rend compte un peu aussi mais de manière très complexe, on considère Squire comme meilleure à ce niveau. Garder en tête que c’est la création de nouveaux lien en mémoire sémantique plutôt que de nouvelles connaissances.</p>
+<section id="comment-faire-appel-à-la-mémoire" class="level2">
+<h2 class="anchored" data-anchor-id="comment-faire-appel-à-la-mémoire">2. Comment faire appel à la mémoire ?</h2>
+<section id="le-point-de-vue-de-lexpérimentateur-directindirect" class="level3">
+<h3 class="anchored" data-anchor-id="le-point-de-vue-de-lexpérimentateur-directindirect">2.1. Le point de vue de l’expérimentateur : direct/indirect</h3>
+<blockquote class="blockquote">
+<p>WARN: alterte important pour l’examen</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>NOTE: revue ??? où on demande aux vieux chercheur de revenirs sur leur données.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>FIX: pas trop compris cette partie help (dont les dichotomies)</p>
+</blockquote>
+<p>Richardson-Klavehn</p>
+<p>On va opposer des tests directs de mémoire à des tests indirects de mémoire :</p>
+<p>Il existe 2 dichotomies permettant d’organiser les évaluations de la mémoire. La première est directe/indirecte :</p>
+<ul>
+<li><strong>Direct</strong> : instructions du tests de mémoire fait référence à un ou plusieurs éléments cibles qui font partie de l’histoire du sujet, c’est-à-dire qui a été appris. “Quelle est la capitale de l’Italie” fait référence à quelque chose que le sujet à appris à un moment donné.</li>
+<li><strong>Indirect</strong> : informations font uniquement référence à la tâche en cours sans faire référence à des éléments précédents, ces derniers étant la cible du test. On interroge le sujet sans faire référence à la mémoire qu’on cherche à mesurer. Par exemple l’amorçage par répétition où on modifie la mémoire du sujet préalablement à la présentation de l’item test.</li>
+</ul>
+<p>Par exemple lors d’une tâche d’amorçage par répétition :</p>
+<ul>
+<li>On modifie expérimentalement la mémoire du sujet préalablement à la présentation de l’item test grâce à la présentation en amorce d’un stimulus qui sera répété lors de la tâche</li>
+<li>On propose une tâche pour vérifier si les items présentés en amorce vont induire une différence de comportement positive ou négative par rapport à ceux qui n’ont pas été présentés en amorce</li>
+</ul>
+<p>Autre dichotomie : implicite/explicite</p>
+</section>
+<section id="le-point-de-vue-du-sujet-expliciteimplicite" class="level3">
+<h3 class="anchored" data-anchor-id="le-point-de-vue-du-sujet-expliciteimplicite">2.2. Le point de vue du sujet : explicite/implicite</h3>
+<p><strong>Implicite</strong> : “la mémoire implicite est mise en évidence quand la performance dans uen tâche est facilitée en absence de recollection consciente”</p>
+<p><strong>Explicite</strong> : “demande une recollection d’expériences passées”, “demande une connaissance consciente de l’épisode d’apprentssage pour réussir la tâche”</p>
+<p>On peut différencier 2 types d’explicites : involontaire et intentionnel</p>
+<ul>
+<li><strong>Explicite involontaire</strong> : on présente un visage, et on se souvient automatiquement sans chercher à le faire qu’on l’a vu quelques minutes plus tôt dans le couloir</li>
+<li><strong>Explicite intentionnelle</strong> : le sujet a volontairement fait l’effort de l’accès conscient de la connaissance</li>
+<li><strong>Implicite</strong> : pas de conscience du souvenir</li>
+</ul>
+<p>On va maintenant croiser ces deux dichotomies de forme de mémoire et forme de test</p>
+<p><img src="../Pasted image 20260916204142.png" class="img-fluid"></p>
+<p>Quand on fait un test direct, on espère qu’il va toujours y avoir une contribution que la meemoire implicite intentionnelle. Quand demande qu’est-ce qu’est quelque chose, on va cherche à savoir ce que c’est.</p>
+<blockquote class="blockquote">
+<p>TODO contaminatino de tests diercts par la mémoire explicite : on fait plus passer la dernière tâche car la ????????</p>
+</blockquote>
+<hr>
+<!-- source: 3_unites_reconnaissance.md -->
+</section>
+</section>
+</section>
+<section id="cm3-modèles-de-la-mémoire" class="level1">
+<h1>CM3 Modèles de la mémoire</h1>
+<ul>
+<li>[[i_unites_reconnaissance]]</li>
+<li>[[ii_unites_reconnaissance]]</li>
+<li>[[iii_unites_reconnaissance]]</li>
+</ul>
+<p>On va souvent tester les connaissances sémantiques par les tests indirects. Ça n’a rien avoir avec effet de récollection en mémoire épisodique. Toujours pas compris ce qu’est la contamination, mais ça s’appelle contamination par la explicite. Et les tâches indirectes rendent improbables la contamination par la mémoire épisodique.</p>
+<p>Les processus explicites prennent plus de temps que les processus implicites (surtout faire la recherche en mémoire), l’utilisation de tests indirects doivent être contraints par deux critères : la facilité et la rapidité de réponse. S’il répond très vite, la probabilité de contamination est infime. Par exemple les tâches de familiarité, “est-ce que je connais cet objet ou non ?”.</p>
+<p>Une tâche de complétion de fragment est la présentation de stimuli et on doit le poursuivre avec premier truc qu’on a en tête.</p>
+<section id="les-modèles-de-la-mémoire-sémantique" class="level2">
+<h2 class="anchored" data-anchor-id="les-modèles-de-la-mémoire-sémantique">3. Les modèles de la mémoire sémantique</h2>
+<section id="contraintes-issues-de-la-métaphore-représentationnelle" class="level3">
+<h3 class="anchored" data-anchor-id="contraintes-issues-de-la-métaphore-représentationnelle">3.1. Contraintes issues de la métaphore représentationnelle</h3>
+<section id="présentation-synthétique-de-lévolution-des-modèles" class="level4">
+<h4 class="anchored" data-anchor-id="présentation-synthétique-de-lévolution-des-modèles">3.1.1. Présentation synthétique de l’évolution des modèles</h4>
+<p>La notion de mémoire <strong>abstractive</strong> veut dire que la mémoire est un stock de représentations nécessairement abstraites, devant donc être créées, placées en mémoire, et atteintes par la suite. C’est donc un espace représentationnel qui duplique le monde. Les connaissances sont stockées en mémoires sous forme d’unités ou symboles qui représentent les choses du monde externe. Il faut que les connaissances soient organisées telles que l’humain puisse se comporter dans le monde de manière cohérente.</p>
+<p>Schéma présentant la structure de base de tous les problèmes qu’on va regarder. On a un niveau de mémoire sémantique, qui est ce “monde réel dupliqué”. Il faut donc avoir une interface entre le monde non oragnisé arrivant sous forme de stimulations et ce monde sémantique.</p>
+<p><img src="../Pasted image 20260924102806.png" class="img-fluid"></p>
+<p>Sur la mémoire sémantique, on n’apprend pas de choses nouvelles, mais on “<em>actualise</em>” nos représentations sémantiques pré-existantes. Mais les épisodes se construisent à partir de la mémoire sémantique, avec des phénomènes de constructions sur des éléments pré-existants.</p>
+<p>Il y a un moment, on s’intéressait tous à la forme de l’organisation de la mémoire sémantique chez l’adulte. On avait deux types de modèles : la <strong>métaphore spatiale</strong> (Réseau Sémantique), et la <strong>métaphore linguistique</strong> (règles formelles) Les deux ont des mécanismes formels, et ont les mêmes prédictions expérimentales, donc on n’en a rien à faire.</p>
+<p>Puis modèle du <strong>réseau sémantique hiérarchique</strong> qui propose différents niveaux à la mémoire sémantique, très économique, car les propriétés pouvaient être définies qu’à un niveau super-ordonnés si elles sont partagées par beaucoup, qui en héritent. Ce modèle est surtout testable (falsifiable), par exemple en vérifications de phrases le nombre de diffusions (passages de nœuds) devrait être proportionnel au temps de traitement.</p>
+<p>Maintenant, on pense qu’il n’y a aucune organisation ou contrainte, les choses sont juste liées entre elles, toute organisation est donc possible. Mais ce modèle n’est pas falsifiable et peut expliquer tout résultat. On va alors avoir une différence entre un niveau central contenant le symbole <strong>sémantique</strong>, soit les mots, et un niveau <strong>perceptif</strong> qui le précède, contenant les éléments perceptifs associés (traits, lettres, etc).</p>
+</section>
+<section id="laccès-aux-représentations-un-problème-crucial-pour-les-modèles-représentationnels" class="level4">
+<h4 class="anchored" data-anchor-id="laccès-aux-représentations-un-problème-crucial-pour-les-modèles-représentationnels">3.1.2. L’accès aux représentations, un problème crucial pour les modèles représentationnels</h4>
+<p>Mais le problème est que le monde n’est pas organisée, et que la mémoire sémantique doit représenter de manière stable et permanente des choses. Mais comment un système biologique peut faire ça quand le monde change de manière continue et que rien ne se reproduit jamais ? Il faut donc nécessairement une <strong>interface</strong> entre le monde et la mémoire qui doit transformer des stimulations pour être capable de trouver la structure de ce qu’on est en train de faire.</p>
+<p>Par exemple dans le modèle de Marr, on extrait des primitives puis on extrait de la 2.5D puis 3D et cette représentation est confrontée aux représentations 3D stockées en mémoire. La perception est donc vue comme quelque chose qui a pour simple but de reconstruire les objets perçus. Le modèle le plus bête et simple ont les mêmes bases fonctionnelles que des modèles compliquées : on imagine une interface entre la perception et la mémoire, constituée de choses appartenant aux deux mondes. Mais elle contiendra des choses de nature perceptive.</p>
+<p>Donc quand on perçoit des choses, on va reconstruire sa structure, ses invariants. On va donc extraire les stimuli de toutes ses caractéristiques <strong>idiosyncratiques</strong>, soit susceptibles de varier pendant les prochaines rencontres.</p>
+<p>Donc en résumé, le principe de base des <strong>modèles à unités de reconnaissance</strong> est premièrement que la perception donne naissance à une représentation invariante, et que l’appariement de cette représentation perceptive avec la représentation mnésique de même type contenue dans une <strong>unité de reconnaissance</strong> permet d’activer celle-ci.</p>
+<p>Il est ensuite possible d’envisager une cognition sous forme d’activations inter-symboliques : on va supposer que pour toutes les entités qu’on connaît, on a une unité de reconnaissance qui contient le ou les invariants correspondant aux stimuli, et ces invariants vont contacter en même temps toutes les unités de reconnaissance.</p>
+<p><strong>Appariement</strong> : les invariants se confrontent aux unités de reconnaissance et quand l’appariement est bon, l’activation en mémoire se produit. Cette activation va devenir une propriété de l’unité elle-même. Et si cette unité est activée, elle propage cette activation à toutes les autres unités liées.</p>
+<p>![[3_unites_reconnaissance 2026-09-29 14.58.53.excalidraw]]</p>
+<p>L’amorçage par répétition comme baisse de seuil d’une unité de reconnaissance : il est nécessaire d’avoir des seuils d’activation dans les modèles par appariement, afin d’éviter des associations inutiles et impertinentes. On propose qu’à la naissance, chaque unité a un seuil équivalent. Il se fait dépasser si l’activation est assez forte, et ça produire une réponse conditionnée et sensation de familiarité. Ici (durant toute la vie) se manifesterait un mécanisme d’abaissement du seuil, qui permet de rendre compte par exemple de l’effet de fréquence des mots. CETTE PHASE DE SEUIL EST A LONG TERME.</p>
+<p>Nous pouvons faire un test indirect de ce modèle par un amorçage par répétition avec deux principes :</p>
+<ul>
+<li>“Modifier” expérimentalement la mémoire du sujet préalablement à la présentation de l’item test</li>
+<li>Proposer une tâche qui pourrait être faite même si la première phase n’avait pas eu lieu et vérifier si les items traitées dans la première phase produisent une différence de comportement par rapport aux items qui n’y ont pas été traités</li>
+</ul>
+<p>Mais il y a une limite à l’effet de ce mécanisme : s’il était linéaire, on aurait continuellement l’impression de voir les visages de nos proches partout. Donc plus ça baisse, moins l’effet de ce mécanisme est fort. La baisse du seuil permet de tester le reste du modèle.</p>
+<blockquote class="blockquote">
+<p>TODO: j’ai pas noté la fin du cours de tessa car je ne sais pas si c’est important ou si ça vient même du cours</p>
+</blockquote>
+<p><img src="../Pasted image 20261001185702.png" class="img-fluid"></p>
+<hr>
+<!-- source: 4_amorcage_semantique.md -->
+</section>
+</section>
+</section>
+</section>
+<section id="cm4-modèles-de-la-mémoire" class="level1">
+<h1>CM4 Modèles de la mémoire</h1>
+<ul>
+<li>[[i_amorcage_semantique]]</li>
+<li>[[ii_amorcage_semantique]]</li>
+</ul>
+<p>On a des unités de reconnaissances pour chaque caractéristique d’une personne, soit par <strong>modalité.</strong> Par définition, l’effet d’amorçage par répétition est intramodal, c’est-à-dire qu’il faut repasser pas la même unité dans le même modalité pour bénéficier de la baisse de seuil. À partir de là, on peut donc proposer une architecture globale dans le domaine des visages.</p>
+<p><img src="../Pasted image 20261001190033.png" class="img-fluid"></p>
+<p>En lecture, on a la particularité de pouvoir lire de mots qu’on ne connaît pas. On a donc une voie de traitement qui sera dédiée à notre capacité de production de mots qu’on ne connaît pas. Nous n’avons pas cette autre voie pour les visages. La perception va donc recréer en le plus d’invariants possibles le stimulus courant. Invariant par rapport à l’expression, par rapport à la pose… On est particulièrement sensibles aux effets d’inversion (à l’envers, on est mauvais) donc l’invariance à moins ça comme limites. Puis appariement aux connaissances.</p>
+<p>En présentation de mot, on a un encodage lexical par extraction des invariants du mot et pour chaque mot connu il y a une unité contenant les invariants des mots écrits. Même chose pour la prosodie. Puis les invariants peuvent emprunter deux voies.</p>
+<p>La première voie est la voie <strong>lexicale</strong> : en cas de dépassement du seuil, propagation dans les unités sémantiques (qui je crois ne sont pas reliées entre elles). Cette activation permet d’activer l’unité sémantique correspondante. La baisse du seuil fonctionne pour les unités de reconnaissance, mais pas pour les unités sémantiques. On peut après accéder à une unité de sortie qui génère le mot lors de son activation : elle contient du code de prononciation à partir de la sémantique (comme unité de reconnaissance inversée).</p>
+<p>Mais qu’est-ce qui justifie ce modèle séquentiel hiérarchique (passer au module suivant nécessite l’accomplissement du module présent) ? Ces modèles sont très utilisés, car simples, mais maintenant, on a des indices très forts que ces modèles-là ne fonctionnent pas. Ce qui les prouverait, c’est une tâche avec laquelle on observe une hiérarchie des temps de réponse.</p>
+<p>Tâche avec 3 réponses possibles en oui/non</p>
+<ul>
+<li>1 : familiarité</li>
+<li>2 : sémantique : est-ce que c’est un homme politique ?</li>
+<li>3 : nom : est-ce que c’est Charles (à la présentation du visage) ?</li>
+</ul>
+<p><img src="../Pasted image 20261001232321.png" class="img-fluid"></p>
+<p>Le TR est systématiquement plus court sur familiarité, puis sémantique. C’est donc un indice fort de la séquentialité. On ne trouvait pas non plus de patient qui pouvait retrouver le nom d’une personne sans d’autres contenus sémantiques. Par ailleurs, ce modèle ne contient que des flèches unidirectionnelles (bottom-up), en revanche, quand on est au niveau sémantique, on en retrouve des bidirectionnelles.</p>
+<p>Principes Fodorien que la perception est <strong>encapsulée</strong> : les processus qui permettent d’accéder aux représentations doivent être imperméables au reste du système cognitif. Si notre système était biaisé, alors la perception ne serait plus une représentation, car sinon la représentation de Rousset ne correspondrait pas à ce qui se trouve à l’extérieur. Mais il y a plein de modèles qui ne marcheraient pas selon les principes fodoriens, comme reconnaître quelqu’un qui sourit ?</p>
+<p>Bruce et Young, auteurs du modèle de reconnaissance des visages vu plus haut, proposent donc de rajouter des modules de plus bas niveau que l’extraction d’invariant pour rendre compte de tout ce qu’on peut faire sur le stimulus autre que de l’identification. Ça constitue l’autre voie de cette reconnaissance. La partie “système cognitif” du modèle est le sac avec lequel l’on met tout ce qu’on n’explique pas.</p>
+<p><img src="../Pasted image 20261001213126.png" class="img-fluid"></p>
+<p>Le modèle nous permet de voir les allers-retours entre unités sémantiques et de reconnaissance. L’effet d’amorçage sémantique qui est très différent que par répétition. Dès qu’un lien d’activation passe, il peut y avoir un retour d’activation médiatisé par le lien sémantique. À bout d’un moment, il y aura déjà donc un peu ?? d’activation alors qu’on n’a pas présenté Mitterrand.</p>
+<p><em>Note : URV = Unité de Reconnaissance des Visages, et NIS = Nœuds d’Identité Spécifique</em></p>
+<p>Mais il ne faut pas que trop remonte, car si c’était le cas, il aurait l’impression qu’il y a deux personnes qui sont Jacques Chirac quand on voit Mitterrand. Cette activation de retour ne doit donc pas dépasser le seuil. On présente donc un stimulus dans le but d’en activer un autre inconsciemment. Et surtout, il n’y a pas de baisse de seuil, juste un peu de préactivation, qui accélère TR. Mais ça ne permet pas de faire des prédictions différentes ?</p>
+<blockquote class="blockquote">
+<p>FIX: clarifier prochain paragraphe</p>
+</blockquote>
+<p>Nécessairement ces phénomènes d’activations doivent être temporaires, sinon le système rentrerait dans un phénomène d’hystérie. L’activation doit donc se dissiper très rapidement. On est donc obligés de faire du “one-to-one”, on présente l’amorce puis la cible (et c’est un test indirect). C’est des effets de modifications structurales, on peut donc faire ça en bloc-à-bloc, alors que naturellement amorçage sémantique est sensé être amorce-cible sur un court moment. On cherche une diffusion d’activation automatique donc euh mémoire sémantique implicite.</p>
+<p><img src="../Pasted image 20261001232514.png" class="img-fluid"></p>
+<p>Mais pour le même phénomène, on pourrait très bien faire la même tache en se servant explicitement de notre mémoire sémantique. On se retrouve avec amorce -&gt; intervalle inter-stimuli -&gt; cible. Mémoire explicite prend plus de temps alors que propagation d’activation va très rapidement. Donc si on laisse du temps, il doit y avoir des phénomènes d’attentes, de stratégies de mémoire explicite. On ne va donc pas laisser le temps. Il faut donc une nouvelle mesure de temps de réflexion : <strong>SOA</strong> soit <em>Stimulus Onset Asynchronies</em>, qui est le temps séparant le début de la présentation du premier stimulus de celui du second. Généralement ça correspond à temps de présentaiton du stimulus + délai. On va souvent en utiliser un court, avec une amorce en subliminal.</p>
+<p>Il faut toujours comparer 3 conditions. Ici quand il n’y a pas de stratégies :</p>
+<ul>
+<li>Amorce reliée ou <span class="math inline">\(R\)</span> : partage unité sémantique, par exemple Chirac et Mitterrand</li>
+<li>Amorce non reliée ou <span class="math inline">\(NR\)</span> : ne partage pas d’unité sémantique, reste dans la même catégorie, par exemple “personne célèbre” chez Chirac et Mirelle Matthieu. Sans préactivation.</li>
+<li>Amorce neutre ou <span class="math inline">\(N\)</span> : aucune diffusion d’activation, par exemple un visage d’inconnu. Ça correspond au temps d’activation d’une unité car pas de préactivation</li>
+</ul>
+<p>Si tout va bien, alors <span class="math inline">\(\text{Neutre} = \text{Non relié}\)</span>. En cas de stratégie consciente :</p>
+<ul>
+<li>Inconnu : pas d’attente, toujours au niveau de base sur le neutre</li>
+<li>Laurel : je m’attends à Hardy donc meilleur <span class="math inline">\(R\)</span></li>
+<li>Hardy : on s’attend à Laurel et on présente Shakira, gène <span class="math inline">\(NR\)</span></li>
+</ul>
+<p>En cas de SOA courts, on a plutôt ce type de configurations : <span class="math inline">\(R &gt; N = NR\)</span>. Dès qu’ils deviennent longs, on va avoir cette différence qui ressort : <span class="math inline">\(R &gt; N &gt; NR\)</span>.</p>
+<p>On a vu que l’amorçage par répétition était amodal. En revanche, on peut se demander si c’est le cas pour le sémantique, que se passe-t-il si on met nom puis visage ? Comme on active par unité sémantique, il doit par définition être intermodal. Peu importe que l’amorce et la cible soient de la même modalité. Résultats le montrent.</p>
+<p>On aime les interactions par la logique des facteurs additifs. Si deux variables jouent sur deux processus différents, alors leurs effets vont s’additionner. En cas d’interaction, on sait que ce qu’on obtient n’est pas juste la somme des deux effets, les deux variables ont donc joué sur le même processus. On observe ici une interaction entre flou et relation d’amorce.</p>
+<p><img src="../Pasted image 20261001232713.png" class="img-fluid"></p>
+<hr>
+<p>Diagramme fait par notebooklm :</p>
+<p><img src="../Pasted image 20261022120450.png" class="img-fluid"></p>
+<p>Diagramme Excalidraw :</p>
+<p>![[4_amorcage_semantique - synthese 2026-10-22 22.09.07.excalidraw]]</p>
+<hr>
+<!-- source: 5_modeles_memoire.md -->
+</section>
+<section id="cm5-modèles-de-la-mémoire" class="level1">
+<h1>CM5 Modèles de la mémoire</h1>
+<ul>
+<li>[[i_5_modeles_memoire]]</li>
+<li>[[ii_5_modeles_memoire]]</li>
+</ul>
+<blockquote class="blockquote">
+<p>Cette note reprend la fin du CM4 (prosopagnosie et modèle de Burton, Bruce &amp; Johnston) puis le CM5 proprement dit. Elle est complétée à partir du PDF « EC10 – CMs Stéphane Rousset ».</p>
+</blockquote>
+<section id="lamorçage-sémantique-chez-les-patients-prosopagnosiques-remise-en-cause-de-la-hiérarchie" class="level2">
+<h2 class="anchored" data-anchor-id="lamorçage-sémantique-chez-les-patients-prosopagnosiques-remise-en-cause-de-la-hiérarchie">1. L’amorçage sémantique chez les patients prosopagnosiques : remise en cause de la hiérarchie</h2>
+<p>La notion de <strong>performance résiduelle</strong> est liée à la définition de la pathologie : un trouble se définit par un écart à la population normale. Dans les prédictions, on considère souvent que ce qu’on étudie est totalement absent, alors que le trouble est rarement total. Il peut donc rester quelque chose.</p>
+<section id="réapprentissage-de-visages-célèbres" class="level3">
+<h3 class="anchored" data-anchor-id="réapprentissage-de-visages-célèbres">1.1. Réapprentissage de visages célèbres</h3>
+<p>Des expériences ont été menées chez <strong>deux patients belges prosopagnosiques</strong> (étude citée en cours sous le nom de Bruyer). Ces patients ne reconnaissaient pas un très grand nombre de visages. On leur a fait réapprendre des visages, soit avec l’association correcte (visage de Chirac + nom de Chirac), soit avec une association modifiée (visage de Chirac + nom de Giscard). Après de nombreuses sessions d’apprentissage, ils apprennent plus vite les <strong>bonnes paires</strong> que les mauvaises : c’est un <strong>effet de congruence visage–nom</strong>. Il restait donc bien quelque chose du traitement des visages.</p>
+</section>
+<section id="amorçage-sémantique-implicite" class="level3">
+<h3 class="anchored" data-anchor-id="amorçage-sémantique-implicite">1.2. Amorçage sémantique implicite</h3>
+<p>Une autre expérience a été réalisée avec un patient prosopagnosique qui avait une connaissance des personnes intacte, mais ne reconnaissait pas leurs visages : ce n’était donc pas un problème sémantique. Ce patient permet un bon contrôle des effets de contamination.</p>
+<p>On présente une cible (nom connu ou inconnu) et une amorce visage <strong>reliée</strong>, <strong>non reliée</strong> ou <strong>neutre</strong>. On observe un <strong>effet d’amorçage sémantique implicite</strong> : les performances sont meilleures pour le visage relié que pour le neutre ou le non-relié. Ces résultats montrent des performances résiduelles et un amorçage sémantique par des processus de diffusion non consciente et automatique.</p>
+</section>
+<section id="conséquence-le-seuil-du-modèle-séquentiel-est-invalidé" class="level3">
+<h3 class="anchored" data-anchor-id="conséquence-le-seuil-du-modèle-séquentiel-est-invalidé">1.3. Conséquence : le seuil du modèle séquentiel est invalidé</h3>
+<p>Dans le modèle séquentiel hiérarchique de Bruce &amp; Young, l’activation ne peut atteindre les NIS que si l’activation des URV <strong>dépasse leur seuil</strong>. Or, le patient est incapable de dire si le visage est connu : le seuil d’activation n’est donc pas dépassé. Pourtant, l’activation passe des URV aux NIS. Cela invalide la structure séquentielle et hiérarchique du modèle, en particulier la notion de <strong>seuil d’activation</strong>.</p>
+<p>À partir des années 1980–2000, on passe à des <strong>modèles en cascade ou interactifs</strong>. La notion de processus indépendants n’a plus de sens, et la logique des facteurs additifs devient difficile à appliquer.</p>
+</section>
+</section>
+<section id="le-modèle-interactif-de-burton-bruce-johnston-1990" class="level2">
+<h2 class="anchored" data-anchor-id="le-modèle-interactif-de-burton-bruce-johnston-1990">2. Le modèle interactif de Burton, Bruce &amp; Johnston (1990)</h2>
+<section id="une-architecture-en-trois-niveaux" class="level3">
+<h3 class="anchored" data-anchor-id="une-architecture-en-trois-niveaux">2.1. Une architecture en trois niveaux</h3>
+<p>Le modèle <strong>IAC</strong> (<em>Interactive Activation and Competition</em>) de Burton, Bruce &amp; Johnston (1990) a deux intérêts : comprendre ce que sont les systèmes interactifs, et montrer qu’il n’y a pas de correspondance anatomo-clinique directe sans présupposés clairs. Il a été proposé parce que le modèle précédent ne fonctionnait pas et parce que ce type de modèle était à la mode à l’époque.</p>
+<p>En s’inspirant de la reconnaissance des mots (les mots sont décomposables en lettres), les auteurs supposent que les visages sont décomposables en nez, yeux, bouche, etc. : ce sont les <strong>UCV</strong> (unités des composantes des visages). Cette partie est à la fois incohérente et non testée ; on l’ignore dans la suite du cours.</p>
+<ul>
+<li><strong>URV / URN</strong> : unités de reconnaissance des visages et des noms. Contrairement au modèle précédent, <strong>l’activation au niveau des UR ne mène pas à une réponse comportementale de familiarité</strong>.</li>
+<li><strong>NIS</strong> : nœuds d’identité spécifique. Ils portent le même nom que dans le modèle précédent, mais ne contiennent plus que le <strong>concept de la personne</strong>. La décision de familiarité se prend à ce niveau. Les URV et URN d’une personne sont reliées uniquement à son NIS, avec une association <strong>1 à 1</strong>.</li>
+<li><strong>UIS</strong> : unités d’information sémantique. On y retrouve la sémantique classique, mais aussi les informations liées au nom. Le nom est donc une information sémantique comme une autre, alors que dans Bruce &amp; Young il avait un module séparé. La connectivité NIS–UIS n’est pas 1 à 1 : une UIS peut être reliée à plusieurs NIS.</li>
+</ul>
+<p><em>Penser aux unités de reconnaissance comme à des clés d’accès à la mémoire.</em></p>
+</section>
+<section id="plus-de-seuil-dactivation-mais-un-seuil-de-conscience" class="level3">
+<h3 class="anchored" data-anchor-id="plus-de-seuil-dactivation-mais-un-seuil-de-conscience">2.2. Plus de seuil d’activation, mais un seuil de conscience</h3>
+<p>Le modèle supprime le <strong>seuil d’activation</strong> qui bloquait la propagation. Il conserve un <strong>seuil de conscience</strong>, paramètre fixe : quand l’activation d’un NIS le dépasse, le concept de la personne est activé et donne le sentiment de familiarité. On ne peut pas jouer sur ce seuil, sinon le modèle devient infalsifiable.</p>
+<p>Pourquoi ce changement ? Dans un système avec rétroaction et uniquement de l’activation, deux états sont possibles : l’explosion (l’« hystérie ») ou l’inactivité (l’activation s’auto-entretient et fait boule de neige). Les seuils servaient à empêcher l’explosion. Il faut donc ajouter de l’<strong>inhibition</strong> : le modèle combine activation et inhibition.</p>
+</section>
+<section id="le-schéma-du-modèle" class="level3">
+<h3 class="anchored" data-anchor-id="le-schéma-du-modèle">2.3. Le schéma du modèle</h3>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+
+<pre class="mermaid mermaid-js">graph TD
+    subgraph E["Entrées"]
+        V["Visage de Mitterrand"]
+        N["Nom « Mitterrand »"]
+    end
+
+    subgraph R["UR — unités de reconnaissance, spécifiques à la modalité"]
+        URV["URV&lt;br/&gt;visage"]
+        URN["URN&lt;br/&gt;nom"]
+    end
+
+    subgraph I["NIS — amodal, un seul nœud par personne"]
+        NISM["NIS&lt;br/&gt;Mitterrand"]
+    end
+
+    subgraph S["UIS — informations sémantiques"]
+        S1["« président »"]
+        S2["« François »"]
+        S3["« socialiste »"]
+    end
+
+    V --&gt; URV
+    N --&gt; URN
+    URV --&gt; NISM
+    URN --&gt; NISM
+    NISM --&gt; S1
+    NISM --&gt; S2
+    NISM --&gt; S3
+
+    style E fill:#181825,stroke:#585b70,color:#cdd6f4
+    style R fill:#181825,stroke:#585b70,color:#cdd6f4
+    style I fill:#181825,stroke:#585b70,color:#cdd6f4
+    style S fill:#181825,stroke:#585b70,color:#cdd6f4
+
+    classDef entree fill:#313244,color:#cdd6f4,stroke:#585b70
+    classDef ur fill:#89b4fa,color:#11111b,stroke:#89b4fa
+    classDef nis fill:#cba6f7,color:#11111b,stroke:#cba6f7,stroke-width:2px
+    classDef uis fill:#a6e3a1,color:#11111b,stroke:#a6e3a1
+
+    class V,N entree
+    class URV,URN ur
+    class NISM nis
+    class S1,S2,S3 uis
+
+    linkStyle default stroke:#6c7086,stroke-width:1.5px
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>Une amorce par le visage active le NIS Mitterrand ; une cible « Mitterrand » présentée par le nom passe par l’URN mais retombe sur le même nœud — d’où l’amorçage intermodal. Dans un même ensemble, les unités s’inhibent mutuellement : un stimulus non relié intercalé active un autre NIS et fait chuter l’effet.</p>
+</section>
+<section id="deux-sources-de-gain-répétition-et-sémantique" class="level3">
+<h3 class="anchored" data-anchor-id="deux-sources-de-gain-répétition-et-sémantique">2.4. Deux sources de gain : répétition et sémantique</h3>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+
+<pre class="mermaid mermaid-js">graph TD
+    A["Amorce (t1)&lt;br/&gt;visage de Mitterrand"]
+    A --&gt; U["URV&lt;br/&gt;seuil abaissé&lt;br/&gt;Bruce &amp; Young"]
+    A --&gt; N["NIS&lt;br/&gt;reste activé&lt;br/&gt;Burton et al."]
+    U --&gt; C1["Cible (t2)&lt;br/&gt;même visage&lt;br/&gt;→ intramodal"]
+    N --&gt; C2["Cible (t2)&lt;br/&gt;nom « Mitterrand »&lt;br/&gt;→ intermodal"]
+    C1 --&gt; R["Réponse plus rapide"]
+    C2 --&gt; R
+
+    classDef entree fill:#313244,color:#cdd6f4,stroke:#585b70
+    classDef by fill:#f9e2af,color:#11111b,stroke:#f9e2af
+    classDef bu fill:#fab387,color:#11111b,stroke:#fab387
+    classDef cible fill:#45475a,color:#cdd6f4,stroke:#6c7086
+    classDef gain fill:#a6e3a1,color:#11111b,stroke:#a6e3a1
+
+    class A entree
+    class U by
+    class N bu
+    class C1,C2 cible
+    class R gain
+
+    linkStyle default stroke:#6c7086,stroke-width:1.5px
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>À la première présentation (t1), Bruce &amp; Young abaissent durablement le seuil de l’URV (amorçage par répétition) ; Burton laisse le NIS activé (amorçage sémantique). À la deuxième présentation (t2), la cible repasse par l’unité déjà modifiée, donc la réponse est plus rapide. Le gain dû à l’URV est propre à la modalité (intramodal) ; celui dû au NIS est amodal et transfère à l’autre modalité (intermodal).</p>
+</section>
+</section>
+<section id="les-principes-du-modèle-iac" class="level2">
+<h2 class="anchored" data-anchor-id="les-principes-du-modèle-iac">3. Les principes du modèle IAC</h2>
+<section id="unités-ensembles-et-connexions" class="level3">
+<h3 class="anchored" data-anchor-id="unités-ensembles-et-connexions">3.1. Unités, ensembles et connexions</h3>
+<p>On reste dans les modèles représentationnels : chaque <strong>unité</strong> est un concept, regroupé en <strong>ensembles</strong> (ou <em>pools</em>) qui ont un sens (les NIS forment un pool, les URV un autre, etc.).</p>
+<p>Les connexions entre ensembles sont <strong>excitatrices</strong> et sans seuil : dès qu’il y a un peu d’activation, elle se propage. Au sein d’un même ensemble, les connexions sont <strong>inhibitrices</strong> : chaque unité est reliée à toutes les autres unités de son ensemble et les inhibe. Les connexions excitatrices inter-pool sont plus fortes que les connexions inhibitrices intra-pool. L’inhibition intra-pool est uniforme, plutôt faible et non soumise à apprentissage ; les connexions inter-pool, elles, ont un sens.</p>
+</section>
+<section id="activation-et-inhibition" class="level3">
+<h3 class="anchored" data-anchor-id="activation-et-inhibition">3.2. Activation et inhibition</h3>
+<p>Un système uniquement activateur ne peut pas fonctionner. Dans les réseaux sémantiques classiques, on parlait de diffusion de l’activation avec trois principes :</p>
+<ol type="1">
+<li>l’activation émise est moindre que celle reçue ;</li>
+<li>l’activation est divisée par le nombre de connexions ;</li>
+<li>les activations de plusieurs sources s’additionnent.</li>
+</ol>
+<p>Les deux premiers principes sont à oublier ; seul le troisième reste vrai.</p>
+<p>Avec l’activation et l’inhibition, le système évolue vers un <strong>équilibre</strong>. Il faut prendre en compte la dynamique et les temps de latence.</p>
+</section>
+<section id="cycles-latence-et-seuil-de-conscience" class="level3">
+<h3 class="anchored" data-anchor-id="cycles-latence-et-seuil-de-conscience">3.3. Cycles, latence et seuil de conscience</h3>
+<p>Un <strong>cycle</strong> (ou <strong>époque</strong>) est le moment où tous les neurones calculent en parallèle leur état d’activation. Après un calcul (époque 1), on obtient un nouvel état, puis on recommence (époque 2), etc. L’état de repos est une légère inhibition.</p>
+<p>Un <strong>seuil de conscience</strong> est défini pour les unités : quand leur activation le dépasse, leur contenu devient conscient. La réponse de familiarité correspond au dépassement du seuil de conscience d’un NIS.</p>
+<p>Dans un modèle séquentiel, le temps de latence est difficile à expliquer. Dans IAC, la latence correspond au <strong>nombre de cycles</strong> nécessaires pour dépasser le seuil de conscience. On peut l’exprimer en ms : plus de ms signifie plus de cycles.</p>
+</section>
+</section>
+<section id="quelques-phénomènes-basiques-de-iac" class="level2">
+<h2 class="anchored" data-anchor-id="quelques-phénomènes-basiques-de-iac">4. Quelques phénomènes basiques de IAC</h2>
+<p>On a deux ensembles : les NIS en haut, les UIS en bas. On présente un visage : tant qu’il est sous les yeux, il active en continu l’URV correspondante.</p>
+<p><img src="../Pasted image 20261113174819.png" class="img-fluid"></p>
+<section id="cas-a-deux-unités-seulement" class="level3">
+<h3 class="anchored" data-anchor-id="cas-a-deux-unités-seulement">4.1. Cas A : deux unités seulement</h3>
+<p>Si le modèle ne contient que deux unités reliées (NIS–UIS), l’UIS reçoit de l’activation du NIS à l’époque 1 et lui en renvoie à l’époque 2. Le NIS continue d’envoyer de l’activation car le visage est toujours présent. Très vite, le seuil de conscience est dépassé et le système explose en l’absence d’inhibition intra-pool.</p>
+</section>
+<section id="cas-b-plusieurs-uis" class="level3">
+<h3 class="anchored" data-anchor-id="cas-b-plusieurs-uis">4.2. Cas B : plusieurs UIS</h3>
+<p>Si le NIS est relié à plusieurs UIS, l’inhibition intra-pool se met en place. À l’époque 1, on est dans la même situation que dans A. Dès l’époque 2, l’UIS est moins activée que dans A, car les autres unités de son ensemble l’inhibent. Elle reste activée car l’inhibition intra-pool est plus faible que l’excitation inter-pool.</p>
+</section>
+<section id="cas-c-plusieurs-urv" class="level3">
+<h3 class="anchored" data-anchor-id="cas-c-plusieurs-urv">4.3. Cas C : plusieurs URV</h3>
+<p>Si une UIS est connectée à plusieurs URV, le modèle s’active plus vite : à l’époque 2, l’activation est renvoyée vers plusieurs NIS ; à l’époque 3, l’UIS reçoit de l’activation de plusieurs NIS en même temps, au lieu d’un seul avec l’inhibition intra-pool.</p>
+</section>
+<section id="cas-d-plusieurs-uis-et-plusieurs-nis" class="level3">
+<h3 class="anchored" data-anchor-id="cas-d-plusieurs-uis-et-plusieurs-nis">4.4. Cas D : plusieurs UIS et plusieurs NIS</h3>
+<p>La deuxième UIS s’active plus vite que la première : elle reçoit l’inhibition de la première, mais aussi plus d’activation des NIS. Par défaut, toutes les informations sémantiques sont liées à différents NIS ; le nom étant spécifique à une personne, il est plutôt sur un lien unique et sera plus difficile à retrouver que les autres informations sémantiques.</p>
+</section>
+<section id="le-problème-de-la-dénomination" class="level3">
+<h3 class="anchored" data-anchor-id="le-problème-de-la-dénomination">4.5. Le problème de la dénomination</h3>
+<p>Deux unités d’un même ensemble peuvent avoir des difficultés différentes à s’activer. Une unité qui ne reçoit de l’activation que d’une seule unité d’un autre ensemble sera plus difficile à activer qu’une unité qui en reçoit de plusieurs. Donc une chose X peut être systématiquement plus difficile qu’une chose Y tout en faisant partie du même ensemble.</p>
+<p>On ne peut plus se baser uniquement sur la <strong>chronométrie</strong> et l’étagement des latences pour montrer la hiérarchie des modules : au sein d’un même module, les latences ne sont pas les mêmes pour toutes les unités.</p>
+</section>
+</section>
+<section id="activation-des-nis-et-structure-des-courbes" class="level2">
+<h2 class="anchored" data-anchor-id="activation-des-nis-et-structure-des-courbes">5. Activation des NIS et structure des courbes</h2>
+<p>On trace le niveau d’activation de deux NIS en fonction du nombre de <strong>cycles</strong>, en maintenant une entrée perceptive au niveau d’une UR. Si on présente le visage de Charles, le NIS « Charles » est activé à chaque cycle. Au temps 0, on a une légère inhibition (état de repos). Puis l’activation augmente : l’URV envoie de l’activation au NIS, qui en envoie aux UIS ; les trois niveaux s’envoient de l’activation en aller-retour.</p>
+<p><img src="../Pasted image 20261113175532.png" class="img-fluid"></p>
+<p>Après un certain temps, le NIS « Charles » dépasse le <strong>seuil de conscience</strong> (différent du seuil d’activation) : le système répond que le stimulus est familier. La latence de base correspond au nombre de cycles nécessaires pour atteindre ce seuil. Ensuite, l’activation se stabilise (≈ plafond).</p>
+<p><img src="../Pasted image 20261113175922.png" class="img-fluid"></p>
+<p>L’activation de « Charles » active « noble » et « anglais » dans les UIS, ce qui active à son tour « Diana » dans les NIS (elle est noble et anglaise). L’inhibition entre NIS se met en place : « Diana » inhibe « Charles » et empêche son explosion. « Diana » s’active moins que « Charles » car elle reçoit moins d’activation des autres ensembles et que « Charles » l’inhibe plus fortement. Il faut quelques cycles pour que « Diana » s’active, le temps que l’activation se propage par les UIS.</p>
+<p>Après la perturbation, les courbes atteignent un nouvel équilibre. Continuer à présenter Charles ne change rien. Si on cesse de présenter Charles, l’activation du NIS « Charles » baisse (moins d’activation des URV) ; celle de « Diana » augmente légèrement car l’inhibition de Charles diminue. Les deux NIS passent sous le seuil de conscience et se rapprochent, car ils partagent beaucoup d’informations sémantiques.</p>
+</section>
+<section id="simulation-damorçage-sémantique" class="level2">
+<h2 class="anchored" data-anchor-id="simulation-damorçage-sémantique">6. Simulation d’amorçage sémantique</h2>
+<p><img src="../Pasted image 20261113180012.png" class="img-fluid"></p>
+<p>Si on présente le nom de Diana, l’URN « Diana » est activé ; le NIS « Diana » augmente et le NIS « Charles » diminue (plus d’inhibition de Diana). Dans la simulation, Charles avait besoin d’une vingtaine de cycles pour dépasser le seuil quand on présentait son visage ; Diana n’en a besoin que de moins de dix quand on présente son nom, car elle avait déjà été activée par la présentation de Charles. Le modèle rend donc compte de l’amorçage sémantique.</p>
+<section id="le-temps-nest-plus-le-facteur-critique" class="level3">
+<h3 class="anchored" data-anchor-id="le-temps-nest-plus-le-facteur-critique">6.1. Le temps n’est plus le facteur critique</h3>
+<p>Dans l’ancien modèle, l’amorçage sémantique dépendait d’un SOA court : il fallait que l’activation n’ait pas le temps de se dissiper. Ici, l’état d’équilibre atteint après l’arrêt de la présentation s’auto-entretient : on peut laisser passer de nombreux cycles sans que l’activation bouge. Ce n’est donc pas le temps qui compte, mais les <strong>stimuli qui interviennent</strong> entre l’amorce et la cible.</p>
+<p>Pour diminuer l’activation des NIS, il faut présenter autre chose : d’autres unités s’activent et inhibent Charles/Diana. Un visage non relié pendant l’ISI fait baisser l’amorçage. Dans la vraie vie, plus on laisse passer de temps, plus de l’activation arrive dans tous les sens (on pense à autre chose). Le modèle est donc valable sur des temps courts, pas sur des temps longs.</p>
+</section>
+<section id="prédictions" class="level3">
+<h3 class="anchored" data-anchor-id="prédictions">6.2. Prédictions</h3>
+<ul>
+<li><strong>Bruce &amp; Young</strong> : <span class="math inline">\(R &gt; N = NR\)</span>.</li>
+<li><strong>Burton et al.</strong> : <span class="math inline">\(R &gt;&gt;&gt; N &gt; NR\)</span>. Il faut se battre contre l’inhibition qui vient de l’amorce en NR. L’effet <span class="math inline">\(R &gt; N\)</span> est plus facile à détecter que <span class="math inline">\(N &gt; NR\)</span>, car il est plus fort.</li>
+</ul>
+</section>
+<section id="interférence" class="level3">
+<h3 class="anchored" data-anchor-id="interférence">6.3. Interférence</h3>
+<p>On observe de l’interférence quand le SOA est nul : un visage non relié gêne le visage relié en présentation simultanée. Deux sources d’activation en même temps → inhibition plus forte ; la compétition est plus difficile ; les effets d’activation sont plus faibles et les effets d’inhibition plus forts.</p>
+</section>
+</section>
+<section id="inférence-dans-un-système-interactif-le-modèle-prosopagnosique" class="level2">
+<h2 class="anchored" data-anchor-id="inférence-dans-un-système-interactif-le-modèle-prosopagnosique">7. Inférence dans un système interactif : le modèle « prosopagnosique »</h2>
+<section id="v-n-et-n-n-chez-le-sujet-sain" class="level3">
+<h3 class="anchored" data-anchor-id="v-n-et-n-n-chez-le-sujet-sain">7.1. V-N et N-N chez le sujet sain</h3>
+<p>On peut simuler une prosopagnosie en baissant l’efficacité des liens <strong>URV–NIS</strong>. On présente le visage de Charles puis le nom de Diana (V-N), ou le nom de Charles puis le nom de Diana (N-N).</p>
+<p>Chez les contrôles, V-N donne les résultats habituels. N-N donne les mêmes résultats, car l’amorçage sémantique est <strong>transmodal</strong>.</p>
+</section>
+<section id="modèle-lésé" class="level3">
+<h3 class="anchored" data-anchor-id="modèle-lésé">7.2. Modèle lésé</h3>
+<p>Chez le modèle lésé, l’activation se propage dans tout le système si on présente le visage de Charles, mais elle ne dépasse jamais le seuil de conscience car les activations passent moins bien. Cela suffit à monter un peu l’activation du NIS « Diana » par propagation. À la présentation de son nom, il est plus facile d’atteindre le seuil : c’est l’amorçage sémantique sur la décision de familiarité du nom Diana.</p>
+<p>En N-N, le modèle lésé dépasse le seuil pour « Charles » et montre un effet d’amorçage sémantique. Globalement, on obtient la même chose qu’un sujet sain, car la prosopagnosie n’atteint pas les noms. Mais il faut plus de cycles qu’un sujet sain pour dépasser le seuil, et le gain d’amorçage est moins fort, alors que seuls les visages sont lésés.</p>
+</section>
+<section id="conséquence-la-correspondance-anatomo-clinique" class="level3">
+<h3 class="anchored" data-anchor-id="conséquence-la-correspondance-anatomo-clinique">7.3. Conséquence : la correspondance anatomo-clinique</h3>
+<p>On a donc un déficit comportemental sur les noms sans lésion du traitement des noms. L’idée d’une <strong>correspondance anatomo-clinique directe</strong> s’effondre : dès que le système est interactif, on ne peut plus faire correspondre directement un déficit à une lésion.</p>
+<p>Pourquoi ce résultat n’est-il pas étonnant ? Chez un sujet contrôle, les allers-retours URV–NIS se mettent en place même en présentation du nom : le NIS bénéficie des allers-retours URN–NIS et URV–NIS. Chez un patient prosopagnosique, les allers-retours URV–NIS sont lésés. Le patient n’est donc pas totalement pathologique sur les noms, mais « seulement » très mauvais.</p>
+</section>
+</section>
+<section id="effet-de-surface-dans-lamorçage-par-répétition-un-problème-en-suspens" class="level2">
+<h2 class="anchored" data-anchor-id="effet-de-surface-dans-lamorçage-par-répétition-un-problème-en-suspens">8. Effet de surface dans l’amorçage par répétition : un problème en suspens</h2>
+<section id="le-renforcement-synaptique" class="level3">
+<h3 class="anchored" data-anchor-id="le-renforcement-synaptique">8.1. Le renforcement synaptique</h3>
+<p>Les modèles précédents expliquaient l’amorçage par répétition par une baisse d’activation des URV, où se faisait la décision de familiarité. Maintenant, la décision se fait au niveau des NIS. Or l’amorçage par répétition est <strong>intramodal et les NIS ne séparent pas les modalités</strong>.</p>
+<p>Les auteurs considèrent donc qu’on <strong>renforce les synapses</strong> entre deux unités quand on présente une stimulation : l’activation passe plus facilement. L’amorçage par répétition est expliqué par le renforcement de la connexion UR–NIS.</p>
+<p>Pratiquement, les prédictions sont exactement les mêmes que celles de la baisse de seuil dans Bruce &amp; Young. On peut donc rester sur une réflexion de baisse de seuil, plus simple.</p>
+</section>
+<section id="le-problème-de-lintramodalité" class="level3">
+<h3 class="anchored" data-anchor-id="le-problème-de-lintramodalité">8.2. Le problème de l’intramodalité</h3>
+<p>Si on pousse le modèle IAC, les allers-retours d’activation devraient renforcer de nombreuses synapses. La présentation du nom après un visage devrait donc faciliter la dénomination : le modèle prédit un amorçage par répétition <strong>intermodal</strong>, alors que les résultats montrent un effet <strong>intramodal</strong>.</p>
+<p>Dans ce cours, on reste donc sur <strong>Bruce &amp; Young</strong> pour expliquer l’amorçage par répétition : baisse à long terme du seuil d’activation de l’UR, qui est propre à une modalité, donc effet intramodal.</p>
+<p>Une expérience classique (Warren &amp; Morton, 1982) le montre : le seuil d’identification d’images baisse après un amorçage par la même image (35,7 ms), mais pas après un amorçage par le nom (43,6 ms, proche du non-amorcé à 43,8 ms).</p>
+</section>
+<section id="ellis-young-flude-hay-1987" class="level3">
+<h3 class="anchored" data-anchor-id="ellis-young-flude-hay-1987">8.3. Ellis, Young, Flude &amp; Hay (1987)</h3>
+<p>Dans le cadre de Bruce &amp; Young, on peut conclure, à partir des résultats de cette étude, qu’il existe des <strong>unités des visages</strong>. L’étude montre que l’amorçage par un visage est plus efficace que l’amorçage par un nom ou par un corps, ce qui soutient l’existence d’unités spécifiques aux visages.</p>
+<p>Dans l’expérience 1, la latence d’estimation de familiarité est de 774 ms après un amorçage par le visage, 850 ms après un nom écrit, 845 ms sans amorçage. Dans l’expérience 2, elle est de 788 ms après un visage, 897 ms après un corps, 909 ms sans amorçage.</p>
+</section>
+<section id="bruce-valentine-1985" class="level3">
+<h3 class="anchored" data-anchor-id="bruce-valentine-1985">8.4. Bruce &amp; Valentine (1985)</h3>
+<p>Tâche : estimer la familiarité d’un visage (oui/non). VI : correspondance de forme de surface entre l’amorçage et le test (même image, image similaire mais un peu différente, nom, pas d’amorce). VD : latence pour estimer la familiarité du visage en phase test.</p>
+<p>Si l’amorçage passait par la même unité de visage, même image et image similaire devraient donner le même effet. Les résultats montrent une différence de latence entre ces deux conditions (863 ms vs 952 ms), ce qui invalide Bruce &amp; Young.</p>
+<p>Une tâche avec des temps de présentation très brefs serait idéale, mais elle est très sensible à la contamination : les participants cherchent à voir quelque chose dans des stimuli présentés trop brièvement pour être perçus consciemment.</p>
+</section>
+<section id="vers-les-modèles-hybrides" class="level3">
+<h3 class="anchored" data-anchor-id="vers-les-modèles-hybrides">8.5. Vers les modèles hybrides</h3>
+<p>Les modèles hybrides apparaissent alors pour tenter de résoudre ce problème. Ils distinguent l’amorçage généralisateur (baisse de seuil des UR, abstrait, qui permet la généralisation et prouve l’existence des UR) et l’amorçage spécifique à la photographie (effet de bas niveau, mémoire picturale, qui ne peut pas généraliser). La suite — l’échec du modèle hybride et les systèmes de représentations perceptuelles (PRS) de Tulving &amp; Schacter (1990) — est traitée dans le CM6.</p>
+<hr>
+<!-- source: 6_modeles_memoire.md -->
+</section>
+</section>
+</section>
+<section id="cm6-modèle-mémoire" class="level1">
+<h1>CM6 modèle mémoire</h1>
+<p>[[i_modeles_memoire]] [[ii_modeles_memoire]]</p>
+<section id="unités-de-reconnaissance-des-visages" class="level3">
+<h3 class="anchored" data-anchor-id="unités-de-reconnaissance-des-visages">Unités de reconnaissance des visages ?</h3>
+<p>Si on lèse la partie lésée, on lèse une partie qui fait de l’interaction. Donc dans ce genre de modèles, on ne peut pas faire d’hypothèses anatomo-cliniques, mais uniquement sur les mécanismes.</p>
+<p>Amorçage par répétition dans les modèles classiques est une baisse à long terme du seuil. Mais on verra que quand 2 neurones sont activés au dessus du seuil de conscience, alors la force de la synapse qui relie les deux neurones est augmentée. Dans Bruce &amp; Young on baisse le seuil, et dans l’autre on fait que ça peut partir plus facilement. Donc les deux ont les mêmes prédictions. Donc faut pas se casser la tête.</p>
+<p>Prédictions : a-t-on une seule ou plusieurs unités de reconnaissance ? On peut amorcer par le visage ou le corps, et on remarque qu’avec cible visage le corps n’amorce pas. Ça va dans le sens d’une unité unique du visage pour les visages.</p>
+</section>
+<section id="modèle-hybride" class="level3">
+<h3 class="anchored" data-anchor-id="modèle-hybride">Modèle hybride</h3>
+<p>On va aller plus loin. On va faire une expérience (Bruce &amp; Valentine, 1985) ou le réslultat attendu n’est pas celui qu’on voit au ta bleau. Une condition où on est amorçee par visage, une par le nom, et dans le visage, soit ils voient exactement le même image en etst ou légèrement différente (“similaire”) ou de la même personne mais lpus différente (“différente”). Logiquement, dans les 2 cas de visage, la baiasse devrait être équivalent si elles sont liées à la même unité de reconnaissanc. Le résultat contredit le modèle : différence significative entre même image et image similaire.</p>
+<p>On va donc séparer l’amorçage par répétition en 2 parties : le “vrai”, <strong>la baisse de seuil</strong>, constituant un amorçage généralisateur, où les caractéristiques propres du stimulus ne comptent pas, mais ce qui compte est “ce que c’est”. L’autre est “<strong>pictural</strong>” : il sert à expliquer le résultat précédent, il y aurait également une facilitation de très bas niveau dû au fait qu’on présente exactement la même image. S’il existe, alors il faut que ça marche uniquement quand c’est la même image. Et ça marche très bien : non amorcé et nom pas de baisse, similaire baisse de seuil dû à la baisse de seuil et même image ça et mémoire de très bas niveau. Cette mémoire picturale est donc solide. <em>Mais elle ne peut pas généraliser : elle ne sait aller que d’une image à elle-même. On ne peut pas partir d’une image vers une image similaire, sinon les URv ne servent plus à rien : elles ont justement été inventées pour généraliser, c’est-à-dire pour reconnaître le même visage malgré ses caractéristiques de surface (maquillage, lunettes, noir et blanc). L’amorçage généralisateur repose uniquement sur les UR : il ne dépend pas des caractéristiques propres du stimulus, mais de « ce que c’est ». C’est lui qui prouve l’existence des UR.</em></p>
+<p><em>Le modèle hybride, c’est donc l’addition des deux : on garde le modèle de Bruce &amp; Young (l’URv et sa baisse de seuil, qui généralise) et on lui ajoute un second mécanisme, la mémoire picturale, qui n’intervient que sur une image identique. Une image identique cumule alors les deux effets (baisse de seuil + aide de bas niveau) ; une image similaire ne bénéficie que de la baisse de seuil.</em></p>
+</section>
+<section id="le-système-de-représentations-perceptives-prs" class="level3">
+<h3 class="anchored" data-anchor-id="le-système-de-représentations-perceptives-prs">Le système de représentations perceptives (PRS)</h3>
+<p>Le modèle hybride ne marche pas, <em>parce qu’il prédit une égalité entre « photo similaire » et « photo différente » : aucune des deux ne profite de la mémoire picturale, et toutes les deux passent par la même URv, donc elles devraient amorcer pareil. Or les résultats montrent bien une différence entre les deux (Ellis, Young, Flude &amp; Hay, 1987 : 697 ms en similaire contre 726 ms en différente). Les UR sont donc sensibles à la similarité, alors qu’elles devraient généraliser.</em> Et c’est embêtant car c’est la base du modèle, et on a 2 choix possible : dire que le modèle de base est faux, soit essayer de l’accomoder pour que ça marche. On va rajouter un nouveau système de mémoire dans les années 2000. On peut plus dire que l’amorçage <em>prouve l’existence des unités de reconnaissance : s’il s’agit d’un effet d’apprentissage, il relèverait de la mémoire procédurale (on est meilleur en perception parce qu’on s’est entraîné), et pas de la sémantique. Du coup on n’a plus rien pour prouver les UR.</em> On dit qu’il est du à des phénomènes procéduraux de construction d’invariants, on aurait une meemiore procéedural particulière pour la construction de code invariant.</p>
+<p>Et ça serait le <strong>PRS, perceptual representation system</strong>. On va se baser sur une seule tâche, de décision d’objet. Est-ce que cet objet est possible ou impossible en 3 dimensions ? On défend qu’on peut construire un <strong>code structual, donc des invariants, sur les objets possibles uniquement</strong>. On devrait donc avoir un effet d’amorçage répétition sur les objets possibles, et non sur les impossibles en raison de la défaillance des processus de construction d’objet.</p>
+<p>Et ça marche très bien, les prédictions sont confirmées par les résultats. Mais, pour que ça marche, il faut qu’il y ait une tâche en première phase qui demande de décision, et le problème c’est que ça <strong>ressemble beaucoup à la tâche de test</strong>. Et ça pose problème, car on a une énorme chance de <strong>contamination par la mémoire épisodique</strong> ; de plus, les deux phases se ressemblent. On suspecte donc énormément ce risque. Enfin, la notion d’un objet “possible” revient presque à dire que cet objet existe et qu’on le connaît, soit la familiarité. Donc cette tâche se rapproche aussi d’une <strong>tâche de décision de familiarité</strong>.</p>
+<p>Analyse de tâche : on peut avoir <strong>plusieurs sources pour répondre</strong> : la familiarité, la récupération de l’information épisodique. Comment ça va jouer pour les items possibles ? En positif sur les deux. Cependant, ça va aussi faire tendre à dire <strong>“possible” pour les items impossibles par familiarité</strong>. Mais va aider à dire que c’est <strong>impossible par récupération de l’information épisodique</strong>. Donc si un <strong>sujet a ces deux sources</strong>, et si elles sont aussi importantes, alors pas d’amorçage pour les items impossibles, et si pas aussi importants, alors l’effet sera dans tous les cas plus faible que pour possible.</p>
+<p>En fait, il y a trois sources : la récupération épisodique, la dextérité perceptive (pouvoir manipuler mentalement l’objet) et le sentiment de familiarité. Pour un objet <strong>impossible, seule la familiarité pousse à répondre “possible”</strong>.</p>
+<p>On va tenter de démontrer que ça est vrai ? (Ratcliff et McKoon). Probabilité de répondre « possible » en phase 2 :</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Phase 1</th>
+<th>Phase 2</th>
+<th>Total</th>
+<th>RT &lt; 900 ms</th>
+<th>RT &gt; 900 ms</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Possible</td>
+<td>Possible</td>
+<td>0,67</td>
+<td>0,67</td>
+<td>0,65</td>
+</tr>
+<tr class="even">
+<td>Non vu</td>
+<td>Possible</td>
+<td>0,58</td>
+<td>0,59</td>
+<td>0,56</td>
+</tr>
+<tr class="odd">
+<td>Impossible</td>
+<td>Impossible</td>
+<td>0,42</td>
+<td>0,42</td>
+<td>0,41</td>
+</tr>
+<tr class="even">
+<td>Non vu</td>
+<td>Impossible</td>
+<td>0,41</td>
+<td>0,36</td>
+<td>0,48</td>
+</tr>
+</tbody>
+</table>
+<p>Ce qu’on a dans le total est que pour un item possible déjà vu, on a 67% de réponse “possible”. Pour un item possible pas vu en phase 1, 58% de réponses “possible”. Donc plus quand ils ont été amorcés que non. Pour un impossible vu en phase 1, 42% de “possibles”. <em>Pour un impossible pas vu en phase 1, 41%.</em> Il y aurait donc un petit effet d’amorçage où ils commettent un peu plus d’erreur sur les amorcés que sur les non-amorcés.</p>
+<p>On va donc faire condition où on force à répondre rapidement et lentement. On fait donc un pré-entrainement, les participants comprennent vite, et on recueilli des réponses rapides et lentes. Les rapides ont moins de risque de contamination, donc, par rapport au tableau précédent des sources, il n’y aurait pas a la partie épisodique. Sur les objets possibles, on a bien un effet positif. <em>Sur les objets impossibles, on a un amorçage négatif (42% contre 41%),</em> mais c’est bien un effet de mémoire, on a un amorçage.</p>
+<p>L’idée des PRS, qu’on a pas d’amorçage de répétition sur les objets impossibles, n’est pas validé. <em>Pour trancher, il faut des patients sans mémoire épisodique : chez eux, tout effet résiduel ne peut être qu’implicite.</em> Donc on va prendre des patients amnésiques antérograde (on pourrait aussi faire attention divisée mais bon), et on a amorçage positif pour les possibles et négatifs sur les impossibles. Mais ils n’obtiennent pas d’effet d’amorçage.</p>
+<p>Donc les unités de reconnaissances ont étées très importantes, utiles, ont été beaucoup de bases, et montrent que l’évaluation expérimentale de la réalité est pas facile facile.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle dark mode");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle dark mode");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,9 @@
+---
+title: "s7"
+listing:
+  type: grid
+  contents:
+    - "*.qmd"
+---
+
+S7 version quarto
