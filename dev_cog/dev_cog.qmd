@@ -35,8 +35,7 @@ Plan :
 ### 1.1. Le conditionnement classique
 
 Pavlov se rend compte que ses cobayes anticipent et se basent sur des événements
-de l'environnement qui prédisent l'arrivée de la nourriture. Il faut qu'il y ait
-:
+de l'environnement qui prédisent l'arrivée de la nourriture. Il faut qu'il y ait :
 
 - Un "**réflexe**", au sens large, soit un lien stimulus/réponse
 - Un stimulus inconditionnel, le stimulus du réflexe
@@ -66,17 +65,18 @@ Les bases neurofonctionnelles sont la plasticité neuronale :
 
 Points terminologiques :
 
-- **Acquisition** : transformation d'un stimulus neutre en un stimulus conditionné
+- **Acquisition** : transformation d'un stimulus neutre en un stimulus
+  conditionné
 - **Extinction** : diminution de la réponse conditionnée lorsque le stimulus
   inconditionnel n'est plus associé au stimulus conditionné
-- **Récupération spontanée** : une récupération partielle de la réponse conditionnée
-  après une phase d'extinction
-- **Généralisation du SC** : tendance à produire la RC pour des stimuli autres que
-  le SC (petit Albert)
+- **Récupération spontanée** : une récupération partielle de la réponse
+  conditionnée après une phase d'extinction
+- **Généralisation du SC** : tendance à produire la RC pour des stimuli autres
+  que le SC (petit Albert)
 
 Expérience où ils cherchent à voir si on généralise aux significations des mots
-: on mesure réponse electrodermale après douleur associée au mot "_large_", et
-la généralisation est perceptive et non sémantique.
+:   on mesure réponse electrodermale après douleur associée au mot "*large*", et
+    la généralisation est perceptive et non sémantique.
 
 Il y a des conditions nécessaires au conditionnement classique :
 
@@ -138,11 +138,11 @@ mois, la mémoire fail si :
 
 Donc très sensible au contexte
 
-![](../Pasted image 20260918092206.png)
+![](../assets/Pasted image 20260918092206.png)
 
-![](../Pasted image 20260918092453.png)
+![](../assets/Pasted image 20260918092453.png)
 
----
+--------------------------------------------------------------------------------
 
 <!-- source: 2_imitation.md -->
 
@@ -190,11 +190,11 @@ l'époque :
   situation ressentent quelque chose
 - **Non équipotentialité** des stimuli
 
-|              | Répondant              | Opérant                           |
-| ------------ | ---------------------- | --------------------------------- |
-| Comportement | Involontaire (réflexe) | Volontaire (non réflexe)          |
-| Association  | Événement (SC & SI)    | Action & renforcement             |
-| Attentes     | Que SC prédise le SI   | Que le comportement soit renforcé |
+  |              | Répondant              | Opérant                           |
+  | ------------ | ---------------------- | --------------------------------- |
+  | Comportement | Involontaire (réflexe) | Volontaire (non réflexe)          |
+  | Association  | Événement (SC & SI)    | Action & renforcement             |
+  | Attentes     | Que SC prédise le SI   | Que le comportement soit renforcé |
 
 C'est opérant parce que c'est l'action du sujet qui apporte une conséquence
 
@@ -238,9 +238,7 @@ probabilité de faire bouger des doigts.
 
 FIX: je copmrends pas l'intérêt de cette étude
 
-
-![](../Pasted image 20260923143736.png)
-
+![](../assets/Pasted image 20260923143736.png)
 
 On remarque que l'imitation prend la forme d'échanges, de proto-conversations,
 et que l'imitation aurait une fonction sociale dans cet aspect, et l'acte
@@ -261,7 +259,7 @@ et production.
 - **Mirror neuron system** (non-inhibition) -> théorie de la simulation, qui est
   plus vieille que MNS
 
----
+--------------------------------------------------------------------------------
 
 <!-- source: 3_dev_cog.md -->
 
@@ -307,13 +305,13 @@ Viviani fait la théorie de résonateurs (penser à la propagation de vibrations
 physiques) : des résonateurs perceptifs font une forme de couplage et j'ai pas
 trop copmris.
 
-![](../Pasted image 20261001082940.png)
+![](../assets/Pasted image 20261001082940.png)
 
 Pour en revenir à l'imitation, la plupart des actions produites par les enfants
 à la naissance sont très simples. L'imitation comme mécanisme d'apprentissage
 doit donc impliquer plus que des actions déjà présentes dans le répertoire. On
-va la définir comme _the copying of a novel or otherwise improbable act or
-utterance, or some act for which there is clearly no instinctive tendency_
+va la définir comme *the copying of a novel or otherwise improbable act or
+utterance, or some act for which there is clearly no instinctive tendency*
 (Thorpe, 1963).
 
 On propose que cette imitation à une fonction **sociale** de communication, et
@@ -348,15 +346,15 @@ d'apprentissage :
   l'inverse du mimicking, l'apprenant fait ça avec une compréhension du but du
   démonstrateur
 
-![](../Pasted image 20261001084814.png)
+![](../assets/Pasted image 20261001084814.png)
 
 Thèse de K. Prepin en sciences cognitives qui propose que l'imitation soit un
-espace varié pour définitions multiples avec trois axes : _structure
-temporelle_, _fonctionnalité_ et _objet_. Les manifestations de l'imitation
+espace varié pour définitions multiples avec trois axes : *structure
+temporelle*, *fonctionnalité* et *objet*. Les manifestations de l'imitation
 évoluent au cours du développement de l'enfant, ici au cours des deux premières
 années, au cours d'interaction avec un robot, je crois ?
 
-![](../Pasted image 20261001085818.png)
+![](../assets/Pasted image 20261001085818.png)
 
 Meltzoff argumente que quand on fait une imitation et qu'on a le résultat, il
 peut être vécu comme un renforcement
@@ -365,7 +363,7 @@ Il est important de considérer que l'imitation peut être différée, car si on
 peut pas imiter une action après longtemps, alors on peut dire que
 l'apprentissage n'a pas vraiment été fait.
 
-![](../Pasted image 20261001090618.png)
+![](../assets/Pasted image 20261001090618.png)
 
 On s'est donc mis à étudier la force de la trace (dans le temps) des
 apprentissages. On fait un test avec une action d'assemblage d'un petit jouet
@@ -391,7 +389,7 @@ expressions théâtrales par exemple. À 18 mois, une action intentionnelle, mai
 échouée, peut être imitée dans l'intention originelle et donc réussie. À trois
 ans, ils savent compléter nos phrases.
 
-![](../Pasted image 20261001092046.png)
+![](../assets/Pasted image 20261001092046.png)
 
 Donc, on peut utiliser l'imitation pour comprendre les bases de la compréhension
 d'autrui. Ça nous renseigne aussi sur la structure des relations entre action et
@@ -403,7 +401,7 @@ Les fœtus peuvent bâiller, et quand la maman regarde une vidéo de quelqu'un q
 bâille et que ça déclenche chez elle un bâillement, ça augmente la probabilité
 que l'enfant bâille lui-même. Mais est-ce que c'est de l'imitation ?
 
----
+--------------------------------------------------------------------------------
 
 <!-- source: 4_dev_cog.md -->
 
@@ -510,20 +508,20 @@ vérifie qu'il sait bien que les deux sont des fleurs. On va mettre plus de
 marguerites que de roses. On lui demande de comparer le nombre de marguerites
 aux nombres de fleurs.
 
-Pour construire les classes logiques, l'enfant doit comprendre la relation
-entre compréhension et extension : les critères d'une classe et les objets
-qu'elle contient. Ces deux aspects varient en sens inverse : plus on ajoute
-de critères, plus la classe est restreinte (« fleur » a une extension large,
-« rose » une extension étroite).
+Pour construire les classes logiques, l'enfant doit comprendre la relation entre
+compréhension et extension : les critères d'une classe et les objets qu'elle
+contient. Ces deux aspects varient en sens inverse : plus on ajoute de critères,
+plus la classe est restreinte (« fleur » a une extension large, « rose » une
+extension étroite).
 
-- **Compréhension** : ensemble des propriétés (ressemblances et différences)
-  qui définissent la classe, c'est-à-dire les critères auxquels on reconnaît
-  qu'un élément en fait partie.
-- **Extension** : ensemble des éléments qui satisfont ces critères,
-  c'est-à-dire la classe elle-même, dans sa portée.
+- **Compréhension** : ensemble des propriétés (ressemblances et différences) qui
+  définissent la classe, c'est-à-dire les critères auxquels on reconnaît qu'un
+  élément en fait partie.
+- **Extension** : ensemble des éléments qui satisfont ces critères, c'est-à-dire
+  la classe elle-même, dans sa portée.
 
-Chez l'enfant de moins de 8 ans, il répond qu'il y a plus de marguerites car
-il n'y a que 2 roses. Au lieu de comparer A à B (marguerites aux fleurs), il
+Chez l'enfant de moins de 8 ans, il répond qu'il y a plus de marguerites car il
+n'y a que 2 roses. Au lieu de comparer A à B (marguerites aux fleurs), il
 compare A à A' (marguerites aux roses). Réussir cette épreuve veut dire qu'il
 peut réussir 2 opérations :
 
@@ -536,7 +534,7 @@ il faut que l'enfant réussisse ces épreuves.
 
 ![[4_dev_cog - inclusion des classes 2026-10-22 20.34.19.excalidraw]]
 
----
+--------------------------------------------------------------------------------
 
 <!-- source: 5_visages.md -->
 
@@ -572,8 +570,7 @@ vide. On regarde les visages plus. Ils ont par la volée montré les stimuli de 
 précédente, et n'ont pas reproduit leurs résultats, qui a produit une
 controverse. On remet en question l'importance de la structures des stimuli dans
 la perception néo-natale, alors qu'on a une hypothèse forte et crédible qu'on
-soit prédisposés à la perception des visages. En vérité, ça se distingue en deux
-:
+soit prédisposés à la perception des visages. En vérité, ça se distingue en deux :
 
 - Apprentissage ultra-rapide
 - Prédisposition hardwired
@@ -587,7 +584,7 @@ mois in utero. La différence est très significative.
 
 Ils proposent des structures neuronales dans le TC qui serviraient de
 détecteur-ultra précoce primitif spécifique aux visages, appelé CONSPEC
-(_conspecific specification_). Et CONLERN (_conspecific learning_) se développe
+(*conspecific specification*). Et CONLERN (*conspecific learning*) se développe
 plus pour mieux les détecter je crois.
 
 ### L'hypothèse généraliste : le biais top-heavy
@@ -677,7 +674,7 @@ visages d'humains et de singes. On peut formuler l'hypothèse qu'on a un meilleu
 potentiel de discriminiation jeune qu'adulte, même pour les primates
 non-humains. C'est le cas, les enfants perdent la capacité à séparer les images
 de primates. Mais comment est-ce possible ? Cette discrimination ne sert à rien,
-voilà pourquoi. Ça s'exprime aussi dans "l'_other race effect_".
+voilà pourquoi. Ça s'exprime aussi dans "l'*other race effect*".
 
 ![[5_visages 2026-11-10 13.58.21.excalidraw]]
 
@@ -737,7 +734,7 @@ TSA. Ça correspond à période du narrowing et mécanisme corticalisé.
 
 ![[5_visages 2026-11-11 10.22.07.excalidraw]]
 
----
+--------------------------------------------------------------------------------
 
 <!-- source: 6_nombres.md -->
 
@@ -863,7 +860,7 @@ dans lesquels on demande lequel de 2 personnages ont plus ou moins de bonbons.
 Réponses bien au-dessus du hasard qui veut dire que ces enfants sont **capables
 de faire du caclul approximatif**.
 
-![](../Pasted image 20261103095225.png)
+![](../assets/Pasted image 20261103095225.png)
 
 C'est surprenant qu'il y ai ce système de nobmre approximatif qui permet
 d'exprimer des quantités et peut faire du calcul approximatif. Et pourtant,
@@ -871,7 +868,7 @@ quelques années plus tard, au terme d'une intense application, un écolier
 conclut sans sourcilller que 317 moins 81 fait 376, c'est qy'il y a quelque
 chose de pourri au royaume de Charlemagne.
 
----
+--------------------------------------------------------------------------------
 
 <!-- source: 7_nombres.md -->
 
@@ -932,7 +929,7 @@ Puis nouvelle tâche pour enfants au début du CP. Forme plus classique : positi
 à mettre sur la ligne à partir d'un nombre donné. Que mesure cette épreuve ?
 Magnitude des nombres, mais évolution des stratégies avec l'âge.
 
-![](../Pasted image 20261115151630.png)
+![](../assets/Pasted image 20261115151630.png)
 
 Il a été mis en valeur que le lien entre la qualité de la ligne numérique (donc
 avoir une représentation linéaire) est associé à la réussite en maths, surtout
@@ -941,7 +938,7 @@ au CP et CE1.
 Représentation unifiée de la genèse et développement de la représentation de la
 quantité et du nombre :
 
-![](../Pasted image 20261115151847.png)
+![](../assets/Pasted image 20261115151847.png)
 
 ## 8. Modèles développementaux
 
@@ -973,12 +970,12 @@ jeunes, qui disparaissent avec l'âge pour laisser place à des stratégies plus
 chevauchent**. Ici, les stratégies sont en compétition, l'une va dominer les
 autres à un moment donné dans une situation donnée.
 
-![](../Pasted image 20261115152716.png)
+![](../assets/Pasted image 20261115152716.png)
 
 Ce modèle est applicable au calcul mental, mais pas à d'autres compétences qui
 demandent des stratégies.
 
----
+--------------------------------------------------------------------------------
 
 <!-- source: 8_nombres.md -->
 
@@ -987,7 +984,7 @@ demandent des stratégies.
 - [[i_8_nombres]]
 - [[ii_8_nombres]]
 
-![](../Pasted image 20261118134452.png)
+![](../assets/Pasted image 20261118134452.png)
 
 Le temps de résolution diminue avec le temps (donc apprentissage) et la
 récupération sollicite beaucoup moins la mémoire de travail que d'autres
@@ -1009,7 +1006,7 @@ Compter sur les doigts serait très adapté, car ça fait une bonne stratégie q
 est tout le temps accessible. Il faut tout de même passer d'une stratégie
 externalisée à une stratégie internalisée
 
-![](../Pasted image 20261118140111.png)
+![](../assets/Pasted image 20261118140111.png)
 
 Les enfants entre 4 et 6 ans qui utilisent leurs doigts ont leurs perfs plus
 élevées en calcul et capacité élevée de MdT. À huit ans, c'est le contraire.
@@ -1017,11 +1014,11 @@ Les enfants entre 4 et 6 ans qui utilisent leurs doigts ont leurs perfs plus
 On a fait un protocole pour entraîner les enfants au comptage sur les doigts. On
 entraîne par 2 stratégies différentes : la stratégie "tout", ou par répétition
 par cœur des mêmes calculs (groupe contrôle actif). Entraînement dure sur 2
-semaines, 6 * 10 minutes, 15 additions au total.
+semaines, 6 \* 10 minutes, 15 additions au total.
 
-![](../Pasted image 20261118140547.png)
+![](../assets/Pasted image 20261118140547.png)
 
-![](../Pasted image 20261118141357.png)
+![](../assets/Pasted image 20261118141357.png)
 
 Les enfants qui n'utilisaient pas leurs doigts l'utilisent plus, et ont aussi de
 meilleurs performances grâce à l'entraînement.
@@ -1031,10 +1028,10 @@ meilleurs performances grâce à l'entraînement.
 On va plus utiliser la mémoire pour les multiplications. Cependant, les traces
 ne sont pas indépendantes, elles sont **associatives**, il peut donc y avoir des
 interférences entre elles. C'est délétère, car un calcul active plein de
-résultats différents ($6\times7 = 42\ \text{or}\ 49$) par exemple.
+résultats différents ($6 \times 7 = 42\ \text{or}\ 49$) par exemple.
 
 Cet effet se manifeste dans une tâche où on demande de sélectionner la bonne
-réponse pour $6\times7$ parmi 4 propositions. Tout le monde n'a pas la même
+réponse pour $6 \times 7$ parmi 4 propositions. Tout le monde n'a pas la même
 sensibilité à l'interférence, ce qui va pénaliser certains à l'apprentissage des
 tables.
 
@@ -1042,11 +1039,11 @@ tables.
 
 ### Modèle du triple code
 
-![Modèle du Triple code de Dehaene](../Pasted image 20261118143702.png)
+![Modèle du Triple code de Dehaene](../assets/Pasted image 20261118143702.png)
 
 C'est un modèle très connu et utilisé, provenant de la neuropsy de l'adulte, sur
-des patients cérébro-lésés. On aurait différents codes ayant chacun un
-substrat anatomique particulier.
+des patients cérébro-lésés. On aurait différents codes ayant chacun un substrat
+anatomique particulier.
 
 - Code analogique, ou des quantités, dans les zones pariétales bilatérales,
   souvent codé symboliquement, qu'on peut représenter de 2 manières différentes.
@@ -1065,12 +1062,12 @@ vite et sans difficultés. C'est ce sur quoi on les fait beaucoup travailler.
 ### Nombre et doigts
 
 Lien entre maturation du lobe pariétal et de la représentation des quantités. On
-cherche un lien causal anatomo-fonctionnel entre le **degré de maturation du lobe
-pariétal et les capacités de représentations des quantités**. Plus précisément, on
-s'attend à ce que les **performances perceptivo-tactiles permettent
-mieux de prédire les performances arithmétiques que le développement
-intellectuel**. On a fait une étude longitudinale sur enfant de GS, CP et CE2. On
-leur a évalué :
+cherche un lien causal anatomo-fonctionnel entre le **degré de maturation du
+lobe pariétal et les capacités de représentations des quantités**. Plus
+précisément, on s'attend à ce que les **performances perceptivo-tactiles
+permettent mieux de prédire les performances arithmétiques que le développement
+intellectuel**. On a fait une étude longitudinale sur enfant de GS, CP et CE2.
+On leur a évalué :
 
 - Le développement intellectuel
 - Habiletés perceptivo-tactiles, gnosie digitale
@@ -1079,4 +1076,3 @@ leur a évalué :
 
 Résultats : dans l'écriture du nombre, QD est le meilleur prédicteur, mais pour
 la quantité, score neuropsy.
-

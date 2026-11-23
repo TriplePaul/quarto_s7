@@ -55,6 +55,7 @@ visuelle, malgré les contraintes du traitement du signal visuel.
   - Traitement sensoriel
 
 - Perception
+
 - Extraction des primitives visuelles
 
 ## Chapitre 1 - Traitement précoce de l'information visuelle : Extraction des caractéristiques visuelles de la scène
@@ -159,11 +160,11 @@ savoir bien la lire
 ligne que le patient est capable de lire à 6 m. La distance est calibrée pour
 que les lettres de cette ligne mesurent 5 minutes d'arc sur sa rétine,
 c'est-à-dire la distance à laquelle une personne sans déficience visuelle
-(10/10) doit pouvoir lire cette ligne (= $D$). Donc à 6m pour un 10/10, 1 cycle
-= 2 MAR, ou 30 c.p.d. Donc 30 cycles sur un degré. $\alpha$ est la taille d'un
+(10/10) doit pouvoir lire cette ligne (= $D$). Donc à 6m pour un 10/10, 1 cycle =
+2 MAR, ou 30 c.p.d. Donc 30 cycles sur un degré. $\alpha$ est la taille d'un
 **optotype** (plus petite distance qu'on peut voir sur la charte du médecin je
-pense), donc on le calcule pas sur un cycle, on est pas sur le même
-principe. C'est la distance $\alpha$ entre 2 objets.
+pense), donc on le calcule pas sur un cycle, on est pas sur le même principe.
+C'est la distance $\alpha$ entre 2 objets.
 
 Une acuité de 6/18 signifie qu'à 6 m de la ligne, la personne lit une lettre
 qu'une personne normale lit à 18 m (≈ 0,33 en acuité décimale).
@@ -184,7 +185,7 @@ L'acuité change donc en fonction du contraste.
 
 La fréquence se déduit de la valeur angulaire d'un cycle, $L = \alpha$
 (période), par la formule $F = \frac{1}{\alpha}$. On exprime l'acuité d'un
-patient en cycles par degré (_c.p.d_). (Rappel : une minute d'arc fait 60
+patient en cycles par degré (*c.p.d*). (Rappel : une minute d'arc fait 60
 degrés)
 
 Conversion de l'acuité de Snellen en fréquence spatiale : voir la diapo.
@@ -200,7 +201,7 @@ Manifestation cliniques :
 - Perte de vision centrale
 - 
 
----
+--------------------------------------------------------------------------------
 
 <!-- source: 6_cog_visuelle.md -->
 
@@ -238,9 +239,9 @@ Règle de contro-latéralité de la vision : effet de superposition verticale
 médiane visuelle. Dans la figure du haut, la zone de chevauche ?? FIX: diapo
 
 Structure en 6 couches du LGN pour séparer les cellules M et P. P sur les 4
-couches supérieures, M les deux inférieures. Dans V1, il y a un codage **spatial,
-local, et dimensionnel**. On analyse la scène champs récepteur par champs
-récepteur. Les dimensions codées localement sont luminance, couleur,
+couches supérieures, M les deux inférieures. Dans V1, il y a un codage
+**spatial, local, et dimensionnel**. On analyse la scène champs récepteur par
+champs récepteur. Les dimensions codées localement sont luminance, couleur,
 orientation, fréquence spatiale, mouvement, disparités. On a donc un codage
 d'une multitude de cartes rétinotopiques.
 
@@ -267,8 +268,8 @@ traitements : voie de perception pour l'**action** (dorsale) et pour
 l'**identification** (ventrale). Il y a des aires spécialisées.
 
 On va faire une tache avec singes lésés à V1. On fait du conditionnement pour
-lui apprendre à réaliser des saccades oculaires après un indice présenté dans
-la partie aveugle.
+lui apprendre à réaliser des saccades oculaires après un indice présenté dans la
+partie aveugle.
 
 Puis tâche sur patients blindsight en TMS (ou pas je crois ptet on cause ça par
 TMS) // : première question pour savoir s'il y a eu une perception consciente ou
@@ -283,7 +284,7 @@ Si je prends tous mes essais et que je sépare entre amorce supérieure a 5 et
 inférieure à 5. On va voir quand est-ce qu'on a une différence d'activité au
 niveau du cortex moteur. On a bien une différence qui apparaît plus tôt.
 
----
+--------------------------------------------------------------------------------
 
 <!-- source: 7_cog_visuelle.md -->
 
@@ -296,11 +297,11 @@ niveau du cortex moteur. On a bien une différence qui apparaît plus tôt.
 On reste pour l'instant dans un modèle qu'ascendant. On va essayer d'expliquer
 deux phénomènes :
 
-- "_Sight in blindisght_" : alors qu'il ne sait pas reporter la présence d'un
+- "*Sight in blindisght*" : alors qu'il ne sait pas reporter la présence d'un
   objet dans la partie aveugle, il a des capacités résiduelles. On propose que
   c'est par les voies sous-corticale, qui vont se projeter sur les aires
   extra-striées (au-delà de V1).
-- "_Blind in blindsight_" : pas capable de reporter les stimuli qui vont
+- "*Blind in blindsight*" : pas capable de reporter les stimuli qui vont
   pourtant activer les aires extra-striées
 
 3 hypothèses sur le rôle de V1 dans la conscience visuelle :
@@ -390,4 +391,3 @@ Expliquer comment c'est possible qu'on puisse continuer de voir un objet
 immobile alors que V1 est inhibé. V5 aurait donc une rétroaction aussi sur
 d'autres zones comme V2. Ou qu'on a perturbé le retour de V5 spécifiquement et
 pas les autres j'ai pas tout compris
-

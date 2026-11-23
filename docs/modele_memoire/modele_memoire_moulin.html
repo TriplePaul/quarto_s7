@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>modele_memoire_moulin – S7</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-cbed20f07cd0a3452a6886fe8d146970.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-181d6909a009fe39f73b5212012c69f5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-cbed20f07cd0a3452a6886fe8d146970.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
+        setTimeout(() => {
+          window.scrollTo(0, scrollY);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">S7</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../neuro_adulte/neuro_adulte.html"> 
+<span class="menu-text">Neuro</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../cognition_visuelle/cognition_visuelle_mermillod.html"> 
+<span class="menu-text">Mermillod</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../dev_cog/dev_cog.html"> 
+<span class="menu-text">Dupierrix</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../modele_memoire/modele_memoire_cours.html"> 
+<span class="menu-text">Sémantique</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../modele_memoire/modele_memoire_moulin.html"> 
+<span class="menu-text">Épisodique</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
+</div>
+            <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../modele_memoire/modele_memoire_moulin.html">EC10 Mémoire Épisodique</a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Section">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Index</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../neuro_adulte/neuro_adulte.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EC07 Neurologie de l’Adulte</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cognition_visuelle/cognition_visuelle_mermillod.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EC08 Cognition Visuelle Mermillod</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cognition_visuelle/cognition_visuelle_dup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EC08 Cognition Visuelle Dupierrix</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../dev_cog/dev_cog.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EC09 Développement Cognitif</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modele_memoire/modele_memoire_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EC10 Mémoire Sémantique</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modele_memoire/modele_memoire_moulin.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">EC10 Mémoire Épisodique</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#ec10-mémoire-épisodique" id="toc-ec10-mémoire-épisodique" class="nav-link active" data-scroll-target="#ec10-mémoire-épisodique">EC10 Mémoire Épisodique</a>
+  <ul class="collapse">
+  <li><a href="#la-mémoire-épisodique-définitions" id="toc-la-mémoire-épisodique-définitions" class="nav-link" data-scroll-target="#la-mémoire-épisodique-définitions">1. La mémoire épisodique : définitions</a></li>
+  <li><a href="#quelques-modèles" id="toc-quelques-modèles" class="nav-link" data-scroll-target="#quelques-modèles">2. Quelques modèles</a></li>
+  <li><a href="#un-point-de-départ-rappel-et-reconnaissance" id="toc-un-point-de-départ-rappel-et-reconnaissance" class="nav-link" data-scroll-target="#un-point-de-départ-rappel-et-reconnaissance">3. Un point de départ : rappel et reconnaissance</a></li>
+  <li><a href="#lencodage-et-le-contexte" id="toc-lencodage-et-le-contexte" class="nav-link" data-scroll-target="#lencodage-et-le-contexte">4. L’encodage et le contexte</a></li>
+  </ul></li>
+  <li><a href="#cm2-chris-moulin" id="toc-cm2-chris-moulin" class="nav-link" data-scroll-target="#cm2-chris-moulin">CM2 Chris Moulin</a>
+  <ul class="collapse">
+  <li><a href="#contexte-théorique" id="toc-contexte-théorique" class="nav-link" data-scroll-target="#contexte-théorique">1. Contexte théorique</a></li>
+  <li><a href="#corrélats-neuronaux-de-al-familiarité" id="toc-corrélats-neuronaux-de-al-familiarité" class="nav-link" data-scroll-target="#corrélats-neuronaux-de-al-familiarité">2. Corrélats neuronaux de al familiarité</a></li>
+  <li><a href="#phénomènes-quotidiens" id="toc-phénomènes-quotidiens" class="nav-link" data-scroll-target="#phénomènes-quotidiens">3. Phénomènes quotidiens</a>
+  <ul class="collapse">
+  <li><a href="#spécificité-de-lencodage" id="toc-spécificité-de-lencodage" class="nav-link" data-scroll-target="#spécificité-de-lencodage">3.1. Spécificité de l’encodage</a></li>
+  <li><a href="#familiarité-représentationnelle-et-phénoménologique" id="toc-familiarité-représentationnelle-et-phénoménologique" class="nav-link" data-scroll-target="#familiarité-représentationnelle-et-phénoménologique">3.2. Familiarité représentationnelle et phénoménologique</a></li>
+  </ul></li>
+  <li><a href="#familiarité-dans-le-contexte-clinique" id="toc-familiarité-dans-le-contexte-clinique" class="nav-link" data-scroll-target="#familiarité-dans-le-contexte-clinique">4. Familiarité dans le contexte clinique</a></li>
+  </ul></li>
+  <li><a href="#familiarité-suit" id="toc-familiarité-suit" class="nav-link" data-scroll-target="#familiarité-suit">familiarité suit</a>
+  <ul class="collapse">
+  <li><a href="#i.-contexte-théorique" id="toc-i.-contexte-théorique" class="nav-link" data-scroll-target="#i.-contexte-théorique">I. Contexte théorique</a>
+  <ul class="collapse">
+  <li><a href="#a.-rappel-théorique" id="toc-a.-rappel-théorique" class="nav-link" data-scroll-target="#a.-rappel-théorique">A. Rappel théorique</a></li>
+  </ul></li>
+  <li><a href="#paradigmes-expérimentaux" id="toc-paradigmes-expérimentaux" class="nav-link" data-scroll-target="#paradigmes-expérimentaux">2. Paradigmes expérimentaux</a>
+  <ul class="collapse">
+  <li><a href="#paradigme-rememberknow-tulving-1985-gardiner-1988" id="toc-paradigme-rememberknow-tulving-1985-gardiner-1988" class="nav-link" data-scroll-target="#paradigme-rememberknow-tulving-1985-gardiner-1988">2.1. Paradigme “remember/know” (Tulving, 1985; Gardiner, 1988)</a></li>
+  </ul></li>
+  <li><a href="#phénomèmnes-quotidiens" id="toc-phénomèmnes-quotidiens" class="nav-link" data-scroll-target="#phénomèmnes-quotidiens">3. Phénomèmnes quotidiens</a>
+  <ul class="collapse">
+  <li><a href="#faux-souvenirs" id="toc-faux-souvenirs" class="nav-link" data-scroll-target="#faux-souvenirs">3.1. Faux souvenirs</a></li>
+  <li><a href="#amnésie-infantile" id="toc-amnésie-infantile" class="nav-link" data-scroll-target="#amnésie-infantile">3.2. Amnésie infantile</a></li>
+  <li><a href="#b.-modèle-intégratif-de-la-mémoire" id="toc-b.-modèle-intégratif-de-la-mémoire" class="nav-link" data-scroll-target="#b.-modèle-intégratif-de-la-mémoire">B. Modèle intégratif de la mémoire</a></li>
+  </ul></li>
+  <li><a href="#ii.-corrélats-neuronaux-de-la-familiarité" id="toc-ii.-corrélats-neuronaux-de-la-familiarité" class="nav-link" data-scroll-target="#ii.-corrélats-neuronaux-de-la-familiarité">II. Corrélats neuronaux de la familiarité</a></li>
+  <li><a href="#iii.-phénomènes-quotidiens" id="toc-iii.-phénomènes-quotidiens" class="nav-link" data-scroll-target="#iii.-phénomènes-quotidiens">III. Phénomènes quotidiens</a>
+  <ul class="collapse">
+  <li><a href="#a.-effet-de-simple-exposition" id="toc-a.-effet-de-simple-exposition" class="nav-link" data-scroll-target="#a.-effet-de-simple-exposition">A. Effet de simple exposition</a></li>
+  <li><a href="#b.-boucher-dans-le-bus" id="toc-b.-boucher-dans-le-bus" class="nav-link" data-scroll-target="#b.-boucher-dans-le-bus">B. Boucher dans le bus »</a></li>
+  <li><a href="#c.-phénomène-du-déjà-vu" id="toc-c.-phénomène-du-déjà-vu" class="nav-link" data-scroll-target="#c.-phénomène-du-déjà-vu">C. Phénomène du déjà-vu</a></li>
+  </ul></li>
+  <li><a href="#iv.-familiarité-dans-le-contexte-clinique" id="toc-iv.-familiarité-dans-le-contexte-clinique" class="nav-link" data-scroll-target="#iv.-familiarité-dans-le-contexte-clinique">IV. Familiarité dans le contexte clinique</a>
+  <ul class="collapse">
+  <li><a href="#a.-déjà-vu-épileptique" id="toc-a.-déjà-vu-épileptique" class="nav-link" data-scroll-target="#a.-déjà-vu-épileptique">A. Déjà-vu épileptique</a></li>
+  <li><a href="#b.-vieillissement" id="toc-b.-vieillissement" class="nav-link" data-scroll-target="#b.-vieillissement">B. Vieillissement</a></li>
+  <li><a href="#c.-schizophrénie" id="toc-c.-schizophrénie" class="nav-link" data-scroll-target="#c.-schizophrénie">C. Schizophrénie</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#cm4-familiarité" id="toc-cm4-familiarité" class="nav-link" data-scroll-target="#cm4-familiarité">CM4 familiarité</a>
+  <ul class="collapse">
+  <li><a href="#la-mémoire-autobiographique" id="toc-la-mémoire-autobiographique" class="nav-link" data-scroll-target="#la-mémoire-autobiographique">1. La mémoire autobiographique</a>
+  <ul class="collapse">
+  <li><a href="#lempan-de-vie-et-le-pic-de-réminiscence" id="toc-lempan-de-vie-et-le-pic-de-réminiscence" class="nav-link" data-scroll-target="#lempan-de-vie-et-le-pic-de-réminiscence">1.1. L’empan de vie et le pic de réminiscence</a></li>
+  </ul></li>
+  <li><a href="#le-soi---the-self" id="toc-le-soi---the-self" class="nav-link" data-scroll-target="#le-soi---the-self">2. Le soi - The Self</a>
+  <ul class="collapse">
+  <li><a href="#effet-de-référence-à-soi" id="toc-effet-de-référence-à-soi" class="nav-link" data-scroll-target="#effet-de-référence-à-soi">2.1. Effet de référence à soi</a></li>
+  <li><a href="#sms-de-conway-système-de-mémore-du-soi" id="toc-sms-de-conway-système-de-mémore-du-soi" class="nav-link" data-scroll-target="#sms-de-conway-système-de-mémore-du-soi">2.2. SMS de Conway (système de mémore du soi)</a></li>
+  </ul></li>
+  <li><a href="#perturbations-de-la-mémoire-autobiographique-et-le-soi" id="toc-perturbations-de-la-mémoire-autobiographique-et-le-soi" class="nav-link" data-scroll-target="#perturbations-de-la-mémoire-autobiographique-et-le-soi">3. Perturbations de la mémoire autobiographique et le soi</a></li>
+  </ul></li>
+  <li><a href="#cm5-chris-moulin" id="toc-cm5-chris-moulin" class="nav-link" data-scroll-target="#cm5-chris-moulin">CM5 Chris Moulin</a>
+  <ul class="collapse">
+  <li><a href="#métamémoire" id="toc-métamémoire" class="nav-link" data-scroll-target="#métamémoire">Métamémoire</a>
+  <ul class="collapse">
+  <li><a href="#définitions" id="toc-définitions" class="nav-link" data-scroll-target="#définitions">1. Définitions</a></li>
+  <li><a href="#mémoire-et-métamorphoe-maladie-dalzheimer" id="toc-mémoire-et-métamorphoe-maladie-dalzheimer" class="nav-link" data-scroll-target="#mémoire-et-métamorphoe-maladie-dalzheimer">3. Mémoire et métamorphoe : maladie d’Alzheimer</a></li>
+  </ul></li>
+  <li><a href="#linhibition" id="toc-linhibition" class="nav-link" data-scroll-target="#linhibition">L’inhibition</a>
+  <ul class="collapse">
+  <li><a href="#loubli" id="toc-loubli" class="nav-link" data-scroll-target="#loubli">L’oubli</a></li>
+  <li><a href="#quest-ce-que-linhibition" id="toc-quest-ce-que-linhibition" class="nav-link" data-scroll-target="#quest-ce-que-linhibition">Qu’est-ce que l’inhibition</a></li>
+  <li><a href="#inhibition-de-la-mémoire-épisodique" id="toc-inhibition-de-la-mémoire-épisodique" class="nav-link" data-scroll-target="#inhibition-de-la-mémoire-épisodique">Inhibition de la mémoire épisodique</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<!-- source: 1_chris_moulin.md -->
+<section id="ec10-mémoire-épisodique" class="level1">
+<h1>EC10 Mémoire Épisodique</h1>
+<ul>
+<li>[[i_chris_moulin]]</li>
+<li>[[ii_chris_moulin]]</li>
+<li>[[iii_chris_moulin]]</li>
+</ul>
+<p>Partie de l’examen où on regarde et explique les données d’une expérience, puis synthèse où on rédige quelque chose sur un thème. Exemples sur moodle.</p>
+<p>Plan :</p>
+<ol type="1">
+<li>La mémoire épisodique : définitions</li>
+<li>Quelques modèles</li>
+<li>Un point de départ : rappel et reconnaissance</li>
+<li>L’encodage et le contexte</li>
+</ol>
+<section id="la-mémoire-épisodique-définitions" class="level2">
+<h2 class="anchored" data-anchor-id="la-mémoire-épisodique-définitions">1. La mémoire épisodique : définitions</h2>
+<p>Important : l’organisation de la MLT qu’on connaît n’est pas un modèle, car ça ne fait pas de prédictions.</p>
+<p>Les définitions de la mémoire :</p>
+<ul>
+<li>Basé sur les <strong>contenus</strong> : la mémoire épisodique et sémantique sont 2 stocks différents : le dernier de choses générales, et le premier, un stock des évènements personnellement vécus.</li>
+<li>Basé sur les processus de récupération, particulièrement basé sur les <strong>sentiments liés à la récupération</strong>. Proposé par Tulving, qu’on a avec la mémoire épisodique la conscience autonoétique qui nous fait voyager dans le temps. La mémoire sémantique vient elle à l’esprit sans effort, c’est la connaissance noétique. À ce niveau on parle de conscience plutôt que de mémoire pour la qualifier.</li>
+</ul>
+<p>Mémoire implicite/explicite se différencie sur le mode de récupération. Incident revient au test de mémoire indirect : dans un test explicite, on demande de rappeler des mots appris dans une phase précédente. Implicite on fait implicite quois.</p>
+</section>
+<section id="quelques-modèles" class="level2">
+<h2 class="anchored" data-anchor-id="quelques-modèles">2. Quelques modèles</h2>
+<p>3 gros processus dans la mémoire :</p>
+<ul>
+<li>Encodage</li>
+<li>Stockage</li>
+<li>Récupération</li>
+</ul>
+<p>Mais pose problème pour la falsification : pour pouvoir mesurer l’encodage il faut passer aussi par les 3 autres étapes.</p>
+<p>Test d’apprentissage et rétention des abbréviations sur un enfant, CJ, qui a une tumeur qui a affecté son hippocampe et sa mémoire épisodique. Sa sœur était le contrôle. On trouve un résultat surprenant : on a une courbe typique pour la sœur, et une semaine 2 elle se souvient de la moitié de la liste. Mais pour le frère, il a autant d’informations à la fin de la session 1 qu’au début de la session 2. Cependant son apprentissage est beaucoup plus lent. Il peut tout de même maîtriser la liste que le montre les prochaines sessions. Et 5 ans plus tard, il se souvient beaucoup mieux que sa sœur.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../..../assets/2026-10-21-12-20-39.png" class="img-fluid figure-img"></p>
+<figcaption>sdfsadfsadf</figcaption>
+</figure>
+</div>
+<p>Si on a pas les infos de la phase d’encodage, on va prendre les items comme jsute des connaissances, qui donne un maintien très stable car c’est de la mémoire sémantique et non épisodique. Ça explique les résultats précédents, il apprendrait tout avec la mémoire sémantique.</p>
+<p>Modèle d’Atkinson &amp; Shiffrin :</p>
+<p>Modèle abandonné mais toujours utilisé par certaines personnes. C’est très inspiré des ordinateurs : on à un transferet d’informations des registres sensoriels vers la MLT. Organisation basée sur la durée de stockage.</p>
+<p>Ce modèle a été appuyé par l’observation de patients amnésiques déficients en MCT, qui ne pouvaient pas encoder en MLT. Mais d’autre patient.es ont forcé la réfutation de ce modèle, car il existe une double dissociation de patient.es ayant des troubles de la MLT pouvant faire tests de MCT mais pas MLT et inversement.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="..../assets/2026-10-21-12-23-39.png" class="img-fluid figure-img"></p>
+<figcaption>dfasdf</figcaption>
+</figure>
+</div>
+<ul>
+<li>HM: MCT intacte, mais pas MLT, ce qui correspond très bien avec transfert d’informations, car il pourrait pas mettre dans le stock permanent</li>
+<li>Patient KF à eu l’inverse</li>
+</ul>
+<p>Il y aurait donc un encodage parallèle, et non sériel, pour la MCT et la MLT. C’est aussi probablement le cas pour la mémoire épisodique et sémantique. Ce modèle est malgré tout utile en clinique.</p>
+<!-- FIX: j'ai rien compris faut demander à tessa -->
+</section>
+<section id="un-point-de-départ-rappel-et-reconnaissance" class="level2">
+<h2 class="anchored" data-anchor-id="un-point-de-départ-rappel-et-reconnaissance">3. Un point de départ : rappel et reconnaissance</h2>
+<p>La dyslexie à un profil très similaire : scores très bas en MCT chez certain patient, donc y’a pas qu’une question de stockage et registre. On observe bien ça dans les expériences de rappel de longues listes montrant les effets de primauté et récence.</p>
+<p>Donc la mémoire n’est pas organisée comme un ordinateur. Son modèle préféré et Bastin, complexe, qui montre les entrées différentes.</p>
+<p>Maladie d’Alzheimer, qui est récemment étudiée par les neuropsychologues, était considérée comme une maladie faisant oublier les informations de manière accélérée, d’une conversation à l’autre. Cette vision a été testée et mise à l’épreuve avec nos modèles, mais pour expliquer ça il faut comprendre le fonctionnement de la mémoire lors du rappel de liste de mots :</p>
+<ul>
+<li>Effet de récence : mémoire primaire (MCT)</li>
+<li>Effet de primauté : mémoire secondaire (MLT)</li>
+</ul>
+<p>L’attribution de ces mécanismes est justifié par la forme que prennent les réponses des participants lors de ces tâches : les mots récents sont répétés dans l’ordre (fonctionnement de la boucle phonologique de la MCT), alors que ce n’est pas le cas pour les mots de primauté.</p>
+<p>2 groupes de personnes avec Alzheimer selon la sévérité du troubles. On remarque en général un oublie accéléré. On voit surtout que part rapport au contrôle, le rappel différé est altéré, et surtout la proportion de MCT utilisée par ces patients est forte, et il y a un plafond à l’utilisation de la MLT qui est autant utilisée dans les tˆåches mixtes que dans les tâches de MLT pure.</p>
+<p><img src="../assets/Pasted image 20261021143902.png" class="img-fluid"></p>
+<p><strong>La mémoire de travail</strong></p>
+<p>Baddeley ajoute une composante dans son modèle, de <strong>buffer épisodique</strong>, pour exlpiquer quelque chose qui n’était pas possible avant. Quand on regarde un film, il est nécessaire de stocker le nom des personnages. On ne peut pas le faire dans la MCT à cause de la durée du film, et pourtant on y arrive. On aurait donc un stockage des informations temporaires multimodales, épisodiques car dans un moment spécifique, stocké quelque part entre MCT et MLT. Buffer car temporaire.</p>
+<p><img src="../assets/Pasted image 20261021144544.png" class="img-fluid" width="400"></p>
+</section>
+<section id="lencodage-et-le-contexte" class="level2">
+<h2 class="anchored" data-anchor-id="lencodage-et-le-contexte">4. L’encodage et le contexte</h2>
+<p>Pour Craik et Tulving, l’<strong>apprentissage incident</strong> se fait quand il n’y a pas de consigne explicite d’encoder. Plus il y a d’élaboration sémantique, plus on apprend. On a uen combinaison de la mémoire implicite et exlpicite dans cet effet</p>
+<p>Niveaux de traitements de Craik et Tuvling, propose que traiter des informations laisse des traces en MLT. Paradigme a été très important, manipulation d’encodage pour mesurer le résultat où on donne de l’argent je crois je sais pas trop.</p>
+<!-- FIX: diapo craik & tulving -->
+<p>Il y a 20 ans, beaucoup d’études s’intéressaient à l’évolution de la mémoire. Méthodes simples et élégantes, mais pas les conclusions. Il y a phase d’encodage, mais au lieu de demander des taches comme “est-ce que ce mot rime avec un autre” etc., on demande aux participants si l’objet dans la liste est utile pour la survie. On raconte une histoire où on doit survivre dans la savanne sans rien, et à ce moment on présente une liste de choses, et pour chacune on doit dire si c’est utile ou pas. Performance plus grande quand on demande si c’est des mots utiles pour la survie que non je crois. On s’est servi de ces résultats comme preuve évolutionnaire de l’utilité de la mémoire épisodique</p>
+<p><strong>Modèle de la trace mnésique</strong> : si on a suffisamment d’activation, on peut reconnaître une information, et si on en a encore plus, on peut le rappeler.</p>
+<p>Pour tous types de mémoire, on a la disponibilité de quelque chose quelque part dans le cerveau, et accessibilité nécessaire (+ fort est + difficile).</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 24%">
+<col style="width: 18%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Disponibilité</th>
+<th>Accessibilité</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mémoire implicite</td>
+<td>Oui</td>
+<td>Un peu - comportement - sans conscience</td>
+</tr>
+<tr class="even">
+<td>Reconnaissance</td>
+<td>Oui</td>
+<td>Fort</td>
+</tr>
+<tr class="odd">
+<td>Rappel libre</td>
+<td>Oui</td>
+<td>Très fort</td>
+</tr>
+</tbody>
+</table>
+<p>On a un modèle qui date des annés 60 génération / reconnaissance. Dans le rappel, on produit spontanément des informations pertinentes et plausibles, puis on identifie une information comme anciennce dans la reconnaissance. La reconnaissanc est toujours mieux que la reconnaissance, et si on observe l’inverse, faut tout revoir.</p>
+<p>4 phases dans l’expérience de Tulving et Thomson 1973 :</p>
+<ul>
+<li>Phase d’encodage : paires de mots (“hope HIGH”)</li>
+<li>Génération : indice de mots très proches, comme “how” pour “high”, “lake” pour “water”</li>
+<li>Reconnaissance : on montre les mots et demande d’entourer les mots si vu pendant la phase d’encodage. 24% de ces mots sont entourés.</li>
+<li>Rappel : indicee, avec indices de la premières phases</li>
+</ul>
+<p>Contexte est donc important pour la mémoire épisodique : le chevauchement entre encodage et test favorise les performances.</p>
+<!-- FIX: bien revoir derni`´re partie` -->
+<hr>
+<!-- source: 2_familiarite.md -->
+<ul>
+<li>[[i_familiarite]]</li>
+<li>[[ii_familiarite]]</li>
+<li>[[iii_familiarite]]</li>
+</ul>
+</section>
+</section>
+<section id="cm2-chris-moulin" class="level1">
+<h1>CM2 Chris Moulin</h1>
+<ul>
+<li>Courbes ROC seront probablement à l’examen</li>
+</ul>
+<section id="contexte-théorique" class="level2">
+<h2 class="anchored" data-anchor-id="contexte-théorique">1. Contexte théorique</h2>
+<p>On va voir la familiarité, sur quoi on se base pour dire qu’on a déjà vu quelque chose. Il y a deux mécanismes principaux :</p>
+<ul>
+<li><strong>Recollection</strong> : récupération consciente d’un souvenir dans son contexte</li>
+<li><strong>Familiaritee</strong> : processus automatique qui permet la reconnaissance sans récupération de détails contextuels associés</li>
+</ul>
+<p>Cette distinction est proposée pour la première fois par Adams (1967), qui cherchait à parler de processus perceptuels et conceptuels :</p>
+<ul>
+<li>Différents processus perceptuels qui permettent de capter des signaux er faire du <strong>matching</strong>, comparer ce qu’on est en train de vior à ce qu’on a en mémoire, et si c’est fait, on a la familiarité. C’est sensé être très rapide, ascendant, de bas niveau, sans contexte.</li>
+<li>Processus conceptuels : de haut niveau, conscient, raisonnement, etc.</li>
+</ul>
+<p>Yonelinas (2002) propose que la familiarité serait un processus auotmique, rapide et implicite, qui donne une sensation d’avoir vu quelque chose auparavant, sans contextes et apprentissages. Ça se base sur la <strong>force (de la trace) mnésique</strong>, qui est plus forte pour des mots appris que non appris. Quand on doit faire des jugements de familiarité, on se base donc sur les différences de force mnésique entre des mots familiers et non. Celle-ci peut varier et peut être augmentée de plusieurs manières.</p>
+<p>Mais où est le critère nous permet de dire que c’est ancien ou nouveau ? On l’appèle critère de décision, qu’on pense arbitraire et variable selon la tâche et l’individu. Celle-ci fonctionne comme un curseur, alors que la recupération comme un interrupteur (booléen).</p>
+<p>Modèle intégratif de la mémoire à 2 composants clé :</p>
+<ul>
+<li>Système représentationnel :
+<ul>
+<li>Stocke et reconstruit les traces mnésiques. Dommage de ce système = dégradation du contenu de la mémoire</li>
+<li>contient les sous-systèmes “cœurs” qui encodent et stockent les représentations spécifiques</li>
+</ul></li>
+<li>Système d’attribution/attention :
+<ul>
+<li>Plus haut niveau</li>
+<li>Module l’utlisation des traces mnésiques en fonction de la tâche, des objectifs</li>
+<li>Permet la réalisation des jugements explicites et la subjectivité des expériences</li>
+</ul></li>
+</ul>
+<p>![[2_familiarite 2026-10-30 11.18.30.excalidraw]]</p>
+</section>
+<section id="corrélats-neuronaux-de-al-familiarité" class="level2">
+<h2 class="anchored" data-anchor-id="corrélats-neuronaux-de-al-familiarité">2. Corrélats neuronaux de al familiarité</h2>
+<p><strong>Familiarité</strong> : système “cœur” des entités, alors que <strong>recollection</strong> : système “cœur” relationnel. La <strong>fluence</strong> est la facilité perçue de traitement de l’information.</p>
+<p>Le système “cœur” des entités (famliarité) : cortex périrhinal, cortex enthorinal antérolatéral. Ce réseau permet de relier toutes les entités complexes en une information unifiée.</p>
+<p>Pour le système relationnel : plutôt porté par hippocampe et structures limbiques environnantes, et nous permet de contextualiser et relier les informations.</p>
+<p>![[2_familiarite 2026-10-30 12.51.29.excalidraw]]</p>
+</section>
+<section id="phénomènes-quotidiens" class="level2">
+<h2 class="anchored" data-anchor-id="phénomènes-quotidiens">3. Phénomènes quotidiens</h2>
+<section id="spécificité-de-lencodage" class="level3">
+<h3 class="anchored" data-anchor-id="spécificité-de-lencodage">3.1. Spécificité de l’encodage</h3>
+<p>Les signaux de fluence arrivent à nous, et le <strong>système de distribution</strong> doit faire une décision. Parler deffet de <strong>simple exposition</strong> peut nous aider : la simple présentation d’un stimulus peut provoquer une préférence accrue vers celui-ci. On fait l’hypothèse que cette préférence est attribuable à la fluence : faciliter la mémoire, peut être interprétée comme un préférence.</p>
+<p>Boucher-dans-le-bus est dû à rencontrer quelqu’un en dehors de son contexte, et retrouver le bon contexte est très très dûr. C’est une expression de la <strong>spécificité de l’encodage</strong>.</p>
+<p><img src="../assets/Pasted image 20261110145513.png" class="img-fluid"></p>
+<p>On fait une étude où on voulait tester qu’est-ce qui change dans la spécificité d’encodage avec le vieillissement, sachant que les capacités évoquées déclinent avec l’âge. Tâche de <strong>Remember/Know</strong> avec phase d’apprentissage, puis phase de test où on demande si c’est totalement nouveau, si c’est un peu familier, ou s’il s’en souvient :</p>
+<ul>
+<li>Apprentissage : 48 images “visage + contexte”</li>
+<li>Test : 72 images (même visage + contexte; même visage dans contexte différent; nouveaux visage + contexte)</li>
+</ul>
+<p>Prédictions :</p>
+<ul>
+<li>Personnes âgées moins performantes en recollection</li>
+<li>Récupération plus forte dans le même contexte en recollection</li>
+<li>Contraste plus favorable pour les jeunes en recollection</li>
+<li>Familiarité plus basse hors contexte surtout pour les âgés</li>
+</ul>
+<p>Pas de différence significative pour les contextes chez les jeunes, pareil pour les âgées. Contexte différent ont familiairté plus forte chez les jeuens que chez personnes âgées qui perdent la notion de familiarité avec changement de contexte.</p>
+</section>
+<section id="familiarité-représentationnelle-et-phénoménologique" class="level3">
+<h3 class="anchored" data-anchor-id="familiarité-représentationnelle-et-phénoménologique">3.2. Familiarité représentationnelle et phénoménologique</h3>
+<p>La <strong>familiarité représentationnelle</strong> est un résultat de match entre ce qu’on est en train de percevoir et des représentations stockées en mémoire. Dans l’effet de simple exposition, il y a bien un matching, donc familiairité représentationnelle. Ça créé une fluence, mais pas forcément de <strong>sensations phénoménologique de familiarité</strong>, mais par exemple de préférence.</p>
+<p>Mais est-ce qu’on peut avoir l’un sans l’autre ? On peut manipuler sensation de fluence avec différentes tˆåches. On peut faire apprendre des listes de mots, puis ???. FIX:</p>
+<p>Par exemple le changement de police peut jouer sur la familiarité à partir d’une différence perceptive. On peut interpréter à tord que police moins lisible = mot moins familier. Ça peut aussi se passer dans le déjà-vu, dont une théorie qui propose qu’il y a pas de représentation stockée dans le déclenchement de familiarité.</p>
+<p>Donc dans l’effet de simple exposition il y a familiarité représentationnelle mais pas phénoménologique. Il y a les deux dans le boucher-dans-le-bus. Déjà-vu que phénoménologique.</p>
+<p>Déjà-vu est défini “any subjectively inappropriate impression of amiliarity of a present moment with an undefine past”. Chris propose plutôt “the phenomenological e xperience of recognizing a current situation and the awareness that this feeling of recognition is inappropriate”.</p>
+<p>FIX: oops j’ai pas écouté</p>
+<p>2 familles de théories explicant l’origine du déjà-vu : bottom-up et top-down.</p>
+<ul>
+<li>Bottom-up : quelque chose matcherai vraiment dans l’environnemnet avec quelque chose en mémoire, mais trop diffuse pour vraiment déclencher reconnaissance</li>
+<li>Top-down : rien dans l’environnement, mais juste des phénomènes neuronaux spontanés para-hippocampiques</li>
+</ul>
+<p>FIX: hopla j’écoute pas du tout</p>
+</section>
+</section>
+<section id="familiarité-dans-le-contexte-clinique" class="level2">
+<h2 class="anchored" data-anchor-id="familiarité-dans-le-contexte-clinique">4. Familiarité dans le contexte clinique</h2>
+<hr>
+<!-- source: 3_familiarite_suite.md -->
+</section>
+</section>
+<section id="familiarité-suit" class="level1">
+<h1>familiarité suit</h1>
+<p>partie test oùl les participants revoyaient des scènes et objets déjà vues, test</p>
+<section id="i.-contexte-théorique" class="level2">
+<h2 class="anchored" data-anchor-id="i.-contexte-théorique">I. Contexte théorique</h2>
+<section id="a.-rappel-théorique" class="level3">
+<h3 class="anchored" data-anchor-id="a.-rappel-théorique">A. Rappel théorique</h3>
+<p>A/modèle de Yonelinas (2002): 2 processus derrière la reconnaissance diapo familiarité et récupération ce modèle dit pas ce qui faut pour dépasser le seuil, il décrit juste des observations comportementales</p>
+<p>B/Modèle BIC “Binding of item and context” : revue de 30 études en neuroimagerie: cherche corrélats neuronaux derrière fam et rec récollection: activité ++ hippocampique et parahippocampique where? encode infos contextuel de l’info familiarité: cortex perirhinal what? encodage informations spécifique de la cible</p>
+<p>//</p>
+<p>Est-ce qu’ils ont trouvé les mêmes résultats que dans le modèle ? (diapo hippocampe). Sur les graphiques, les réponses de familiairité (sans souvneir du contexte particulier), et RA qui est une recollection complète. On peut voir que l’activité pour les RA est plus grande par rapport aux réposnes F. L’hippocampe serait donc impliqué dans les liens bidirectionnels entre l’item et le contexte.</p>
+<p>Le gyrus paraphippocampique est divisé en 3 parties, les RA sont plus grandes que l’activité pour les F quand on doit récupérer un contexte à partir de l’objet. Systématiquement, le coretx parahippocampique est actif.</p>
+<p>//</p>
+<p>On voit que chaque objet avait sa propre scène. Mais ça ne ressemble pas à la vraie vie : on se retrouve souvent dans les mêmes contextes et on doit retrouver des informations dans ces mêmes contextes. Comme retrouver notre voiture sur un parking particulier. Donc comment on fait pour distinguer des souvenirs issus du même contexte ? Il peut se produire des interférences quand des souvenirs partagent des éléments de contextes.</p>
+<p>Il y a 2 grandes types d’interférences : rétroactives et proactives. Dans la première, une nouvelle interfère sur la précédente. //</p>
+<p>Qu’est-ce que rappel ou apprentissage par anticipation ? Dans un test de mémoire, on s’attend à des présentations des mots. Ici, on va devoir anticiper ce qu’il y aura par la suite : “est-ce que vous vous demandé du mot qu’on a appris ?”, “non on n’a pas appris”, “ok normal c chat”, et on continue comme ça, et quand on refait un passage on sait répondre vu qu’on a appris normalement. Au début on n’a rien à anticiper, on a juste des trigrammes (“XCM”, “KTQ”…). On fait 5 passage pour chaque liste.</p>
+<p>On avait des listes A et B soit similaires soit non similaires. // on veut voir comments les listes influences chacunes //</p>
+<!-- FIX: mettre le tableau jaune et bleu pâle -->
+<p>Pour retrouver la source du souvenir on doit retrouver le contexteg // On peut faire tâche de mémoire d’item puis tâche de mémoire de source. C’est pour ça qu’on dit souven tque la reconnaissance est plus dure que le rappel</p>
+<p>//</p>
+<p>Pour l’encodage, les représentations de souvenirs qu’on a sont distribuées. Chaque unité reçoit un agencement très unique. Chaque épisode est encodé indépendament des autres, ce qui aide à cette construction unique. Pour le rappel, à partir d’une information d’une aprtie de l’épisode on peut retrouver toutes les informatisin ??? qui permet de réativer l’épisode complet. Puis on décide si c’est pertinent, si on l’a imaginé ou vécu ou raconté. C’set comme ça qu’on distingue les souvenirs similaires.</p>
+<p>Mais ce qu’on a vu avant dépend de caractéristiques visuo-spatiales. Mais comment est-ce qu’on sépare les souvenirs en termes de temps ? On touche ici aux limites du modèle. On nous dit pas trop où est stocké le temps. Certains auteurs pensent qu’on a des régions spécifiques qui stockeraient le temps, d’autres pensent qu’il est distribué dans toutes les entités, qui permettrait de distinguer les souvenirs temporellement.</p>
+</section>
+</section>
+<section id="paradigmes-expérimentaux" class="level2">
+<h2 class="anchored" data-anchor-id="paradigmes-expérimentaux">2. Paradigmes expérimentaux</h2>
+<section id="paradigme-rememberknow-tulving-1985-gardiner-1988" class="level3">
+<h3 class="anchored" data-anchor-id="paradigme-rememberknow-tulving-1985-gardiner-1988">2.1. Paradigme “remember/know” (Tulving, 1985; Gardiner, 1988)</h3>
+<p>La familiarité suffit pour les jugements de “remember”, pour le “know” on sait qu’on euhh jsp FIX: diapo</p>
+<p>On va voir ce paradigme dans une étude de Davidson qui veut comparer les performances des familiarité entre participants sains et parkinson. Recollection pas de différence, mais familiarité les sains ont des meilleurs scores. Mais il y a un problème dans le fait de demander aux participant eux-mêmes de distinguer entre réponses “Remember” et “Know” ? //</p>
+<p>Dissociation de processus est une mesure un peu moins directe. On demande pas au participant s’il se souvient directement. On produit de contexte d’apprentissages différents, écrit ou verbalement. On fait une tâche d’inclusion : dire “ancien” pour tous les mots appris de la liste 1 et 2; ou tâche d’exclusion : dire “ancien” seulement pour les mots appris de la lsite 2. Donc quand on dit ancien pour tous les mots appris /////</p>
+<p>Nos résultats sont donc assez robustes, avec 2 méthodes dfférnets on voit différentes observations. C’est donc une méthode un peu plus objective, car ce n’est pas les personnes qui jugent mais nous qui déduisons à partir des personnes.//</p>
+</section>
+</section>
+<section id="phénomèmnes-quotidiens" class="level2">
+<h2 class="anchored" data-anchor-id="phénomèmnes-quotidiens">3. Phénomèmnes quotidiens</h2>
+<section id="faux-souvenirs" class="level3">
+<h3 class="anchored" data-anchor-id="faux-souvenirs">3.1. Faux souvenirs</h3>
+<p>Expérience de shopping mall qui est une étude où on se demande si on peut implenter un souvenir qui n’a jamais existé. On est allé voir les familles des participants pour les interroger sur des épisodes de leur enfance, et pendant le test on rajoute un épisode faux, qui décrit un enfant en détressse qui s’est perdu dans un centre commercial.</p>
+<p>Est-ce que juste imaginer quelque chose peut produire un souvenir de cette chose ? On appris des étudiants avec des questionnaires contenant 40 évènements dont des choses totalement improbables. Ils ont demandé pour chaque évènement sur une échelle de 1 à 8 la probabilté qu’il soit arrivé. On voit quand même une augmentation de certitude non négligeable pour ???</p>
+<p>On relie différents éléments en mémoire mais ce sont des situations probable, et imaginer des choses ferait des liens entre des éléments probables. Donc, plus on répète ces expériences, on rajoute des détails, on juge un évènement plausible. Donc plus c’est détaillé et probable plus on y fait confiance.</p>
+<p>Paradigme DRM qui montre qu’on peut avoir une sensation très forte de familiarité alors qu’on a pas vu un item. juste mettre la diapo</p>
+</section>
+<section id="amnésie-infantile" class="level3">
+<h3 class="anchored" data-anchor-id="amnésie-infantile">3.2. Amnésie infantile</h3>
+<p>//</p>
+<p>Maturation du cerveau fait que des zones se développent de mani<code>´re hétérogène</code></p>
+</section>
+<section id="b.-modèle-intégratif-de-la-mémoire" class="level3">
+<h3 class="anchored" data-anchor-id="b.-modèle-intégratif-de-la-mémoire">B. Modèle intégratif de la mémoire</h3>
+</section>
+</section>
+<section id="ii.-corrélats-neuronaux-de-la-familiarité" class="level2">
+<h2 class="anchored" data-anchor-id="ii.-corrélats-neuronaux-de-la-familiarité">II. Corrélats neuronaux de la familiarité</h2>
+</section>
+<section id="iii.-phénomènes-quotidiens" class="level2">
+<h2 class="anchored" data-anchor-id="iii.-phénomènes-quotidiens">III. Phénomènes quotidiens</h2>
+<section id="a.-effet-de-simple-exposition" class="level3">
+<h3 class="anchored" data-anchor-id="a.-effet-de-simple-exposition">A. Effet de simple exposition</h3>
+</section>
+<section id="b.-boucher-dans-le-bus" class="level3">
+<h3 class="anchored" data-anchor-id="b.-boucher-dans-le-bus">B. Boucher dans le bus »</h3>
+</section>
+<section id="c.-phénomène-du-déjà-vu" class="level3">
+<h3 class="anchored" data-anchor-id="c.-phénomène-du-déjà-vu">C. Phénomène du déjà-vu</h3>
+<section id="c.-1.-un-peu-dhistoire" class="level4">
+<h4 class="anchored" data-anchor-id="c.-1.-un-peu-dhistoire">C. 1. Un peu d’histoire</h4>
+</section>
+<section id="c.2.-contexte-théorique" class="level4">
+<h4 class="anchored" data-anchor-id="c.2.-contexte-théorique">C.2. Contexte théorique</h4>
+</section>
+<section id="c.3.-paradigmes-expérimentaux" class="level4">
+<h4 class="anchored" data-anchor-id="c.3.-paradigmes-expérimentaux">C.3. Paradigmes expérimentaux</h4>
+</section>
+</section>
+</section>
+<section id="iv.-familiarité-dans-le-contexte-clinique" class="level2">
+<h2 class="anchored" data-anchor-id="iv.-familiarité-dans-le-contexte-clinique">IV. Familiarité dans le contexte clinique</h2>
+<section id="a.-déjà-vu-épileptique" class="level3">
+<h3 class="anchored" data-anchor-id="a.-déjà-vu-épileptique">A. Déjà-vu épileptique</h3>
+</section>
+<section id="b.-vieillissement" class="level3">
+<h3 class="anchored" data-anchor-id="b.-vieillissement">B. Vieillissement</h3>
+<section id="b.1.-vieillissement-normal" class="level4">
+<h4 class="anchored" data-anchor-id="b.1.-vieillissement-normal">B.1. Vieillissement normal</h4>
+</section>
+<section id="b.2.-vieillissement-pathologique" class="level4">
+<h4 class="anchored" data-anchor-id="b.2.-vieillissement-pathologique">B.2. Vieillissement pathologique</h4>
+</section>
+</section>
+<section id="c.-schizophrénie" class="level3">
+<h3 class="anchored" data-anchor-id="c.-schizophrénie">C. Schizophrénie</h3>
+<section id="c.1.-lhypofamiliarité-le-syndrome-de-capgras" class="level4">
+<h4 class="anchored" data-anchor-id="c.1.-lhypofamiliarité-le-syndrome-de-capgras">C.1. L’hypofamiliarité : Le syndrome de Capgras</h4>
+</section>
+<section id="c.2.-lhyperfamiliarité-le-syndrome-de-fregoli" class="level4">
+<h4 class="anchored" data-anchor-id="c.2.-lhyperfamiliarité-le-syndrome-de-fregoli">C.2. L’hyperfamiliarité : Le syndrome de Fregoli</h4>
+<hr>
+<!-- source: 4_memoire_autobiographique.md -->
+</section>
+</section>
+</section>
+</section>
+<section id="cm4-familiarité" class="level1">
+<h1>CM4 familiarité</h1>
+<!--toc:start-->
+<ul>
+<li><a href="#cm4-familiarité">CM4 familiarité</a>
+<ul>
+<li><a href="#1-la-mémoire-autobiographique">1. La mémoire autobiographique</a>
+<ul>
+<li><a href="#11-lempan-de-vie-et-le-pic-de-réminiscence">1.1. L’empan de vie et le pic de réminiscence</a></li>
+</ul></li>
+<li><a href="#2-le-soi-the-self">2. Le soi - The Self</a>
+<ul>
+<li><a href="#21-effet-de-référence-à-soi">2.1. Effet de référence à soi</a></li>
+<li><a href="#22-sms-de-conway-système-de-mémore-du-soi">2.2. SMS de Conway (système de mémore du soi)</a></li>
+</ul></li>
+<li><a href="#3-perturbations-de-la-mémoire-autobiographique-et-le-soi">3. Perturbations de la mémoire autobiographique et le soi</a> <!--toc:end--></li>
+</ul></li>
+</ul>
+<p>Révisions :</p>
+<ul>
+<li>[[i_4_familiarite_suite]]</li>
+<li>[[ii_memoire_autobiographique]]</li>
+</ul>
+<section id="la-mémoire-autobiographique" class="level2">
+<h2 class="anchored" data-anchor-id="la-mémoire-autobiographique">1. La mémoire autobiographique</h2>
+<section id="lempan-de-vie-et-le-pic-de-réminiscence" class="level3">
+<h3 class="anchored" data-anchor-id="lempan-de-vie-et-le-pic-de-réminiscence">1.1. L’empan de vie et le pic de réminiscence</h3>
+<p>Modèle de la mémoire autobiographique qui prend en compte la mémoire sémantique ET épisodique. On va parler du pique de réminiscence pour expliquer la théorie d’organisation de mémoire autobiographique. Puis, on va parler du soi, et présenter le modèle central su <strong>Self Memory System</strong>, puis exemples concrets des troubles de la mémoire autobiographique.</p>
+<p>La mémoire épisodique n’est pas la même chose qu’autobiographique. <strong>C’est un système dynamique pour stocker les souvenirs personnels et connaissances dans un hiérarchie</strong>, portée par l’identité et le soi.</p>
+<p>On donne des mots et on demande aux gens de récupérer des souvenirs spécifiques de leur passé. Mais la difficulté est d’évaluer si le souvenir est vrai ou faux. Mais on s’en fiche, dans la mémoire autobiographique, on sait que la mémoire est une reconstruction du passé, et on ne va pas vérifier les contenus de ces souvenirs. On se rend compte qu’il y a amnésie infantile, puis <strong>pic de réminiscence</strong> (15 à 25 ans). Celui-là se retrouve dans toutes les tâches de ce genre, en excluant quelques différences individuelles.</p>
+<p>Un article a tenté d’expliquer cet effet, en explorant les types de souvenirs. On prend des gens et leur demande les évènements les plus importants de l’histoire du monde au cours de leur vie. Et on retrouve aussi cet effet. On a donc un effet systématique du pic de réminiscence. Et ce n’est pas un test de mémoire autobiographique. Pareil pour les connaissances de culture générale. Pareil si on demande aux gens leurs albums préférés et plein de trucs.</p>
+<p>Mais pourquoi ? 5 théories.</p>
+<ul>
+<li>Combinaison des effets de nouveauté et primauté</li>
+<li><strong>Explication neuropsychologique</strong> : lié à la maturation du cerveau, on a pas de très bonnes de structures de stockage avant 20 ans</li>
+<li><strong>Explication d’identité</strong> : la période de pic de réminiscence est importante pour la formation du soi. Théorie stadiste pour expliquer le développement de la personalité. Et c’est débile</li>
+<li><strong>Explication adaptative</strong> : c’est l’âge important pour la reproduction</li>
+<li><strong>Approche narrative</strong> : prend en compte le récit de notre vie. Un <strong>script culturel de vie</strong> désigne un ensemble de repères temporels et d’événements de vie socialement partagés (par exemple : tomber amoureux, se marier, avoir un enfant), considérés comme typiques et normatifs dans une culture donnée. Ces scripts influencent la façon dont nous organisions et rappelons nos souvenirs autobiographiques.</li>
+</ul>
+<p>Donc on fait une étude que je n’ai pas écoutée et on a un pic de réminiscence surtout d’évènements positifs, et à partir de 31 ans la vie est horrible.</p>
+</section>
+</section>
+<section id="le-soi---the-self" class="level2">
+<h2 class="anchored" data-anchor-id="le-soi---the-self">2. Le soi - The Self</h2>
+<section id="effet-de-référence-à-soi" class="level3">
+<h3 class="anchored" data-anchor-id="effet-de-référence-à-soi">2.1. Effet de référence à soi</h3>
+<p>Le “soi” à différentes définitions, et en recherche c’est plutôt une définition objective, de choses qui nous définissent. Il y a plusieurs manière de le mesurer dans le contexte dans la mémoire.</p>
+<p><strong>Effet de référence à soi</strong> : test où on encode les informations où on encode en relation à autre ou soi. Encoder par rapport à nous-même nous permet de beaucoup mieux organiser les informations. Participants encodent 80 adjectifs (2 conditions d’encodage bloqués) : référence aux autres (“est-ce que ce mot décxrit Einstein ?” -&gt; yes/no) ou à soi (“est-ce que ce mot me décrit ?” yes/no). Les résultats yes/no ne sont pas importants, mais quelle catégorie d’information, on a le plus encodé. Et on se souvient donc beaucoup des choses encodées par rapport à soi.</p>
+<p>Pour chaque apsect de notre identité, on aurait une population de souvenirs regroupée autour de ça. On a donc utilisé le TST (twenty-statements tests), fait par les sociologues pour mesurer l’identité, ou description de la personne. On a pris ces identités et demandé de récupérer les souvenirs liés aux aspects de l’identité.</p>
+<p>// C’est pas l’âge qui compte mais les relations entre évènemnts et identité.</p>
+<p>Donc l’idée c’est que les souvenirs autobiographiques sont regorupés aux moments clés de la formation d’identité, quelque soit l’âge.</p>
+</section>
+<section id="sms-de-conway-système-de-mémore-du-soi" class="level3">
+<h3 class="anchored" data-anchor-id="sms-de-conway-système-de-mémore-du-soi">2.2. SMS de Conway (système de mémore du soi)</h3>
+<p><img src="../assets/Pasted image 20261121110608.png" class="img-fluid"></p>
+<p><strong>Modèle self-memory systeme de Conway</strong> : on a une base de données autobiographiques, et le “soi de travail” en ref blague à Baddeley. Ça serait un soi temporaire. C’est un modèle constructiviste de la mémoire, mais c’est un problème car il y a des liens bidirectionnels donc le soi va impacter les souvenirs stockées, et les souvenirs récupérés vont influencer le soi. C’est donc très difficile à tester.</p>
+<p>On a une mémoire autobiographique qui serait un construction mentale très riche faite d’une combinaison de mémoire épisodique qui donne une image sensorielle très proche de ce qu’on a vécu, et du Self à Long Terme. Il y aurait un schéma d’organisation des mémoires autobiographiques, sur les périodes de vie (j’étais en thèse, en couple avec Tess…).</p>
+<p><img src="../assets/Pasted image 20261121105824.png" class="img-fluid"></p>
+<p><strong>Comment lire les deux figures</strong> (même modèle, deux niveaux : l’architecture à gauche, la récupération à droite).</p>
+<p>Figure de gauche, la construction : un souvenir autobiographique n’est pas stocké d’un bloc, il est assemblé. Le système de mémoire épisodique fournit une image sensorielle proche du vécu ; cette image est indexée par le Self à long terme, qui contient les connaissances autobiographiques de base (schéma historique personnel, périodes de vie, événements généraux) et le self conceptuel (script personnel, self possible, croyance). Les doubles flèches = circulation dans les deux sens.</p>
+<p>Figure de droite, la récupération, à lire par le bas :</p>
+<ul>
+<li>le <strong>working self</strong> est le moteur de la recherche, entre mémoire de travail et self à long terme ;</li>
+<li>la recherche remonte la hiérarchie périodes de vie → événements généraux → détails spécifiques (flèches roses), avec des allers-retours (flèches rouges) ;</li>
+<li>le format du souvenir dépend du niveau où on s’arrête : souvenir spécifique (détails), souvenir répété (événement vécu plusieurs fois), souvenir étendu (qui couvre une période de vie) ;</li>
+<li>l’<strong>accès direct</strong> permet de tomber directement sur les détails spécifiques, sans remonter la hiérarchie.</li>
+</ul>
+<p>Les diapos ne légendent pas les flèches roses et rouges : le sens ci-dessus est une lecture de la figure, pas du cours.</p>
+</section>
+</section>
+<section id="perturbations-de-la-mémoire-autobiographique-et-le-soi" class="level2">
+<h2 class="anchored" data-anchor-id="perturbations-de-la-mémoire-autobiographique-et-le-soi">3. Perturbations de la mémoire autobiographique et le soi</h2>
+<ul>
+<li>Confabulation : génération de faux souvenirs, pour combler trous de la mémoire ou identité</li>
+<li>Fugue dissociative</li>
+<li>Alzheimer : lien entre fonctions exécuives et la mémoire autobiographique. Impact sur l’identité, on trouve des baisses sur une mesure de “l’intensité de l’identité”. Mais c’est corrélationnel.</li>
+</ul>
+<p>Mais l’identité à une composante sémantique et épisodique, il est très très rare de tout perdre.</p>
+<hr>
+<!-- source: 5_process_haut_niveau.md -->
+</section>
+</section>
+<section id="cm5-chris-moulin" class="level1">
+<h1>CM5 Chris Moulin</h1>
+<section id="métamémoire" class="level2">
+<h2 class="anchored" data-anchor-id="métamémoire">Métamémoire</h2>
+<p>Plan :</p>
+<ul>
+<li>Définitions</li>
+<li>Comment mesurer la métamémoire ?
+<ul>
+<li>JOL</li>
+<li>FOK</li>
+</ul></li>
+<li>Théorie : Delayed JOLs</li>
+<li>Théorie : Koriat - accessibilitee</li>
+<li>Et alors ? Métamémoire dans la maladie d’alzheimer</li>
+</ul>
+<p>Bons exemples de métamémoire est le mot sur le bout de la lampe qui est deux choses : Échec de la récupération, mais avec une recherche de celle-ci. On utilise ce sentiment pour orienter la recherche en mémoire. C’est la petite voix de la <strong>métamémoire</strong>.</p>
+<section id="définitions" class="level3">
+<h3 class="anchored" data-anchor-id="définitions">1. Définitions</h3>
+<p>La <strong>métacognition</strong> est le contrôle et évaluation de nos propres processus cognitifs. La métamémoire est la métacognition pour la mémoire. C’est très utilisé pour étudier la conscience, mais vient du développement dans les années 80. Flavell, psychologue stadiste, propose qu’il y a des processus prédéterminant pour le développement, surtout fonction permettant la régulation et l’orchestration des processus cognitifs. Ça a soutenu les approches types “apprendre à apprendre”.</p>
+<p>Il y a les connaissances métacognitives, qui sont les connaissances générales acquises, et les expériences métacognitive, qui sont les connaissances en rapport avec une tâche en cours. Ces dernières comprennent fluence, déjà-vu.</p>
+<p>Modèle très connu de la métamémoire :</p>
+<p><img src="../assets/Pasted image 20261123082300.png" class="img-fluid"></p>
+<p>Entre les deux niveaux de mémoire, ce sont les processus représentants les flux d’informations entre les niveaux de traitements. Cette boucle a donc la capacité d’optimiser les processus de mémorisation.</p>
+<!-- FIX: il me manque quelques explications pour ^ -->
+<p>Pour le <strong>monitoring</strong>, on utilise estimation/prédictions pour rappel et la reconnaissance. On compare toujours celles-ci aux vraies performances : l’idée est que mesurer la performance est le niveau objet, et avoir une représentation de la performance est au niveau méta. Et pour le <strong>contrôle</strong>, on va mesurer les capacité des individus à utiliser/modifier les stratégies mnésiques.</p>
+<p>Le <strong>JOL</strong> (Judgement of Learning) est la capacité à prédire le rappel d’un item lors de l’apprentissage. JOLs peuvent se faire immédiatement après l’encodage (Immediate JOLs) ou après un délai (delayed JOL). Généralement, on le fait item par item en paires de mots</p>
+<p><img src="../assets/Pasted image 20261123082803.png" class="img-fluid"></p>
+<p>Nos prédictions avec les JOLs sont beaucoup plus précises après un délai. Et cet effet est la base de beaucoup de théories en métamémoire. Donc pour la mesurer dans cette situation, il faut avoir une mesure de précision : un bon niveau est de savoir prédire notre performance, quels sont les mots mieux encodés que les autres. On peut donc faire une corrélation (“gamma score”) qui regarde association entre prédictions et performances pour chaque individu. Et ce gamma score est bien plus haut après un délai.</p>
+<p>Comment ça fonctionne ? C’est évident : si on doit aller vite, l’information reste en MdT donc il est dur de savoir si on va la perdre ou pas, alors que le JOL différée se base uniquement sur la MLT. Le JOL est basé sur la récupération de l’information.</p>
+<section id="feeling-of-knowing-fok" class="level4">
+<h4 class="anchored" data-anchor-id="feeling-of-knowing-fok">2.2. Feeling-of-Knowing (FOK)</h4>
+<p>FOK est la prédiction de reconnaissance d’items non récupérés en mémoire. // Le mot sur le bout de la langue en est un cas extrême. Elle nous aide à orienter une recherche pour pouvoir retrouver l’item.</p>
+<p><img src="../assets/Pasted image 20261123083826.png" class="img-fluid"></p>
+<p>Mode de prédiction : échelle de pourcentage, ou prédiction binaire. C’est une bonne mesure car ça représente quelque chose de la vie quotidienne, mais on retrouve la même chose que pour le JOL : on a une prédiction item par item et personne par personne ???</p>
+<p>On peut faire exactement la même chose dans la mémoire sémantique (avant, épisodique). C’est un paradigme idéal.</p>
+</section>
+</section>
+<section id="mémoire-et-métamorphoe-maladie-dalzheimer" class="level3">
+<h3 class="anchored" data-anchor-id="mémoire-et-métamorphoe-maladie-dalzheimer">3. Mémoire et métamorphoe : maladie d’Alzheimer</h3>
+<p>On a des prédictions très peu précises, un gamma même légèrement négatif. Mails il y a une différence entre mémoire sémantique et épisodique : uniquement la mémoire épisodique est altérée. Mais comment expliquer tout ça en termes de théories ?</p>
+<p>L’<strong>approche d’accessibilité</strong> de Koriat dit que pour les JOLs il y a plusieurs indices qu’on peut utiliser pour nos jugement métacognitifs. Certains sont plus ou moins intéressants pour la mémoire et plus ou moins en lien avec les expéreinces métacognitives. On a des indices <strong>intrinsèques</strong> commes les caractéristiques des items. On peut donc pendant une phase d’encodage utiliser ces facteurs pour évaluer notre performance (c’est long, c’est en anglais, c’est un prénom…). Indices <strong>extrinsèques</strong> (est-ce qu’il y a du bruit, combien d’items j’ai à mémoriser…). Ces deux indices sont de la métacognition car c’est un contrôle de haut niveau mais moins cool cdar pas de rretour direct de la trace dans la mémoire. Les <strong>indices mnémoniques</strong> sont l’évaluation du niveau d’apprentissage des items, ressentis donné par la trace en direct.</p>
+<p>2 possibilités pour son modèle. Impact des facteurs intrinsèques et extrinsèques sur les processus de la mémoire, et on utilise la mémoire pour JOL ou FOK; ou quelque chose de plus direct, on utilise les caractéristiques des mots directement pour JOL ou FOK. En vrai c’est un peu les deux. Pour disitnguer les deux, on a des jOL immédiats qui se basent surtout sur les petits facteusr, mais si on met du délai elle va réflechir ou jsp quoi et passer pa mnémonique. Le but c’est d’encourage les participants à utiliser les indices mnémoniques.</p>
+<p><img src="../assets/Pasted image 20261123084858.png" class="img-fluid"></p>
+<p>Les indices mnémoniques :</p>
+<ul>
+<li>La familiarité avec l’indice : dans une tentative de rappel où il faut faire une préditions pour la suite, on va utiliser la familiarité pour faire une prédiction du rappel de cette information</li>
+<li>La facilité perçu d’encodage et de récupération (flutente : “encoding and retrival fluency”)</li>
+<li>Informations partielles : même si on sait pas vraiment on peut relier quelque chose de relié. Ça fait appel à la remémoration.</li>
+</ul>
+<p>L’indice qu’on voit aura des processus de reconnaissance. Quand on voit ce mot on va faire appel à tous les processus reconnaissance avec familiarité et remémoration et on va utiliser pour faire les préditions. On va regarder les JOLs qui sont fait rapidements, et on peut mˆ´me dans les FOK donner l’infomraiton de familiairité en présntant plusierus fois les mêmes informaitons, ce qui va manipuler les probabilités (de faire des prédictions ?).</p>
+<p>Chose à retenir : on fait le tour des processus dans la mémoire qui sont métacognitifs, soit faire un jugement sur paires de mots avec indices donnés, les processus utilisés pour faire des prédictions sont les processus reliés à la mémoire et la reconnaissance. C’es processus de haut niveau sont connaissancres et expériences basées sur la reconnaissance te processus mnésiques déjà existants. Les jugements métacognitifs utilisent des processus disponibles.</p>
+<hr>
+</section>
+</section>
+<section id="linhibition" class="level2">
+<h2 class="anchored" data-anchor-id="linhibition">L’inhibition</h2>
+<section id="loubli" class="level3">
+<h3 class="anchored" data-anchor-id="loubli">L’oubli</h3>
+<p>Idées importantes sur l’oubli :</p>
+<ol type="1">
+<li>La trace se dégrade avec le temps</li>
+<li>Perturbation de la récupération - disponibilité (car on peut pas être sûr qu’on “oublie” pour de vrai)</li>
+<li>L’oublie serait une interférenc</li>
+<li>Inhbition : processus actif de supression</li>
+</ol>
+</section>
+<section id="quest-ce-que-linhibition" class="level3">
+<h3 class="anchored" data-anchor-id="quest-ce-que-linhibition">Qu’est-ce que l’inhibition</h3>
+<p>Ce n’est pas une perte passive, mais une suppression active. Il y a des processus qui existent pour diminuer l’activation des informations dans le système. L’inhibition serait un mécanisme actif de suppression des éléments distracteurs afin de laisser disponible l’efficacité des traitements pour la cible. Elle serait également un phénomène adaptatif, car son effet sur les temps de réponse dépend de la pertinence de l’information portée par le stimulus.</p>
+</section>
+<section id="inhibition-de-la-mémoire-épisodique" class="level3">
+<h3 class="anchored" data-anchor-id="inhibition-de-la-mémoire-épisodique">Inhibition de la mémoire épisodique</h3>
+<p>FIX: oublié de noter modèle théorique</p>
+<p>Oubli induit par la récupération (RIF) : paradigme montre que processus de récupération d’une chose inhibe récupération d’autres informations. On apprend des items de différentes catégories sémantique. On va rappeler en continu des informatiosn dans une liste, et pour assurer. J’ai écouté mais le but c’est juste de récupérer certaines informations.</p>
+<p>FIX: j’écoute pas la tâche demander à tess</p>
+<p><img src="../assets/Pasted image 20261123092311.png" class="img-fluid"></p>
+<p>???????????////////////</p>
+<p>Plusieurs possiblités pour cet effet :</p>
+<ul>
+<li>Ce n’est pas de l’inhibition</li>
+</ul>
+<p>Modèle de suppression des caractéristiques : on trouve des chevauchements entre les catégories, qiu montre par exemple que tomate peut rentrer dans la catégorie “fruits” ou “choses rouges”. Sang et tomates étaient étudiés dans la phase d’encodage comme choses rouges. Dans la phase test, on doit générer tous les fruits qui étaient dans la liste initiale. On teste l’activation de tomate avec l’indice fruit (et non rouge qui été utilisé pour sang). On a une inhibition du rappel de tomate même avec l’autre indice.</p>
+<p>On trouve toujours une inhbition, donc on trouve otujours que le rappel est diminué pour tomate même si on utilise pas la catégorie originale (“rouge”).</p>
+<p>Sang et toamtes partagent certaines caractéristiques.</p>
+<p>Points noirs activés points clairs inhibés. Reestlats c’est que toamte et fraise sont inhibé au même niveau.</p>
+<p>Donc l’inhbition eput travers les catégories, peu importe l’indice. C’est la représentation qui est inhibée, et ça va traverser les catégories elon els caractéristiques.</p>
+<p>Oubli dirigé est un paradigme où on fait genre qu’on a donné la mauvaise liste, donc on demande d’oublier, et on donne une autre liste. Puis on fiat test de mémorisation sur les 2. Le résultat n’est pas important pour la première liste, c’est qu’on a une meilleur performance pour la deuxième liste, il y a donc bien eu un oubli de la première liste.</p>
+<p>Conclusions : la métam</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle dark mode");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle dark mode");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

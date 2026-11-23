@@ -63,7 +63,7 @@ session 2. Cependant son apprentissage est beaucoup plus lent. Il peut tout de
 même maîtriser la liste que le montre les prochaines sessions. Et 5 ans plus
 tard, il se souvient beaucoup mieux que sa sœur.
 
-![sdfsadfsadf](../../assets/2026-10-21-12-20-39.png)
+![sdfsadfsadf](../..../assets/2026-10-21-12-20-39.png)
 
 Si on a pas les infos de la phase d'encodage, on va prendre les items comme
 jsute des connaissances, qui donne un maintien très stable car c'est de la
@@ -82,7 +82,7 @@ réfutation de ce modèle, car il existe une double dissociation de patient.es
 ayant des troubles de la MLT pouvant faire tests de MCT mais pas MLT et
 inversement.
 
-![dfasdf](../assets/2026-10-21-12-23-39.png)
+![dfasdf](..../assets/2026-10-21-12-23-39.png)
 
 - HM: MCT intacte, mais pas MLT, ce qui correspond très bien avec transfert
   d'informations, car il pourrait pas mettre dans le stock permanent
@@ -92,7 +92,7 @@ Il y aurait donc un encodage parallèle, et non sériel, pour la MCT et la MLT.
 C'est aussi probablement le cas pour la mémoire épisodique et sémantique. Ce
 modèle est malgré tout utile en clinique.
 
- <!-- FIX: j'ai rien compris faut demander à tessa -->
+<!-- FIX: j'ai rien compris faut demander à tessa -->
 
 ## 3. Un point de départ : rappel et reconnaissance
 
@@ -124,7 +124,7 @@ rappel différé est altéré, et surtout la proportion de MCT utilisée par ces
 patients est forte, et il y a un plafond à l'utilisation de la MLT qui est
 autant utilisée dans les tˆåches mixtes que dans les tâches de MLT pure.
 
-![](../Pasted image 20261021143902.png)
+![](../assets/Pasted image 20261021143902.png)
 
 **La mémoire de travail**
 
@@ -136,7 +136,7 @@ aurait donc un stockage des informations temporaires multimodales, épisodiques
 car dans un moment spécifique, stocké quelque part entre MCT et MLT. Buffer car
 temporaire.
 
-![](../Pasted image 20261021144544.png){width=400}
+![](../assets/Pasted image 20261021144544.png){width=400}
 
 ## 4. L'encodage et le contexte
 
@@ -169,11 +169,11 @@ reconnaître une information, et si on en a encore plus, on peut le rappeler.
 Pour tous types de mémoire, on a la disponibilité de quelque chose quelque part
 dans le cerveau, et accessibilité nécessaire (+ fort est + difficile).
 
-|                   | Disponibilité | Accessibilité                           |
-| ----------------- | ------------- | --------------------------------------- |
-| Mémoire implicite | Oui           | Un peu - comportement - sans conscience |
-| Reconnaissance    | Oui           | Fort                                    |
-| Rappel libre      | Oui           | Très fort                               |
+  |                   | Disponibilité | Accessibilité                           |
+  | ----------------- | ------------- | --------------------------------------- |
+  | Mémoire implicite | Oui           | Un peu - comportement - sans conscience |
+  | Reconnaissance    | Oui           | Fort                                    |
+  | Rappel libre      | Oui           | Très fort                               |
 
 On a un modèle qui date des annés 60 génération / reconnaissance. Dans le
 rappel, on produit spontanément des informations pertinentes et plausibles, puis
@@ -195,7 +195,7 @@ encodage et test favorise les performances.
 
 <!-- FIX: bien revoir derni`´re partie` -->
 
----
+--------------------------------------------------------------------------------
 
 <!-- source: 2_familiarite.md -->
 
@@ -277,14 +277,14 @@ informations.
 Les signaux de fluence arrivent à nous, et le **système de distribution** doit
 faire une décision. Parler deffet de **simple exposition** peut nous aider : la
 simple présentation d'un stimulus peut provoquer une préférence accrue vers
-celui-ci. On fait l'hypothèse que cette préférence est attribuable à la fluence
-: faciliter la mémoire, peut être interprétée comme un préférence.
+celui-ci. On fait l'hypothèse que cette préférence est attribuable à la fluence :
+faciliter la mémoire, peut être interprétée comme un préférence.
 
 Boucher-dans-le-bus est dû à rencontrer quelqu'un en dehors de son contexte, et
 retrouver le bon contexte est très très dûr. C'est une expression de la
 **spécificité de l'encodage**.
 
-![](../Pasted image 20261110145513.png)
+![](../assets/Pasted image 20261110145513.png)
 
 On fait une étude où on voulait tester qu'est-ce qui change dans la spécificité
 d'encodage avec le vieillissement, sachant que les capacités évoquées déclinent
@@ -319,12 +319,12 @@ phénoménologique de familiarité**, mais par exemple de préférence.
 Mais est-ce qu'on peut avoir l'un sans l'autre ? On peut manipuler sensation de
 fluence avec différentes tˆåches. On peut faire apprendre des listes de mots,
 puis ???. FIX:
- 
-Par exemple le changement de police peut jouer sur la familiarité à
-partir d'une différence perceptive. On peut interpréter à tord que police moins
-lisible = mot moins familier. Ça peut aussi se passer dans le déjà-vu, dont une
-théorie qui propose qu'il y a pas de représentation stockée dans le
-déclenchement de familiarité.
+
+Par exemple le changement de police peut jouer sur la familiarité à partir d'une
+différence perceptive. On peut interpréter à tord que police moins lisible = mot
+moins familier. Ça peut aussi se passer dans le déjà-vu, dont une théorie qui
+propose qu'il y a pas de représentation stockée dans le déclenchement de
+familiarité.
 
 Donc dans l'effet de simple exposition il y a familiarité représentationnelle
 mais pas phénoménologique. Il y a les deux dans le boucher-dans-le-bus. Déjà-vu
@@ -348,7 +348,7 @@ FIX: hopla j'écoute pas du tout
 
 ## 4. Familiarité dans le contexte clinique
 
----
+--------------------------------------------------------------------------------
 
 <!-- source: 3_familiarite_suite.md -->
 
@@ -364,10 +364,10 @@ A/modèle de Yonelinas (2002): 2 processus derrière la reconnaissance diapo
 familiarité et récupération ce modèle dit pas ce qui faut pour dépasser le
 seuil, il décrit juste des observations comportementales
 
-B/Modèle BIC “Binding of item and context” : revue de 30 études en
+B/Modèle BIC "Binding of item and context" : revue de 30 études en
 neuroimagerie: cherche corrélats neuronaux derrière fam et rec récollection:
 activité ++ hippocampique et parahippocampique where? encode infos contextuel de
-l’info familiarité: cortex perirhinal what? encodage informations spécifique de
+l'info familiarité: cortex perirhinal what? encodage informations spécifique de
 la cible
 
 //
@@ -443,10 +443,10 @@ entre réponses "Remember" et "Know" ? //
 
 Dissociation de processus est une mesure un peu moins directe. On demande pas au
 participant s'il se souvient directement. On produit de contexte
-d'apprentissages différents, écrit ou verbalement. On fait une tâche d'inclusion
-: dire "ancien" pour tous les mots appris de la liste 1 et 2; ou tâche
-d'exclusion : dire "ancien" seulement pour les mots appris de la lsite 2. Donc
-quand on dit ancien pour tous les mots appris /////
+d'apprentissages différents, écrit ou verbalement. On fait une tâche d'inclusion :
+dire "ancien" pour tous les mots appris de la liste 1 et 2; ou tâche d'exclusion :
+dire "ancien" seulement pour les mots appris de la lsite 2. Donc quand on dit
+ancien pour tous les mots appris /////
 
 Nos résultats sont donc assez robustes, avec 2 méthodes dfférnets on voit
 différentes observations. C'est donc une méthode un peu plus objective, car ce
@@ -517,21 +517,25 @@ Maturation du cerveau fait que des zones se développent de mani`´re hétérog�
 
 #### C.2. L'hyperfamiliarité : Le syndrome de Fregoli
 
----
+--------------------------------------------------------------------------------
 
 <!-- source: 4_memoire_autobiographique.md -->
 
 # CM4 familiarité
 
 <!--toc:start-->
+
 - [CM4 familiarité](#cm4-familiarité)
   - [1. La mémoire autobiographique](#1-la-mémoire-autobiographique)
-    - [1.1. L'empan de vie et le pic de réminiscence](#11-lempan-de-vie-et-le-pic-de-réminiscence)
+    - [1.1. L'empan de vie et le pic de
+      réminiscence](#11-lempan-de-vie-et-le-pic-de-réminiscence)
   - [2. Le soi - The Self](#2-le-soi-the-self)
     - [2.1. Effet de référence à soi](#21-effet-de-référence-à-soi)
-    - [2.2. SMS de Conway (système de mémore du soi)](#22-sms-de-conway-système-de-mémore-du-soi)
-  - [3. Perturbations de la mémoire autobiographique et le soi](#3-perturbations-de-la-mémoire-autobiographique-et-le-soi)
-<!--toc:end-->
+    - [2.2. SMS de Conway (système de mémore du
+      soi)](#22-sms-de-conway-système-de-mémore-du-soi)
+  - [3. Perturbations de la mémoire autobiographique et le
+    soi](#3-perturbations-de-la-mémoire-autobiographique-et-le-soi)
+    <!--toc:end-->
 
 Révisions :
 
@@ -616,7 +620,7 @@ clés de la formation d'identité, quelque soit l'âge.
 
 ### 2.2. SMS de Conway (système de mémore du soi)
 
-![](../Pasted image 20261121110608.png)
+![](../assets/Pasted image 20261121110608.png)
 
 **Modèle self-memory systeme de Conway** : on a une base de données
 autobiographiques, et le "soi de travail" en ref blague à Baddeley. Ça serait un
@@ -631,25 +635,26 @@ très proche de ce qu'on a vécu, et du Self à Long Terme. Il y aurait un sché
 d'organisation des mémoires autobiographiques, sur les périodes de vie (j'étais
 en thèse, en couple avec Tess...).
 
-![](../Pasted image 20261121105824.png)
+![](../assets/Pasted image 20261121105824.png)
 
 **Comment lire les deux figures** (même modèle, deux niveaux : l'architecture à
 gauche, la récupération à droite).
 
-Figure de gauche, la construction : un souvenir autobiographique n'est pas stocké
-d'un bloc, il est assemblé. Le système de mémoire épisodique fournit une image
-sensorielle proche du vécu ; cette image est indexée par le Self à long terme,
-qui contient les connaissances autobiographiques de base (schéma historique
-personnel, périodes de vie, événements généraux) et le self conceptuel (script
-personnel, self possible, croyance). Les doubles flèches = circulation dans les
-deux sens.
+Figure de gauche, la construction : un souvenir autobiographique n'est pas
+stocké d'un bloc, il est assemblé. Le système de mémoire épisodique fournit une
+image sensorielle proche du vécu ; cette image est indexée par le Self à long
+terme, qui contient les connaissances autobiographiques de base (schéma
+historique personnel, périodes de vie, événements généraux) et le self
+conceptuel (script personnel, self possible, croyance). Les doubles flèches =
+circulation dans les deux sens.
 
 Figure de droite, la récupération, à lire par le bas :
 
 - le **working self** est le moteur de la recherche, entre mémoire de travail et
   self à long terme ;
 - la recherche remonte la hiérarchie périodes de vie → événements généraux →
-  détails spécifiques (flèches roses), avec des allers-retours (flèches rouges) ;
+  détails spécifiques (flèches roses), avec des allers-retours (flèches rouges)
+  ;
 - le format du souvenir dépend du niveau où on s'arrête : souvenir spécifique
   (détails), souvenir répété (événement vécu plusieurs fois), souvenir étendu
   (qui couvre une période de vie) ;
@@ -671,7 +676,7 @@ une lecture de la figure, pas du cours.
 Mais l'identité à une composante sémantique et épisodique, il est très très rare
 de tout perdre.
 
----
+--------------------------------------------------------------------------------
 
 <!-- source: 5_process_haut_niveau.md -->
 
@@ -698,8 +703,8 @@ de la **métamémoire**.
 
 La **métacognition** est le contrôle et évaluation de nos propres processus
 cognitifs. La métamémoire est la métacognition pour la mémoire. C'est très
-utilisé pour étudier la conscience, mais vient du développement dans les
-années 80. Flavell, psychologue stadiste, propose qu'il y a des processus
+utilisé pour étudier la conscience, mais vient du développement dans les années
+80. Flavell, psychologue stadiste, propose qu'il y a des processus
 prédéterminant pour le développement, surtout fonction permettant la régulation
 et l'orchestration des processus cognitifs. Ça a soutenu les approches types
 "apprendre à apprendre".
@@ -710,7 +715,7 @@ rapport avec une tâche en cours. Ces dernières comprennent fluence, déjà-vu.
 
 Modèle très connu de la métamémoire :
 
-![](../Pasted image 20261123082300.png)
+![](../assets/Pasted image 20261123082300.png)
 
 Entre les deux niveaux de mémoire, ce sont les processus représentants les flux
 d'informations entre les niveaux de traitements. Cette boucle a donc la capacité
@@ -729,7 +734,7 @@ lors de l'apprentissage. JOLs peuvent se faire immédiatement après l'encodage
 (Immediate JOLs) ou après un délai (delayed JOL). Généralement, on le fait item
 par item en paires de mots
 
-![](../Pasted image 20261123082803.png)
+![](../assets/Pasted image 20261123082803.png)
 
 Nos prédictions avec les JOLs sont beaucoup plus précises après un délai. Et cet
 effet est la base de beaucoup de théories en métamémoire. Donc pour la mesurer
@@ -750,7 +755,7 @@ FOK est la prédiction de reconnaissance d'items non récupérés en mémoire. /
 mot sur le bout de la langue en est un cas extrême. Elle nous aide à orienter
 une recherche pour pouvoir retrouver l'item.
 
-![](../Pasted image 20261123083826.png)
+![](../assets/Pasted image 20261123083826.png)
 
 Mode de prédiction : échelle de pourcentage, ou prédiction binaire. C'est une
 bonne mesure car ça représente quelque chose de la vie quotidienne, mais on
@@ -787,7 +792,7 @@ deux, on a des jOL immédiats qui se basent surtout sur les petits facteusr, mai
 si on met du délai elle va réflechir ou jsp quoi et passer pa mnémonique. Le but
 c'est d'encourage les participants à utiliser les indices mnémoniques.
 
-![](../Pasted image 20261123084858.png)
+![](../assets/Pasted image 20261123084858.png)
 
 Les indices mnémoniques :
 
@@ -813,7 +818,7 @@ mémoire et la reconnaissance. C'es processus de haut niveau sont connaissancres
 et expériences basées sur la reconnaissance te processus mnésiques déjà
 existants. Les jugements métacognitifs utilisent des processus disponibles.
 
----
+--------------------------------------------------------------------------------
 
 ## L'inhibition
 
@@ -848,7 +853,7 @@ juste de récupérer certaines informations.
 
 FIX: j'écoute pas la tâche demander à tess
 
-![](../Pasted image 20261123092311.png)
+![](../assets/Pasted image 20261123092311.png)
 
 ???????????////////////
 
@@ -883,4 +888,3 @@ c'est qu'on a une meilleur performance pour la deuxième liste, il y a donc bien
 eu un oubli de la première liste.
 
 Conclusions : la métam
-

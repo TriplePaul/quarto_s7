@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.11.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>dev_cog – S7</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-cbed20f07cd0a3452a6886fe8d146970.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-181d6909a009fe39f73b5212012c69f5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-cbed20f07cd0a3452a6886fe8d146970.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
+        setTimeout(() => {
+          window.scrollTo(0, scrollY);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Site">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">S7</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../neuro_adulte/neuro_adulte.html"> 
+<span class="menu-text">Neuro</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../cognition_visuelle/cognition_visuelle_mermillod.html"> 
+<span class="menu-text">Mermillod</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../dev_cog/dev_cog.html"> 
+<span class="menu-text">Dupierrix</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../modele_memoire/modele_memoire_cours.html"> 
+<span class="menu-text">Sémantique</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../modele_memoire/modele_memoire_moulin.html"> 
+<span class="menu-text">Épisodique</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
+</div>
+            <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" aria-label="Toolbar">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../dev_cog/dev_cog.html">EC09 Développement Cognitif</a></li></ol></nav>
+        <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Section">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Index</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../neuro_adulte/neuro_adulte.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EC07 Neurologie de l’Adulte</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cognition_visuelle/cognition_visuelle_mermillod.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EC08 Cognition Visuelle Mermillod</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cognition_visuelle/cognition_visuelle_dup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EC08 Cognition Visuelle Dupierrix</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../dev_cog/dev_cog.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">EC09 Développement Cognitif</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modele_memoire/modele_memoire_cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EC10 Mémoire Sémantique</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modele_memoire/modele_memoire_moulin.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">EC10 Mémoire Épisodique</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active" data-toc-expanded="2">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#ec09-développement-cognitif" id="toc-ec09-développement-cognitif" class="nav-link active" data-scroll-target="#ec09-développement-cognitif">EC09 Développement Cognitif</a>
+  <ul class="collapse">
+  <li><a href="#cm1---conditionnement-rappel" id="toc-cm1---conditionnement-rappel" class="nav-link" data-scroll-target="#cm1---conditionnement-rappel">CM1 - Conditionnement Rappel</a></li>
+  <li><a href="#apprentissage-et-conditionnement" id="toc-apprentissage-et-conditionnement" class="nav-link" data-scroll-target="#apprentissage-et-conditionnement">1. Apprentissage et conditionnement</a>
+  <ul class="collapse">
+  <li><a href="#le-conditionnement-classique" id="toc-le-conditionnement-classique" class="nav-link" data-scroll-target="#le-conditionnement-classique">1.1. Le conditionnement classique</a></li>
+  <li><a href="#le-conditionnement-opérant" id="toc-le-conditionnement-opérant" class="nav-link" data-scroll-target="#le-conditionnement-opérant">1.2. Le conditionnement opérant</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#cm2---imitation" id="toc-cm2---imitation" class="nav-link" data-scroll-target="#cm2---imitation">CM2 - Imitation</a>
+  <ul class="collapse">
+  <li><a href="#le-conditionnement-opérant-suite" id="toc-le-conditionnement-opérant-suite" class="nav-link" data-scroll-target="#le-conditionnement-opérant-suite">Le conditionnement opérant (suite)</a></li>
+  <li><a href="#imitation-et-apprentissages" id="toc-imitation-et-apprentissages" class="nav-link" data-scroll-target="#imitation-et-apprentissages">2. Imitation et apprentissages</a>
+  <ul class="collapse">
+  <li><a href="#imitation-néonatale" id="toc-imitation-néonatale" class="nav-link" data-scroll-target="#imitation-néonatale">Imitation Néonatale</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#cm3-dev-cog" id="toc-cm3-dev-cog" class="nav-link" data-scroll-target="#cm3-dev-cog">CM3 dev cog</a></li>
+  <li><a href="#cm4-dev-cog" id="toc-cm4-dev-cog" class="nav-link" data-scroll-target="#cm4-dev-cog">CM4 dev cog</a>
+  <ul class="collapse">
+  <li><a href="#histoire-du-nombre" id="toc-histoire-du-nombre" class="nav-link" data-scroll-target="#histoire-du-nombre">Histoire du nombre</a></li>
+  <li><a href="#acquisition-du-nombre-au-cours-du-développement" id="toc-acquisition-du-nombre-au-cours-du-développement" class="nav-link" data-scroll-target="#acquisition-du-nombre-au-cours-du-développement">Acquisition du nombre au cours du développement</a></li>
+  </ul></li>
+  <li><a href="#cm5-dev-cog" id="toc-cm5-dev-cog" class="nav-link" data-scroll-target="#cm5-dev-cog">CM5 dev cog</a>
+  <ul class="collapse">
+  <li><a href="#introduction-et-méthodes-détude" id="toc-introduction-et-méthodes-détude" class="nav-link" data-scroll-target="#introduction-et-méthodes-détude">1. Introduction et méthodes d’étude</a></li>
+  <li><a href="#le-débat-sur-lorigine-de-la-préférence-pour-les-visages" id="toc-le-débat-sur-lorigine-de-la-préférence-pour-les-visages" class="nav-link" data-scroll-target="#le-débat-sur-lorigine-de-la-préférence-pour-les-visages">2. Le débat sur l’origine de la préférence pour les visages</a>
+  <ul class="collapse">
+  <li><a href="#les-expériences-fondatrices-et-la-controverse" id="toc-les-expériences-fondatrices-et-la-controverse" class="nav-link" data-scroll-target="#les-expériences-fondatrices-et-la-controverse">Les expériences fondatrices et la controverse</a></li>
+  <li><a href="#lhypothèse-spécifique-conspec-et-conlern" id="toc-lhypothèse-spécifique-conspec-et-conlern" class="nav-link" data-scroll-target="#lhypothèse-spécifique-conspec-et-conlern">L’hypothèse spécifique : CONSPEC et CONLERN</a></li>
+  <li><a href="#lhypothèse-généraliste-le-biais-top-heavy" id="toc-lhypothèse-généraliste-le-biais-top-heavy" class="nav-link" data-scroll-target="#lhypothèse-généraliste-le-biais-top-heavy">L’hypothèse généraliste : le biais top-heavy</a></li>
+  <li><a href="#le-test-eeg-en-frequency-tagging" id="toc-le-test-eeg-en-frequency-tagging" class="nav-link" data-scroll-target="#le-test-eeg-en-frequency-tagging">Le test EEG en frequency-tagging</a></li>
+  <li><a href="#lhypothèse-incarnée-la-corrélation-binoculaire" id="toc-lhypothèse-incarnée-la-corrélation-binoculaire" class="nav-link" data-scroll-target="#lhypothèse-incarnée-la-corrélation-binoculaire">L’hypothèse incarnée : la corrélation binoculaire</a></li>
+  </ul></li>
+  <li><a href="#effet-thatcher-et-arguments-en-faveur-dun-système-spécifique" id="toc-effet-thatcher-et-arguments-en-faveur-dun-système-spécifique" class="nav-link" data-scroll-target="#effet-thatcher-et-arguments-en-faveur-dun-système-spécifique">3. Effet Thatcher et arguments en faveur d’un système spécifique</a></li>
+  <li><a href="#le-traitement-holistique-et-configural" id="toc-le-traitement-holistique-et-configural" class="nav-link" data-scroll-target="#le-traitement-holistique-et-configural">4. Le traitement holistique et configural</a></li>
+  <li><a href="#le-regard-un-signal-social-particulier" id="toc-le-regard-un-signal-social-particulier" class="nav-link" data-scroll-target="#le-regard-un-signal-social-particulier">5. Le regard : un signal social particulier</a></li>
+  <li><a href="#expressions-faciales-et-perceptual-narrowing" id="toc-expressions-faciales-et-perceptual-narrowing" class="nav-link" data-scroll-target="#expressions-faciales-et-perceptual-narrowing">6. Expressions faciales et perceptual narrowing</a></li>
+  <li><a href="#exploration-visuelle-et-cognition-sociale" id="toc-exploration-visuelle-et-cognition-sociale" class="nav-link" data-scroll-target="#exploration-visuelle-et-cognition-sociale">7. Exploration visuelle et cognition sociale</a></li>
+  <li><a href="#attention-aux-visages-dans-le-développement-atypique" id="toc-attention-aux-visages-dans-le-développement-atypique" class="nav-link" data-scroll-target="#attention-aux-visages-dans-le-développement-atypique">8. Attention aux visages dans le développement atypique</a></li>
+  <li><a href="#tsa-et-hypothèse-conspec" id="toc-tsa-et-hypothèse-conspec" class="nav-link" data-scroll-target="#tsa-et-hypothèse-conspec">9. TSA et hypothèse CONSPEC</a></li>
+  <li><a href="#études-prospectives-et-trajectoire-développementale" id="toc-études-prospectives-et-trajectoire-développementale" class="nav-link" data-scroll-target="#études-prospectives-et-trajectoire-développementale">10. Études prospectives et trajectoire développementale</a></li>
+  <li><a href="#nombre-et-langage" id="toc-nombre-et-langage" class="nav-link" data-scroll-target="#nombre-et-langage">Nombre et langage</a></li>
+  <li><a href="#procédures-de-quantification" id="toc-procédures-de-quantification" class="nav-link" data-scroll-target="#procédures-de-quantification">6. Procédures de quantification</a>
+  <ul class="collapse">
+  <li><a href="#dénombrement-et-subitizing" id="toc-dénombrement-et-subitizing" class="nav-link" data-scroll-target="#dénombrement-et-subitizing">6.1. Dénombrement et subitizing</a></li>
+  <li><a href="#lestimation" id="toc-lestimation" class="nav-link" data-scroll-target="#lestimation">6.2. L’estimation</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#cm7---nombres" id="toc-cm7---nombres" class="nav-link" data-scroll-target="#cm7---nombres">CM7 - Nombres</a>
+  <ul class="collapse">
+  <li><a href="#nombre-quantité-et-espace" id="toc-nombre-quantité-et-espace" class="nav-link" data-scroll-target="#nombre-quantité-et-espace">5. Nombre, quantité et espace</a>
+  <ul class="collapse">
+  <li><a href="#effets-stroop" id="toc-effets-stroop" class="nav-link" data-scroll-target="#effets-stroop">Effets Stroop</a></li>
+  <li><a href="#espace" id="toc-espace" class="nav-link" data-scroll-target="#espace">Espace</a></li>
+  </ul></li>
+  <li><a href="#modèles-développementaux" id="toc-modèles-développementaux" class="nav-link" data-scroll-target="#modèles-développementaux">8. Modèles développementaux</a></li>
+  <li><a href="#calcul" id="toc-calcul" class="nav-link" data-scroll-target="#calcul">9. Calcul</a>
+  <ul class="collapse">
+  <li><a href="#stratégies" id="toc-stratégies" class="nav-link" data-scroll-target="#stratégies">Stratégies</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#cm8-dev" id="toc-cm8-dev" class="nav-link" data-scroll-target="#cm8-dev">CM8 Dev</a>
+  <ul class="collapse">
+  <li><a href="#compter-sur-les-doigts" id="toc-compter-sur-les-doigts" class="nav-link" data-scroll-target="#compter-sur-les-doigts">Compter sur les doigts</a></li>
+  <li><a href="#les-multiplications" id="toc-les-multiplications" class="nav-link" data-scroll-target="#les-multiplications">Les multiplications</a></li>
+  <li><a href="#approche-neuropsychologique" id="toc-approche-neuropsychologique" class="nav-link" data-scroll-target="#approche-neuropsychologique">10. Approche neuropsychologique</a>
+  <ul class="collapse">
+  <li><a href="#modèle-du-triple-code" id="toc-modèle-du-triple-code" class="nav-link" data-scroll-target="#modèle-du-triple-code">Modèle du triple code</a></li>
+  <li><a href="#nombre-et-doigts" id="toc-nombre-et-doigts" class="nav-link" data-scroll-target="#nombre-et-doigts">Nombre et doigts</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content" tabindex="-1"><header id="title-block-header" class="quarto-title-block"></header>
+
+
+
+
+
+<!-- source: 1_conditionnement_rappel.md -->
+<section id="ec09-développement-cognitif" class="level1">
+<h1>EC09 Développement Cognitif</h1>
+<section id="cm1---conditionnement-rappel" class="level2">
+<h2 class="anchored" data-anchor-id="cm1---conditionnement-rappel">CM1 - Conditionnement Rappel</h2>
+<ul>
+<li>[[i_conditionnement_rappel]]</li>
+<li>[[ii_conditionnement_rappel]]</li>
+<li>[[iii_conditionnement_rappel]]</li>
+</ul>
+<p>Approches comportementalistes sont centrées sur l’environnement, alors que cognitivistes plutôt sur l’individu, avec les approches constructivistes qui font le lien entre les deux (en tant que paradigme général qu’on se construit en fonction de l’environnement et l’individu).</p>
+<p>L’<strong>apprentissage</strong> est toute modification durable du comportement en lien avec l’expérience. Sont exclus les changements temporaires dus à la maladie, les lésions, la maturation, les psychotropes.</p>
+<p>Plan :</p>
+<ul>
+<li>Apprentissage et conditionnement</li>
+<li>Imitation et apprentissage</li>
+<li>Reconnaitre les visages</li>
+<li>Développement social</li>
+<li>Vision plus globale : les piliers de l’apprentissage</li>
+</ul>
+</section>
+<section id="apprentissage-et-conditionnement" class="level2">
+<h2 class="anchored" data-anchor-id="apprentissage-et-conditionnement">1. Apprentissage et conditionnement</h2>
+<section id="le-conditionnement-classique" class="level3">
+<h3 class="anchored" data-anchor-id="le-conditionnement-classique">1.1. Le conditionnement classique</h3>
+<p>Pavlov se rend compte que ses cobayes anticipent et se basent sur des événements de l’environnement qui prédisent l’arrivée de la nourriture. Il faut qu’il y ait :</p>
+<ul>
+<li>Un “<strong>réflexe</strong>”, au sens large, soit un lien stimulus/réponse</li>
+<li>Un stimulus inconditionnel, le stimulus du réflexe</li>
+<li>Réponse inconditionnelle : la réponse du réflexe</li>
+<li>Un stimulus neutre : pas lié à la boucle réflexe et ne peut déclencher en aucun cas la réponse inconditionnelle</li>
+</ul>
+<p>Le son devient associé à l’arrivée future de la viande. On a donc une modification du comportement, et on ne peut pas revenir à l’état initial. C’est un conditionnement de <strong>premier ordre</strong>. Ça se manifeste par exemple quand on ressent du confort par les lumières rouges, associées à la chaleur.</p>
+<p>On peut imaginer des conditionnements sur des conditionnements. On conditionne un chien à saliver sur Beethoven, puis on conditionne un stimulus neutre comme une lumière jaune à Beethoven. Dire “Attention !” à quelqu’un qui va mettre sa main sur une plaque chauffante rentre dans la définition. C’est donc un <strong>conditionnement de second ordre</strong>.</p>
+<p>Les bases neurofonctionnelles sont la plasticité neuronale :</p>
+<ul>
+<li>Facilitation présynaptique : augmentation des neurotransmetteurs émit par les neurones pré-synaptiques</li>
+<li>Potentialisation à long terme (PLT), post-synaptique. Si un neurone reçoit l’activité de plusieurs neurones, ce dernier va répondre à la corrélation de la réponse des neurones pré-synaptiques. S’appuie sur la démonstration du développement de nouvelles dendrites lorsqu’un réseau est stimulé</li>
+</ul>
+<p>Points terminologiques :</p>
+<ul>
+<li><strong>Acquisition</strong> : transformation d’un stimulus neutre en un stimulus conditionné</li>
+<li><strong>Extinction</strong> : diminution de la réponse conditionnée lorsque le stimulus inconditionnel n’est plus associé au stimulus conditionné</li>
+<li><strong>Récupération spontanée</strong> : une récupération partielle de la réponse conditionnée après une phase d’extinction</li>
+<li><strong>Généralisation du SC</strong> : tendance à produire la RC pour des stimuli autres que le SC (petit Albert)</li>
+</ul>
+<dl>
+<dt>Expérience où ils cherchent à voir si on généralise aux significations des mots</dt>
+<dd>
+on mesure réponse electrodermale après douleur associée au mot “<em>large</em>”, et la généralisation est perceptive et non sémantique.
+</dd>
+</dl>
+<p>Il y a des conditions nécessaires au conditionnement classique :</p>
+<ul>
+<li>Stimulus conditionné doit être neutre au départ</li>
+<li>Contiguïté temporelle : SC doit se produire avant le SI, il doit le signaler</li>
+<li>Contingence : si le SC n’est plus suivi du SI, la RC s’éteint</li>
+<li>Récupération spontanée : même après extinction, la relation SC-RC peut réapparaitre</li>
+</ul>
+<p>Si ces conditions sont remplies, n’importe quel stimulus neutre devrait pouvoir devenir un stimulus conditionné. <strong>Principe d’équipotentialité.</strong> Mais on a montré chez le rat que ce principe a des limites, car certaines associations sont prédisposées, comme goût est nausée (positivement), et son et nausée (contre-prédisposé). Pour conditionner, il faut donc <strong>suivre la structure du SNC</strong>, on ne peut pas associer tout équitablement. La portée du conditionnement classique est donc limitée.</p>
+</section>
+<section id="le-conditionnement-opérant" class="level3">
+<h3 class="anchored" data-anchor-id="le-conditionnement-opérant">1.2. Le conditionnement opérant</h3>
+<p>Se base sur le principe qu’un comportement produit des conséquences, pouvant être agréables ou désagréables. On va donc apprendre à se comporter en fonction de la suite. La suite d’un comportement va donc modifier la probabilité de le reproduire.</p>
+<p>Types de stimuli :</p>
+<ul>
+<li>Stimulus appétitif : un stimulus plaisant</li>
+<li>Stimulus aversif : un stimulus déplaisant</li>
+<li>Renforcement positif : renforcement par un stimulus appétitif</li>
+<li>Punition positive : punition par la présentation d’un stimulus aversif</li>
+<li>Renforcement négatif : renforcement par le retrait d’un stimulus aversif</li>
+<li>Punition négative : punition par le retrait d’un stimulus appétitif</li>
+</ul>
+<p>Plusieurs catégories de renforçateurs :</p>
+<ul>
+<li>Renforçateurs primaires : non appris, naturel, satisfaisant un besoin primaire</li>
+<li>Renforçateurs secondaires : appris
+<ul>
+<li>Tangible : argent etc</li>
+<li>Intangible : donné par autrui, comme approbation admiration</li>
+</ul></li>
+</ul>
+<p>Conditions d’efficacité :</p>
+<ul>
+<li>Renforçateur doit être présenté immédiatement après le comportement (cas simple de la boite de Skinner)</li>
+<li>Fréquence de reforcement, qu’on peut conceptualiser avec un planning de reforcement (voir après). C’est très intéressant, car ratio variable est le plus efficace, en effet l’extinction est très difficile étant donné qu’il est normal de ne pas avoir le renforçateur</li>
+</ul>
+<p>Le sommeil de l’enfant bla bla bla, il faut pas l’aimer on le détsete</p>
+<p>Association entre mouvement de la jambe et plaisir du mobile qui bouge. S’il y a eu conditionnement, même si on détache le fil, il devrait bouger son pied. À 3 mois, la mémoire fail si :</p>
+<ul>
+<li>Couleur du crib change</li>
+<li>Odeurs ambiantes changes</li>
+<li>Bruit ambiant…</li>
+</ul>
+<p>Donc très sensible au contexte</p>
+<p><img src="../assets/Pasted image 20260918092206.png" class="img-fluid"></p>
+<p><img src="../assets/Pasted image 20260918092453.png" class="img-fluid"></p>
+<hr>
+<!-- source: 2_imitation.md -->
+</section>
+</section>
+</section>
+<section id="cm2---imitation" class="level1">
+<h1>CM2 - Imitation</h1>
+<ul>
+<li>[[i_imitation]]</li>
+<li>[[ii_imitation]]</li>
+<li>[[iii_imitation]]</li>
+</ul>
+<section id="le-conditionnement-opérant-suite" class="level3">
+<h3 class="anchored" data-anchor-id="le-conditionnement-opérant-suite">Le conditionnement opérant (suite)</h3>
+<p>Tâche du train : table avec petit chemin de fer avec train, puis enfant a une barre en fer le train se met en route. C’est une version pour bébé de la boîte de skinner. Dès 9 mois on peut observer des délais de rétention de 2 mois.</p>
+<p>On utilise ce genre de tâches pour étudier la mémoire et délais de rétention chez les bébés.</p>
+<p>Plusieurs domaines sont reliés au conditionnement.</p>
+<p><strong>Désensibilisation</strong>, qui vise à diminuer la réponse comportementale et/ou émotionnelle a un stimulus. Peut être mis en place par différentes procédures.</p>
+<ul>
+<li><strong>Contreconditionnement</strong> : réponse conditionnelle peut être éliminé plus efficacement si une réponse qui est incompatible avec la réponse conditionnelle est reliée au stimulus conditionnel en même temps que la réponse conditionenlle disparait. C’est un cadre pavlovien. Y’a aussi thérapie par aversion où on met en place une situation où la réponse de plaisir est changée en une réponse de déplaisir</li>
+<li><strong>Habituation progressive</strong> : sujet est exposé par degrés à la situation anxiogène dans le but de l’habituer et de diminuer la réponse émotionnelle excessive l’ayant amené à consulter. Cette approche est utilisée pour le traitement des phobies en particulier</li>
+<li>D’autres</li>
+</ul>
+<p>Il y a cependant des choses qui vont limiter les approches de l’environnement à l’époque :</p>
+<ul>
+<li><p><strong>Apprentissages sans conditionnement</strong>, comme le rat dans le labyrinthe, qui ne devrait pas être encouragé à apprendre le labyrinthe sans récompense, mais pourtant. Mais on peut critiquer ces études qu’il y a aurai des renforçateurs dans le labyrinthe qui ne permettent pas de garantir l’absence de conditionnement</p></li>
+<li><p><strong>Apprentissage par observations</strong> venant que des congénères dans une situation ressentent quelque chose</p></li>
+<li><p><strong>Non équipotentialité</strong> des stimuli</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 32%">
+<col style="width: 49%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Répondant</th>
+<th>Opérant</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Comportement</td>
+<td>Involontaire (réflexe)</td>
+<td>Volontaire (non réflexe)</td>
+</tr>
+<tr class="even">
+<td>Association</td>
+<td>Événement (SC &amp; SI)</td>
+<td>Action &amp; renforcement</td>
+</tr>
+<tr class="odd">
+<td>Attentes</td>
+<td>Que SC prédise le SI</td>
+<td>Que le comportement soit renforcé</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
+<p>C’est opérant parce que c’est l’action du sujet qui apporte une conséquence</p>
+</section>
+<section id="imitation-et-apprentissages" class="level2">
+<h2 class="anchored" data-anchor-id="imitation-et-apprentissages">2. Imitation et apprentissages</h2>
+<section id="imitation-néonatale" class="level3">
+<h3 class="anchored" data-anchor-id="imitation-néonatale">Imitation Néonatale</h3>
+<p>Est-ce que l’imitation néonatale est une forme d’apprentissage ? Ce n’est pas très clair. On va chercher à faire des imitations néonatales chez des macaques. On arrive à le reproduire, mais ça pose plusieurs problèmes méthodologiques :</p>
+<p>Peut-être que l’action est déjà dans le répertoire du participant, mais on peut dire qu’à la naissance les zones de la mâchoire sont largement immatures. Chez le nouveau-nez les zones préfrontales sont largement sous-utilisées au profit des aires motrices. On va donc faire des expériences sur des actions qui sont moins probables d’être dans le répertoire d’action de l’enfant, comme les mouvements de la main. On va coder les actions de 1 à 3 :</p>
+<ol type="1">
+<li>Lève la main</li>
+<li>Extension incomplète du doigt</li>
+<li>Extension du doigt</li>
+</ol>
+<p>Ils montrent une augemtnation de probabilité sélective de production des actes imités. Surtout, au fur et à mesure qu’on expose les bébés au stimulus, la probabilité augmente et les mouvements deviennent de plus en plus précis. Pas d’effet de latéralité. Situation d’imitation a une augmentation du rythme cardiaque par rapport au repos.</p>
+<p>La prochaine expérience montre que chaque situation d’imitation augmente de manière sélective la probabilité que le beebé fasse des gestes en particulier. 4 groupes de gestes :</p>
+<ul>
+<li>Protusion de la langue</li>
+<li>Head tilt and loop-up</li>
+<li>Deux doigts</li>
+<li>Trois doigts</li>
+</ul>
+<p>Les bébés ne font pas la même fréquence de chacun de ces mouvements selon les gestes qu’on leur présente. Dans toutes les situations, on n’a pas augmenté la probabilité de faire bouger des doigts.</p>
+<p>FIX: je copmrends pas l’intérêt de cette étude</p>
+<p><img src="../assets/Pasted image 20260923143736.png" class="img-fluid"></p>
+<p>On remarque que l’imitation prend la forme d’échanges, de proto-conversations, et que l’imitation aurait une fonction sociale dans cet aspect, et l’acte s’appelé ici “provocation”. On considère que l’imitation par l’enfant est un acte volontaire.</p>
+<p>On a fait différente hypothèse pour savoir comment ça marche. On a un signal dans nos champs visuel, qui a une structure. À l’issue de cette perception, augmentation de la fréquence motrice de la séquence observée (il faut que le geste soit dans le répertoire à la naissance les mouvements complexes ne sont pas possibles). Elles cherchent à expliquer l’origine du lien entre observation et production.</p>
+<ul>
+<li><strong>Innate realising mechanism</strong>, on augmente juste la fréquence d’un acte réflexe</li>
+<li><strong>Active intermodal mapping theory</strong>: on encode de manière amodale un acte et une perception</li>
+<li><strong>Mirror neuron system</strong> (non-inhibition) -&gt; théorie de la simulation, qui est plus vieille que MNS</li>
+</ul>
+<hr>
+<!-- source: 3_dev_cog.md -->
+</section>
+</section>
+</section>
+<section id="cm3-dev-cog" class="level1">
+<h1>CM3 dev cog</h1>
+<ul>
+<li>[[i_cm3_dev_cog]]</li>
+<li>[[ii_cm3_dev_cog]]</li>
+</ul>
+<p>Mais comment fonctionne ce mécanisme d’imitation ? On sait qu’il faut mettre en correspondance l’action observée et le système moteur, mais il y a différents niveaux de complexité de ces actes imités.</p>
+<ul>
+<li>Innate releasing mechanism a du mal à expliquer les actes complexes, car selon elle, ils devraient être dans le répertoire dès la naissance</li>
+<li>Active intermodal mapping theory l’explique plus naturellement</li>
+<li>MNS</li>
+</ul>
+<p>On va se concentrer sur le MNS, qui a un problème : comment est-ce qu’on ne produit pas tout le temps les actions qu’on observe si ce système existe ? On doit avoir un phénomène d’inhibition, qui expliquerait les déficits comme inhibition.</p>
+<p>La théorie de simulation et résonance par des années 60 avec le “mouvement imaginé”, qui est un effet qu’imaginer un mouvement prends autant de temps que réellement le produire. Il y aurait donc une composante motrice&nbsp;à ce processus d’imagination. <strong>Jeannerod</strong> propose que lorsqu’on fait de la cognition motrice on active ce système de simulation. Se représenter l’intention d’une action est aussi mettre en place les processus permettant de la produire. Ces processus peuvent être conscients ou non :</p>
+<ul>
+<li>Conscient :
+<ul>
+<li>Imagine</li>
+<li>Actions dans les rêves</li>
+</ul></li>
+<li>Conscient et non conscient
+<ul>
+<li>Intention</li>
+<li>Observation d’actions faites par les autres</li>
+</ul></li>
+<li>Non conscient :
+<ul>
+<li>Prospective action judgement</li>
+<li>Perceptually based decisions</li>
+<li>Observation of graspable object</li>
+</ul></li>
+</ul>
+<p>Viviani fait la théorie de résonateurs (penser à la propagation de vibrations physiques) : des résonateurs perceptifs font une forme de couplage et j’ai pas trop copmris.</p>
+<p><img src="../assets/Pasted image 20261001082940.png" class="img-fluid"></p>
+<p>Pour en revenir à l’imitation, la plupart des actions produites par les enfants à la naissance sont très simples. L’imitation comme mécanisme d’apprentissage doit donc impliquer plus que des actions déjà présentes dans le répertoire. On va la définir comme <em>the copying of a novel or otherwise improbable act or utterance, or some act for which there is clearly no instinctive tendency</em> (Thorpe, 1963).</p>
+<p>On propose que cette imitation à une fonction <strong>sociale</strong> de communication, et de l’autre côté une fonction <strong>instrumentale</strong> qui nous permet d’apprendre quelque chose sur un objet ou une action possible. Ces deux apprentissages se font par la <strong>démonstration</strong>.</p>
+<p>Mais il manque certains éléments pour comprendre la compréhension de l’intention d’action dans l’imitation instrumentale. Ce concept vient nuancer le propos : le <strong>mimicking</strong> est une copie de la forme d’une action qui se fait sans reproduction de l’intention du but. Qu’est-ce qui est imité ? Plein de choses, comme accents, le débit verbal, les rythmes verbaux, les expressions faciales, les humeurs, la posture, les manières, les mouvements idiosyncratiques…</p>
+<p>À noter que l’inclusion des expressions faciales, donc de l’imitation néo-natale, fait débat, car dans la définition du mimicking, il faut que l’action ne soit pas dans le répertoire de l’enfant, ce qui n’est pas le cas pour l’imitation néo-natale. Mais elle se fait sans représentation du but, il y a donc une zone grise.</p>
+<p>Il y a trois sources d’informations à la démonstration d’une action imitée instrumentalement : le <strong>but</strong>, l’<strong>action</strong> et le <strong>résultat</strong>.</p>
+<p>Ce mode d’apprentissage social n’est pas l’unique exemplaire de ce mode d’apprentissage :</p>
+<ul>
+<li>Émulation : l’apprenant obtient le même résultat final en utilisant ses propres actions</li>
+<li>Émulation du but : apprenant atteint le but voulu du démonstrateur en utilisant ses propres actions</li>
+<li>Apprentissage par imitation : apprenant copie l’action du démonstrateur, et, à l’inverse du mimicking, l’apprenant fait ça avec une compréhension du but du démonstrateur</li>
+</ul>
+<p><img src="../assets/Pasted image 20261001084814.png" class="img-fluid"></p>
+<p>Thèse de K. Prepin en sciences cognitives qui propose que l’imitation soit un espace varié pour définitions multiples avec trois axes : <em>structure temporelle</em>, <em>fonctionnalité</em> et <em>objet</em>. Les manifestations de l’imitation évoluent au cours du développement de l’enfant, ici au cours des deux premières années, au cours d’interaction avec un robot, je crois ?</p>
+<p><img src="../assets/Pasted image 20261001085818.png" class="img-fluid"></p>
+<p>Meltzoff argumente que quand on fait une imitation et qu’on a le résultat, il peut être vécu comme un renforcement</p>
+<p>Il est important de considérer que l’imitation peut être différée, car si on ne peut pas imiter une action après longtemps, alors on peut dire que l’apprentissage n’a pas vraiment été fait.</p>
+<p><img src="../assets/Pasted image 20261001090618.png" class="img-fluid"></p>
+<p>On s’est donc mis à étudier la force de la trace (dans le temps) des apprentissages. On fait un test avec une action d’assemblage d’un petit jouet qui fait gling gling, en leur montrant, mais ne laissant pas l’occasion de reproduire.</p>
+<p>On a fait cette tache à des adultes cérébro-lésés, et ils sont capables de reproduire l’action que si les systèmes temporaux-médiaux sont intacts, avec activation de l’hippocampe.</p>
+<p>La tâche de la poupée est une variante de cette tâche pour les enfants : on montre à un enfant une poupée se faire démonter (je crois lol). Entre 6 et 9 mois, ils retiennent 24h, et de 12 à 14 pendant 7 jours. Mais comme on l’a vu au début du cours, ces apprentissages dépendent fortement du contexte, et dans ce cas d’imitation, cet effet se manifeste à 12 mois, mais plus à 18 mois. Dans cette période, il y aurait donc un changement de la nature de la mémoire, qui se <strong>décontextualise</strong>.</p>
+<p>Capacité à distinguer actions intentionnelles et accidentelles peut être très important. On peut montrer qu’à 14 mois l’enfant imitera beaucoup plus si l’adulte a appuyé sur le fait que l’action est intentionnelle, avec des expressions théâtrales par exemple. À 18 mois, une action intentionnelle, mais échouée, peut être imitée dans l’intention originelle et donc réussie. À trois ans, ils savent compléter nos phrases.</p>
+<p><img src="../assets/Pasted image 20261001092046.png" class="img-fluid"></p>
+<p>Donc, on peut utiliser l’imitation pour comprendre les bases de la compréhension d’autrui. Ça nous renseigne aussi sur la structure des relations entre action et perception. Ça nous permet aussi d’avoir des informations sur la manière dont l’enfant se représente les autres et comment il entend la correspondance entre soi et autrui, ainsi qu’une première représentation des états internes d’autrui.</p>
+<p>Les fœtus peuvent bâiller, et quand la maman regarde une vidéo de quelqu’un qui bâille et que ça déclenche chez elle un bâillement, ça augmente la probabilité que l’enfant bâille lui-même. Mais est-ce que c’est de l’imitation ?</p>
+<hr>
+<!-- source: 4_dev_cog.md -->
+</section>
+<section id="cm4-dev-cog" class="level1">
+<h1>CM4 dev cog</h1>
+<ul>
+<li>[[1_4_dev_cog]]</li>
+<li>[[ii_dev_cog]]</li>
+<li>[[iii_dev_cog]]</li>
+</ul>
+<section id="histoire-du-nombre" class="level2">
+<h2 class="anchored" data-anchor-id="histoire-du-nombre">Histoire du nombre</h2>
+<p>Chiffres : unités qui nous permettent d’écrire les nombres. Ils ont une histoire chaotique et mondiale. Les nombres n’ont longtemps pas existé. Les 3 premiers nombres ont un statut particulier et, pour les deux premiers, sont toujours nommés dans les cultures. En revanche, 3 veut souvent dire “plus que 2”. C’est un peu la limite de notre perception pour voir un en coup d’œil, au-delà duquel il faut faire un traiement séquentiel. En français, trois vient de très qui vient de trans (au-delà). En latin aussi, en anglais aussi, arabe.</p>
+<p>Premier niveau de la quantifiaction agie// nous la correspondance terme-à-terme, quand on fait correspondre à chaque élément d’une collection les éléments d’une autre collection. On utilise des moyens concrets en égalisant des collections de choses. Entailles dans la roche pour compter le bétail en mésopotamie. On peut aussi compter avec le corps humain pour cette correspondance terme-à-terme. Ils vont nommer leurs parties du corps et les utiliser à la place de chiffres.</p>
+<p>On va remplacer les cailloux par des bâtonnets, qui donne le niveau de représentations concrètes des nombres élevés (premiers par vers la symbolisation, apparition de la base). On va commencer à remplacer des grosses quantités de petits cailloux par des gros cailloux. Base 10 vient des doigts de la main. Base 60 en mésopotamie viendrait du croisement de deux populations utilisant la base 5 et l’autre 12 (provenant des articulations de la main) et on multiplie le tout. 12000 ans avant JC, on remplace cailloux par bâtons d’argile (calculies).</p>
+<p>3e niveau : graphisme remplacer les calculies. Civilisation de Sumer, où les comptables écrivent sur des tablettes d’argiles, où on représente des quantités par des signes.</p>
+<p>4e niveau : quand on bascule des symboles (lien entre signifié et signifiant) vers les signes (pas de lien entre signifié et signifiant). Les civilisations ont souvent des symboles jusqu’au 3. On développe alors des signes pour les quantités, ce qui nous renvoie à ce qu’on disait au début du cours sur les limites de la perception.</p>
+<p>5 niveau : on a un signe pour chaque chiffre, le principe de position, et le 0 qui apprait en 500 avanat jésus-christ au nord de l’Inde. Le principe de position est qu’on met les unités à droite, puis dizaines à gauche, et centaines encore à gauche etc. Les arabes vont après diffuser ces chiffres dans le reste du monde.</p>
+</section>
+<section id="acquisition-du-nombre-au-cours-du-développement" class="level2">
+<h2 class="anchored" data-anchor-id="acquisition-du-nombre-au-cours-du-développement">Acquisition du nombre au cours du développement</h2>
+<p>On a deux types de nombres : le <strong>nombre ordinal</strong> repose sur sériation et de relations asymétrique entre les quantités. Le <strong>nombre cardinal</strong> est la quantité, le nombre d’éléments dans un ensemble. Repose sur la notion d’inclusion de classes. Dans 7 il y a toutes les quantités jusqu’à 7 qui sont incluses.</p>
+<p>FIX: je pense qu’il me manque un truc là sur les logiques de piaget</p>
+<p>Piaget part de ces deux aspects du nombre, et regardent comment ils se construisent chez l’enfant. On aurait deux systèmes logiques propres à chacun. La logique du nombre sera acquise quand l’enfant maîtrise les deux. Celles-ci se construisent simultanément. Il met au point des épreuves sur la logique de l’enfant dans ces fonctions. Pour étudier la logique du nombre ordinal il étudie la sériation, et cardinal l’inclusion des classes. Il va aussi étudier le développement de la conservation du nombre. Le nombre d’éléments d’un ensemble est identique quelque soit la disposition spatiale des objets qui le compose.</p>
+<p>Épreuve des jetons : on présente une ligne de jetons à l’enfant, on demande “est-ce qu’il y a la même chose de jetons dans les deux lignes ?”</p>
+<p>![[4_dev_cog 2026-10-22 20.01.40.excalidraw]]</p>
+<ul>
+<li>Intuition simple : 4-5 ans</li>
+<li>5-6 ans : intution articulée par correspondance terme-à-terme, mais si on écarte ou ressere les jetons et qu’on pose la question ils pensent qu’ils y en a plus</li>
+<li>Réussite opératoire : 7 ans, arguments d’identité, de réversibilité, de compensation <!-- FIX: les détailler --></li>
+</ul>
+<p>Épreuve de sériation : ranger des baguettes de la plus petite à la plus grande. 3 niveaux de réussite :</p>
+<ul>
+<li>Intuition simple (avant 5 ans) : font des groupes de deux, avec une petite, une grande mais n’utilise pas toute la série. ou font qqch de croissant sur le haut des baguettes mais sans prendre en compte la taille réelle des baguettes (perceptif)</li>
+<li>Intuition articulée (5 ans) : les enfants font la série mais par tâtonnement par essai/erreur</li>
+<li>Réussite opératoire (6 ans et plus) : utilise des méthodes systématiques :
+<ul>
+<li>Algorithme extremum : met les plus extremes en premier</li>
+<li>Inserrtion : compare les baguettes en paires</li>
+</ul></li>
+</ul>
+<p>Ça lui permet de comprendre le principe de transitivité : si A &lt; B et B &lt; C alors A &lt; C.</p>
+<p>![[4_dev_cog - conservation et seriation 2026-10-22 20.43.52.excalidraw]]</p>
+<p>Épreuve de classification et de quantification de l’inclusion des classes. On prend une classe (fleurs) avec deux types de fleurs (rose et marguerite). On vérifie qu’il sait bien que les deux sont des fleurs. On va mettre plus de marguerites que de roses. On lui demande de comparer le nombre de marguerites aux nombres de fleurs.</p>
+<p>Pour construire les classes logiques, l’enfant doit comprendre la relation entre compréhension et extension : les critères d’une classe et les objets qu’elle contient. Ces deux aspects varient en sens inverse : plus on ajoute de critères, plus la classe est restreinte (« fleur » a une extension large, « rose » une extension étroite).</p>
+<ul>
+<li><strong>Compréhension</strong> : ensemble des propriétés (ressemblances et différences) qui définissent la classe, c’est-à-dire les critères auxquels on reconnaît qu’un élément en fait partie.</li>
+<li><strong>Extension</strong> : ensemble des éléments qui satisfont ces critères, c’est-à-dire la classe elle-même, dans sa portée.</li>
+</ul>
+<p>Chez l’enfant de moins de 8 ans, il répond qu’il y a plus de marguerites car il n’y a que 2 roses. Au lieu de comparer A à B (marguerites aux fleurs), il compare A à A’ (marguerites aux roses). Réussir cette épreuve veut dire qu’il peut réussir 2 opérations :</p>
+<ul>
+<li><strong>Réunion</strong> : A et A’ font partie de B (B = A + A’)</li>
+<li><strong>Dissociation</strong> : B - A’ = A</li>
+</ul>
+<p>Donc pour Piaget, qui s’intéresse à la logique, il y a 3 opérations nécessaires à la logique du monde. Décomposer les nombres est très important pour le calcul, il faut que l’enfant réussisse ces épreuves.</p>
+<p>![[4_dev_cog - inclusion des classes 2026-10-22 20.34.19.excalidraw]]</p>
+<hr>
+<!-- source: 5_visages.md -->
+</section>
+</section>
+<section id="cm5-dev-cog" class="level1">
+<h1>CM5 dev cog</h1>
+<ul>
+<li>[[i. visages]]</li>
+<li>[[ii_visages]]</li>
+</ul>
+<section id="introduction-et-méthodes-détude" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-et-méthodes-détude">1. Introduction et méthodes d’étude</h2>
+<p>Pourquoi s’intéresser aux visages ? C’est un élément essentiel de notre environnement. On étudie ça par préférence visuelle, comparaison visuelle par paires et habituations/réaction à la nouveauté.</p>
+</section>
+<section id="le-débat-sur-lorigine-de-la-préférence-pour-les-visages" class="level2">
+<h2 class="anchored" data-anchor-id="le-débat-sur-lorigine-de-la-préférence-pour-les-visages">2. Le débat sur l’origine de la préférence pour les visages</h2>
+<section id="les-expériences-fondatrices-et-la-controverse" class="level3">
+<h3 class="anchored" data-anchor-id="les-expériences-fondatrices-et-la-controverse">Les expériences fondatrices et la controverse</h3>
+<p>Yarbus, en 1967, pionner de l’eye-tracking, compare les patterns d’exploration selon les consignes d’exploration visuelle d’un tableau.</p>
+<p>Fantz en 1973 explore la préférence des bébés pour des stimuli “face-like”, en mesurant le temps de fixation pour différent stimuli. Il montre que les enfants regardent plus les visages, mais n’en tire pas de conclusions. D’autres auteurs s’y intéressent. D’autres chercheurs s’y collent, avec des stimuli très primitifs de 3 points dans un sens ou dans l’autre. Ceux-ci montrent que les nouveaux-nés regardent beaucoup plus les visages que non, et proposent l’existence d’un mécanisme spécifique.</p>
+<p>En 1991, on fait 2 expériences sur nouveaux-nés, où on mesure le degré de rotation de la tête vers un stimuli, selon qu’il soit un visage, brouillé ou vide. On regarde les visages plus. Ils ont par la volée montré les stimuli de la précédente, et n’ont pas reproduit leurs résultats, qui a produit une controverse. On remet en question l’importance de la structures des stimuli dans la perception néo-natale, alors qu’on a une hypothèse forte et crédible qu’on soit prédisposés à la perception des visages. En vérité, ça se distingue en deux :</p>
+<ul>
+<li>Apprentissage ultra-rapide</li>
+<li>Prédisposition hardwired</li>
+</ul>
+<p>En 2017, Reid et al.&nbsp;cherchent à l’explorer chez les enfants dans le ventre, par l’utilisation de lasers, avec les stimuli en triangle classiques et mesurant les mouvements de l’enfant. L’enfant suit les mouvements des lasers. Enfants de 7-8 mois in utero. La différence est très significative.</p>
+</section>
+<section id="lhypothèse-spécifique-conspec-et-conlern" class="level3">
+<h3 class="anchored" data-anchor-id="lhypothèse-spécifique-conspec-et-conlern">L’hypothèse spécifique : CONSPEC et CONLERN</h3>
+<p>Ils proposent des structures neuronales dans le TC qui serviraient de détecteur-ultra précoce primitif spécifique aux visages, appelé CONSPEC (<em>conspecific specification</em>). Et CONLERN (<em>conspecific learning</em>) se développe plus pour mieux les détecter je crois.</p>
+</section>
+<section id="lhypothèse-généraliste-le-biais-top-heavy" class="level3">
+<h3 class="anchored" data-anchor-id="lhypothèse-généraliste-le-biais-top-heavy">L’hypothèse généraliste : le biais top-heavy</h3>
+<p>Mais on propose une hypothèse qui met à mal : que ce mécanismes ne sont pas spécifiques auvs visages, mais aux stimuli qui ont plus de choses en haut qu’en bas (“top-heavy”). On utilise des stimuli de visages : endroit-enverse ; configuration top-heavy à bottom-heavy, qui ne peuvent pas être vus comme des visages, impliquant qu’on est sennsible au otp heavy. Et entre upright et top-heavy, pas de différence. Gros argument de juste que haut des visages ont plus d’informations.</p>
+</section>
+<section id="le-test-eeg-en-frequency-tagging" class="level3">
+<h3 class="anchored" data-anchor-id="le-test-eeg-en-frequency-tagging">Le test EEG en frequency-tagging</h3>
+<p>Qu’est-ce qu’il faut croire alors ? On utilise en frequency-tagging paradigm en EEG. On présente une information peu présente dans du bruit, on augmente son contarste par rapport au bruit, puis on fait revenir le bruit. On la passe en boucle. On mesure l’activité EEG, et on cherche une réponse spécifique à la fréquence de la présentation de notre stimuli (par transformation de Fourier). On obtient des pics d’énergie par unité temporelle. On utilise 3 types de stimuli : upright, inverted, scrambled top-heavy. On cherche à montrer que visage = top-heavy. Visages fait beaucopu plus qu’inversé, mais aussi plus que top-heavy, à un âge ou les structures temporales du nouveau-né ne sont pas matures pour traiter les visages. Donc c’est bizarre.</p>
+</section>
+<section id="lhypothèse-incarnée-la-corrélation-binoculaire" class="level3">
+<h3 class="anchored" data-anchor-id="lhypothèse-incarnée-la-corrélation-binoculaire">L’hypothèse incarnée : la corrélation binoculaire</h3>
+<p>Dernier paradigme, de corrélation binoculaire. Nos yeux doivent reconstituer une image en compensant un décalage, par corrélation binoculaire, qui trouve le matching de 2 images qui donne le meilleur résultat. On va donc faire une hypothèse incarnée, que les visages ont un statut particulier que si on ne fait pas la corrélation, on voit les gens en double. Ça fait que image non corrélée à beaucoup d’énergie dans son “œil central”. Juste parce que c’est séparé d’une même quantité d’espace. On sait que les nouveaux-nés ont une préférence pour les barres horizontales que verticales, ou même de carrés. Ceci peut être expliqué par le décalage de la décorrélation. Mais ça pose une problème, car on observe pas d’effet d’orientation je crois ? Mais leur modèle permet pas d’expliquer l’effet d’orientation, et effet tatcher (endroit / envers).</p>
+</section>
+</section>
+<section id="effet-thatcher-et-arguments-en-faveur-dun-système-spécifique" class="level2">
+<h2 class="anchored" data-anchor-id="effet-thatcher-et-arguments-en-faveur-dun-système-spécifique">3. Effet Thatcher et arguments en faveur d’un système spécifique</h2>
+<p>On a tenté cet effet chez les nouveaux-nés : on les familiarise, moitié avec le visage à l’enverse, l’autre à l’endroit. En phase de test on présente viasge normal et altéré. À l’envers, pas de réponse différent, alors que surprise et orientation quand c’est à l’endroit. Traitemnet serait donc similaire à l’adulte à quelques jours de vie. On aurait donc bien un système spécifique de détection des visages.</p>
+<p>![[5_visages 2026-11-10 11.13.52.excalidraw]]</p>
+</section>
+<section id="le-traitement-holistique-et-configural" class="level2">
+<h2 class="anchored" data-anchor-id="le-traitement-holistique-et-configural">4. Le traitement holistique et configural</h2>
+<p>On peut cependant noter un certain nombre de subtilités dans ce traitement, comme effet Thatcher, ou qu’on fait un traitement très globaliste des visages comme le montre les visages coupés mélangés. Très holistique et amène à traiter information différament. On peut aussi s’intéresser à l’information locale : soit les traits du visage (premier ordre) ou des relations entre les traits (second ordre). Si on fait un changemnet de configuration (écarté les yeux, etc.). Pour les visages à l’envers, il est plus simple de détecter des changements de premier ordre que de second. Dans les modèles de traitement des visages, on implique des aires très variées pour le traitement des visages. On aurait 2 systèms différents : un qui analyse regard, expression, etc., autre qui fait l’identité. Au bout de 3 mois on aurait un système corticalisé capable de tout ça.</p>
+<!-- FIX: diapo modèle -->
+</section>
+<section id="le-regard-un-signal-social-particulier" class="level2">
+<h2 class="anchored" data-anchor-id="le-regard-un-signal-social-particulier">5. Le regard : un signal social particulier</h2>
+<p>Certains éléments composant les visages ont eux-même une structure particulière. L’humain même particulièrement, ont le plus grand contraste, grâce à une sclérate très blanche. On propose une explication évolutionnaire, que ça aide à communiquer. Mais dans quelle mesure ces structures de l’œil vont aider au traitement des visages ? Il y a beaucoup de travaux dans cette veine. Les nouveaux-nés préfèrent les visages qui les regardent, même dans les représentations schématiques.</p>
+</section>
+<section id="expressions-faciales-et-perceptual-narrowing" class="level2">
+<h2 class="anchored" data-anchor-id="expressions-faciales-et-perceptual-narrowing">6. Expressions faciales et perceptual narrowing</h2>
+<p>Études dans la perception des expressions, montrant qu’on détcte plus la peur que tout. On construit des visages où on mélange différentes par de peur à joie. On présente des détections d’émotions et réponse spécifique aux émotions dès 7 mois. Lors de la première année, on organise donc un système permettant de reconnaître les expressions. Beaucoup de chercheurs explorent comment est-ce que ce système s’ajuste. On va reprendre l’effet de perceptual narrowing, avec des visages d’humains et de singes. On peut formuler l’hypothèse qu’on a un meilleur potentiel de discriminiation jeune qu’adulte, même pour les primates non-humains. C’est le cas, les enfants perdent la capacité à séparer les images de primates. Mais comment est-ce possible ? Cette discrimination ne sert à rien, voilà pourquoi. Ça s’exprime aussi dans “l’<em>other race effect</em>”.</p>
+<p>![[5_visages 2026-11-10 13.58.21.excalidraw]]</p>
+</section>
+<section id="exploration-visuelle-et-cognition-sociale" class="level2">
+<h2 class="anchored" data-anchor-id="exploration-visuelle-et-cognition-sociale">7. Exploration visuelle et cognition sociale</h2>
+<p>L’analyse visuelle d’une scène implique des parcours d’exploration spécifique. Les visages ont souvent la même structure. Dans les situations réelles, cette exploration s’adapte aux demandes du contexte (par exemple por comprendre quelqu’un qui parle dans du bruit). Entre 6 et 9 mois, ils font très attention aux mouvements de la bouche. Les visages et les humains qui les portent sont dse signaux très important pour le développement de la cognition sociale, car on y fait très attnetion. Si on veut apprendre à fonctionner socialement, il faut faire attention aux éléments qui sont socialement importants. Il faut les détecter, les déchiffrer, et y répondre de manière appropriée.</p>
+</section>
+<section id="attention-aux-visages-dans-le-développement-atypique" class="level2">
+<h2 class="anchored" data-anchor-id="attention-aux-visages-dans-le-développement-atypique">8. Attention aux visages dans le développement atypique</h2>
+<p>Syndrome de Williams est un déficit génétique rare, qui s’associe à une attention extrêmement prolongée vers les visages. Déficits de cognition sociale, hyper sociables. Dans TSA c’est réduction de l’attention vers les visages, qui est associé à des déficits sociaux. Modulation du regard est maladroite. On prend des enfants du même âge, avec des nouveaux distincts de compétences nonverbales dû au développement typique ou atypique. Effet principal du type de développement sur le temps de fixation sur les visages, TSA moins et William’s plus. On va s’intéresser à la capacité d’infére l’objet fixé à partir de l’information extraite à partir des informations du visage. On code 3 types de réponse : cible, erreur plausible, erreur implausible. Quand on donne instruction qu’il faut regarder, les enfants TSA peuvent le faire. Mais si on regarde le pattern, on passe beaucoup de temps sur le visage mais on fait beaucoup d’erreurs, ils ne sont pas trop capable d’inférer l’objectif. Si on leur donne comme consigne de détecter l’objet regardé, ils passeront plus de temps à détecter les visages. Enfants WD font aussi plus d’erreur malgré beaucoup de temps passé.</p>
+</section>
+<section id="tsa-et-hypothèse-conspec" class="level2">
+<h2 class="anchored" data-anchor-id="tsa-et-hypothèse-conspec">9. TSA et hypothèse CONSPEC</h2>
+<p>Très vite une hypothèse est venue : le TSA vient d’un déficit du CONSPEC, le mécanisme primitif d’orientation des visages. On prend des adultes avec TSA : point de fixation, et subliminalement on flashe un proto-visage en périphérie de la croix de fixation, puis 2 série de 4 lettres. Tâche d’identification d’une lettre particulière. On fait varier position du proto-visage : congruence avec position de la lettre, incongruence. Mesure du temps d’identification (droite/gauche). Du côté congruent, on fait baisser vitesse de détection de manière significative. Même résultats chez enfants et adultes, donc argument que système fonctionne correctement.</p>
+</section>
+<section id="études-prospectives-et-trajectoire-développementale" class="level2">
+<h2 class="anchored" data-anchor-id="études-prospectives-et-trajectoire-développementale">10. Études prospectives et trajectoire développementale</h2>
+<p>On suit un groupe de familles dont un enfant à du TSA. On attend que la maman soit de nouveau enceinte. On a donc un groupe à risque d’autisme, et un autre sans risque d’autisme. À 3 ans on fait passer un diagnostique de TSA, puis on fait suivre 10 ans. Ils font un modèle de prédiction du risque TSA, dont le but est que ce soit déterminable vers 6 mois. Résultat fondamental est que l’attention sur les yeux est présent à la naissance mais décline entre 2 et 6 mois. Donc pas de déficit néo-natal chez enfants qui vont être diagnostiqués TSA. Ça correspond à période du narrowing et mécanisme corticalisé.</p>
+<p>![[5_visages 2026-11-11 10.22.07.excalidraw]]</p>
+<hr>
+<!-- source: 6_nombres.md -->
+<ul>
+<li>[[i_nombres]]</li>
+<li>[[ii_6_nombres]]</li>
+<li>[[iii_6_nombres]]</li>
+</ul>
+<blockquote class="blockquote">
+<p>FIX: rraattrrappeerr</p>
+</blockquote>
+<p><strong>Transfert du nombre vers la logique plus probable que l’inverse.</strong> Sur l’épreuve de conservation le groupe numérique avance plus vite que le group logique. On peut donc conclure que faire des trvaux juste centrés sur la logiques ne sont pas si pertinentes que ça.</p>
+<p>C’était les deux grandes théoriques classiques du développement du nombre chez l’enfant.</p>
+</section>
+<section id="nombre-et-langage" class="level2">
+<h2 class="anchored" data-anchor-id="nombre-et-langage">Nombre et langage</h2>
+<p>Le nombre est un apprentissage qui se fait dans une culture donnée. Les nombres vont donc être rencontrés par l’enfant dans différents contextes :</p>
+<ul>
+<li>Mathématiques :
+<ul>
+<li>Cardinal</li>
+<li>Ordinal</li>
+<li>Mesure (quantité donnée avec unité)</li>
+</ul></li>
+<li>Renvoyant aux outils culturels
+<ul>
+<li>Contexte de séquence</li>
+<li>Contexte de dénombrement (combien est-ce qu’on va être à table pour les couverts ?)</li>
+<li>Contexte de lecture : quand l’enfant apprend à reconnaître les chiffres écrits</li>
+<li>Contexte de situations quasi numériques (lignes de bus, téléphone, heure)</li>
+</ul></li>
+</ul>
+<p>Étapes du développement de la chaîne numérique verbales :</p>
+<p>![[6_nombres 2026-11-03 08.42.45.excalidraw]]</p>
+<ul>
+<li>Niveau 1 : niveau du chapelet (2-4 ans), on répète je crois mais ça veut pas dire qu’on sait compter</li>
+<li>Niveau 2 : chaîne insécable (4 ans), les mots sont bien individualisés, commencent à être associés à des objets, commencent à être capables de compte jusqu’à un nombre donné, avec fort taux de contrôle. Mais ils ne peuvent pas compter à partir d’un nombre donné, d’où le terme “insécable”</li>
+<li>Niveau 3 : chaîne sécable (4-6 ans), est capable de partir d’un nombre donné, ou entre 2 nombres. Développent de la flexibilité dans l’utilisation de la chaîne numérique verbale</li>
+<li>Niveau 4 : chaîne terminale (7 ans), peut compter n à partir de x dans n’importe quel sens. Commence à comprendre le rapport entre les nombres</li>
+</ul>
+<p>Nombre oral, nombre écrit, et transcodage (passer d’un nombre à un autre)</p>
+<p>Il faut garder en tête que les nombres oraux ont des nombres de phonèmes assez importants. Deux façons principales d’écrire les nombres : chiffres indo-arabes ou alphabétique. Le lexique en français contient 26 mots permettant de construire tous les nombres. Il contient les nombres de 0 à 16. En français, c’est le bordel, donc l’enfant fait des erreurs.</p>
+<p>Surtout, les règles ne sont pas les mêmes à l’oral qu’à l’écrit, d’où les problèmes de transcodage, par exemple écrire “1002” quand on demande “102”. En chinois la chaîne verbale est beaucoup plus logique, ce qui les avantage.</p>
+</section>
+<section id="procédures-de-quantification" class="level2">
+<h2 class="anchored" data-anchor-id="procédures-de-quantification">6. Procédures de quantification</h2>
+<section id="dénombrement-et-subitizing" class="level3">
+<h3 class="anchored" data-anchor-id="dénombrement-et-subitizing">6.1. Dénombrement et subitizing</h3>
+<ul>
+<li>Dénombrement : c’est la correspondance terme à terme des éléments d’une collection avec les éléments de la suite conventionnelle des noms de nombres.</li>
+<li>Subitizing : processus permettant de déterminer très rapidement et aec exactitude de la numérosité de petites collections d’éléments (3-4). Dans les collections plus grandes il faut utiliser des capcités intentionnelles pour faire un dénombrement</li>
+</ul>
+<p>Mandler et Shebo constatent que plus les collections augmentent, plus on met du temps à répondre et on fait des erreurs, alors que de 1 à 3 c’est identique, ce qui impliquerai que les processus attentionnels ne sont pas recrutés, ce sont pas les mêmes processus.</p>
+<p><strong>Mais comment est-ce que les enfants acquièrent le sens cardinal des petits nombres ?</strong> Par le comptage ou le subitizing ? On fait 2 tâches sur enfants de 3 à 5 ans où on présente des collections de 1 à 6 points. Dans une première tâche, la <strong>présentation est simultanée,</strong> les collections sont présentées rapidement sur un écran d’ordinateurs. L’enfant doit dire combien il y a de points. La seconde, en <strong>présentation successive</strong>, les éléments sont présentés séquentiellement. L’enfant doit compter les points au fur et à mesure de leur présentation et ensuite indiquer combien il y en a. Pour cahcune des présentatinos on va utiliser des configurations familières (dés) ou non familières. Taille des collections : petites numérosités (de 1 à 3) et grandes numérosités (de 4 à 6).</p>
+<p>L’essentiel des résultats est que :</p>
+<ul>
+<li>Présentation simultanée &gt; présentation séquentielle pour petites collections. Le subitizing permettrait ici aux enfants de déterminer les nombres d’éléments dans les petits ensembles</li>
+<li>À 4 ans, problème de la cardinalité après le comptage</li>
+<li>À 5 ans, pas de différence entre les tâches</li>
+</ul>
+<p>Effet du type de configuration (familière vs non familière) indépendamment de l’âge.</p>
+<p><strong>Le subitizing est donc important dans le comptage pour exprimer la cardinalité.</strong></p>
+</section>
+<section id="lestimation" class="level3">
+<h3 class="anchored" data-anchor-id="lestimation">6.2. L’estimation</h3>
+<p><strong>L’estimation est une procédure peu précise sur des grandes collections.</strong> C’est un système universel présent chez les animaux, être humaine dès la naissance, chez l’adulte dans toutes les cultures.</p>
+<p>Il y a des illusions reliées, comme celle du solitaire : les points plus denses donnent une impression d’être plus nombreux que moins denses.</p>
+<p>Estimation dépend de la loi de Weber : la capacité à différencier deux quantités ne dépend pas de leur différence absolue, <strong>mais de leur différence relative (ratio)</strong>. Avec le développement, les enfants détectent des différences de quantités avec des rations de plus en plus proches de 1.</p>
+<p>Les enfants s’appuient-ils sur le <strong>système du nombre approximatif (SNA)</strong> pour réaliser des calculs symboliques approximatifs ? Étude sur enfants de 5 ans, ne savant donc pas faire de calcul exact, à qui on va raconter des petits scénarios dans lesquels on demande lequel de 2 personnages ont plus ou moins de bonbons. Réponses bien au-dessus du hasard qui veut dire que ces enfants sont <strong>capables de faire du caclul approximatif</strong>.</p>
+<p><img src="../assets/Pasted image 20261103095225.png" class="img-fluid"></p>
+<p>C’est surprenant qu’il y ai ce système de nobmre approximatif qui permet d’exprimer des quantités et peut faire du calcul approximatif. Et pourtant, quelques années plus tard, au terme d’une intense application, un écolier conclut sans sourcilller que 317 moins 81 fait 376, c’est qy’il y a quelque chose de pourri au royaume de Charlemagne.</p>
+<hr>
+<!-- source: 7_nombres.md -->
+</section>
+</section>
+</section>
+<section id="cm7---nombres" class="level1">
+<h1>CM7 - Nombres</h1>
+<ul>
+<li>[[ii_nombres]]</li>
+<li>[[iii_nombres]]</li>
+</ul>
+<p>Système du nombre approximatif meilleur = meilleur apprentissage des maths. Et inversement. Mais on constate une différence entre les indvidus qui ne vont pas du tout à l’école et ceux qui n’y vont pas (chez des enfants d’amazonie). Chez les premiers, la précision du approximate number sense.</p>
+<section id="nombre-quantité-et-espace" class="level2">
+<h2 class="anchored" data-anchor-id="nombre-quantité-et-espace">5. Nombre, quantité et espace</h2>
+<section id="effets-stroop" class="level3">
+<h3 class="anchored" data-anchor-id="effets-stroop">Effets Stroop</h3>
+<p>On perçoit des quantités quand on perçoit des nombres. Quand on perçoit un nombre, le cerveau active une quantité. On fait un stroop avec des chiffres où on fait varier leur taille physique. Effet de la congruité de la taille des nombres (décider si u nnombre est plus grand qu’un autre, en présentaiton de paires de nombres). C’est pour ça qu’on l’appelé effet stroop-nombre. Mais chez les enfants c’est dur à faire car mesure de temps de réponse et doivent être familiers avec les nombres symboliques.</p>
+<p>3 effets importants :</p>
+<ul>
+<li><strong>Effet de distance</strong> : le temps nécessaire pour décider lequel de deux nombres est le plus grand diminue avec l’augmentation de la distance numérique avec ?? Cet effet de distance existe très tôt.</li>
+<li><strong>Effet de taille</strong> : plus les nombres à comparer sont grands, plus les temps de réponses sont lents. Cela s’expliquerait par la fréquence plus grande des petits nombre, qui leur confère une représentation plus précise</li>
+<li><strong>Effet SNARC (Spatial Numerical Association Response Codes)</strong>, les petits nombres sont inconsciemment associés au côté gauche du corps et les grands au côté droit. La tâche est plus facile pour les suejts qui doivent dire petit avec la main gauche que l’inverse</li>
+</ul>
+</section>
+<section id="espace" class="level3">
+<h3 class="anchored" data-anchor-id="espace">Espace</h3>
+<p>On va associer aux nombres des quantités qui sont continues : quand on entend 65 on active 65 et les quantités environnantes.</p>
+<p>Travaux rendent compte de ligne numérique menrtal, qui tente d erendre compte comment les nombres sont représentés dans notre système cognitif, surtout représentation spatiale.</p>
+<p>On présente aux enfants une ligne numérique qui va par exemple de 0 à 100, qui ne sera pas graduée. On va demander à l’enfant “où est-ce que tu placerai 28 ?”. Les enfants ont des échelles logarithmiques.</p>
+<ul>
+<li>Enfant (entre GS et CE2) : échelle logarithmique → échelle linéaire</li>
+<li>Ligne de 0 à 10 : le % d’erreurs passe de 14% en fin de CP à 4% en fin de CE2.</li>
+<li>Ligne de 0 à 100 : le % d’erreurs passe de 19% en fin de CP à 8% en fin de CE2.</li>
+</ul>
+<p>Puis nouvelle tâche pour enfants au début du CP. Forme plus classique : position à mettre sur la ligne à partir d’un nombre donné. Que mesure cette épreuve ? Magnitude des nombres, mais évolution des stratégies avec l’âge.</p>
+<p><img src="../assets/Pasted image 20261115151630.png" class="img-fluid"></p>
+<p>Il a été mis en valeur que le lien entre la qualité de la ligne numérique (donc avoir une représentation linéaire) est associé à la réussite en maths, surtout au CP et CE1.</p>
+<p>Représentation unifiée de la genèse et développement de la représentation de la quantité et du nombre :</p>
+<p><img src="../assets/Pasted image 20261115151847.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="modèles-développementaux" class="level2">
+<h2 class="anchored" data-anchor-id="modèles-développementaux">8. Modèles développementaux</h2>
+<p>Pas à apprendre par cœur donc je relis même pas</p>
+</section>
+<section id="calcul" class="level2">
+<h2 class="anchored" data-anchor-id="calcul">9. Calcul</h2>
+<section id="stratégies" class="level3">
+<h3 class="anchored" data-anchor-id="stratégies">Stratégies</h3>
+<p>Les opérations arithmétiques sont des manipulations de symboles. Elles doivent aboutir aux mêmes résultats que la manipulation d’objets concrets. Il faut donc apprendre à manipuler des symboles.</p>
+<p>Pour mettre en œuvre les opérations arithmétiques, il faut :</p>
+<ul>
+<li>Des connaissances conceptuelles : analyser la situation, choisir la stratégie, mettre en œuvre</li>
+<li>Connaissance de certains faits artihmétiques : pour exécutrer la stratégie choisie, il faut chonnaître certains faits numeeriques, utilisables sans calucules (par exemple : 3+3 font 6)</li>
+<li>Connaissance des algorithmes : suites d’étapes à appliquer suivant rigoureusement l’ordre et les règles (par exemple : additions avec retenues)</li>
+</ul>
+<p>Une <strong>stratégie</strong> est une procédure ou ensemble de procédure permettant d’atteindre un but cognitif. Le calcul mental est une activitee fondamentale qui est mise en œuvre quotidiennement. Il y a plusieurs stratégies, surtout plus jeunes, qui disparaissent avec l’âge pour laisser place à des stratégies plus élaborées. Cette progression est illustrée dans le modèle des <strong>vagues qui se chevauchent</strong>. Ici, les stratégies sont en compétition, l’une va dominer les autres à un moment donné dans une situation donnée.</p>
+<p><img src="../assets/Pasted image 20261115152716.png" class="img-fluid"></p>
+<p>Ce modèle est applicable au calcul mental, mais pas à d’autres compétences qui demandent des stratégies.</p>
+<hr>
+<!-- source: 8_nombres.md -->
+</section>
+</section>
+</section>
+<section id="cm8-dev" class="level1">
+<h1>CM8 Dev</h1>
+<ul>
+<li>[[i_8_nombres]]</li>
+<li>[[ii_8_nombres]]</li>
+</ul>
+<p><img src="../assets/Pasted image 20261118134452.png" class="img-fluid"></p>
+<p>Le temps de résolution diminue avec le temps (donc apprentissage) et la récupération sollicite beaucoup moins la mémoire de travail que d’autres stratégies. Donc plus on avance, moins on utilise la MdT pour ces calcules afin de la conserver pour autre chose.</p>
+<p>Qu’est-ce qui fait qu’un enfant choisit une stratégie plutôt qu’une autre ?</p>
+<ul>
+<li>Difficulté du problème</li>
+<li>Temps dont dispose l’enfant</li>
+<li>Facteurs cognitifs : sa base de connaissance en calcul (bon = récupération, mauvais = calcul)</li>
+<li>Facteurs conatifs : confiance que l’enfant a en lui et en ses réponses, anxiété</li>
+</ul>
+<section id="compter-sur-les-doigts" class="level3">
+<h3 class="anchored" data-anchor-id="compter-sur-les-doigts">Compter sur les doigts</h3>
+<p>Compter sur les doigts serait très adapté, car ça fait une bonne stratégie qui est tout le temps accessible. Il faut tout de même passer d’une stratégie externalisée à une stratégie internalisée</p>
+<p><img src="../assets/Pasted image 20261118140111.png" class="img-fluid"></p>
+<p>Les enfants entre 4 et 6 ans qui utilisent leurs doigts ont leurs perfs plus élevées en calcul et capacité élevée de MdT. À huit ans, c’est le contraire.</p>
+<p>On a fait un protocole pour entraîner les enfants au comptage sur les doigts. On entraîne par 2 stratégies différentes : la stratégie “tout”, ou par répétition par cœur des mêmes calculs (groupe contrôle actif). Entraînement dure sur 2 semaines, 6 * 10 minutes, 15 additions au total.</p>
+<p><img src="../assets/Pasted image 20261118140547.png" class="img-fluid"></p>
+<p><img src="../assets/Pasted image 20261118141357.png" class="img-fluid"></p>
+<p>Les enfants qui n’utilisaient pas leurs doigts l’utilisent plus, et ont aussi de meilleurs performances grâce à l’entraînement.</p>
+</section>
+<section id="les-multiplications" class="level3">
+<h3 class="anchored" data-anchor-id="les-multiplications">Les multiplications</h3>
+<p>On va plus utiliser la mémoire pour les multiplications. Cependant, les traces ne sont pas indépendantes, elles sont <strong>associatives</strong>, il peut donc y avoir des interférences entre elles. C’est délétère, car un calcul active plein de résultats différents (<span class="math inline">\(6 \times 7 = 42\ \text{or}\ 49\)</span>) par exemple.</p>
+<p>Cet effet se manifeste dans une tâche où on demande de sélectionner la bonne réponse pour <span class="math inline">\(6 \times 7\)</span> parmi 4 propositions. Tout le monde n’a pas la même sensibilité à l’interférence, ce qui va pénaliser certains à l’apprentissage des tables.</p>
+</section>
+<section id="approche-neuropsychologique" class="level2">
+<h2 class="anchored" data-anchor-id="approche-neuropsychologique">10. Approche neuropsychologique</h2>
+<section id="modèle-du-triple-code" class="level3">
+<h3 class="anchored" data-anchor-id="modèle-du-triple-code">Modèle du triple code</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/Pasted image 20261118143702.png" class="img-fluid figure-img"></p>
+<figcaption>Modèle du Triple code de Dehaene</figcaption>
+</figure>
+</div>
+<p>C’est un modèle très connu et utilisé, provenant de la neuropsy de l’adulte, sur des patients cérébro-lésés. On aurait différents codes ayant chacun un substrat anatomique particulier.</p>
+<ul>
+<li>Code analogique, ou des quantités, dans les zones pariétales bilatérales, souvent codé symboliquement, qu’on peut représenter de 2 manières différentes.
+<ul>
+<li>Par des quantités concrètes (points)</li>
+<li>Par une ligne numérique mentale</li>
+</ul></li>
+<li>Code verbal : mot “six”, oral ou écrit. Dans les aires du langage de l’HG</li>
+<li>Code arabe : nombre écrit en chiffres arabes. Zone occipito-temporale</li>
+</ul>
+<p>Code verbal et arabe sont des symboles, alors que le code analogique renvoie à l’aspect sémantique du nombre, c’est lui qui lui confère son sens. L’adulte fait très facilement du transcodage entre ces codes. Mais c’est plus dur pour les enfants. Ils développent en premier le code des quantités, puis verbal, puis arabe. Le plus important est le développement du transcodage, qui doit se faire vite et sans difficultés. C’est ce sur quoi on les fait beaucoup travailler.</p>
+</section>
+<section id="nombre-et-doigts" class="level3">
+<h3 class="anchored" data-anchor-id="nombre-et-doigts">Nombre et doigts</h3>
+<p>Lien entre maturation du lobe pariétal et de la représentation des quantités. On cherche un lien causal anatomo-fonctionnel entre le <strong>degré de maturation du lobe pariétal et les capacités de représentations des quantités</strong>. Plus précisément, on s’attend à ce que les <strong>performances perceptivo-tactiles permettent mieux de prédire les performances arithmétiques que le développement intellectuel</strong>. On a fait une étude longitudinale sur enfant de GS, CP et CE2. On leur a évalué :</p>
+<ul>
+<li>Le développement intellectuel</li>
+<li>Habiletés perceptivo-tactiles, gnosie digitale</li>
+<li>Arithmétique</li>
+<li>Épreuve de français au Ce2</li>
+</ul>
+<p>Résultats : dans l’écriture du nombre, QD est le meilleur prédicteur, mais pour la quantité, score neuropsy.</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle dark mode");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle dark mode");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+          if (!link.classList.contains('no-external-icon')) {
+          }
+        }
+      }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
+          if (lineIds.length > 0) {
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            placeBand(gutterDiv, el, lastEl);
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Scrollable code","output":"Scrollable output"};
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

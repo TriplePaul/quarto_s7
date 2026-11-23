@@ -7,28 +7,25 @@ tags: []
 
 # EC07 Neurologie de l'Adulte
 
-- [[i_neuro_pyramidal]]
-- [[ii_neuro_pyramidal]]
-- [[iii_neuro_pyramidal]]
+> 4 cours neurologie, 8 cours de neuropsychologie. Chacun presenté par des
+> spécialistes en leur domaine du CHU de Grenoble, pour nous familiariser aux
+> notions importantes de neurologie, et faire la différence entre partie
+> médicale et psychologique. Prof d'aujourd'hui clinicienne, recherche clinique,
+> surtout sur maladies du SNC et inflamatoires auto-immunes. Examen 1h,
+> questions ouvertes, neuro couvrant tous les cours.
 
-4 cours neurologie, 8 cours de neuropsychologie. Chacun presenté par des
-spécialistes en leur domaine du CHU de Grenoble, pour nous familiariser aux
-notions importantes de neurologie, et faire la différence entre partie médicale
-et psychologique. Prof d'aujourd'hui clinicienne, recherche clinique, surtout
-sur maladies du SNC et inflamatoires auto-immunes.
+<!-- CM1 -->
 
-Examen 1h, questions ouvertes, neuro couvrant tous les cours.
+## Partie I - Neurologie
 
-## CM1 - Sémiologie et syndrome neurologique primaire
+### 1. Sémiologie et syndrome neurologique primaire
 
-### 1. Notions Générales
+#### Notions Générales
 
 Neurologues et neuropsychologues regardent même chose avec approche différent :
 les premiers ont une vision très "maladie" mais n'ont pas de prise en compte ou
 mesures de choses pas "évidentes". La neurologie est la discipline médicale qui
 étudie l'ensemble des maladies du SNC et SNP.
-
-### 2. Sémiologie neurologique
 
 Sa base est la **sémiologie** *(signe + parole, car on voit des signes et
 utiliser notre parole pour avancer)*, qu'on étudie beaucoup avant de voir les
@@ -37,7 +34,7 @@ les **signes cliniques** (objectifs) recuillis par l'examen neurologique.
 L'objectif est de **formuler un diagnostique analytique/fonctionnel et
 topographique**.
 
-![](../Pasted image 20260911105336.png)
+![](../assets/Pasted image 20260911105336.png)
 
 #### L'anamnèse
 
@@ -84,7 +81,7 @@ choses :
 
 La sémiologie peut être centrale, périphérique, fonctoinnelle ou musculaire.
 
-![](../Pasted image 20260911110452.png)
+![](../assets/Pasted image 20260911110452.png)
 
 ### 3. Exemple de syndrome neurologique "primaire"
 
@@ -93,7 +90,7 @@ Le diagnostique du syndrome clinique a 2 composantes :
 - Fonctionnel : quelle fonction est perturbé ?
 - Topographique : quel niveau anatomo-fonctionnel du système est atteint ?
 
-![](../Pasted image 20261111112210.png)
+![](../assets/Pasted image 20261111112210.png)
 
 Il existe 2 types de syndrôme neurologique moteur :
 
@@ -152,7 +149,7 @@ Muscles visage-cou :
    mandibulaires, dégultation et phonation
 3. Hypoglosse (XII) paralysie de la langue
 
-![](../Pasted image 20260911113437.png){width=100}
+![](../assets/Pasted image 20260911113437.png){width=100}
 
 On utilise une **échelle globale de cotation de 0 à 5** :
 
@@ -194,7 +191,7 @@ Les réflexes ostéo-tendieux (ROT) sont évalués sur une échelle de 4 à 0
 - 1 - Diminués/faibles
 - 0 - Pas de réponse (aréflexie OT)
 
-![](../Pasted image 20260910155018.png)
+![](../assets/Pasted image 20260910155018.png)
 
 Le tonus musculaire dans le syndrome pyramidal est exaggéré, mais si la lésion
 est aiguëe (< 2 semaines), une hypotonie se manifeste, ce qui est
@@ -409,7 +406,7 @@ bras), complexes ont une altération de la conscience.
 
 ## 2. Différentes formes et diagnostic
 
-![](../Pasted image 20260917145221.png)
+![](../assets/Pasted image 20260917145221.png)
 
 Épilepsie d'absence de l'enfant
 
@@ -458,7 +455,7 @@ si crise dure plus de 5 minutes et s'il y a 2 crises.
 
 Crises focales
 
-![](../Pasted image 20260917152411.png)
+![](../assets/Pasted image 20260917152411.png)
 
 Épilepsie focale frontale
 
@@ -551,11 +548,11 @@ Signes cliniques (souvent recherche d'activité unilatérale) :
 Lévétiracétam est toujours le premier choix, puis lamotrigine. Noter que chaque
 médicament cible un récépteur pour limiter la propagation.
 
-![](../Pasted image 20260917162411.png)
+![](../assets/Pasted image 20260917162411.png)
 
 3/10 patients sont résistants aux traitements
 
-![](../Pasted image 20260917162750.png)
+![](../assets/Pasted image 20260917162750.png)
 
 Que faire si notre patient ne répond pas au traitement ? On va enlever la région
 de manière chirurgicale, puis diminuer voire arréter le traitement. Mais risque
@@ -570,7 +567,7 @@ lésion est proche d'une région fonctionnelle cruciale à ne pas opérer, et si
 tout est OK alors on opère. On peut enlever un lobe ou des petites parties. En
 manque d'informations, sEEG. On peut aussi faire une chirurgie palliative.
 
-![](../Pasted image 20260917163545.png)
+![](../assets/Pasted image 20260917163545.png)
 
 Chirurgies palliatives :
 
@@ -592,11 +589,11 @@ Complications de l'épilepsie :
 
 Conséquences des crises : troubles d'apprentissages etc
 
-![](../Pasted image 20260917164849.png)
+![](../assets/Pasted image 20260917164849.png)
 
 Pour les anti-épileptiques :
 
-![](../Pasted image 20260917164918.png)
+![](../assets/Pasted image 20260917164918.png)
 
 Effets des pointes :
 
@@ -642,9 +639,9 @@ parle d'ischémique, on parle de territoires extrêmement précis. Bien garder e
 tête que les parties antérieures et postérieures sont irriguées par différentes
 artères, ce qui va affecter les conséquences d'un AVC.
 
-![](../Pasted image 20260924141937.png)
+![](../assets/Pasted image 20260924141937.png)
 
-![](../Pasted image 20260924142150.png)
+![](../assets/Pasted image 20260924142150.png)
 
 ## AVC
 
@@ -674,7 +671,7 @@ Exemple : infarctus sylvien total droit → hémiplégie gauche proportionnelle,
 hypo/anesthésie gauche, HLH gauche, syndrome d'Anton-Babinski (héminegligence,
 anosognosie, hémissomatognosie).
 
-![](../Pasted image 20261114083500.png)
+![](../assets/Pasted image 20261114083500.png)
 
 **Rappel aphasies** :
 
@@ -843,7 +840,7 @@ protéine Tau qui sert à la communication entre neurones, trop de phosphore s'y
 connectent et on ne peut plus assurer le transport stable entre les cellules qui
 entraîne des dégenérescences.
 
-![](../Pasted image 20261001143151.png)
+![](../assets/Pasted image 20261001143151.png)
 
 ## 2. Triade diagnostique : stade (clinique)
 
@@ -862,7 +859,7 @@ les sypmtômes pour mieux expliquer aux patients.
 
 On utilise stade et le score MMSE qui est une évaluation générale.
 
-![](../Pasted image 20261001144036.png)
+![](../assets/Pasted image 20261001144036.png)
 
 ## 3. Triade diagnostique: syndrome (clinique)
 
@@ -890,11 +887,11 @@ cognitifs de dépistage
 - Antécédents familiaux neurologiques, psychiatriques et arbre généalogique
 - Traitements actuels
 
-![](../Pasted image 20261001144724.png)
+![](../assets/Pasted image 20261001144724.png)
 
-![](../Pasted image 20261001145733.png)
+![](../assets/Pasted image 20261001145733.png)
 
-![](../Pasted image 20261001150112.png)
+![](../assets/Pasted image 20261001150112.png)
 
 > WARN: Juste aller voire le diapo
 
@@ -1057,11 +1054,11 @@ Troubles de la répétitions :
 
 #### 1.2.1. Production orale
 
-![](../Pasted image 20261021152528.png)
+![](../assets/Pasted image 20261021152528.png)
 
 En compréhension orale
 
-![](../Pasted image 20261021152639.png)
+![](../assets/Pasted image 20261021152639.png)
 
 ### 1.3. Différents types d'aphasies de base
 
@@ -1136,7 +1133,7 @@ d'approche
 La récupération se fait souvent sur la même temporalité que les AVC. Conduction
 , > Broca > Wernicke, et on retrouve les mêmes troubles à l'écrit.
 
-![](../Pasted image 20261021155346.png)
+![](../assets/Pasted image 20261021155346.png)
 
 ## 2. Les apraxies
 
@@ -1257,7 +1254,7 @@ Plein de méthodes d'évaluations, procédures empiriques, avec peu de bases
 théoriques très définies, avec grande variabilité inter-individuelle de
 performances chez les sujest normaux.
 
-![](../Pasted image 20261021162340.png)
+![](../assets/Pasted image 20261021162340.png)
 
 <!-- FIX: diapo Plusieurs types d'erreurs  -->
 
@@ -1324,7 +1321,7 @@ On décrit différents sous-types selon différents facteurs :
 Donc on parle des négilgenc**es** au pluriel car il y a différentes
 manifestations.
 
-![](../Pasted image 20261112181601.png)
+![](../assets/Pasted image 20261112181601.png)
 
 Dans les manifestations productives :
 
@@ -1379,7 +1376,7 @@ types de négligences.
 J'ai pas écouté mais c'est pas grave je pense. En tout cas approche combinée de
 rééducation marche toujours mieux qu'un moyen d'action seul.
 
-![](../Pasted image 20261112184428.png)
+![](../assets/Pasted image 20261112184428.png)
 
 --------------------------------------------------------------------------------
 
@@ -1471,7 +1468,7 @@ position dans l'espace. On utilise donc une intégration multisensorielle.
 On a longtemps considéré à tort de système vestibulaire comme l'organe de
 l'orientation ce n'est pas du tout le seul :
 
-![](../Pasted image 20261120101819.png)
+![](../assets/Pasted image 20261120101819.png)
 
 Toutes les informations sont traitées dans le SNC dans la notion de **cadre de
 référence spatiale** : e sont des systèmes de coordonnées spatiales pour repérer
@@ -1484,7 +1481,7 @@ permet des réponses posturales et représentations spatiales de l'espace, qui
 permet la posture, qui permet locomotion, navigation, action motrice,
 perception.
 
-![](../Pasted image 20261120102755.png)
+![](../assets/Pasted image 20261120102755.png)
 
 FIX: sens de verticalité
 

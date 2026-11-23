@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dire: docs
+  output-dir: docs
 
 website:
   title: "S7"
