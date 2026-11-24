@@ -2,14 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
-      "/matieres/dev/dev_cog.html",
-      "/matieres/cog_visu/cognition_visuelle_mermillod.html",
-      "/matieres/memoire/modele_memoire_cours.html",
-      "/matieres/neuro/neuro_partie_neuro.html",
-      "/matieres/dev/dev_cog_nombre.html",
-      "/matieres/cog_visu/cognition_visuelle_dup.html",
-      "/matieres/memoire/modele_memoire_moulin.html",
-      "/matieres/neuro/neuro_partie_psycho.html"
+      "/matieres/dev/dev_cog.html"
     ]
   }
 ]
