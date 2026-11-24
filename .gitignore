@@ -1,3 +1,16 @@
+# Quarto
 /.quarto/
+_site/
+*_files/
 **/*.quarto_ipynb
+
+# Space (index binaire local)
+.space/
+.space*/
+
+# LTeX
 ltex.hiddenFalsePositives.fr.txt
+ltex.dictionary.fr.txt
+
+# macOS
+.DS_Store
