@@ -7,6 +7,10 @@ tags: []
 
 # Partie I - Imitation
 
+::: {.callout-note}
+Estimation de l'intégrité de la prise de note : `8/10`
+:::
+
 Approches comportementalistes sont centrées sur l'environnement, alors que
 cognitivistes plutôt sur l'individu, avec les approches constructivistes qui
 font le lien entre les deux (en tant que paradigme général qu'on se construit en
