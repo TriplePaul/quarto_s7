@@ -1,1 +1,9 @@
 /* css styles */
+
+/* Les images Markdown ![]() ne sont pas des figures : `execute: fig-align`
+   ne les touche pas. On les centre donc en CSS (toutes sont des blocs). */
+#quarto-document-content img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

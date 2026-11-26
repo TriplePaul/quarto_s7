@@ -50,8 +50,11 @@ website:
 format:
   html:
     theme:
-      light: litera
-      dark: cyborg
+      light: minty
+      dark: solar
     css: styles.css
     toc: true
     toc-expand: 2
+
+execute:
+  fig-align: center
