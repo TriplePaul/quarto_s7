@@ -79,9 +79,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
@@ -303,28 +300,16 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../../index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../.././matieres/neuro_adulte.qmd"> 
-<span class="menu-text">Neuro</span></a>
+    <a class="nav-link active" href="../../cours.html" aria-current="page"> 
+<span class="menu-text">Cours</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../.././matieres/cognition_visuelle_mermillod.qmd"> 
-<span class="menu-text">Mermillod</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../.././matieres/dev_cog.qmd"> 
-<span class="menu-text">Dupierrix</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../.././matieres/modele_memoire_cours.qmd"> 
-<span class="menu-text">Sémantique</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../.././matieres/modele_memoire_moulin.qmd"> 
-<span class="menu-text">Épisodique</span></a>
+    <a class="nav-link" href="../../annales.html"> 
+<span class="menu-text">Annales</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -361,11 +346,10 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Index</span></a>
+  <a href="../../cours.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Cours</span></a>
   </div>
 </li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <button type="button" class="sidebar-item-text sidebar-item-toggle sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-controls="quarto-sidebar-section-1" aria-expanded="true">
@@ -455,16 +439,21 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active" data-toc-expanded="2">
+        <nav id="TOC" role="doc-toc" aria-labelledby="toc-title" class="toc-active" data-toc-expanded="3">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
   <li><a href="#partie-i---mémoire-sémantique" id="toc-partie-i---mémoire-sémantique" class="nav-link active" data-scroll-target="#partie-i---mémoire-sémantique">Partie I - Mémoire Sémantique</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#rôle-et-nature-des-modèles-en-psychologie-cognitive" id="toc-rôle-et-nature-des-modèles-en-psychologie-cognitive" class="nav-link" data-scroll-target="#rôle-et-nature-des-modèles-en-psychologie-cognitive">1. Rôle et nature des modèles en Psychologie Cognitive</a>
   <ul class="collapse">
   <li><a href="#quelles-contraintes-pour-un-modèle-de-la-mémoire" id="toc-quelles-contraintes-pour-un-modèle-de-la-mémoire" class="nav-link" data-scroll-target="#quelles-contraintes-pour-un-modèle-de-la-mémoire">1.1. Quelles contraintes pour un modèle de la mémoire ?</a></li>
-  <li><a href="#la-métaphore-spatiale" id="toc-la-métaphore-spatiale" class="nav-link" data-scroll-target="#la-métaphore-spatiale">1.2. La métaphore spatiale</a></li>
+  <li><a href="#la-métaphore-spatiale" id="toc-la-métaphore-spatiale" class="nav-link" data-scroll-target="#la-métaphore-spatiale">1.2. La métaphore spatiale</a>
+  <ul class="collapse">
+  <li><a href="#le-modèle-de-tulving" id="toc-le-modèle-de-tulving" class="nav-link" data-scroll-target="#le-modèle-de-tulving">1.2.1. Le modèle de Tulving</a></li>
+  <li><a href="#les-mesures-de-la-mémoire" id="toc-les-mesures-de-la-mémoire" class="nav-link" data-scroll-target="#les-mesures-de-la-mémoire">1.2.2. Les mesures de la mémoire</a></li>
+  <li><a href="#le-modèle-de-squire" id="toc-le-modèle-de-squire" class="nav-link" data-scroll-target="#le-modèle-de-squire">1.2.3. Le modèle de Squire</a></li>
+  </ul></li>
   </ul></li>
   <li><a href="#comment-faire-appel-à-la-mémoire" id="toc-comment-faire-appel-à-la-mémoire" class="nav-link" data-scroll-target="#comment-faire-appel-à-la-mémoire">2. Comment faire appel à la mémoire ?</a>
   <ul class="collapse">
@@ -474,8 +463,26 @@ window.Quarto = {
   </ul></li>
   <li><a href="#les-modèles-de-la-mémoire-sémantique" id="toc-les-modèles-de-la-mémoire-sémantique" class="nav-link" data-scroll-target="#les-modèles-de-la-mémoire-sémantique">3. Les modèles de la mémoire sémantique</a>
   <ul class="collapse">
-  <li><a href="#contraintes-issues-de-la-métaphore-représentationnelle" id="toc-contraintes-issues-de-la-métaphore-représentationnelle" class="nav-link" data-scroll-target="#contraintes-issues-de-la-métaphore-représentationnelle">3.1. Contraintes issues de la métaphore représentationnelle</a></li>
-  <li><a href="#modèle-cognitif-de-bruce-young" id="toc-modèle-cognitif-de-bruce-young" class="nav-link" data-scroll-target="#modèle-cognitif-de-bruce-young">3.2. Modèle cognitif de Bruce &amp; Young</a></li>
+  <li><a href="#contraintes-issues-de-la-métaphore-représentationnelle" id="toc-contraintes-issues-de-la-métaphore-représentationnelle" class="nav-link" data-scroll-target="#contraintes-issues-de-la-métaphore-représentationnelle">3.1. Contraintes issues de la métaphore représentationnelle</a>
+  <ul class="collapse">
+  <li><a href="#présentation-synthétique-de-lévolution-des-modèles" id="toc-présentation-synthétique-de-lévolution-des-modèles" class="nav-link" data-scroll-target="#présentation-synthétique-de-lévolution-des-modèles">3.1.1. Présentation synthétique de l’évolution des modèles</a></li>
+  <li><a href="#laccès-aux-représentations-un-problème-crucial-pour-les-modèles-représentationnels" id="toc-laccès-aux-représentations-un-problème-crucial-pour-les-modèles-représentationnels" class="nav-link" data-scroll-target="#laccès-aux-représentations-un-problème-crucial-pour-les-modèles-représentationnels">3.1.2. L’accès aux représentations, un problème crucial pour les modèles représentationnels</a></li>
+  <li><a href="#la-notion-de-seuil" id="toc-la-notion-de-seuil" class="nav-link" data-scroll-target="#la-notion-de-seuil">3.1.3. La notion de seuil</a></li>
+  </ul></li>
+  <li><a href="#modèle-hiérarchique-de-bruce-young" id="toc-modèle-hiérarchique-de-bruce-young" class="nav-link" data-scroll-target="#modèle-hiérarchique-de-bruce-young">3.2. Modèle hiérarchique de Bruce &amp; Young</a>
+  <ul class="collapse">
+  <li><a href="#présentation-du-modèle" id="toc-présentation-du-modèle" class="nav-link" data-scroll-target="#présentation-du-modèle">3.2.1. Présentation du modèle</a></li>
+  <li><a href="#un-modèle-séquentiel-hiérarchique" id="toc-un-modèle-séquentiel-hiérarchique" class="nav-link" data-scroll-target="#un-modèle-séquentiel-hiérarchique">3.2.2. Un modèle séquentiel hiérarchique</a></li>
+  <li><a href="#la-diffusion-dactivation-dans-lamorçage-sémantique" id="toc-la-diffusion-dactivation-dans-lamorçage-sémantique" class="nav-link" data-scroll-target="#la-diffusion-dactivation-dans-lamorçage-sémantique">3.2.3. La diffusion d’activation dans l’amorçage sémantique</a></li>
+  <li><a href="#lamorçage-sémantique-chez-les-patients-prosopagnosiques-remise-en-cause-de-la-hiérarchie" id="toc-lamorçage-sémantique-chez-les-patients-prosopagnosiques-remise-en-cause-de-la-hiérarchie" class="nav-link" data-scroll-target="#lamorçage-sémantique-chez-les-patients-prosopagnosiques-remise-en-cause-de-la-hiérarchie">3.2.4. L’amorçage sémantique chez les patients prosopagnosiques : remise en cause de la hiérarchie</a></li>
+  </ul></li>
+  <li><a href="#le-modèle-interactif-de-burton-bruce-johnston-1990" id="toc-le-modèle-interactif-de-burton-bruce-johnston-1990" class="nav-link" data-scroll-target="#le-modèle-interactif-de-burton-bruce-johnston-1990">3.3. Le modèle interactif de Burton, Bruce &amp; Johnston (1990)</a>
+  <ul class="collapse">
+  <li><a href="#une-architecture-en-trois-niveaux" id="toc-une-architecture-en-trois-niveaux" class="nav-link" data-scroll-target="#une-architecture-en-trois-niveaux">3.3.1. Une architecture en trois niveaux</a></li>
+  <li><a href="#les-principes-du-modèle-iac" id="toc-les-principes-du-modèle-iac" class="nav-link" data-scroll-target="#les-principes-du-modèle-iac">3.3.2. Les principes du modèle IAC</a></li>
+  <li><a href="#quelques-phénomènes-basiques-de-iac" id="toc-quelques-phénomènes-basiques-de-iac" class="nav-link" data-scroll-target="#quelques-phénomènes-basiques-de-iac">3.3.3. Quelques phénomènes basiques de IAC</a></li>
+  <li><a href="#prédictions-en-amorçage-sémantique" id="toc-prédictions-en-amorçage-sémantique" class="nav-link" data-scroll-target="#prédictions-en-amorçage-sémantique">3.3.4. Prédictions en amorçage sémantique</a></li>
+  </ul></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -776,8 +783,8 @@ Important
 <!-- source: 4_amorcage_semantique.md -->
 </section>
 </section>
-<section id="modèle-cognitif-de-bruce-young" class="level3">
-<h3 class="anchored" data-anchor-id="modèle-cognitif-de-bruce-young">3.2. Modèle cognitif de Bruce &amp; Young</h3>
+<section id="modèle-hiérarchique-de-bruce-young" class="level3">
+<h3 class="anchored" data-anchor-id="modèle-hiérarchique-de-bruce-young">3.2. Modèle hiérarchique de Bruce &amp; Young</h3>
 <section id="présentation-du-modèle" class="level4">
 <h4 class="anchored" data-anchor-id="présentation-du-modèle">3.2.1. Présentation du modèle</h4>
 <p>On a des unités de reconnaissances pour chaque caractéristique d’une personne, soit par <strong>modalité.</strong> Par définition, l’effet d’amorçage par répétition est intramodal, c’est-à-dire qu’il faut repasser pas la même unité dans le même modalité pour bénéficier de la baisse de seuil. À partir de là, on peut donc proposer une architecture globale dans le domaine des visages.</p>
@@ -793,239 +800,161 @@ Important
 </section>
 <section id="un-modèle-séquentiel-hiérarchique" class="level4">
 <h4 class="anchored" data-anchor-id="un-modèle-séquentiel-hiérarchique">3.2.2. Un modèle séquentiel hiérarchique</h4>
-<p>Mais qu’est-ce qui justifie ce <strong>modèle séquentiel hiérarchique</strong> (passer au module suivant nécessite l’accomplissement du module présent) ? Ces modèles sont très utilisés, car simples, mais maintenant, on a des indices très forts que ces modèles-là ne fonctionnent pas. Ce qui les prouverait, c’est une tâche avec laquelle on observe une hiérarchie des temps de réponse selon le traitement nécessaire qui montrerait l’étagement des processus.</p>
+<p>Mais qu’est-ce qui justifie ce <strong>modèle séquentiel hiérarchique</strong> (passer au module suivant nécessite l’accomplissement du module présent) ? Ces modèles sont très utilisés, car simples, mais maintenant, on a des indices très forts que ces modèles-là ne fonctionnent pas. Ce qui les prouverait, c’est une tâche avec laquelle on observe une hiérarchie des temps de réponse selon le traitement nécessaire qui montrerait l’<strong>étagement des processus</strong>.</p>
 <p>Tâche avec 3 réponses possibles en oui/non :</p>
 <ul>
 <li>1 : familiarité</li>
 <li>2 : sémantique : est-ce que c’est un homme politique ?</li>
 <li>3 : nom : est-ce que c’est Charles (à la présentation du visage) ?</li>
 </ul>
-<p>Le TR est systématiquement plus court sur familiarité, puis sémantique. C’est donc un indice fort de la séquentialité. On ne trouvait pas non plus de patient qui pouvait retrouver le nom d’une personne sans d’autres contenus sémantiques. Par ailleurs, ce modèle ne contient que des flèches unidirectionnelles (bottom-up), en revanche, quand on est au niveau sémantique, on en retrouve des bidirectionnelles.</p>
-<p>Principes Fodorien que la perception est <strong>encapsulée</strong> : les processus qui permettent d’accéder aux représentations doivent être imperméables au reste du système cognitif. Si notre système était biaisé, alors la perception ne serait plus une représentation, car sinon la représentation de Rousset ne correspondrait pas à ce qui se trouve à l’extérieur. Mais il y a plein de modèles qui ne marcheraient pas selon les principes fodoriens, comme reconnaître quelqu’un qui sourit ?</p>
-<p>Bruce et Young, auteurs du modèle de reconnaissance des visages vu plus haut, proposent donc de rajouter des modules de plus bas niveau que l’extraction d’invariant pour rendre compte de tout ce qu’on peut faire sur le stimulus autre que de l’identification. Ça constitue l’autre voie de cette reconnaissance. La partie “système cognitif” du modèle est le sac avec lequel l’on met tout ce qu’on n’explique pas.</p>
-<p><img src="../../assets/Pasted image 20261001213126.png" class="img-fluid"></p>
-<p>Le modèle nous permet de voir les allers-retours entre unités sémantiques et de reconnaissance. L’effet d’amorçage sémantique qui est très différent que par répétition. Dès qu’un lien d’activation passe, il peut y avoir un retour d’activation médiatisé par le lien sémantique. À bout d’un moment, il y aura déjà donc un peu ?? d’activation alors qu’on n’a pas présenté Mitterrand.</p>
-<p><em>Note : URV = Unité de Reconnaissance des Visages, et NIS = Nœuds d’Identité Spécifique</em></p>
+<p>Le TR est systématiquement plus court sur familiarité, puis sémantique. C’est donc un indice fort de la <strong>séquentialité.</strong> On ne trouvait pas non plus de patient qui pouvait retrouver le nom d’une personne sans d’autres contenus sémantiques. Par ailleurs, ce modèle ne contient que des flèches unidirectionnelles (bottom-up), en revanche, quand on est au niveau sémantique, on en retrouve des bidirectionnelles.</p>
+<p>Fodor propose le pinrcipe de la perception <strong>encapsulée</strong> : les processus qui permettent d’accéder aux représentations doivent être imperméables au reste du système cognitif. Si notre système était biaisé, alors la perception ne serait plus une représentation, car sinon la représentation de Rousset ne correspondrait pas à ce qui se trouve à l’extérieur. Mais il y a plein de modèles qui ne marcheraient pas selon les principes fodoriens, comme reconnaître quelqu’un qui sourit. Comment est-ce qu’ils résoudent ce problème ?</p>
+<p>Bruce et Young proposent donc de rajouter des modules de plus bas niveau que l’extraction d’invariant pour rendre compte de tout ce qu’on peut faire sur le stimulus autre que de l’identification. Ça constitue l’autre voie de cette reconnaissance. Et la partie “système cognitif” du modèle est le sac avec lequel l’on met tout ce qu’on n’explique pas.</p>
+</section>
+<section id="la-diffusion-dactivation-dans-lamorçage-sémantique" class="level4">
+<h4 class="anchored" data-anchor-id="la-diffusion-dactivation-dans-lamorçage-sémantique">3.2.3. La diffusion d’activation dans l’amorçage sémantique</h4>
+<p>Le modèle nous permet une explication théorique à l’effet d’<strong>amorçage sémantique</strong>. Il y aurait des allers-retours entre unités sémantiques et de reconnaissance. Dès qu’un lien d’activation passe, il peut y avoir un retour d’activation médiatisé par le lien sémantique. À bout d’un moment, il y aura de la pré-activation alors qu’on n’a pas présenté Mitterrand.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/Pasted image 20261001213126.png" class="img-fluid figure-img" style="width:70.0%"></p>
+<figcaption>URV : Unité de Reconnaissance des Visages, NIS : Nœuds d’Identité Spécifique</figcaption>
+</figure>
+</div>
 <p>Mais il ne faut pas que trop remonte, car si c’était le cas, il aurait l’impression qu’il y a deux personnes qui sont Jacques Chirac quand on voit Mitterrand. Cette activation de retour ne doit donc pas dépasser le seuil. On présente donc un stimulus dans le but d’en activer un autre inconsciemment. Et surtout, il n’y a pas de baisse de seuil, juste un peu de préactivation, qui accélère TR. Mais ça ne permet pas de faire des prédictions différentes ?</p>
-<blockquote class="blockquote">
-<p>FIX: clarifier prochain paragraphe</p>
-</blockquote>
-<p>Nécessairement ces phénomènes d’activations doivent être temporaires, sinon le système rentrerait dans un phénomène d’hystérie. L’activation doit donc se dissiper très rapidement. On est donc obligés de faire du “one-to-one”, on présente l’amorce puis la cible (et c’est un test indirect). C’est des effets de modifications structurales, on peut donc faire ça en bloc-à-bloc, alors que naturellement amorçage sémantique est sensé être amorce-cible sur un court moment. On cherche une diffusion d’activation automatique donc euh mémoire sémantique implicite.</p>
-<p>Mais pour le même phénomène, on pourrait très bien faire la même tache en se servant explicitement de notre mémoire sémantique. On se retrouve avec amorce -&gt; intervalle inter-stimuli -&gt; cible. Mémoire explicite prend plus de temps alors que propagation d’activation va très rapidement. Donc si on laisse du temps, il doit y avoir des phénomènes d’attentes, de stratégies de mémoire explicite. On ne va donc pas laisser le temps. Il faut donc une nouvelle mesure de temps de réflexion : <strong>SOA</strong> soit <em>Stimulus Onset Asynchronies</em>, qui est le temps séparant le début de la présentation du premier stimulus de celui du second. Généralement ça correspond à temps de présentaiton du stimulus + délai. On va souvent en utiliser un court, avec une amorce en subliminal.</p>
-<p>Il faut toujours comparer 3 conditions. Ici quand il n’y a pas de stratégies :</p>
+<p>Nécessairement ces phénomènes d’activations doivent être temporaires, sinon le système ferai n’importe quoi. L’activation doit donc se <strong>dissiper très rapidement</strong>. On est donc obligés de faire du “one-to-one”, on présente l’amorce puis la cible (et c’est un test indirect). Ici ça de distingue de l’amorçage par répétition qui cause des effets de modifications structurales, on peut donc faire ça en bloc-à-bloc, alors que naturellement amorçage sémantique est sensé être amorce-cible sur un court moment.</p>
+<p>Mais comment être sur qu’on a pas de contamination ? On cherche une diffusion d’activation automatique donc euh mémoire sémantique implicite. Mais pour le même phénomène, on pourrait très bien faire la même tache en se servant explicitement de notre mémoire sémantique. On se retrouve avec amorce -&gt; intervalle inter-stimuli -&gt; cible. Mémoire explicite prend plus de temps alors que propagation d’activation va très rapidement. Donc si on laisse du temps, il doit y avoir des phénomènes d’attentes, de stratégies de mémoire explicite. On ne va donc pas laisser le temps. Il faut donc une nouvelle mesure de temps de réflexion : SOA soit <em>Stimulus Onset Asynchronies</em>, qui est le temps séparant le début de la présentation du premier stimulus de celui du second. Généralement ça correspond à temps de présentation du stimulus + délai. On va souvent en utiliser un court, avec une amorce en subliminal.</p>
+<p>Il faut toujours comparer trois conditions. Ici quand il n’y a pas de stratégies :</p>
 <ul>
-<li>Amorce reliée ou <span class="math inline">\(R\)</span> : partage unité sémantique, par exemple Chirac et Mitterrand</li>
-<li>Amorce non reliée ou <span class="math inline">\(NR\)</span> : ne partage pas d’unité sémantique, reste dans la même catégorie, par exemple “personne célèbre” chez Chirac et Mirelle Matthieu. Sans préactivation.</li>
-<li>Amorce neutre ou <span class="math inline">\(N\)</span> : aucune diffusion d’activation, par exemple un visage d’inconnu. Ça correspond au temps d’activation d’une unité car pas de préactivation</li>
+<li>Amorce reliée ou <span class="math inline">\(\text{R}\)</span> : partage unité sémantique, par exemple Chirac et Mitterrand</li>
+<li>Amorce non reliée ou <span class="math inline">\(\text{NR}\)</span> : ne partage pas d’unité sémantique, reste dans la même catégorie, par exemple “personne célèbre” chez Chirac et Mirelle Matthieu. Sans pré-activation.</li>
+<li>Amorce neutre ou <span class="math inline">\(\text{N}\)</span> : aucune diffusion d’activation, par exemple un visage d’inconnu. Ça correspond au temps d’activation d’une unité, car pas de pré-activation</li>
 </ul>
 <p>Si tout va bien, alors <span class="math inline">\(\text{Neutre} = \text{Non relié}\)</span>. En cas de stratégie consciente :</p>
 <ul>
 <li>Inconnu : pas d’attente, toujours au niveau de base sur le neutre</li>
-<li>Laurel : je m’attends à Hardy donc meilleur <span class="math inline">\(R\)</span></li>
-<li>Hardy : on s’attend à Laurel et on présente Shakira, gène <span class="math inline">\(NR\)</span></li>
+<li>Laurel : je m’attends à Hardy donc meilleur <span class="math inline">\(\text{R}\)</span></li>
+<li>Hardy : on s’attend à Laurel et on présente Shakira, gène <span class="math inline">\(\text{NR}\)</span></li>
 </ul>
-<p>En cas de SOA courts, on a plutôt ce type de configurations : <span class="math inline">\(R &gt; N = NR\)</span>. Dès qu’ils deviennent longs, on va avoir cette différence qui ressort : <span class="math inline">\(R &gt; N &gt; NR\)</span>.</p>
-<p>On a vu que l’amorçage par répétition était amodal. En revanche, on peut se demander si c’est le cas pour le sémantique, que se passe-t-il si on met nom puis visage ? Comme on active par unité sémantique, il doit par définition être intermodal. Peu importe que l’amorce et la cible soient de la même modalité. Résultats le montrent.</p>
+<p>En cas de SOA courts, on a plutôt ce type de configurations : <span class="math inline">\(\text{R} &gt; \text{N} = \text{NR}\)</span>. Dès qu’ils deviennent longs, on va avoir cette différence qui ressort : <span class="math inline">\(\text{R} &gt; \text{N} &gt; \text{NR}\)</span>.</p>
+<p>On a vu que l’amorçage par répétition était intramodal. En revanche, ça ne doit pas être le cas pour l’amorçage sémantique, donc que se passe-t-il si on met nom puis visage ? Comme on active par unité sémantique, il doit par définition être intermodal. Peu importe que l’amorce et la cible soient de la même modalité. Résultats le montrent.</p>
 <p>On aime les interactions par la logique des facteurs additifs. Si deux variables jouent sur deux processus différents, alors leurs effets vont s’additionner. En cas d’interaction, on sait que ce qu’on obtient n’est pas juste la somme des deux effets, les deux variables ont donc joué sur le même processus. On observe ici une interaction entre flou et relation d’amorce.</p>
 <!-- source: 5_modeles_memoire.md -->
-<p>^-# CM5 Modèles de la mémoire</p>
-<ul>
-<li>[[i_5_modeles_memoire]]</li>
-<li>[[ii_5_modeles_memoire]]</li>
-</ul>
-<blockquote class="blockquote">
-<p>Cette note reprend la fin du CM4 (prosopagnosie et modèle de Burton, Bruce &amp; Johnston) puis le CM5 proprement dit. Elle est complétée à partir du PDF « EC10 – CMs Stéphane Rousset ».</p>
-</blockquote>
-<p>^-## 1. L’amorçage sémantique chez les patients prosopagnosiques : remise en cause de la hiérarchie</p>
+</section>
+<section id="lamorçage-sémantique-chez-les-patients-prosopagnosiques-remise-en-cause-de-la-hiérarchie" class="level4">
+<h4 class="anchored" data-anchor-id="lamorçage-sémantique-chez-les-patients-prosopagnosiques-remise-en-cause-de-la-hiérarchie">3.2.4. L’amorçage sémantique chez les patients prosopagnosiques : remise en cause de la hiérarchie</h4>
 <p>La notion de <strong>performance résiduelle</strong> est liée à la définition de la pathologie : un trouble se définit par un écart à la population normale. Dans les prédictions, on considère souvent que ce qu’on étudie est totalement absent, alors que le trouble est rarement total. Il peut donc rester quelque chose.</p>
-<p>^-### 1.1. Réapprentissage de visages célèbres</p>
-<p>Des expériences ont été menées chez <strong>deux patients belges prosopagnosiques</strong> (étude citée en cours sous le nom de Bruyer). Ces patients ne reconnaissaient pas un très grand nombre de visages. On leur a fait réapprendre des visages, soit avec l’association correcte (visage de Chirac + nom de Chirac), soit avec une association modifiée (visage de Chirac + nom de Giscard). Après de nombreuses sessions d’apprentissage, ils apprennent plus vite les <strong>bonnes paires</strong> que les mauvaises : c’est un <strong>effet de congruence visage–nom</strong>. Il restait donc bien quelque chose du traitement des visages.</p>
-<p>^-### 1.2. Amorçage sémantique implicite</p>
-<p>Une autre expérience a été réalisée avec un patient prosopagnosique qui avait une connaissance des personnes intacte, mais ne reconnaissait pas leurs visages : ce n’était donc pas un problème sémantique. Ce patient permet un bon contrôle des effets de contamination.</p>
-<p>On présente une cible (nom connu ou inconnu) et une amorce visage <strong>reliée</strong>, <strong>non reliée</strong> ou <strong>neutre</strong>. On observe un <strong>effet d’amorçage sémantique implicite</strong> : les performances sont meilleures pour le visage relié que pour le neutre ou le non-relié. Ces résultats montrent des performances résiduelles et un amorçage sémantique par des processus de diffusion non consciente et automatique.</p>
-<p>^-### 1.3. Conséquence : le seuil du modèle séquentiel est invalidé</p>
-<p>Dans le modèle séquentiel hiérarchique de Bruce &amp; Young, l’activation ne peut atteindre les NIS que si l’activation des URV <strong>dépasse leur seuil</strong>. Or, le patient est incapable de dire si le visage est connu : le seuil d’activation n’est donc pas dépassé. Pourtant, l’activation passe des URV aux NIS. Cela invalide la structure séquentielle et hiérarchique du modèle, en particulier la notion de <strong>seuil d’activation</strong>.</p>
-<p>À partir des années 1980–2000, on passe à des <strong>modèles en cascade ou interactifs</strong>. La notion de processus indépendants n’a plus de sens, et la logique des facteurs additifs devient difficile à appliquer.</p>
-<p>^-## 2. Le modèle interactif de Burton, Bruce &amp; Johnston (1990)</p>
-<p>^-### 2.1. Une architecture en trois niveaux</p>
-<p>Le modèle <strong>IAC</strong> (<em>Interactive Activation and Competition</em>) de Burton, Bruce &amp; Johnston (1990) a deux intérêts : comprendre ce que sont les systèmes interactifs, et montrer qu’il n’y a pas de correspondance anatomo-clinique directe sans présupposés clairs. Il a été proposé parce que le modèle précédent ne fonctionnait pas et parce que ce type de modèle était à la mode à l’époque.</p>
-<p>En s’inspirant de la reconnaissance des mots (les mots sont décomposables en lettres), les auteurs supposent que les visages sont décomposables en nez, yeux, bouche, etc. : ce sont les <strong>UCV</strong> (unités des composantes des visages). Cette partie est à la fois incohérente et non testée ; on l’ignore dans la suite du cours.</p>
+<p>Des expériences ont été menées chez deux patients belges <strong>prosopagnosiques</strong> (étude citée en cours sous le nom de Bruyer). Ces patients ne reconnaissaient pas un très grand nombre de visages. On leur a fait réapprendre des visages, soit avec l’association correcte (visage de Chirac + nom de Chirac), soit avec une association modifiée (visage de Chirac + nom de Giscard). Après de nombreuses sessions d’apprentissage, ils apprennent plus vite les bonnes paires que les mauvaises : c’est un effet de congruence visage-nom. Il restait donc bien quelque chose du traitement des visages.</p>
+<p>Une autre expérience a été réalisée avec un patient prosopagnosique qui avait une connaissance des personnes intacte, mais ne reconnaissait pas leurs visages : ce n’était donc pas un problème sémantique. Ce patient permet un <strong>bon contrôle des effets de contamination</strong>. On présente une cible (nom connu ou inconnu) et une amorce visage reliée, non reliée ou neutre. On observe un effet d’amorçage sémantique implicite : les performances sont meilleures pour le visage relié que pour le neutre ou le non-relié. Ces résultats montrent des performances <strong>résiduelles et un amorçage sémantique par des processus de diffusion non consciente et automatique</strong>.</p>
+<p>Dans le modèle séquentiel hiérarchique de Bruce &amp; Young, l’activation ne peut atteindre les NIS que si l’activation des URV dépasse leur seuil. Or, le patient est incapable de dire si le visage est connu : le seuil d’activation n’est donc pas dépassé. Pourtant, l’activation passe des URV aux NIS. Cela <strong>invalide la structure séquentielle et hiérarchique du modèle</strong>, en particulier la notion de <strong>seuil d’activation</strong>.</p>
+<p>À partir des années 1980-2000, on passe à des modèles en <strong>cascade ou interactifs</strong>. La notion de processus indépendants n’a plus de sens, et la logique des facteurs additifs devient difficile à appliquer.</p>
+</section>
+</section>
+<section id="le-modèle-interactif-de-burton-bruce-johnston-1990" class="level3">
+<h3 class="anchored" data-anchor-id="le-modèle-interactif-de-burton-bruce-johnston-1990">3.3. Le modèle interactif de Burton, Bruce &amp; Johnston (1990)</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>À partir de maintenant, j’ai pris des notes un peu n’importe comment. Cette partie est donc en partie construite sur des résumés de cours des années précédentes, parfois résumées par IA :(</p>
+</div>
+</div>
+<section id="une-architecture-en-trois-niveaux" class="level4">
+<h4 class="anchored" data-anchor-id="une-architecture-en-trois-niveaux">3.3.1. Une architecture en trois niveaux</h4>
+<p>Le modèle IAC (<strong>Interactive Activation and Competition</strong>) de Burton, Bruce &amp; Johnston (1990) a deux intérêts : comprendre ce que sont les systèmes interactifs, et montrer qu’il n’y a pas de correspondance anatomo-clinique directe sans présupposés clairs. Il a été proposé parce que le modèle précédent ne fonctionnait pas et parce que ce type de modèle était à la mode à l’époque.</p>
+<p>En s’inspirant de la reconnaissance des mots (les mots sont décomposables en lettres), les auteurs supposent que les visages sont décomposables en nez, yeux, bouche, etc. : ce sont les UCV (unités des composantes des visages). Cette partie est à la fois incohérente et non testée ; on l’ignore dans la suite du cours.</p>
 <ul>
-<li><strong>URV / URN</strong> : unités de reconnaissance des visages et des noms. Contrairement au modèle précédent, <strong>l’activation au niveau des UR ne mène pas à une réponse comportementale de familiarité</strong>.</li>
-<li><strong>NIS</strong> : nœuds d’identité spécifique. Ils portent le même nom que dans le modèle précédent, mais ne contiennent plus que le <strong>concept de la personne</strong>. La décision de familiarité se prend à ce niveau. Les URV et URN d’une personne sont reliées uniquement à son NIS, avec une association <strong>1 à 1</strong>.</li>
-<li><strong>UIS</strong> : unités d’information sémantique. On y retrouve la sémantique classique, mais aussi les informations liées au nom. Le nom est donc une information sémantique comme une autre, alors que dans Bruce &amp; Young il avait un module séparé. La connectivité NIS–UIS n’est pas 1 à 1 : une UIS peut être reliée à plusieurs NIS.</li>
+<li><strong>URV / URN</strong> : unités de reconnaissance des visages et des noms. Contrairement au modèle précédent, l’activation au niveau des UR ne mène pas à une réponse comportementale de familiarité. Il faut y penser comme des clés d’accès à la mémoire.</li>
+<li><strong>NIS</strong> : nœuds d’identité spécifique. Ils portent le même nom que dans le modèle précédent, mais ne contiennent plus que le concept de la personne. La décision de familiarité se prend à ce niveau. Les URV et URN d’une personne sont reliées uniquement à son NIS, avec une association 1 à 1.</li>
+<li><strong>UIS</strong> : unités d’information sémantique. On y retrouve la sémantique classique, mais aussi les informations liées au nom. Le nom est donc une information sémantique comme une autre, alors que dans Bruce &amp; Young il avait un module séparé. La connectivité NIS-UIS n’est pas 1 à 1 : une UIS peut être reliée à plusieurs NIS.</li>
 </ul>
-<p><em>Penser aux unités de reconnaissance comme à des clés d’accès à la mémoire.</em></p>
-<p>^-### 2.2. Plus de seuil d’activation, mais un seuil de conscience</p>
-<p>Le modèle supprime le <strong>seuil d’activation</strong> qui bloquait la propagation. Il conserve un <strong>seuil de conscience</strong>, paramètre fixe : quand l’activation d’un NIS le dépasse, le concept de la personne est activé et donne le sentiment de familiarité. On ne peut pas jouer sur ce seuil, sinon le modèle devient infalsifiable.</p>
-<p>Pourquoi ce changement ? Dans un système avec rétroaction et uniquement de l’activation, deux états sont possibles : l’explosion (l’« hystérie ») ou l’inactivité (l’activation s’auto-entretient et fait boule de neige). Les seuils servaient à empêcher l’explosion. Il faut donc ajouter de l’<strong>inhibition</strong> : le modèle combine activation et inhibition.</p>
-<p>^-### 2.3. Le schéma du modèle</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-
-<pre class="mermaid mermaid-js">graph TD
-    subgraph E["Entrées"]
-        V["Visage de Mitterrand"]
-        N["Nom « Mitterrand »"]
-    end
-
-    subgraph R["UR — unités de reconnaissance, spécifiques à la modalité"]
-        URV["URV&lt;br/&gt;visage"]
-        URN["URN&lt;br/&gt;nom"]
-    end
-
-    subgraph I["NIS — amodal, un seul nœud par personne"]
-        NISM["NIS&lt;br/&gt;Mitterrand"]
-    end
-
-    subgraph S["UIS — informations sémantiques"]
-        S1["« président »"]
-        S2["« François »"]
-        S3["« socialiste »"]
-    end
-
-    V --&gt; URV
-    N --&gt; URN
-    URV --&gt; NISM
-    URN --&gt; NISM
-    NISM --&gt; S1
-    NISM --&gt; S2
-    NISM --&gt; S3
-
-    style E fill:#181825,stroke:#585b70,color:#cdd6f4
-    style R fill:#181825,stroke:#585b70,color:#cdd6f4
-    style I fill:#181825,stroke:#585b70,color:#cdd6f4
-    style S fill:#181825,stroke:#585b70,color:#cdd6f4
-
-    classDef entree fill:#313244,color:#cdd6f4,stroke:#585b70
-    classDef ur fill:#89b4fa,color:#11111b,stroke:#89b4fa
-    classDef nis fill:#cba6f7,color:#11111b,stroke:#cba6f7,stroke-width:2px
-    classDef uis fill:#a6e3a1,color:#11111b,stroke:#a6e3a1
-
-    class V,N entree
-    class URV,URN ur
-    class NISM nis
-    class S1,S2,S3 uis
-
-    linkStyle default stroke:#6c7086,stroke-width:1.5px
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<p>Une amorce par le visage active le NIS Mitterrand ; une cible « Mitterrand » présentée par le nom passe par l’URN mais retombe sur le même nœud — d’où l’amorçage intermodal. Dans un même ensemble, les unités s’inhibent mutuellement : un stimulus non relié intercalé active un autre NIS et fait chuter l’effet.</p>
-<p>^-### 2.4. Deux sources de gain : répétition et sémantique</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-
-<pre class="mermaid mermaid-js">graph TD
-    A["Amorce (t1)&lt;br/&gt;visage de Mitterrand"]
-    A --&gt; U["URV&lt;br/&gt;seuil abaissé&lt;br/&gt;Bruce &amp; Young"]
-    A --&gt; N["NIS&lt;br/&gt;reste activé&lt;br/&gt;Burton et al."]
-    U --&gt; C1["Cible (t2)&lt;br/&gt;même visage&lt;br/&gt;→ intramodal"]
-    N --&gt; C2["Cible (t2)&lt;br/&gt;nom « Mitterrand »&lt;br/&gt;→ intermodal"]
-    C1 --&gt; R["Réponse plus rapide"]
-    C2 --&gt; R
-
-    classDef entree fill:#313244,color:#cdd6f4,stroke:#585b70
-    classDef by fill:#f9e2af,color:#11111b,stroke:#f9e2af
-    classDef bu fill:#fab387,color:#11111b,stroke:#fab387
-    classDef cible fill:#45475a,color:#cdd6f4,stroke:#6c7086
-    classDef gain fill:#a6e3a1,color:#11111b,stroke:#a6e3a1
-
-    class A entree
-    class U by
-    class N bu
-    class C1,C2 cible
-    class R gain
-
-    linkStyle default stroke:#6c7086,stroke-width:1.5px
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<p>À la première présentation (t1), Bruce &amp; Young abaissent durablement le seuil de l’URV (amorçage par répétition) ; Burton laisse le NIS activé (amorçage sémantique). À la deuxième présentation (t2), la cible repasse par l’unité déjà modifiée, donc la réponse est plus rapide. Le gain dû à l’URV est propre à la modalité (intramodal) ; celui dû au NIS est amodal et transfère à l’autre modalité (intermodal).</p>
-<p>^-## 3. Les principes du modèle IAC</p>
-<p>^-### 3.1. Unités, ensembles et connexions</p>
-<p>On reste dans les modèles représentationnels : chaque <strong>unité</strong> est un concept, regroupé en <strong>ensembles</strong> (ou <em>pools</em>) qui ont un sens (les NIS forment un pool, les URV un autre, etc.).</p>
-<p>Les connexions entre ensembles sont <strong>excitatrices</strong> et sans seuil : dès qu’il y a un peu d’activation, elle se propage. Au sein d’un même ensemble, les connexions sont <strong>inhibitrices</strong> : chaque unité est reliée à toutes les autres unités de son ensemble et les inhibe. Les connexions excitatrices inter-pool sont plus fortes que les connexions inhibitrices intra-pool. L’inhibition intra-pool est uniforme, plutôt faible et non soumise à apprentissage ; les connexions inter-pool, elles, ont un sens.</p>
-<p>^-### 3.2. Activation et inhibition</p>
+<p>Le modèle <strong>supprime le seuil d’activation</strong> qui bloquait la propagation. Il conserve un <strong>seuil de conscience</strong>, paramètre fixe : quand l’activation d’un NIS le dépasse, le concept de la personne est activé et donne le sentiment de familiarité. On ne peut pas jouer sur ce seuil, sinon le modèle devient infalsifiable.</p>
+<p>Pourquoi ce changement ? Dans un système avec rétroaction et uniquement de l’activation, deux états sont possibles : l’explosion ou l’inactivité (l’activation s’auto-entretient et fait boule de neige). Les seuils servaient à empêcher l’explosion. Il faut donc ajouter de l’inhibition : le modèle combine activation et inhibition.</p>
+<p>Dans l’amorçasge sémantique : à la première présentation (t1), Bruce &amp; Young abaissent durablement le seuil de l’URV (amorçage par répétition) ; Burton laisse le NIS activé (amorçage sémantique). À la deuxième présentation (t2), la cible repasse par l’unité déjà modifiée, donc la réponse est plus rapide. Le gain dû à l’URV est propre à la modalité (intramodal) ; celui dû au NIS est amodal et transfère à l’autre modalité (intermodal).</p>
+</section>
+<section id="les-principes-du-modèle-iac" class="level4">
+<h4 class="anchored" data-anchor-id="les-principes-du-modèle-iac">3.3.2. Les principes du modèle IAC</h4>
+<p>On reste dans les modèles représentationnels : chaque unité est un concept, regroupé en ensembles (ou <em>pools</em>) qui ont un sens (les NIS forment un pool, les URV un autre, etc.).</p>
+<p>Les <strong>connexions entre ensembles</strong> sont excitatrices et sans seuil : dès qu’il y a un peu d’activation, elle se propage. <strong>Au sein d’un même ensemble</strong>, les connexions sont inhibitrices : chaque unité est reliée à toutes les autres unités de son ensemble et les inhibe. Les connexions excitatrices inter-pool sont plus fortes que les connexions inhibitrices intra-pool. L’inhibition intra-pool est uniforme, plutôt faible et non soumise à apprentissage ; les connexions inter-pool, elles, ont un sens.</p>
 <p>Un système uniquement activateur ne peut pas fonctionner. Dans les réseaux sémantiques classiques, on parlait de diffusion de l’activation avec trois principes :</p>
 <ol type="1">
-<li>l’activation émise est moindre que celle reçue ;</li>
-<li>l’activation est divisée par le nombre de connexions ;</li>
-<li>les activations de plusieurs sources s’additionnent.</li>
+<li>L’activation émise est moindre que celle reçue</li>
+<li>L’activation est divisée par le nombre de connexions</li>
+<li>Les activations de plusieurs sources s’additionnent</li>
 </ol>
-<p>Les deux premiers principes sont à oublier ; seul le troisième reste vrai.</p>
-<p>Avec l’activation et l’inhibition, le système évolue vers un <strong>équilibre</strong>. Il faut prendre en compte la dynamique et les temps de latence.</p>
-<p>^-### 3.3. Cycles, latence et seuil de conscience</p>
-<p>Un <strong>cycle</strong> (ou <strong>époque</strong>) est le moment où tous les neurones calculent en parallèle leur état d’activation. Après un calcul (époque 1), on obtient un nouvel état, puis on recommence (époque 2), etc. L’état de repos est une légère inhibition.</p>
-<p>Un <strong>seuil de conscience</strong> est défini pour les unités : quand leur activation le dépasse, leur contenu devient conscient. La réponse de familiarité correspond au dépassement du seuil de conscience d’un NIS.</p>
-<p>Dans un modèle séquentiel, le temps de latence est difficile à expliquer. Dans IAC, la latence correspond au <strong>nombre de cycles</strong> nécessaires pour dépasser le seuil de conscience. On peut l’exprimer en ms : plus de ms signifie plus de cycles.</p>
-<p>^-## 4. Quelques phénomènes basiques de IAC</p>
+<p>Les deux premiers principes sont à oublier, seul le troisième reste vrai.</p>
+<p>Avec l’activation et l’inhibition, le système évolue vers un équilibre. Il faut prendre en compte la dynamique et les temps de latence. On peut maintenant utiliser ces notions temporelles pour faire des prédictions :</p>
+<ul>
+<li>Un <strong>cycle</strong> (ou époque) est le moment où tous les neurones calculent en parallèle leur état d’activation. Après un calcul (époque 1), on obtient un nouvel état, puis on recommence (époque 2), etc. L’état de repos est une légère inhibition.</li>
+<li>Un <strong>seuil de conscience</strong> est défini pour les unités : quand leur activation le dépasse, leur contenu devient conscient. La réponse de familiarité correspond au dépassement du seuil de conscience d’un NIS.</li>
+<li>Dans un modèle séquentiel, le temps de latence est difficile à expliquer. Dans IAC, la <strong>latence</strong> correspond au nombre de cycles nécessaires pour dépasser le seuil de conscience. On peut l’exprimer en ms : plus de ms signifie plus de cycles.</li>
+</ul>
+</section>
+<section id="quelques-phénomènes-basiques-de-iac" class="level4">
+<h4 class="anchored" data-anchor-id="quelques-phénomènes-basiques-de-iac">3.3.3. Quelques phénomènes basiques de IAC</h4>
 <p>On a deux ensembles : les NIS en haut, les UIS en bas. On présente un visage : tant qu’il est sous les yeux, il active en continu l’URV correspondante.</p>
 <p><img src="../../assets/Pasted image 20261113174819.png" class="img-fluid"></p>
-<p>^-### 4.1. Cas A : deux unités seulement</p>
-<p>Si le modèle ne contient que deux unités reliées (NIS–UIS), l’UIS reçoit de l’activation du NIS à l’époque 1 et lui en renvoie à l’époque 2. Le NIS continue d’envoyer de l’activation car le visage est toujours présent. Très vite, le seuil de conscience est dépassé et le système explose en l’absence d’inhibition intra-pool.</p>
-<p>^-### 4.2. Cas B : plusieurs UIS</p>
+<section id="cas-a-deux-unités-seulement" class="level5">
+<h5 class="anchored" data-anchor-id="cas-a-deux-unités-seulement">Cas A : deux unités seulement</h5>
+<p>Si le modèle ne contient que deux unités reliées (NIS-UIS), l’UIS reçoit de l’activation du NIS à l’époque 1 et lui en renvoie à l’époque 2. Le NIS continue d’envoyer de l’activation car le visage est toujours présent. Très vite, le seuil de conscience est dépassé et le système explose en l’absence d’inhibition intra-pool.</p>
+</section>
+<section id="cas-b-plusieurs-uis" class="level5">
+<h5 class="anchored" data-anchor-id="cas-b-plusieurs-uis">Cas B : plusieurs UIS</h5>
 <p>Si le NIS est relié à plusieurs UIS, l’inhibition intra-pool se met en place. À l’époque 1, on est dans la même situation que dans A. Dès l’époque 2, l’UIS est moins activée que dans A, car les autres unités de son ensemble l’inhibent. Elle reste activée car l’inhibition intra-pool est plus faible que l’excitation inter-pool.</p>
-<p>^-### 4.3. Cas C : plusieurs URV</p>
+</section>
+<section id="cas-c-plusieurs-urv" class="level5">
+<h5 class="anchored" data-anchor-id="cas-c-plusieurs-urv">Cas C : plusieurs URV</h5>
 <p>Si une UIS est connectée à plusieurs URV, le modèle s’active plus vite : à l’époque 2, l’activation est renvoyée vers plusieurs NIS ; à l’époque 3, l’UIS reçoit de l’activation de plusieurs NIS en même temps, au lieu d’un seul avec l’inhibition intra-pool.</p>
-<p>^-### 4.4. Cas D : plusieurs UIS et plusieurs NIS</p>
+</section>
+<section id="cas-d-plusieurs-uis-et-plusieurs-nis" class="level5">
+<h5 class="anchored" data-anchor-id="cas-d-plusieurs-uis-et-plusieurs-nis">Cas D : plusieurs UIS et plusieurs NIS</h5>
 <p>La deuxième UIS s’active plus vite que la première : elle reçoit l’inhibition de la première, mais aussi plus d’activation des NIS. Par défaut, toutes les informations sémantiques sont liées à différents NIS ; le nom étant spécifique à une personne, il est plutôt sur un lien unique et sera plus difficile à retrouver que les autres informations sémantiques.</p>
-<p>^-### 4.5. Le problème de la dénomination</p>
+</section>
+<section id="activation-temporelles-dunités-sémantiques" class="level5">
+<h5 class="anchored" data-anchor-id="activation-temporelles-dunités-sémantiques">Activation temporelles d’unités sémantiques</h5>
 <p>Deux unités d’un même ensemble peuvent avoir des difficultés différentes à s’activer. Une unité qui ne reçoit de l’activation que d’une seule unité d’un autre ensemble sera plus difficile à activer qu’une unité qui en reçoit de plusieurs. Donc une chose X peut être systématiquement plus difficile qu’une chose Y tout en faisant partie du même ensemble.</p>
-<p>On ne peut plus se baser uniquement sur la <strong>chronométrie</strong> et l’étagement des latences pour montrer la hiérarchie des modules : au sein d’un même module, les latences ne sont pas les mêmes pour toutes les unités.</p>
-<p>^-## 5. Activation des NIS et structure des courbes</p>
-<p>On trace le niveau d’activation de deux NIS en fonction du nombre de <strong>cycles</strong>, en maintenant une entrée perceptive au niveau d’une UR. Si on présente le visage de Charles, le NIS « Charles » est activé à chaque cycle. Au temps 0, on a une légère inhibition (état de repos). Puis l’activation augmente : l’URV envoie de l’activation au NIS, qui en envoie aux UIS ; les trois niveaux s’envoient de l’activation en aller-retour.</p>
-<p><img src="../../assets/Pasted image 20261113175532.png" class="img-fluid"></p>
-<p>Après un certain temps, le NIS « Charles » dépasse le <strong>seuil de conscience</strong> (différent du seuil d’activation) : le système répond que le stimulus est familier. La latence de base correspond au nombre de cycles nécessaires pour atteindre ce seuil. Ensuite, l’activation se stabilise (≈ plafond).</p>
-<p><img src="../../assets/Pasted image 20261113175922.png" class="img-fluid"></p>
+<p>On ne peut plus se baser <strong>uniquement sur la chronométrie et l’étagement des latences</strong> pour montrer la hiérarchie des modules : au sein d’un même module, les latences ne sont pas les mêmes pour toutes les unités.</p>
+<p>On trace le niveau d’activation de deux NIS en fonction du nombre de cycles, en maintenant une entrée perceptive au niveau d’une UR. Si on présente le visage de Charles, le NIS « Charles » est activé à chaque cycle. Au temps 0, on a une légère inhibition (état de repos). Puis l’activation augmente : l’URV envoie de l’activation au NIS, qui en envoie aux UIS ; les trois niveaux s’envoient de l’activation en aller-retour.</p>
+<p><img src="../../assets/Pasted image 20261113175532.png" class="img-fluid" style="width:70.0%"></p>
+<p>Après un certain temps, le NIS « Charles » dépasse le seuil de conscience (différent du seuil d’activation) : le système répond que le stimulus est familier. La latence de base correspond au nombre de cycles nécessaires pour atteindre ce seuil. Ensuite, l’activation se stabilise (≈ plafond).</p>
+<p><img src="../../assets/Pasted image 20261113175922.png" class="img-fluid" style="width:70.0%"></p>
 <p>L’activation de « Charles » active « noble » et « anglais » dans les UIS, ce qui active à son tour « Diana » dans les NIS (elle est noble et anglaise). L’inhibition entre NIS se met en place : « Diana » inhibe « Charles » et empêche son explosion. « Diana » s’active moins que « Charles » car elle reçoit moins d’activation des autres ensembles et que « Charles » l’inhibe plus fortement. Il faut quelques cycles pour que « Diana » s’active, le temps que l’activation se propage par les UIS.</p>
 <p>Après la perturbation, les courbes atteignent un nouvel équilibre. Continuer à présenter Charles ne change rien. Si on cesse de présenter Charles, l’activation du NIS « Charles » baisse (moins d’activation des URV) ; celle de « Diana » augmente légèrement car l’inhibition de Charles diminue. Les deux NIS passent sous le seuil de conscience et se rapprochent, car ils partagent beaucoup d’informations sémantiques.</p>
-<p>^-## 6. Simulation d’amorçage sémantique</p>
-<p><img src="../../assets/Pasted image 20261113180012.png" class="img-fluid"></p>
-<p>Si on présente le nom de Diana, l’URN « Diana » est activé ; le NIS « Diana » augmente et le NIS « Charles » diminue (plus d’inhibition de Diana). Dans la simulation, Charles avait besoin d’une vingtaine de cycles pour dépasser le seuil quand on présentait son visage ; Diana n’en a besoin que de moins de dix quand on présente son nom, car elle avait déjà été activée par la présentation de Charles. Le modèle rend donc compte de l’amorçage sémantique.</p>
-<p>^-### 6.1. Le temps n’est plus le facteur critique</p>
-<p>Dans l’ancien modèle, l’amorçage sémantique dépendait d’un SOA court : il fallait que l’activation n’ait pas le temps de se dissiper. Ici, l’état d’équilibre atteint après l’arrêt de la présentation s’auto-entretient : on peut laisser passer de nombreux cycles sans que l’activation bouge. Ce n’est donc pas le temps qui compte, mais les <strong>stimuli qui interviennent</strong> entre l’amorce et la cible.</p>
-<p>Pour diminuer l’activation des NIS, il faut présenter autre chose : d’autres unités s’activent et inhibent Charles/Diana. Un visage non relié pendant l’ISI fait baisser l’amorçage. Dans la vraie vie, plus on laisse passer de temps, plus de l’activation arrive dans tous les sens (on pense à autre chose). Le modèle est donc valable sur des temps courts, pas sur des temps longs.</p>
-<p>^-### 6.2. Prédictions</p>
+<p><img src="../../assets/Pasted image 20261113180012.png" class="img-fluid" style="width:70.0%"></p>
+<p>Simulons un amorçage sémantique. Si on présente donc ensuite le nom de Diana, l’URN « Diana » est activé ; le NIS « Diana » augmente et le NIS « Charles » diminue (plus d’inhibition de Diana). Dans la simulation, Charles avait besoin d’une vingtaine de cycles pour dépasser le seuil quand on présentait son visage ; Diana n’en a besoin que de moins de dix quand on présente son nom, car elle avait déjà été activée par la présentation de Charles. Le modèle rend donc compte de l’amorçage sémantique.</p>
+<p>Dans l’ancien modèle, l’<strong>amorçage sémantique dépendait d’un SOA court</strong> : il fallait que l’activation n’ait pas le temps de se dissiper. Ici, l’état d’équilibre atteint après l’arrêt de la présentation s’auto-entretient : on peut laisser passer de nombreux cycles sans que l’activation bouge. Ce n’est donc pas le temps qui compte, mais les stimuli qui interviennent entre l’amorce et la cible.</p>
+<p>Pour <strong>diminuer l’activation des NIS</strong>, il faut présenter autre chose : d’autres unités s’activent et inhibent Charles/Diana. Un visage non relié pendant l’ISI fait baisser l’amorçage. Dans la vraie vie, plus on laisse passer de temps, plus de l’activation arrive dans tous les sens (on pense à autre chose). Le modèle est donc valable sur des temps courts, pas sur des temps longs.</p>
+</section>
+</section>
+<section id="prédictions-en-amorçage-sémantique" class="level4">
+<h4 class="anchored" data-anchor-id="prédictions-en-amorçage-sémantique">3.3.4. Prédictions en amorçage sémantique</h4>
 <ul>
-<li><strong>Bruce &amp; Young</strong> : <span class="math inline">\(R &gt; N = NR\)</span>.</li>
-<li><strong>Burton et al.</strong> : <span class="math inline">\(R &gt;&gt;&gt; N &gt; NR\)</span>. Il faut se battre contre l’inhibition qui vient de l’amorce en NR. L’effet <span class="math inline">\(R &gt; N\)</span> est plus facile à détecter que <span class="math inline">\(N &gt; NR\)</span>, car il est plus fort.</li>
+<li>Bruce &amp; Young : <span class="math inline">\(R &gt; N = NR\)</span>.</li>
+<li>Burton et al.&nbsp;: <span class="math inline">\(R &gt;&gt;&gt; N &gt; NR\)</span>. Il faut se battre contre l’inhibition qui vient de l’amorce en NR. L’effet <span class="math inline">\(R &gt; N\)</span> est plus facile à détecter que <span class="math inline">\(N &gt; NR\)</span>, car il est plus fort.</li>
 </ul>
-<p>^-### 6.3. Interférence</p>
 <p>On observe de l’interférence quand le SOA est nul : un visage non relié gêne le visage relié en présentation simultanée. Deux sources d’activation en même temps → inhibition plus forte ; la compétition est plus difficile ; les effets d’activation sont plus faibles et les effets d’inhibition plus forts.</p>
-<p>^-## 7. Inférence dans un système interactif : le modèle « prosopagnosique »</p>
-<p>^-### 7.1. V-N et N-N chez le sujet sain</p>
-<p>On peut simuler une prosopagnosie en baissant l’efficacité des liens <strong>URV–NIS</strong>. On présente le visage de Charles puis le nom de Diana (V-N), ou le nom de Charles puis le nom de Diana (N-N).</p>
-<p>Chez les contrôles, V-N donne les résultats habituels. N-N donne les mêmes résultats, car l’amorçage sémantique est <strong>transmodal</strong>.</p>
-<p>^-### 7.2. Modèle lésé</p>
-<p>Chez le modèle lésé, l’activation se propage dans tout le système si on présente le visage de Charles, mais elle ne dépasse jamais le seuil de conscience car les activations passent moins bien. Cela suffit à monter un peu l’activation du NIS « Diana » par propagation. À la présentation de son nom, il est plus facile d’atteindre le seuil : c’est l’amorçage sémantique sur la décision de familiarité du nom Diana.</p>
+<p>On peut simuler une prosopagnosie en baissant l’efficacité des liens URV-NIS. On présente le visage de Charles puis le nom de Diana (V-N), ou le nom de Charles puis le nom de Diana (N-N). Chez les contrôles, V-N donne les résultats habituels. N-N donne les mêmes résultats, car l’amorçage sémantique est intermodal.</p>
+<p>Chez le modèle lésé, l’activation se propage dans tout le système si on présente le visage de Charles, mais elle <strong>ne dépasse jamais le seuil de conscience</strong> car les activations passent moins bien. Cela suffit à monter un peu l’activation du NIS « Diana » par propagation. À la présentation de son nom, il est plus facile d’atteindre le seuil : c’est l’amorçage sémantique sur la décision de familiarité du nom Diana.</p>
 <p>En N-N, le modèle lésé dépasse le seuil pour « Charles » et montre un effet d’amorçage sémantique. Globalement, on obtient la même chose qu’un sujet sain, car la prosopagnosie n’atteint pas les noms. Mais il faut plus de cycles qu’un sujet sain pour dépasser le seuil, et le gain d’amorçage est moins fort, alors que seuls les visages sont lésés.</p>
 <p>^-### 7.3. Conséquence : la correspondance anatomo-clinique</p>
-<p>On a donc un déficit comportemental sur les noms sans lésion du traitement des noms. L’idée d’une <strong>correspondance anatomo-clinique directe</strong> s’effondre : dès que le système est interactif, on ne peut plus faire correspondre directement un déficit à une lésion.</p>
+<p>On a donc un déficit comportemental sur les noms sans lésion du traitement des noms. L’idée d’une correspondance anatomo-clinique directe s’effondre : dès que le système est interactif, on ne peut plus faire correspondre directement un déficit à une lésion.</p>
 <p>Pourquoi ce résultat n’est-il pas étonnant ? Chez un sujet contrôle, les allers-retours URV–NIS se mettent en place même en présentation du nom : le NIS bénéficie des allers-retours URN–NIS et URV–NIS. Chez un patient prosopagnosique, les allers-retours URV–NIS sont lésés. Le patient n’est donc pas totalement pathologique sur les noms, mais « seulement » très mauvais.</p>
 <p>^-## 8. Effet de surface dans l’amorçage par répétition : un problème en suspens</p>
 <p>^-### 8.1. Le renforcement synaptique</p>
-<p>Les modèles précédents expliquaient l’amorçage par répétition par une baisse d’activation des URV, où se faisait la décision de familiarité. Maintenant, la décision se fait au niveau des NIS. Or l’amorçage par répétition est <strong>intramodal et les NIS ne séparent pas les modalités</strong>.</p>
-<p>Les auteurs considèrent donc qu’on <strong>renforce les synapses</strong> entre deux unités quand on présente une stimulation : l’activation passe plus facilement. L’amorçage par répétition est expliqué par le renforcement de la connexion UR–NIS.</p>
+<p>Les modèles précédents expliquaient l’amorçage par répétition par une baisse d’activation des URV, où se faisait la décision de familiarité. Maintenant, la décision se fait au niveau des NIS. Or l’amorçage par répétition est intramodal et les NIS ne séparent pas les modalités.</p>
+<p>Les auteurs considèrent donc qu’on renforce les synapses entre deux unités quand on présente une stimulation : l’activation passe plus facilement. L’amorçage par répétition est expliqué par le renforcement de la connexion UR–NIS.</p>
 <p>Pratiquement, les prédictions sont exactement les mêmes que celles de la baisse de seuil dans Bruce &amp; Young. On peut donc rester sur une réflexion de baisse de seuil, plus simple.</p>
 <p>^-### 8.2. Le problème de l’intramodalité</p>
-<p>Si on pousse le modèle IAC, les allers-retours d’activation devraient renforcer de nombreuses synapses. La présentation du nom après un visage devrait donc faciliter la dénomination : le modèle prédit un amorçage par répétition <strong>intermodal</strong>, alors que les résultats montrent un effet <strong>intramodal</strong>.</p>
-<p>Dans ce cours, on reste donc sur <strong>Bruce &amp; Young</strong> pour expliquer l’amorçage par répétition : baisse à long terme du seuil d’activation de l’UR, qui est propre à une modalité, donc effet intramodal.</p>
+<p>Si on pousse le modèle IAC, les allers-retours d’activation devraient renforcer de nombreuses synapses. La présentation du nom après un visage devrait donc faciliter la dénomination : le modèle prédit un amorçage par répétition intermodal, alors que les résultats montrent un effet intramodal.</p>
+<p>Dans ce cours, on reste donc sur Bruce &amp; Young pour expliquer l’amorçage par répétition : baisse à long terme du seuil d’activation de l’UR, qui est propre à une modalité, donc effet intramodal.</p>
 <p>Une expérience classique (Warren &amp; Morton, 1982) le montre : le seuil d’identification d’images baisse après un amorçage par la même image (35,7 ms), mais pas après un amorçage par le nom (43,6 ms, proche du non-amorcé à 43,8 ms).</p>
 <p>^-### 8.3. Ellis, Young, Flude &amp; Hay (1987)</p>
-<p>Dans le cadre de Bruce &amp; Young, on peut conclure, à partir des résultats de cette étude, qu’il existe des <strong>unités des visages</strong>. L’étude montre que l’amorçage par un visage est plus efficace que l’amorçage par un nom ou par un corps, ce qui soutient l’existence d’unités spécifiques aux visages.</p>
+<p>Dans le cadre de Bruce &amp; Young, on peut conclure, à partir des résultats de cette étude, qu’il existe des unités des visages. L’étude montre que l’amorçage par un visage est plus efficace que l’amorçage par un nom ou par un corps, ce qui soutient l’existence d’unités spécifiques aux visages.</p>
 <p>Dans l’expérience 1, la latence d’estimation de familiarité est de 774 ms après un amorçage par le visage, 850 ms après un nom écrit, 845 ms sans amorçage. Dans l’expérience 2, elle est de 788 ms après un visage, 897 ms après un corps, 909 ms sans amorçage.</p>
 <p>^-### 8.4. Bruce &amp; Valentine (1985)</p>
 <p>Tâche : estimer la familiarité d’un visage (oui/non). VI : correspondance de forme de surface entre l’amorçage et le test (même image, image similaire mais un peu différente, nom, pas d’amorce). VD : latence pour estimer la familiarité du visage en phase test.</p>
@@ -1043,14 +972,14 @@ Important
 <p>Prédictions : a-t-on une seule ou plusieurs unités de reconnaissance ? On peut amorcer par le visage ou le corps, et on remarque qu’avec cible visage le corps n’amorce pas. Ça va dans le sens d’une unité unique du visage pour les visages.</p>
 <p>^-### Modèle hybride</p>
 <p>On va aller plus loin. On va faire une expérience (Bruce &amp; Valentine, 1985) ou le réslultat attendu n’est pas celui qu’on voit au ta bleau. Une condition où on est amorçee par visage, une par le nom, et dans le visage, soit ils voient exactement le même image en etst ou légèrement différente (“similaire”) ou de la même personne mais lpus différente (“différente”). Logiquement, dans les 2 cas de visage, la baiasse devrait être équivalent si elles sont liées à la même unité de reconnaissanc. Le résultat contredit le modèle : différence significative entre même image et image similaire.</p>
-<p>On va donc séparer l’amorçage par répétition en 2 parties : le “vrai”, <strong>la baisse de seuil</strong>, constituant un amorçage généralisateur, où les caractéristiques propres du stimulus ne comptent pas, mais ce qui compte est “ce que c’est”. L’autre est “<strong>pictural</strong>” : il sert à expliquer le résultat précédent, il y aurait également une facilitation de très bas niveau dû au fait qu’on présente exactement la même image. S’il existe, alors il faut que ça marche uniquement quand c’est la même image. Et ça marche très bien : non amorcé et nom pas de baisse, similaire baisse de seuil dû à la baisse de seuil et même image ça et mémoire de très bas niveau. Cette mémoire picturale est donc solide. <em>Mais elle ne peut pas généraliser : elle ne sait aller que d’une image à elle-même. On ne peut pas partir d’une image vers une image similaire, sinon les URv ne servent plus à rien : elles ont justement été inventées pour généraliser, c’est-à-dire pour reconnaître le même visage malgré ses caractéristiques de surface (maquillage, lunettes, noir et blanc). L’amorçage généralisateur repose uniquement sur les UR : il ne dépend pas des caractéristiques propres du stimulus, mais de « ce que c’est ». C’est lui qui prouve l’existence des UR.</em></p>
+<p>On va donc séparer l’amorçage par répétition en 2 parties : le “vrai”, la baisse de seuil, constituant un amorçage généralisateur, où les caractéristiques propres du stimulus ne comptent pas, mais ce qui compte est “ce que c’est”. L’autre est “pictural” : il sert à expliquer le résultat précédent, il y aurait également une facilitation de très bas niveau dû au fait qu’on présente exactement la même image. S’il existe, alors il faut que ça marche uniquement quand c’est la même image. Et ça marche très bien : non amorcé et nom pas de baisse, similaire baisse de seuil dû à la baisse de seuil et même image ça et mémoire de très bas niveau. Cette mémoire picturale est donc solide. <em>Mais elle ne peut pas généraliser : elle ne sait aller que d’une image à elle-même. On ne peut pas partir d’une image vers une image similaire, sinon les URv ne servent plus à rien : elles ont justement été inventées pour généraliser, c’est-à-dire pour reconnaître le même visage malgré ses caractéristiques de surface (maquillage, lunettes, noir et blanc). L’amorçage généralisateur repose uniquement sur les UR : il ne dépend pas des caractéristiques propres du stimulus, mais de « ce que c’est ». C’est lui qui prouve l’existence des UR.</em></p>
 <p><em>Le modèle hybride, c’est donc l’addition des deux : on garde le modèle de Bruce &amp; Young (l’URv et sa baisse de seuil, qui généralise) et on lui ajoute un second mécanisme, la mémoire picturale, qui n’intervient que sur une image identique. Une image identique cumule alors les deux effets (baisse de seuil + aide de bas niveau) ; une image similaire ne bénéficie que de la baisse de seuil.</em></p>
 <p>^-### Le système de représentations perceptives (PRS)</p>
 <p>Le modèle hybride ne marche pas, <em>parce qu’il prédit une égalité entre « photo similaire » et « photo différente » : aucune des deux ne profite de la mémoire picturale, et toutes les deux passent par la même URv, donc elles devraient amorcer pareil. Or les résultats montrent bien une différence entre les deux (Ellis, Young, Flude &amp; Hay, 1987 : 697 ms en similaire contre 726 ms en différente). Les UR sont donc sensibles à la similarité, alors qu’elles devraient généraliser.</em> Et c’est embêtant car c’est la base du modèle, et on a 2 choix possible : dire que le modèle de base est faux, soit essayer de l’accomoder pour que ça marche. On va rajouter un nouveau système de mémoire dans les années 2000. On peut plus dire que l’amorçage <em>prouve l’existence des unités de reconnaissance : s’il s’agit d’un effet d’apprentissage, il relèverait de la mémoire procédurale (on est meilleur en perception parce qu’on s’est entraîné), et pas de la sémantique. Du coup on n’a plus rien pour prouver les UR.</em> On dit qu’il est du à des phénomènes procéduraux de construction d’invariants, on aurait une meemiore procéedural particulière pour la construction de code invariant.</p>
-<p>Et ça serait le <strong>PRS, perceptual representation system</strong>. On va se baser sur une seule tâche, de décision d’objet. Est-ce que cet objet est possible ou impossible en 3 dimensions ? On défend qu’on peut construire un <strong>code structual, donc des invariants, sur les objets possibles uniquement</strong>. On devrait donc avoir un effet d’amorçage répétition sur les objets possibles, et non sur les impossibles en raison de la défaillance des processus de construction d’objet.</p>
-<p>Et ça marche très bien, les prédictions sont confirmées par les résultats. Mais, pour que ça marche, il faut qu’il y ait une tâche en première phase qui demande de décision, et le problème c’est que ça <strong>ressemble beaucoup à la tâche de test</strong>. Et ça pose problème, car on a une énorme chance de <strong>contamination par la mémoire épisodique</strong> ; de plus, les deux phases se ressemblent. On suspecte donc énormément ce risque. Enfin, la notion d’un objet “possible” revient presque à dire que cet objet existe et qu’on le connaît, soit la familiarité. Donc cette tâche se rapproche aussi d’une <strong>tâche de décision de familiarité</strong>.</p>
-<p>Analyse de tâche : on peut avoir <strong>plusieurs sources pour répondre</strong> : la familiarité, la récupération de l’information épisodique. Comment ça va jouer pour les items possibles ? En positif sur les deux. Cependant, ça va aussi faire tendre à dire <strong>“possible” pour les items impossibles par familiarité</strong>. Mais va aider à dire que c’est <strong>impossible par récupération de l’information épisodique</strong>. Donc si un <strong>sujet a ces deux sources</strong>, et si elles sont aussi importantes, alors pas d’amorçage pour les items impossibles, et si pas aussi importants, alors l’effet sera dans tous les cas plus faible que pour possible.</p>
-<p>En fait, il y a trois sources : la récupération épisodique, la dextérité perceptive (pouvoir manipuler mentalement l’objet) et le sentiment de familiarité. Pour un objet <strong>impossible, seule la familiarité pousse à répondre “possible”</strong>.</p>
+<p>Et ça serait le PRS, perceptual representation system. On va se baser sur une seule tâche, de décision d’objet. Est-ce que cet objet est possible ou impossible en 3 dimensions ? On défend qu’on peut construire un code structual, donc des invariants, sur les objets possibles uniquement. On devrait donc avoir un effet d’amorçage répétition sur les objets possibles, et non sur les impossibles en raison de la défaillance des processus de construction d’objet.</p>
+<p>Et ça marche très bien, les prédictions sont confirmées par les résultats. Mais, pour que ça marche, il faut qu’il y ait une tâche en première phase qui demande de décision, et le problème c’est que ça ressemble beaucoup à la tâche de test. Et ça pose problème, car on a une énorme chance de contamination par la mémoire épisodique ; de plus, les deux phases se ressemblent. On suspecte donc énormément ce risque. Enfin, la notion d’un objet “possible” revient presque à dire que cet objet existe et qu’on le connaît, soit la familiarité. Donc cette tâche se rapproche aussi d’une tâche de décision de familiarité.</p>
+<p>Analyse de tâche : on peut avoir plusieurs sources pour répondre : la familiarité, la récupération de l’information épisodique. Comment ça va jouer pour les items possibles ? En positif sur les deux. Cependant, ça va aussi faire tendre à dire “possible” pour les items impossibles par familiarité. Mais va aider à dire que c’est impossible par récupération de l’information épisodique. Donc si un sujet a ces deux sources, et si elles sont aussi importantes, alors pas d’amorçage pour les items impossibles, et si pas aussi importants, alors l’effet sera dans tous les cas plus faible que pour possible.</p>
+<p>En fait, il y a trois sources : la récupération épisodique, la dextérité perceptive (pouvoir manipuler mentalement l’objet) et le sentiment de familiarité. Pour un objet impossible, seule la familiarité pousse à répondre “possible”.</p>
 <p>On va tenter de démontrer que ça est vrai ? (Ratcliff et McKoon). Probabilité de répondre « possible » en phase 2 :</p>
 <table class="caption-top table">
 <thead>
@@ -1102,9 +1031,9 @@ Important
 <p>Examen : à la fin du TD, il met à la fois le contenu du cours et un sujet type examen pour pouvoir s’entraîner. On aura ptet une question sur la fluence, il faut qu’on soit capable d’expliquer ce qu’est la différence et l’appliquer.</p>
 </blockquote>
 <p>La familiarité : l’idée est qu’on a quelque chose dans la tête qui s’allume, qui veut dire qu’on connaît. Autre conception, qui existe depuis longtemps, propose que ce n’ait pas un reflet de quelque chose activé en mémoire, mais une attribution en fonction de la facilité de traitement du stimulus. Ça ressemble un peu aux PRS, c’est-à-dire que c’est plus un effet procédural.</p>
-<p>Cela fait appel à une distinction particulière : que la mémoire qui sert à deux grandes choses. Porter des jugements sur le passé, et traiter le monde. Est-ce qu’on connaît cet objet, est-ce que c’est un moment que j’ai vécu… La mémoire est l’<strong>objet</strong> de notre attention. Mais c’est aussi un <strong>outil</strong>. Ça nous permet de nous dire que tel stimulus a telle caractéristique et va donc modifier la manière dont on traite l’environnement. On espère que cette modification est bien adaptative. Donc le participant, face un phénomène, a soit un indicateur de fluence, soit sentiment épistémique de savoir, soit modifier la façon dont il traite l’environnement.</p>
-<p>On va donc créer la <strong>fluence</strong> ou <strong>dextérité</strong> : quand on est en train d’interagir dans l’environnement, on peut ressentir une facilitation dans le traitement. Peut arriver dans deux cas : le passé facilite le traitement, soit parce que le stimulus lui-même est facile à traiter. Ce n’est pas une comparaison entre avant et maintenant, car dans ce cas, il faudrait une récupération du passé. Ce n’est donc pas fluent par rapport à avant, mais <strong>par rapport à maintenant</strong>, c’est-à-dire que dans l’environnement quelque chose est plus simple à traiter que le reste. C’est donc une notion relative : on va ressentir que ces stimuli sont plus faciles à traiter.</p>
-<p>Ce qui est dur à comprendre est que cet indicateur n’est pas un état épisteemique (sentimenet du sujnet), ça va être transforém en sentimenet de familiarité si le participant s’interrogr sur sa mémoire, donc traite sa mémoire comme objet. S’il n’est pas en train de le faire, ce sentiment ne sera pas attribué à de la familiarité mais <strong>à une caractéristique du stimulus</strong>. C’est très dur de le voir dans notre vie quotidienne, mais dans une tache on deamnde juste au participant un question de mémoire dite “cognitive” (“avez vous déjà vu ça”, “qu’est-ce que cet objet”). L’attribution n’est donc pas du tout un phénomène délibéré, mais plutôt orienté par la situation : <strong>est-ce qu’on est plutôt en train d’attribuer en terme de mémoire comme objet ou mémoire comme outil</strong>.</p>
+<p>Cela fait appel à une distinction particulière : que la mémoire qui sert à deux grandes choses. Porter des jugements sur le passé, et traiter le monde. Est-ce qu’on connaît cet objet, est-ce que c’est un moment que j’ai vécu… La mémoire est l’objet de notre attention. Mais c’est aussi un outil. Ça nous permet de nous dire que tel stimulus a telle caractéristique et va donc modifier la manière dont on traite l’environnement. On espère que cette modification est bien adaptative. Donc le participant, face un phénomène, a soit un indicateur de fluence, soit sentiment épistémique de savoir, soit modifier la façon dont il traite l’environnement.</p>
+<p>On va donc créer la fluence ou dextérité : quand on est en train d’interagir dans l’environnement, on peut ressentir une facilitation dans le traitement. Peut arriver dans deux cas : le passé facilite le traitement, soit parce que le stimulus lui-même est facile à traiter. Ce n’est pas une comparaison entre avant et maintenant, car dans ce cas, il faudrait une récupération du passé. Ce n’est donc pas fluent par rapport à avant, mais par rapport à maintenant, c’est-à-dire que dans l’environnement quelque chose est plus simple à traiter que le reste. C’est donc une notion relative : on va ressentir que ces stimuli sont plus faciles à traiter.</p>
+<p>Ce qui est dur à comprendre est que cet indicateur n’est pas un état épisteemique (sentimenet du sujnet), ça va être transforém en sentimenet de familiarité si le participant s’interrogr sur sa mémoire, donc traite sa mémoire comme objet. S’il n’est pas en train de le faire, ce sentiment ne sera pas attribué à de la familiarité mais à une caractéristique du stimulus. C’est très dur de le voir dans notre vie quotidienne, mais dans une tache on deamnde juste au participant un question de mémoire dite “cognitive” (“avez vous déjà vu ça”, “qu’est-ce que cet objet”). L’attribution n’est donc pas du tout un phénomène délibéré, mais plutôt orienté par la situation : est-ce qu’on est plutôt en train d’attribuer en terme de mémoire comme objet ou mémoire comme outil.</p>
 <p>Dans une première phase, on va faire entendre des phrases aux participants. Dans une seconde, on présente des phrases soit déjà présentées (anciennes) ou nouvelles. On les présente avec un niveau de bruitage différent. Le participant doit dire si le bruitage est fort ou faible. On commence avec des phrases très bruitées (je crois pour cacher le vrai but de la tâche), puis on les présente exactement avec même niveau de bruitage, et ici, on aura des phrases soit anciennes, soit nouvelles, et on voit que les participants vont dire que les phrases. Ils sont en train d’utiliser leur mémoire pour juger l’environnement, donc mémoire comme outil, et ici, ils vont juger que le niveau de bruit des phrases anciennes est moins fort.</p>
 <p>Un autre type d’expérience est qu’on présente une première phase très rapide et difficile, où on présente pendant des temps variables des stimuli. La tache est de dire si le stimulus est présenté longtemps ou non. On présente au début longtemps, puis on baise de plus en plus. Quand ils ont vraiment du mal, on présente exactement le même temps, et on leur met à la fois des mots déjà présentés et nouvaux. Les anciens sont traités plus facilement (utilisation de la mémoire comme outil, attribution d’une caractéristique de stimuli directement à la fluence, connaître = sentiment que c’est présenté plus longtemps), ils vont donc répondre qu’ils sont présentés plus longtemps. Les participants, après leur avoir explique la tache, sont persuadés que la tache n’a pas marché pour eux, et que l’effet est indépendant des attentes.</p>
 <p>Autre expérience à prendre avec des pincettes car mal répliquée. Dans une première phase, ils présentent des octogones très rapidement (tant que le participant croit ne pas l’avoir vu). En test, ils vont présenter des octogones avec un ancien et un nouveau, et souvent comment on fait la tache, il y aura des effets. Suivant le groupe de participants, on leur posera des questions différentes. À certains on demande à utiliser la mémoire comme outil, et l’autre reconnaissance d’occurrence, “est-ce qu’on vous l’a présnté tout à lheure”, ou mémoire comme objet. On va demander 3 types de jugements selon les groupes :</p>

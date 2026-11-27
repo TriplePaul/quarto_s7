@@ -1,9 +1,17 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/cours.html",
     "items": [
       "/matieres/dev/dev_cog.html",
-      "/matieres/dev/dev_cog_nombre.html"
+      "/matieres/dev/dev_cog_nombre.html",
+      "/matieres/cog_visu/cognition_visuelle_dup.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/annales.html",
+      "/cours.html"
     ]
   }
 ]
