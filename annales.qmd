@@ -1,3 +1,7 @@
+---
+image: assets/melenchon_2.png
+---
+
 # Annales
 
 ## Stats
