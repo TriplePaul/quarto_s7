@@ -9,43 +9,37 @@ website:
   navbar:
     left:
       - href: index.qmd
-        text: Home
-      - href: ./matieres/neuro_adulte.qmd
-        text: Neuro
-      - href: ./matieres/cognition_visuelle_mermillod.qmd
-        text: Mermillod
-      - href: ./matieres/dev_cog.qmd
-        text: Dupierrix
-      - href: ./matieres/modele_memoire_cours.qmd
-        text: Sémantique
-      - href: ./matieres/modele_memoire_moulin.qmd
-        text: Épisodique
+        text: "Home"
+      - href: cours.qmd
+        text: "Cours"
+      - href: annales.qmd
+        text: "Annales"
+
   sidebar:
-    style: "floating"
-    search: true
-    contents:
-      - href: index.qmd
-        text: Index
-      - text: "---"
-      - section: "EC07 Neurologie de l'adulte"
-        contents:
-          - ./matieres/neuro/neuro_partie_neuro.qmd
-          - ./matieres/neuro/neuro_partie_psycho.qmd
-      - text: "---"
-      - section: "EC08 Cognition Visuelle"
-        contents:
-        - ./matieres/cog_visu/cognition_visuelle_mermillod.qmd
-        - ./matieres/cog_visu/cognition_visuelle_dup.qmd
-      - text: "---"
-      - section: "EC09 Développement Cognitif"
-        contents:
-        - ./matieres/dev/dev_cog.qmd
-        - ./matieres/dev/dev_cog_nombre.qmd
-      - text: "---"
-      - section: "EC10 Modèles de la Mémoire"
-        contents:
-        - ./matieres/memoire/modele_memoire_cours.qmd
-        - ./matieres/memoire/modele_memoire_moulin.qmd
+    - title: "Cours"
+      style: "floating"
+      search: true
+      contents:
+        - cours.qmd
+        - section: "EC07 Neurologie de l'adulte"
+          contents:
+            - ./matieres/neuro/neuro_partie_neuro.qmd
+            - ./matieres/neuro/neuro_partie_psycho.qmd
+        - text: "---"
+        - section: "EC08 Cognition Visuelle"
+          contents:
+          - ./matieres/cog_visu/cognition_visuelle_mermillod.qmd
+          - ./matieres/cog_visu/cognition_visuelle_dup.qmd
+        - text: "---"
+        - section: "EC09 Développement Cognitif"
+          contents:
+          - ./matieres/dev/dev_cog.qmd
+          - ./matieres/dev/dev_cog_nombre.qmd
+        - text: "---"
+        - section: "EC10 Modèles de la Mémoire"
+          contents:
+          - ./matieres/memoire/modele_memoire_cours.qmd
+          - ./matieres/memoire/modele_memoire_moulin.qmd
 
 format:
   html:

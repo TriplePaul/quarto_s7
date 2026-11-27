@@ -1,0 +1,16 @@
+---
+listing:
+  id: notes-listing
+  type: grid
+  contents:
+    - "dev_cog.qmd"
+    - "dev_cog_nombre.qmd"
+    - "*dup.qmd"
+---
+
+# Cours
+
+Ici les cours qui sont à jour et correctement formatés :
+
+::: {#notes-listing}
+:::
