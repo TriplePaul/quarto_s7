@@ -80,6 +80,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -428,55 +457,24 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#la-récollection" id="toc-la-récollection" class="nav-link" data-scroll-target="#la-récollection">2. La récollection</a>
   <ul class="collapse">
   <li><a href="#contexte-théorique-1" id="toc-contexte-théorique-1" class="nav-link" data-scroll-target="#contexte-théorique-1">2.1. Contexte théorique</a></li>
+  <li><a href="#paradigmes-expérimentaux" id="toc-paradigmes-expérimentaux" class="nav-link" data-scroll-target="#paradigmes-expérimentaux">2.2. Paradigmes expérimentaux</a></li>
+  <li><a href="#phénomènes-quotidiens-1" id="toc-phénomènes-quotidiens-1" class="nav-link" data-scroll-target="#phénomènes-quotidiens-1">2.3. Phénomènes quotidiens</a></li>
   </ul></li>
-  <li><a href="#paradigmes-expérimentaux" id="toc-paradigmes-expérimentaux" class="nav-link" data-scroll-target="#paradigmes-expérimentaux">2. Paradigmes expérimentaux</a>
+  <li><a href="#la-mémoire-autobiographique" id="toc-la-mémoire-autobiographique" class="nav-link" data-scroll-target="#la-mémoire-autobiographique">3. La mémoire autobiographique</a>
   <ul class="collapse">
-  <li><a href="#paradigme-rememberknow-tulving-1985-gardiner-1988" id="toc-paradigme-rememberknow-tulving-1985-gardiner-1988" class="nav-link" data-scroll-target="#paradigme-rememberknow-tulving-1985-gardiner-1988">2.1. Paradigme “remember/know” (Tulving, 1985; Gardiner, 1988)</a></li>
+  <li><a href="#lempan-de-vie-et-le-pic-de-réminiscence" id="toc-lempan-de-vie-et-le-pic-de-réminiscence" class="nav-link" data-scroll-target="#lempan-de-vie-et-le-pic-de-réminiscence">3.1. L’empan de vie et le pic de réminiscence</a></li>
+  <li><a href="#le-soi---the-self" id="toc-le-soi---the-self" class="nav-link" data-scroll-target="#le-soi---the-self">3.2. Le soi - The Self</a></li>
   </ul></li>
-  <li><a href="#phénomèmnes-quotidiens" id="toc-phénomèmnes-quotidiens" class="nav-link" data-scroll-target="#phénomèmnes-quotidiens">3. Phénomèmnes quotidiens</a>
+  <li><a href="#la-métamémoire" id="toc-la-métamémoire" class="nav-link" data-scroll-target="#la-métamémoire">4. La métamémoire</a>
   <ul class="collapse">
-  <li><a href="#faux-souvenirs" id="toc-faux-souvenirs" class="nav-link" data-scroll-target="#faux-souvenirs">3.1. Faux souvenirs</a></li>
-  <li><a href="#amnésie-infantile" id="toc-amnésie-infantile" class="nav-link" data-scroll-target="#amnésie-infantile">3.2. Amnésie infantile</a></li>
-  <li><a href="#b.-modèle-intégratif-de-la-mémoire" id="toc-b.-modèle-intégratif-de-la-mémoire" class="nav-link" data-scroll-target="#b.-modèle-intégratif-de-la-mémoire">B. Modèle intégratif de la mémoire</a></li>
+  <li><a href="#définitions" id="toc-définitions" class="nav-link" data-scroll-target="#définitions">4.1. Définitions</a></li>
+  <li><a href="#comment-mesurer-la-métamémoire" id="toc-comment-mesurer-la-métamémoire" class="nav-link" data-scroll-target="#comment-mesurer-la-métamémoire">4.2. Comment mesurer la métamémoire ?</a></li>
+  <li><a href="#théories-des-delayed-jol" id="toc-théories-des-delayed-jol" class="nav-link" data-scroll-target="#théories-des-delayed-jol">4.3. Théories des delayed JOL</a></li>
   </ul></li>
-  <li><a href="#ii.-corrélats-neuronaux-de-la-familiarité" id="toc-ii.-corrélats-neuronaux-de-la-familiarité" class="nav-link" data-scroll-target="#ii.-corrélats-neuronaux-de-la-familiarité">II. Corrélats neuronaux de la familiarité</a></li>
-  <li><a href="#iii.-phénomènes-quotidiens" id="toc-iii.-phénomènes-quotidiens" class="nav-link" data-scroll-target="#iii.-phénomènes-quotidiens">III. Phénomènes quotidiens</a>
+  <li><a href="#linhibition" id="toc-linhibition" class="nav-link" data-scroll-target="#linhibition">5. L’inhibition</a>
   <ul class="collapse">
-  <li><a href="#a.-effet-de-simple-exposition" id="toc-a.-effet-de-simple-exposition" class="nav-link" data-scroll-target="#a.-effet-de-simple-exposition">A. Effet de simple exposition</a></li>
-  <li><a href="#b.-boucher-dans-le-bus" id="toc-b.-boucher-dans-le-bus" class="nav-link" data-scroll-target="#b.-boucher-dans-le-bus">B. Boucher dans le bus »</a></li>
-  <li><a href="#c.-phénomène-du-déjà-vu" id="toc-c.-phénomène-du-déjà-vu" class="nav-link" data-scroll-target="#c.-phénomène-du-déjà-vu">C. Phénomène du déjà-vu</a></li>
-  </ul></li>
-  <li><a href="#iv.-familiarité-dans-le-contexte-clinique" id="toc-iv.-familiarité-dans-le-contexte-clinique" class="nav-link" data-scroll-target="#iv.-familiarité-dans-le-contexte-clinique">IV. Familiarité dans le contexte clinique</a>
-  <ul class="collapse">
-  <li><a href="#a.-déjà-vu-épileptique" id="toc-a.-déjà-vu-épileptique" class="nav-link" data-scroll-target="#a.-déjà-vu-épileptique">A. Déjà-vu épileptique</a></li>
-  <li><a href="#b.-vieillissement" id="toc-b.-vieillissement" class="nav-link" data-scroll-target="#b.-vieillissement">B. Vieillissement</a></li>
-  <li><a href="#c.-schizophrénie" id="toc-c.-schizophrénie" class="nav-link" data-scroll-target="#c.-schizophrénie">C. Schizophrénie</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#cm4-familiarité" id="toc-cm4-familiarité" class="nav-link" data-scroll-target="#cm4-familiarité">CM4 familiarité</a>
-  <ul class="collapse">
-  <li><a href="#la-mémoire-autobiographique" id="toc-la-mémoire-autobiographique" class="nav-link" data-scroll-target="#la-mémoire-autobiographique">1. La mémoire autobiographique</a>
-  <ul class="collapse">
-  <li><a href="#lempan-de-vie-et-le-pic-de-réminiscence" id="toc-lempan-de-vie-et-le-pic-de-réminiscence" class="nav-link" data-scroll-target="#lempan-de-vie-et-le-pic-de-réminiscence">1.1. L’empan de vie et le pic de réminiscence</a></li>
-  </ul></li>
-  <li><a href="#le-soi---the-self" id="toc-le-soi---the-self" class="nav-link" data-scroll-target="#le-soi---the-self">2. Le soi - The Self</a>
-  <ul class="collapse">
-  <li><a href="#effet-de-référence-à-soi" id="toc-effet-de-référence-à-soi" class="nav-link" data-scroll-target="#effet-de-référence-à-soi">2.1. Effet de référence à soi</a></li>
-  <li><a href="#sms-de-conway-système-de-mémore-du-soi" id="toc-sms-de-conway-système-de-mémore-du-soi" class="nav-link" data-scroll-target="#sms-de-conway-système-de-mémore-du-soi">2.2. SMS de Conway (système de mémore du soi)</a></li>
-  </ul></li>
-  <li><a href="#perturbations-de-la-mémoire-autobiographique-et-le-soi" id="toc-perturbations-de-la-mémoire-autobiographique-et-le-soi" class="nav-link" data-scroll-target="#perturbations-de-la-mémoire-autobiographique-et-le-soi">3. Perturbations de la mémoire autobiographique et le soi</a></li>
-  </ul></li>
-  <li><a href="#cm5-chris-moulin" id="toc-cm5-chris-moulin" class="nav-link" data-scroll-target="#cm5-chris-moulin">CM5 Chris Moulin</a>
-  <ul class="collapse">
-  <li><a href="#métamémoire" id="toc-métamémoire" class="nav-link" data-scroll-target="#métamémoire">Métamémoire</a>
-  <ul class="collapse">
-  <li><a href="#définitions" id="toc-définitions" class="nav-link" data-scroll-target="#définitions">1. Définitions</a></li>
-  <li><a href="#mémoire-et-métamorphoe-maladie-dalzheimer" id="toc-mémoire-et-métamorphoe-maladie-dalzheimer" class="nav-link" data-scroll-target="#mémoire-et-métamorphoe-maladie-dalzheimer">3. Mémoire et métamorphoe : maladie d’Alzheimer</a></li>
-  </ul></li>
-  <li><a href="#linhibition" id="toc-linhibition" class="nav-link" data-scroll-target="#linhibition">L’inhibition</a>
-  <ul class="collapse">
-  <li><a href="#loubli" id="toc-loubli" class="nav-link" data-scroll-target="#loubli">L’oubli</a></li>
-  <li><a href="#quest-ce-que-linhibition" id="toc-quest-ce-que-linhibition" class="nav-link" data-scroll-target="#quest-ce-que-linhibition">Qu’est-ce que l’inhibition</a></li>
+  <li><a href="#loubli" id="toc-loubli" class="nav-link" data-scroll-target="#loubli">5.1. L’oubli</a></li>
+  <li><a href="#quest-ce-que-linhibition" id="toc-quest-ce-que-linhibition" class="nav-link" data-scroll-target="#quest-ce-que-linhibition">5.2. Qu’est-ce que l’inhibition</a></li>
   <li><a href="#inhibition-de-la-mémoire-épisodique" id="toc-inhibition-de-la-mémoire-épisodique" class="nav-link" data-scroll-target="#inhibition-de-la-mémoire-épisodique">Inhibition de la mémoire épisodique</a></li>
   </ul></li>
   </ul></li>
@@ -760,130 +758,127 @@ Note
 <p>Résultats par région d’intérêt :</p>
 <p><img src="../../assets/hippocampe_bic.png" class="img-fluid"></p>
 <p><img src="../../assets/parahippocampe_bic.png" class="img-fluid"></p>
+<p>On voit que chaque objet avait sa propre scène. Mais ça ne ressemble pas à la vraie vie : on se retrouve souvent dans les mêmes contextes et on doit retrouver des informations dans ces mêmes contextes. Comme retrouver notre voiture sur un parking particulier. Donc comment on fait pour distinguer des souvenirs issus du même contexte ? Il peut se produire des interférences quand des souvenirs partagent des éléments de contextes.</p>
 </section>
 <section id="interférence-et-mémoire-de-source" class="level4">
 <h4 class="anchored" data-anchor-id="interférence-et-mémoire-de-source">2.1.2. Interférence et mémoire de source</h4>
-<p>L’<strong>interférence</strong> est le fait que des souvenirs partagent les mêmes indicse de récupération se font concurrence au moment du rappel, ce qui produit l’oublie ou des confusions. Elles sont rétroactives ou proactives.</p>
-<!-- NOTE: point le plus récent -->
-<p>On voit que chaque objet avait sa propre scène. Mais ça ne ressemble pas à la vraie vie : on se retrouve souvent dans les mêmes contextes et on doit retrouver des informations dans ces mêmes contextes. Comme retrouver notre voiture sur un parking particulier. Donc comment on fait pour distinguer des souvenirs issus du même contexte ? Il peut se produire des interférences quand des souvenirs partagent des éléments de contextes.</p>
-<p>Il y a 2 grandes types d’interférences : rétroactives et proactives. Dans la première, une nouvelle interfère sur la précédente. //</p>
-<p>Qu’est-ce que rappel ou apprentissage par anticipation ? Dans un test de mémoire, on s’attend à des présentations des mots. Ici, on va devoir anticiper ce qu’il y aura par la suite : “est-ce que vous vous demandé du mot qu’on a appris ?”, “non on n’a pas appris”, “ok normal c chat”, et on continue comme ça, et quand on refait un passage on sait répondre vu qu’on a appris normalement. Au début on n’a rien à anticiper, on a juste des trigrammes (“XCM”, “KTQ”…). On fait 5 passage pour chaque liste.</p>
-<p>On avait des listes A et B soit similaires soit non similaires. // on veut voir comments les listes influences chacunes //</p>
-<!-- FIX: mettre le tableau jaune et bleu pâle -->
-<p>Pour retrouver la source du souvenir on doit retrouver le contexteg // On peut faire tâche de mémoire d’item puis tâche de mémoire de source. C’est pour ça qu’on dit souven tque la reconnaissance est plus dure que le rappel</p>
-<p>//</p>
-<p>Pour l’encodage, les représentations de souvenirs qu’on a sont distribuées. Chaque unité reçoit un agencement très unique. Chaque épisode est encodé indépendament des autres, ce qui aide à cette construction unique. Pour le rappel, à partir d’une information d’une aprtie de l’épisode on peut retrouver toutes les informatisin ??? qui permet de réativer l’épisode complet. Puis on décide si c’est pertinent, si on l’a imaginé ou vécu ou raconté. C’set comme ça qu’on distingue les souvenirs similaires.</p>
-<p>Mais ce qu’on a vu avant dépend de caractéristiques visuo-spatiales. Mais comment est-ce qu’on sépare les souvenirs en termes de temps ? On touche ici aux limites du modèle. On nous dit pas trop où est stocké le temps. Certains auteurs pensent qu’on a des régions spécifiques qui stockeraient le temps, d’autres pensent qu’il est distribué dans toutes les entités, qui permettrait de distinguer les souvenirs temporellement.</p>
+<p>L’<strong>interférence</strong> est le fait que des souvenirs partagent les mêmes indicse de récupération se font concurrence au moment du rappel, ce qui produit l’oublie ou des confusions. Elles sont rétroactives (RI) ou proactives (PI).</p>
+<p>On va utiliser une tâche de <strong>rappel ou apprentissage par anticipation</strong> : dans un test de mémoire, on s’attend à des présentations des mots. Ici, on va devoir anticiper ce qu’il y aura par la suite : “est-ce que vous vous souvenez du mot qu’on a appris ?”, “non on n’a pas appris”, “ok normal c chat”, et on continue comme ça, et quand on refait un passage, on sait répondre vu qu’on a appris normalement. Au début, on n’a rien à anticiper, on a juste des trigrammes (“XCM”, “KTQ”…). On fait 5 passage pour chaque liste.</p>
+<p><img src="../../assets/trigrammes.png" class="img-fluid"></p>
+<p>La similarité de deux types de listes apprises (A et B) est manipulée :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../assets/conditions_trigrammes.png" class="img-fluid figure-img"></p>
+<figcaption>Conditions d’interférences</figcaption>
+</figure>
+</div>
+<p>Résultats :</p>
+<ul>
+<li>Effet du type d’interférence, plus élevé dans la condition rétroactive</li>
+<li>Effet de la similarité des listes, plus élevé pour les listes similaires</li>
+</ul>
+<p><img src="../../assets/resultats_trigrammes.png" class="img-fluid" style="width:50.0%"></p>
+<p>On propose que pour retrouver la <strong>source du souvenir</strong>, on doit retrouver le contexte. On fait une tâche de mémoire d’items (reconnaissance, familiarité et/ou récollection) puis tâche de mémoire de source (ou quand et comment l’ai-je vu, surtout récollection).</p>
+<p><img src="../../assets/source_item.png" class="img-fluid" style="width:50.0%"></p>
+</section>
+<section id="modèle-intégratif-de-la-mémoire-1" class="level4">
+<h4 class="anchored" data-anchor-id="modèle-intégratif-de-la-mémoire-1">2.1.3. Modèle intégratif de la mémoire</h4>
+<p><img src="../../assets/modele_integratif_memoire.png" class="img-fluid" style="width:70.0%"></p>
+<p>On peut donc distinguer dans ce modèle comment distinguer des souvenirs contextuellement similaires :</p>
+<ul>
+<li>À l’encodage :
+<ul>
+<li>Chaque entité reçoit une <strong>représentation unique</strong>, construite de façon distribuée et hiérarchique</li>
+<li>Chaque épisode (même proche d’un autre) reçoit <strong>sa propre trace</strong> dans l’hippocampe</li>
+</ul></li>
+<li>Au rappel :
+<ul>
+<li>Récollection : une partie de l’épisode peut suffire à réactiver l’épisode complet</li>
+<li>Les détails de l’épisode sont ensuite relayés vers le système d’attribution</li>
+<li>Décision finale : le <strong>système d’attribution</strong> (cortex préfrontal) juge la pertinence des détails récupérés</li>
+</ul></li>
+</ul>
+<p>Cependant ce qu’on a vu avant dépend de caractéristiques visuo-spatiales. Comment est-ce qu’on sépare les souvenirs en termes de temps ? On touche ici aux limites du modèle. On nous dit pas trop où est stocké le temps. Certains auteurs pensent qu’on a des régions spécifiques qui stockeraient le temps, d’autres pensent qu’il est distribué dans toutes les entités, qui permettrait de distinguer les souvenirs temporellement.</p>
 </section>
 </section>
+<section id="paradigmes-expérimentaux" class="level3">
+<h3 class="anchored" data-anchor-id="paradigmes-expérimentaux">2.2. Paradigmes expérimentaux</h3>
+<section id="paradigme-rememberknow-tulving-1985-gardiner-1988" class="level4">
+<h4 class="anchored" data-anchor-id="paradigme-rememberknow-tulving-1985-gardiner-1988">2.2.1. Paradigme “remember/know” (Tulving, 1985; Gardiner, 1988)</h4>
+<p>On présente aux participants une liste de mots à mémoriser. Durant la phase de test, on leur demande d’identifier des items préalablement étudiés, parmis les distracteurs, selon deux types de jugements :</p>
+<ol type="1">
+<li>“<strong>Remember</strong>” : indique que le participant se souvient du contexte</li>
+<li>“<strong>Know</strong>” : sentimenet de familiarité sans récupération explicite des détails contextuels précis</li>
+</ol>
+<p>On va voir ce paradigme dans une étude de Davidson qui veut comparer les performances de familiarité entre participants sains et Parkinson. On fait une phase d’apprentissage de mots, puis de test après 10 minutes, où ils auto-évaluent leur réponse remember/know/new aux mots présentés. Récollection pas de différence, mais familiarité les sains ont des meilleurs scores. Mais il y a plusieurs problèmes avec cette étude, surtout avec le fait de faire une auto-évaluation des réponses :</p>
+<ol type="1">
+<li>Classification subjective (mesure indirecte)</li>
+<li>Critères personnels variables</li>
+<li>Des patients cérébrolésés peuvent avoir des souvenirs très précis mais faux</li>
+<li>Suejts sains peuvent avoir des souvenirs vifs et détaillés qu’ils non jamais vus</li>
+</ol>
 </section>
-<section id="paradigmes-expérimentaux" class="level2">
-<h2 class="anchored" data-anchor-id="paradigmes-expérimentaux">2. Paradigmes expérimentaux</h2>
-<section id="paradigme-rememberknow-tulving-1985-gardiner-1988" class="level3">
-<h3 class="anchored" data-anchor-id="paradigme-rememberknow-tulving-1985-gardiner-1988">2.1. Paradigme “remember/know” (Tulving, 1985; Gardiner, 1988)</h3>
-<p>La familiarité suffit pour les jugements de “remember”, pour le “know” on sait qu’on euhh jsp FIX: diapo</p>
-<p>On va voir ce paradigme dans une étude de Davidson qui veut comparer les performances des familiarité entre participants sains et parkinson. Recollection pas de différence, mais familiarité les sains ont des meilleurs scores. Mais il y a un problème dans le fait de demander aux participant eux-mêmes de distinguer entre réponses “Remember” et “Know” ? //</p>
-<p>Dissociation de processus est une mesure un peu moins directe. On demande pas au participant s’il se souvient directement. On produit de contexte d’apprentissages différents, écrit ou verbalement. On fait une tâche d’inclusion : dire “ancien” pour tous les mots appris de la liste 1 et 2; ou tâche d’exclusion : dire “ancien” seulement pour les mots appris de la lsite 2. Donc quand on dit ancien pour tous les mots appris /////</p>
-<p>Nos résultats sont donc assez robustes, avec 2 méthodes dfférnets on voit différentes observations. C’est donc une méthode un peu plus objective, car ce n’est pas les personnes qui jugent mais nous qui déduisons à partir des personnes.//</p>
+<section id="paradigme-de-dissociation-de-processus-jacoby-1991" class="level4">
+<h4 class="anchored" data-anchor-id="paradigme-de-dissociation-de-processus-jacoby-1991">2.2.2. Paradigme de “dissociation de processus” (Jacoby, 1991)</h4>
+<p>Dissociation de processus est une mesure un peu moins directe. On produit de contexte d’apprentissages différents, écrit ou verbalement. On présente aux participants deux lisets de mots consécutives :</p>
+<ul>
+<li>Phase d’encodage :
+<ul>
+<li>Liste 1 : mots écrits présentés un par un</li>
+<li>Liste 2 : mots présentés verbalement</li>
+</ul></li>
+<li>Phase de reconnaissance : liset 1, liste 2, mots nouveaux
+<ul>
+<li>Tâche d’<strong>inclusion</strong> : dire “ancien” pour tous les mots appris de la liste 1 et 2</li>
+<li>Tâche d’<strong>exclusion</strong> : dire “ancien” seulement pour les mots appris de la liste 2 (nécessite la récollection)</li>
+</ul></li>
+</ul>
+<p>Utilisation de familiarité / récollection en fonction de la tâche et de la justesse :</p>
+<p><img src="../../assets/jacoby_reponses.png" class="img-fluid" style="width:70.0%"></p>
+<p>À partir de ça on peut calculer la part de récupération et familiarité dans ce paradigme :</p>
+<p><img src="../../assets/calcul_part_familiarite.png" class="img-fluid"></p>
+<p>On va donc reprendre le but de la première étude avec ce paradigme. On a donc deux groupes de patients, sains et Parkinson. On comparer l’utilisation des deux mémoires : pas de différence pour la récollection, mais les patients Parkinson utilsent beaucoup moins la <strong>familiarité</strong> (en <span class="math inline">\(d'\)</span>).</p>
 </section>
 </section>
-<section id="phénomèmnes-quotidiens" class="level2">
-<h2 class="anchored" data-anchor-id="phénomèmnes-quotidiens">3. Phénomèmnes quotidiens</h2>
-<section id="faux-souvenirs" class="level3">
-<h3 class="anchored" data-anchor-id="faux-souvenirs">3.1. Faux souvenirs</h3>
-<p>Expérience de shopping mall qui est une étude où on se demande si on peut implenter un souvenir qui n’a jamais existé. On est allé voir les familles des participants pour les interroger sur des épisodes de leur enfance, et pendant le test on rajoute un épisode faux, qui décrit un enfant en détressse qui s’est perdu dans un centre commercial.</p>
-<p>Est-ce que juste imaginer quelque chose peut produire un souvenir de cette chose ? On appris des étudiants avec des questionnaires contenant 40 évènements dont des choses totalement improbables. Ils ont demandé pour chaque évènement sur une échelle de 1 à 8 la probabilté qu’il soit arrivé. On voit quand même une augmentation de certitude non négligeable pour ???</p>
+<section id="phénomènes-quotidiens-1" class="level3">
+<h3 class="anchored" data-anchor-id="phénomènes-quotidiens-1">2.3. Phénomènes quotidiens</h3>
+<p>Nos résultats sont donc assez robustes, avec 2 méthodes dfférentes on voit différentes observations. C’est donc une méthode un peu plus objective, car ce n’est pas les personnes qui jugent mais nous qui déduisons à partir des personnes.//</p>
+<section id="faux-souvenirs" class="level4">
+<h4 class="anchored" data-anchor-id="faux-souvenirs">2.3.1. Faux souvenirs</h4>
+<section id="shopping-mall" class="level5">
+<h5 class="anchored" data-anchor-id="shopping-mall">Shopping mall</h5>
+<p>Expérience de “shopping mall” qui est une étude où on se demande si on peut implanter un souvenir qui n’a jamais existé. On est allé voir les familles des participants pour les interroger sur des épisodes de leur enfance, et pendant le test, on rajoute un épisode faux, qui décrit un enfant en détresse qui s’est perdu dans un centre commercial.</p>
+<p>La tâche est que les participants ont reçu des descriptions de 4 souvenirs issus de leur enfance (trois vrai un faux). Ils devaient écrire ce dont ils se souvenaient de chaque. Ils le faisaient lors de deux entretiens (avec ce rappel et une évaluation de la clarté de 1 à 10). 25% des participants y ont cru, mais les faux souvenirs restent moins détaillés.</p>
+</section>
+<section id="imaginer-un-évènement-puis-sen-souvenir" class="level5">
+<h5 class="anchored" data-anchor-id="imaginer-un-évènement-puis-sen-souvenir">Imaginer un évènement puis s’en souvenir</h5>
+<p>Autre expérience, “<strong>inflation par l’imagination</strong>”, où on fait 2 séances espacées de 2 semaines :</p>
+<ol type="1">
+<li>40 événements, “est-ce que c’est arrivé y’a 10 ans ?” jugé de 1 à 8, dont 8 improbables</li>
+<li>Imaginer 4 événements jugés improbables, puis remplir à nouveau le questionnaire (car le premier était “perdu”)</li>
+</ol>
+<p>La certitude que l’évènement s’est déjà produit augmente plus souvent pour les événements imaginés. Comment ça pourrait marcher ? On propose qu’imaginer et se souvenir sont toutes des simulations construites à partir des mêmes éléments stockés (détails d’expériences passées, schémas). On pourrait donc faire une <strong>confusion de source</strong>. Une fausse récollection n’est pas équivalente à l’absencde du contenu en mémoire.</p>
+</section>
+<section id="le-paradigme-drm" class="level5">
+<h5 class="anchored" data-anchor-id="le-paradigme-drm">Le paradigme DRM</h5>
+<p>16 listes de 15 mots entendus, tous associés à un mot critique jamais présenté. Reconnaissance : “ancien ou nouveau ?”, si ancien, remember/know. Résultat : le mot critique reçoit autant de réponses “remember” que les mots réellement entendus. Les mots de la liste activent le mot critique par association. Si le monitoring de sa source échoue, il est attribué à tort à la liste, soit une fausse récollection.</p>
 <p>On relie différents éléments en mémoire mais ce sont des situations probable, et imaginer des choses ferait des liens entre des éléments probables. Donc, plus on répète ces expériences, on rajoute des détails, on juge un évènement plausible. Donc plus c’est détaillé et probable plus on y fait confiance.</p>
-<p>Paradigme DRM qui montre qu’on peut avoir une sensation très forte de familiarité alors qu’on a pas vu un item. juste mettre la diapo</p>
-</section>
-<section id="amnésie-infantile" class="level3">
-<h3 class="anchored" data-anchor-id="amnésie-infantile">3.2. Amnésie infantile</h3>
-<p>//</p>
-<p>Maturation du cerveau fait que des zones se développent de mani<code>´re hétérogène</code></p>
-</section>
-<section id="b.-modèle-intégratif-de-la-mémoire" class="level3">
-<h3 class="anchored" data-anchor-id="b.-modèle-intégratif-de-la-mémoire">B. Modèle intégratif de la mémoire</h3>
+<p>Paradigme DRM qui montre qu’on peut avoir une sensation très forte de familiarité alors qu’on a pas vu un item.</p>
 </section>
 </section>
-<section id="ii.-corrélats-neuronaux-de-la-familiarité" class="level2">
-<h2 class="anchored" data-anchor-id="ii.-corrélats-neuronaux-de-la-familiarité">II. Corrélats neuronaux de la familiarité</h2>
-</section>
-<section id="iii.-phénomènes-quotidiens" class="level2">
-<h2 class="anchored" data-anchor-id="iii.-phénomènes-quotidiens">III. Phénomènes quotidiens</h2>
-<section id="a.-effet-de-simple-exposition" class="level3">
-<h3 class="anchored" data-anchor-id="a.-effet-de-simple-exposition">A. Effet de simple exposition</h3>
-</section>
-<section id="b.-boucher-dans-le-bus" class="level3">
-<h3 class="anchored" data-anchor-id="b.-boucher-dans-le-bus">B. Boucher dans le bus »</h3>
-</section>
-<section id="c.-phénomène-du-déjà-vu" class="level3">
-<h3 class="anchored" data-anchor-id="c.-phénomène-du-déjà-vu">C. Phénomène du déjà-vu</h3>
-<section id="c.-1.-un-peu-dhistoire" class="level4">
-<h4 class="anchored" data-anchor-id="c.-1.-un-peu-dhistoire">C. 1. Un peu d’histoire</h4>
-</section>
-<section id="c.2.-contexte-théorique" class="level4">
-<h4 class="anchored" data-anchor-id="c.2.-contexte-théorique">C.2. Contexte théorique</h4>
-</section>
-<section id="c.3.-paradigmes-expérimentaux" class="level4">
-<h4 class="anchored" data-anchor-id="c.3.-paradigmes-expérimentaux">C.3. Paradigmes expérimentaux</h4>
-</section>
-</section>
-</section>
-<section id="iv.-familiarité-dans-le-contexte-clinique" class="level2">
-<h2 class="anchored" data-anchor-id="iv.-familiarité-dans-le-contexte-clinique">IV. Familiarité dans le contexte clinique</h2>
-<section id="a.-déjà-vu-épileptique" class="level3">
-<h3 class="anchored" data-anchor-id="a.-déjà-vu-épileptique">A. Déjà-vu épileptique</h3>
-</section>
-<section id="b.-vieillissement" class="level3">
-<h3 class="anchored" data-anchor-id="b.-vieillissement">B. Vieillissement</h3>
-<section id="b.1.-vieillissement-normal" class="level4">
-<h4 class="anchored" data-anchor-id="b.1.-vieillissement-normal">B.1. Vieillissement normal</h4>
-</section>
-<section id="b.2.-vieillissement-pathologique" class="level4">
-<h4 class="anchored" data-anchor-id="b.2.-vieillissement-pathologique">B.2. Vieillissement pathologique</h4>
-</section>
-</section>
-<section id="c.-schizophrénie" class="level3">
-<h3 class="anchored" data-anchor-id="c.-schizophrénie">C. Schizophrénie</h3>
-<section id="c.1.-lhypofamiliarité-le-syndrome-de-capgras" class="level4">
-<h4 class="anchored" data-anchor-id="c.1.-lhypofamiliarité-le-syndrome-de-capgras">C.1. L’hypofamiliarité : Le syndrome de Capgras</h4>
-</section>
-<section id="c.2.-lhyperfamiliarité-le-syndrome-de-fregoli" class="level4">
-<h4 class="anchored" data-anchor-id="c.2.-lhyperfamiliarité-le-syndrome-de-fregoli">C.2. L’hyperfamiliarité : Le syndrome de Fregoli</h4>
-<hr>
+<section id="amnésie-infantile" class="level4">
+<h4 class="anchored" data-anchor-id="amnésie-infantile">2.3.2. Amnésie infantile</h4>
+<p>L’amnésie infantile est l’incapacité à se souvenir des événements vécus dans les premières années la vie, il y a très peur de souvenirs avant 3 ans. Étude der Peterson montre que l’âge des premiers souvenirs d’enfance se décale vers une période plus tardive vers le temps, les souvenirs précoces des plus jeunes enfants sont instables et souvent vite oubliés, et les souvenir des enfants agés sont lpus conservés, reconnus et rappelés de façon cohérente.</p>
+<p>L’hypothèse principale est que la maturation du cerveau fait que des zones se développent de manière hétérogène, surtout pour le cortex préfrontal et l’hippocampe.</p>
 <!-- source: 4_memoire_autobiographique.md -->
 </section>
 </section>
 </section>
-</section>
-<section id="cm4-familiarité" class="level1">
-<h1>CM4 familiarité</h1>
-<!--toc:start-->
-<ul>
-<li><a href="#cm4-familiarité">CM4 familiarité</a>
-<ul>
-<li><a href="#1-la-mémoire-autobiographique">1. La mémoire autobiographique</a>
-<ul>
-<li><a href="#11-lempan-de-vie-et-le-pic-de-réminiscence">1.1. L’empan de vie et le pic de réminiscence</a></li>
-</ul></li>
-<li><a href="#2-le-soi-the-self">2. Le soi - The Self</a>
-<ul>
-<li><a href="#21-effet-de-référence-à-soi">2.1. Effet de référence à soi</a></li>
-<li><a href="#22-sms-de-conway-système-de-mémore-du-soi">2.2. SMS de Conway (système de mémore du soi)</a></li>
-</ul></li>
-<li><a href="#3-perturbations-de-la-mémoire-autobiographique-et-le-soi">3. Perturbations de la mémoire autobiographique et le soi</a> <!--toc:end--></li>
-</ul></li>
-</ul>
-<p>Révisions :</p>
-<ul>
-<li>[[i_4_familiarite_suite]]</li>
-<li>[[ii_memoire_autobiographique]]</li>
-</ul>
 <section id="la-mémoire-autobiographique" class="level2">
-<h2 class="anchored" data-anchor-id="la-mémoire-autobiographique">1. La mémoire autobiographique</h2>
+<h2 class="anchored" data-anchor-id="la-mémoire-autobiographique">3. La mémoire autobiographique</h2>
 <section id="lempan-de-vie-et-le-pic-de-réminiscence" class="level3">
-<h3 class="anchored" data-anchor-id="lempan-de-vie-et-le-pic-de-réminiscence">1.1. L’empan de vie et le pic de réminiscence</h3>
-<p>Modèle de la mémoire autobiographique qui prend en compte la mémoire sémantique ET épisodique. On va parler du pique de réminiscence pour expliquer la théorie d’organisation de mémoire autobiographique. Puis, on va parler du soi, et présenter le modèle central su <strong>Self Memory System</strong>, puis exemples concrets des troubles de la mémoire autobiographique.</p>
+<h3 class="anchored" data-anchor-id="lempan-de-vie-et-le-pic-de-réminiscence">3.1. L’empan de vie et le pic de réminiscence</h3>
+<p>La mémoire autobiographique prend en compte la mémoire sémantique ET épisodique. On va parler du pic de réminiscence pour expliquer la théorie d’organisation de mémoire autobiographique. Puis, on va parler du soi, et présenter le modèle central su <strong>Self Memory System</strong>, puis exemples concrets des troubles de la mémoire autobiographique.</p>
 <p>La mémoire épisodique n’est pas la même chose qu’autobiographique. <strong>C’est un système dynamique pour stocker les souvenirs personnels et connaissances dans un hiérarchie</strong>, portée par l’identité et le soi.</p>
 <p>On donne des mots et on demande aux gens de récupérer des souvenirs spécifiques de leur passé. Mais la difficulté est d’évaluer si le souvenir est vrai ou faux. Mais on s’en fiche, dans la mémoire autobiographique, on sait que la mémoire est une reconstruction du passé, et on ne va pas vérifier les contenus de ces souvenirs. On se rend compte qu’il y a amnésie infantile, puis <strong>pic de réminiscence</strong> (15 à 25 ans). Celui-là se retrouve dans toutes les tâches de ce genre, en excluant quelques différences individuelles.</p>
 <p>Un article a tenté d’expliquer cet effet, en explorant les types de souvenirs. On prend des gens et leur demande les évènements les plus importants de l’histoire du monde au cours de leur vie. Et on retrouve aussi cet effet. On a donc un effet systématique du pic de réminiscence. Et ce n’est pas un test de mémoire autobiographique. Pareil pour les connaissances de culture générale. Pareil si on demande aux gens leurs albums préférés et plein de trucs.</p>
@@ -897,24 +892,34 @@ Note
 </ul>
 <p>Donc on fait une étude que je n’ai pas écoutée et on a un pic de réminiscence surtout d’évènements positifs, et à partir de 31 ans la vie est horrible.</p>
 </section>
-</section>
-<section id="le-soi---the-self" class="level2">
-<h2 class="anchored" data-anchor-id="le-soi---the-self">2. Le soi - The Self</h2>
-<section id="effet-de-référence-à-soi" class="level3">
-<h3 class="anchored" data-anchor-id="effet-de-référence-à-soi">2.1. Effet de référence à soi</h3>
-<p>Le “soi” à différentes définitions, et en recherche c’est plutôt une définition objective, de choses qui nous définissent. Il y a plusieurs manière de le mesurer dans le contexte dans la mémoire.</p>
+<section id="le-soi---the-self" class="level3">
+<h3 class="anchored" data-anchor-id="le-soi---the-self">3.2. Le soi - The Self</h3>
+<section id="effet-de-référence-à-soi" class="level4">
+<h4 class="anchored" data-anchor-id="effet-de-référence-à-soi">3.2.1. Effet de référence à soi</h4>
+<p>Le “soi” à différentes définitions, et en recherche c’est plutôt une définition objective, de choses qui nous définissent. Il y a plusieurs manières de le mesurer dans le contexte dans la mémoire.</p>
 <p><strong>Effet de référence à soi</strong> : test où on encode les informations où on encode en relation à autre ou soi. Encoder par rapport à nous-même nous permet de beaucoup mieux organiser les informations. Participants encodent 80 adjectifs (2 conditions d’encodage bloqués) : référence aux autres (“est-ce que ce mot décxrit Einstein ?” -&gt; yes/no) ou à soi (“est-ce que ce mot me décrit ?” yes/no). Les résultats yes/no ne sont pas importants, mais quelle catégorie d’information, on a le plus encodé. Et on se souvient donc beaucoup des choses encodées par rapport à soi.</p>
-<p>Pour chaque apsect de notre identité, on aurait une population de souvenirs regroupée autour de ça. On a donc utilisé le TST (twenty-statements tests), fait par les sociologues pour mesurer l’identité, ou description de la personne. On a pris ces identités et demandé de récupérer les souvenirs liés aux aspects de l’identité.</p>
-<p>// C’est pas l’âge qui compte mais les relations entre évènemnts et identité.</p>
-<p>Donc l’idée c’est que les souvenirs autobiographiques sont regorupés aux moments clés de la formation d’identité, quelque soit l’âge.</p>
+<p>Pour chaque aspect de notre identité, on aurait une population de souvenirs regroupée autour de ça. On a donc utilisé le TST (twenty-statements tests), fait par les sociologues pour mesurer l’identité, ou description de la personne. On a pris ces identités et demandé de récupérer les souvenirs liés aux aspects de l’identité.</p>
+<p>C’est pas l’âge qui compte mais les <strong>relations entre évènemnts et identité</strong>. Donc l’idée c’est que les souvenirs autobiographiques sont regorupés aux moments clés de la formation d’identité, quelque soit l’âge.</p>
 </section>
-<section id="sms-de-conway-système-de-mémore-du-soi" class="level3">
-<h3 class="anchored" data-anchor-id="sms-de-conway-système-de-mémore-du-soi">2.2. SMS de Conway (système de mémore du soi)</h3>
-<p><img src="../../assets/Pasted image 20261121110608.png" class="img-fluid"></p>
-<p><strong>Modèle self-memory systeme de Conway</strong> : on a une base de données autobiographiques, et le “soi de travail” en ref blague à Baddeley. Ça serait un soi temporaire. C’est un modèle constructiviste de la mémoire, mais c’est un problème car il y a des liens bidirectionnels donc le soi va impacter les souvenirs stockées, et les souvenirs récupérés vont influencer le soi. C’est donc très difficile à tester.</p>
-<p>On a une mémoire autobiographique qui serait un construction mentale très riche faite d’une combinaison de mémoire épisodique qui donne une image sensorielle très proche de ce qu’on a vécu, et du Self à Long Terme. Il y aurait un schéma d’organisation des mémoires autobiographiques, sur les périodes de vie (j’étais en thèse, en couple avec Tess…).</p>
+<section id="sms-de-conway-système-de-mémore-du-soi" class="level4">
+<h4 class="anchored" data-anchor-id="sms-de-conway-système-de-mémore-du-soi">3.2.2. SMS de Conway (système de mémore du soi)</h4>
+<p><img src="../../assets/Pasted image 20261121110608.png" class="img-fluid" style="width:70.0%"></p>
+<p><strong>Modèle self-memory systeme de Conway</strong> : on a une base de données autobiographiques, et le “soi de travail” en ref blague à Baddeley. Ça serait un soi temporaire. C’est un modèle constructiviste de la mémoire, mais c’est un problème, car il y a des liens bidirectionnels donc le soi va impacter les souvenirs stockées, et les souvenirs récupérés vont influencer le soi. C’est donc très difficile à tester.</p>
+<p>On a une mémoire autobiographique qui serait une construction mentale très riche faite d’une combinaison de <strong>mémoire épisodique</strong> qui donne une image sensorielle très proche de ce qu’on a vécu, et du <strong>Self à Long Terme</strong>. Il y aurait un schéma d’organisation des mémoires autobiographiques, sur les périodes de vie (j’étais en thèse, en couple avec Tess…).</p>
 <p><img src="../../assets/Pasted image 20261121105824.png" class="img-fluid"></p>
-<p><strong>Comment lire les deux figures</strong> (même modèle, deux niveaux : l’architecture à gauche, la récupération à droite).</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lecture des figures
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Comment lire les deux figures</strong> : (même modèle, deux niveaux : l’architecture à gauche, la récupération à droite). /!\ j’ai utilisé de l’ia sinon impossible de comprendre lol désolé……. /!\</p>
 <p>Figure de gauche, la construction : un souvenir autobiographique n’est pas stocké d’un bloc, il est assemblé. Le système de mémoire épisodique fournit une image sensorielle proche du vécu ; cette image est indexée par le Self à long terme, qui contient les connaissances autobiographiques de base (schéma historique personnel, périodes de vie, événements généraux) et le self conceptuel (script personnel, self possible, croyance). Les doubles flèches = circulation dans les deux sens.</p>
 <p>Figure de droite, la récupération, à lire par le bas :</p>
 <ul>
@@ -924,90 +929,120 @@ Note
 <li>l’<strong>accès direct</strong> permet de tomber directement sur les détails spécifiques, sans remonter la hiérarchie.</li>
 </ul>
 <p>Les diapos ne légendent pas les flèches roses et rouges : le sens ci-dessus est une lecture de la figure, pas du cours.</p>
+</div>
+</div>
+</div>
 </section>
-</section>
-<section id="perturbations-de-la-mémoire-autobiographique-et-le-soi" class="level2">
-<h2 class="anchored" data-anchor-id="perturbations-de-la-mémoire-autobiographique-et-le-soi">3. Perturbations de la mémoire autobiographique et le soi</h2>
+<section id="perturbations-de-la-mémoire-autobiographique-et-le-soi" class="level4">
+<h4 class="anchored" data-anchor-id="perturbations-de-la-mémoire-autobiographique-et-le-soi">3.2.3. Perturbations de la mémoire autobiographique et le soi</h4>
 <ul>
 <li>Confabulation : génération de faux souvenirs, pour combler trous de la mémoire ou identité</li>
 <li>Fugue dissociative</li>
 <li>Alzheimer : lien entre fonctions exécuives et la mémoire autobiographique. Impact sur l’identité, on trouve des baisses sur une mesure de “l’intensité de l’identité”. Mais c’est corrélationnel.</li>
 </ul>
 <p>Mais l’identité à une composante sémantique et épisodique, il est très très rare de tout perdre.</p>
-<hr>
 <!-- source: 5_process_haut_niveau.md -->
 </section>
 </section>
-<section id="cm5-chris-moulin" class="level1">
-<h1>CM5 Chris Moulin</h1>
-<section id="métamémoire" class="level2">
-<h2 class="anchored" data-anchor-id="métamémoire">Métamémoire</h2>
-<p>Plan :</p>
-<ul>
-<li>Définitions</li>
-<li>Comment mesurer la métamémoire ?
-<ul>
-<li>JOL</li>
-<li>FOK</li>
-</ul></li>
-<li>Théorie : Delayed JOLs</li>
-<li>Théorie : Koriat - accessibilitee</li>
-<li>Et alors ? Métamémoire dans la maladie d’alzheimer</li>
-</ul>
-<p>Bons exemples de métamémoire est le mot sur le bout de la lampe qui est deux choses : Échec de la récupération, mais avec une recherche de celle-ci. On utilise ce sentiment pour orienter la recherche en mémoire. C’est la petite voix de la <strong>métamémoire</strong>.</p>
+</section>
+<section id="la-métamémoire" class="level2">
+<h2 class="anchored" data-anchor-id="la-métamémoire">4. La métamémoire</h2>
 <section id="définitions" class="level3">
-<h3 class="anchored" data-anchor-id="définitions">1. Définitions</h3>
-<p>La <strong>métacognition</strong> est le contrôle et évaluation de nos propres processus cognitifs. La métamémoire est la métacognition pour la mémoire. C’est très utilisé pour étudier la conscience, mais vient du développement dans les années 80. Flavell, psychologue stadiste, propose qu’il y a des processus prédéterminant pour le développement, surtout fonction permettant la régulation et l’orchestration des processus cognitifs. Ça a soutenu les approches types “apprendre à apprendre”.</p>
-<p>Il y a les connaissances métacognitives, qui sont les connaissances générales acquises, et les expériences métacognitive, qui sont les connaissances en rapport avec une tâche en cours. Ces dernières comprennent fluence, déjà-vu.</p>
+<h3 class="anchored" data-anchor-id="définitions">4.1. Définitions</h3>
+<p>Bons exemples de métamémoire est le mot sur le bout de la lampe qui est deux choses : Échec de la récupération, mais avec une recherche de celle-ci. On utilise ce sentiment pour orienter la recherche en mémoire. C’est la petite voix de la <strong>métamémoire</strong>.</p>
+<p>La <strong>métacognition</strong> est le contrôle et évaluation de nos propres processus cognitifs. La <strong>métamémoire</strong> est la métacognition pour la mémoire. C’est très utilisé pour étudier la conscience, mais vient du développement dans les années 80. Flavell, psychologue stadiste, proposait qu’il y a des processus prédéterminant pour le développement, surtout fonction permettant la régulation et l’orchestration des processus cognitifs. Ça a soutenu les approches types “apprendre à apprendre”.</p>
+<p>Il y a les <strong>connaissances métacognitives</strong>, qui sont les connaissances générales acquises, et les <strong>expériences métacognitive</strong>, qui sont les connaissances en rapport avec une tâche en cours. Ces dernières comprennent fluence, déjà-vu.</p>
 <p>Modèle très connu de la métamémoire :</p>
-<p><img src="../../assets/Pasted image 20261123082300.png" class="img-fluid"></p>
-<p>Entre les deux niveaux de mémoire, ce sont les processus représentants les flux d’informations entre les niveaux de traitements. Cette boucle a donc la capacité d’optimiser les processus de mémorisation.</p>
-<!-- FIX: il me manque quelques explications pour ^ -->
-<p>Pour le <strong>monitoring</strong>, on utilise estimation/prédictions pour rappel et la reconnaissance. On compare toujours celles-ci aux vraies performances : l’idée est que mesurer la performance est le niveau objet, et avoir une représentation de la performance est au niveau méta. Et pour le <strong>contrôle</strong>, on va mesurer les capacité des individus à utiliser/modifier les stratégies mnésiques.</p>
-<p>Le <strong>JOL</strong> (Judgement of Learning) est la capacité à prédire le rappel d’un item lors de l’apprentissage. JOLs peuvent se faire immédiatement après l’encodage (Immediate JOLs) ou après un délai (delayed JOL). Généralement, on le fait item par item en paires de mots</p>
+<p><img src="../../assets/Pasted image 20261123082300.png" class="img-fluid" style="width:70.0%"></p>
+<p>Entre les deux niveaux de mémoire, ce sont les processus représentant les flux d’informations entre les niveaux de traitements. Cette boucle a donc la capacité d’optimiser les processus de mémorisation.</p>
+</section>
+<section id="comment-mesurer-la-métamémoire" class="level3">
+<h3 class="anchored" data-anchor-id="comment-mesurer-la-métamémoire">4.2. Comment mesurer la métamémoire ?</h3>
+<p>Pour mesurer ces processus dans le cadre de la reconnaissance :</p>
+<ul>
+<li>Pour le <strong>monitoring</strong>, on utilise estimation/prédictions. On compare toujours celles-ci aux vraies performances : l’idée est que mesurer la performance est le niveau objet, et avoir une représentation de la performance est au niveau méta</li>
+<li>Pour le <strong>contrôle</strong>, on va mesurer les capacités des individus à utiliser/modifier les stratégies mnésiques</li>
+</ul>
+<!-- TODO: et dcp jol ou fok ? -->
+<section id="judgement-of-learning-jol" class="level4">
+<h4 class="anchored" data-anchor-id="judgement-of-learning-jol">4.2.1. Judgement of learning (JOL)</h4>
+<p>Le <strong>JOL</strong> (Judgement of Learning) est la capacité à prédire le rappel d’un item lors de l’apprentissage. Les JOLs peuvent se faire immédiatement après l’encodage (immediate JOLs) ou après un délai (delayed JOLs). Généralement, on le fait item par item en paires de mots</p>
 <p><img src="../../assets/Pasted image 20261123082803.png" class="img-fluid"></p>
 <p>Nos prédictions avec les JOLs sont beaucoup plus précises après un délai. Et cet effet est la base de beaucoup de théories en métamémoire. Donc pour la mesurer dans cette situation, il faut avoir une mesure de précision : un bon niveau est de savoir prédire notre performance, quels sont les mots mieux encodés que les autres. On peut donc faire une corrélation (“gamma score”) qui regarde association entre prédictions et performances pour chaque individu. Et ce gamma score est bien plus haut après un délai.</p>
-<p>Comment ça fonctionne ? C’est évident : si on doit aller vite, l’information reste en MdT donc il est dur de savoir si on va la perdre ou pas, alors que le JOL différée se base uniquement sur la MLT. Le JOL est basé sur la récupération de l’information.</p>
+<p>Comment ça fonctionne ? C’est évident : si on doit aller vite, l’information reste en MdT donc il est dur de savoir si on va la perdre ou pas, alors que le JOL différée se base uniquement sur la MLT (plus précis). Le JOL est basé sur la récupération de l’information.</p>
+</section>
 <section id="feeling-of-knowing-fok" class="level4">
-<h4 class="anchored" data-anchor-id="feeling-of-knowing-fok">2.2. Feeling-of-Knowing (FOK)</h4>
+<h4 class="anchored" data-anchor-id="feeling-of-knowing-fok">4.2.2. Feeling of knowing (FOK)</h4>
 <p>FOK est la prédiction de reconnaissance d’items non récupérés en mémoire. // Le mot sur le bout de la langue en est un cas extrême. Elle nous aide à orienter une recherche pour pouvoir retrouver l’item.</p>
 <p><img src="../../assets/Pasted image 20261123083826.png" class="img-fluid"></p>
 <p>Mode de prédiction : échelle de pourcentage, ou prédiction binaire. C’est une bonne mesure car ça représente quelque chose de la vie quotidienne, mais on retrouve la même chose que pour le JOL : on a une prédiction item par item et personne par personne ???</p>
 <p>On peut faire exactement la même chose dans la mémoire sémantique (avant, épisodique). C’est un paradigme idéal.</p>
 </section>
 </section>
-<section id="mémoire-et-métamorphoe-maladie-dalzheimer" class="level3">
-<h3 class="anchored" data-anchor-id="mémoire-et-métamorphoe-maladie-dalzheimer">3. Mémoire et métamorphoe : maladie d’Alzheimer</h3>
-<p>On a des prédictions très peu précises, un gamma même légèrement négatif. Mails il y a une différence entre mémoire sémantique et épisodique : uniquement la mémoire épisodique est altérée. Mais comment expliquer tout ça en termes de théories ?</p>
-<p>L’<strong>approche d’accessibilité</strong> de Koriat dit que pour les JOLs il y a plusieurs indices qu’on peut utiliser pour nos jugement métacognitifs. Certains sont plus ou moins intéressants pour la mémoire et plus ou moins en lien avec les expéreinces métacognitives. On a des indices <strong>intrinsèques</strong> commes les caractéristiques des items. On peut donc pendant une phase d’encodage utiliser ces facteurs pour évaluer notre performance (c’est long, c’est en anglais, c’est un prénom…). Indices <strong>extrinsèques</strong> (est-ce qu’il y a du bruit, combien d’items j’ai à mémoriser…). Ces deux indices sont de la métacognition car c’est un contrôle de haut niveau mais moins cool cdar pas de rretour direct de la trace dans la mémoire. Les <strong>indices mnémoniques</strong> sont l’évaluation du niveau d’apprentissage des items, ressentis donné par la trace en direct.</p>
-<p>2 possibilités pour son modèle. Impact des facteurs intrinsèques et extrinsèques sur les processus de la mémoire, et on utilise la mémoire pour JOL ou FOK; ou quelque chose de plus direct, on utilise les caractéristiques des mots directement pour JOL ou FOK. En vrai c’est un peu les deux. Pour disitnguer les deux, on a des jOL immédiats qui se basent surtout sur les petits facteusr, mais si on met du délai elle va réflechir ou jsp quoi et passer pa mnémonique. Le but c’est d’encourage les participants à utiliser les indices mnémoniques.</p>
-<p><img src="../../assets/Pasted image 20261123084858.png" class="img-fluid"></p>
+<section id="théories-des-delayed-jol" class="level3">
+<h3 class="anchored" data-anchor-id="théories-des-delayed-jol">4.3. Théories des delayed JOL</h3>
+<section id="théorie-de-laccessibilité" class="level4">
+<h4 class="anchored" data-anchor-id="théorie-de-laccessibilité">4.3.1. Théorie de l’accessibilité</h4>
+<p>On a des prédictions très peu précises, un gamma même légèrement négatif. Mais il y a une différence entre mémoire sémantique et épisodique : uniquement la mémoire épisodique est altérée. Mais comment expliquer tout ça en termes de théories ?</p>
+<p>L’<strong>approche d’accessibilité</strong> de Koriat dit que pour les JOLs il y a plusieurs indices qu’on peut utiliser pour nos jugements métacognitifs. Certains sont plus ou moins intéressants pour la mémoire et plus ou moins en lien avec les expériences métacognitives :</p>
+<ul>
+<li>On a des indices <strong>intrinsèques</strong> comme les caractéristiques des items. On peut donc pendant une phase d’encodage utiliser ces facteurs pour évaluer notre performance (c’est long, c’est en anglais, c’est un prénom…)</li>
+<li>Indices <strong>extrinsèques</strong> (est-ce qu’il y a du bruit, combien d’items j’ai à mémoriser…)</li>
+</ul>
+<p>Ces deux indices sont de la métacognition car c’est un contrôle de haut niveau mais moins cool car pas de retour direct de la trace dans la mémoire. Les <strong>indices mnémoniques</strong> sont l’évaluation du niveau d’apprentissage des items, ressentis donnés par la trace en direct.</p>
+<p>Deux possibilités pour l’origine des JOL et FOK dans ce modèle. Il y aurait 3 types d’indices sur lesquels on se base :</p>
+<ol type="1">
+<li>Intrinsèques : caractéristiques des items</li>
+<li>Extrinsèques : caractéristiques de la tache</li>
+<li>Mnémoniques : évaluation du niveau d’apprentissage des items</li>
+</ol>
+<p><img src="../../assets/Pasted image 20261123084858.png" class="img-fluid" style="width:70.0%"></p>
+<p>Le modèle a 2 possibilités :</p>
+<ol type="1">
+<li>Impact des facteurs intrinsèques et extrinsèques médiés par les indices mnémoniques</li>
+<li>Impact des facteurs intrinsèques et extrinsèques par médiation des indices mnémoniques, et direct</li>
+</ol>
 <p>Les indices mnémoniques :</p>
 <ul>
-<li>La familiarité avec l’indice : dans une tentative de rappel où il faut faire une préditions pour la suite, on va utiliser la familiarité pour faire une prédiction du rappel de cette information</li>
-<li>La facilité perçu d’encodage et de récupération (flutente : “encoding and retrival fluency”)</li>
-<li>Informations partielles : même si on sait pas vraiment on peut relier quelque chose de relié. Ça fait appel à la remémoration.</li>
+<li>La <strong>familiarité avec l’indice</strong> : dans une tentative de rappel où il faut faire une prédiction pour la suite, on va utiliser la familiarité pour faire une prédiction du rappel de cette information. Permet une réponse rapide.</li>
+<li>La <strong>facilité perçue d’encodage et de récupération</strong> (fluente : “encoding and retrieval fluency”)</li>
+<li><strong>Informations partielles</strong> : même si on sait pas vraiment, on peut relier quelque chose de relié. Ça fait appel à la remémoration.</li>
 </ul>
-<p>L’indice qu’on voit aura des processus de reconnaissance. Quand on voit ce mot on va faire appel à tous les processus reconnaissance avec familiarité et remémoration et on va utiliser pour faire les préditions. On va regarder les JOLs qui sont fait rapidements, et on peut mˆ´me dans les FOK donner l’infomraiton de familiairité en présntant plusierus fois les mêmes informaitons, ce qui va manipuler les probabilités (de faire des prédictions ?).</p>
-<p>Chose à retenir : on fait le tour des processus dans la mémoire qui sont métacognitifs, soit faire un jugement sur paires de mots avec indices donnés, les processus utilisés pour faire des prédictions sont les processus reliés à la mémoire et la reconnaissance. C’es processus de haut niveau sont connaissancres et expériences basées sur la reconnaissance te processus mnésiques déjà existants. Les jugements métacognitifs utilisent des processus disponibles.</p>
-<hr>
+<p>Patients d’alzheimer ne peuvent pas préidre la reconnaissance future d’un item oublié.</p>
+<p><img src="../../assets/fok_alzheimer.png" class="img-fluid"></p>
+<!-- FIX: finir la ^ -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>À retenir
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>On fait le tour des processus dans la mémoire qui sont métacognitifs, soit pour faire un jugement sur paires de mots avec indices donnés, les processus utilisés pour faire des prédictions sont les processus reliés à la mémoire et la reconnaissance. C’es processus de haut niveau sont connaissancres et expériences basées sur la reconnaissance te processus mnésiques déjà existants. Les jugements métacognitifs utilisent des processus disponibles.</p>
+</div>
+</div>
+</section>
 </section>
 </section>
 <section id="linhibition" class="level2">
-<h2 class="anchored" data-anchor-id="linhibition">L’inhibition</h2>
+<h2 class="anchored" data-anchor-id="linhibition">5. L’inhibition</h2>
 <section id="loubli" class="level3">
-<h3 class="anchored" data-anchor-id="loubli">L’oubli</h3>
-<p>Idées importantes sur l’oubli :</p>
+<h3 class="anchored" data-anchor-id="loubli">5.1. L’oubli</h3>
+<p>Idées importantes cherchant à exlpiquer l’oubli :</p>
 <ol type="1">
 <li>La trace se dégrade avec le temps</li>
 <li>Perturbation de la récupération - disponibilité (car on peut pas être sûr qu’on “oublie” pour de vrai)</li>
-<li>L’oublie serait une interférenc</li>
-<li>Inhbition : processus actif de supression</li>
+<li>L’oubli serait une interférence</li>
+<li>Inhibition : processus actif de suppression</li>
 </ol>
 </section>
 <section id="quest-ce-que-linhibition" class="level3">
-<h3 class="anchored" data-anchor-id="quest-ce-que-linhibition">Qu’est-ce que l’inhibition</h3>
-<p>Ce n’est pas une perte passive, mais une suppression active. Il y a des processus qui existent pour diminuer l’activation des informations dans le système. L’inhibition serait un mécanisme actif de suppression des éléments distracteurs afin de laisser disponible l’efficacité des traitements pour la cible. Elle serait également un phénomène adaptatif, car son effet sur les temps de réponse dépend de la pertinence de l’information portée par le stimulus.</p>
+<h3 class="anchored" data-anchor-id="quest-ce-que-linhibition">5.2. Qu’est-ce que l’inhibition</h3>
+<p>Ce n’est pas une perte passive, mais une suppression active. Il y a des processus qui existent pour diminuer l’activation des informations dans le système. L’inhibition serait un mécanisme actif de <strong>suppression des éléments distracteurs</strong> afin de laisser disponible l’efficacité des traitements pour la cible. Elle serait également un phénomène adaptatif, car son effet sur les temps de réponse dépend de la pertinence de l’information portée par le stimulus.</p>
+<p>L’<strong>oubli induit par la récupération (RIF)</strong> est un phénomène montrant que la récupération d’une information peut supprimer ou bloquer temporairement la récupération d’autres informations liées. Cela montra la compétition entre des items en mémoire.</p>
 </section>
 <section id="inhibition-de-la-mémoire-épisodique" class="level3">
 <h3 class="anchored" data-anchor-id="inhibition-de-la-mémoire-épisodique">Inhibition de la mémoire épisodique</h3>
