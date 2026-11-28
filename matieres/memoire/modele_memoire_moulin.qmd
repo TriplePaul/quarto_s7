@@ -10,13 +10,6 @@ tags: []
 Partie de l'examen où on regarde et explique les données d'une expérience, puis
 synthèse où on rédige quelque chose sur un thème. Exemples sur moodle.
 
-Plan :
-
-1. La mémoire épisodique : définitions
-2. Quelques modèles
-3. Un point de départ : rappel et reconnaissance
-4. L'encodage et le contexte
-
 ## Introduction
 
 ### i. La mémoire épisodique : définitions
@@ -90,8 +83,6 @@ Il y aurait donc un encodage parallèle, et non sériel, pour la MCT et la MLT.
 C'est aussi probablement le cas pour la mémoire épisodique et sémantique. Ce
 modèle est malgré tout utile en clinique.
 
-<!-- FIX: j'ai rien compris faut demander à tessa -->
-
 ### iii. Un point de départ : rappel et reconnaissance
 
 La dyslexie à un profil très similaire : scores très bas en MCT chez certain
@@ -148,8 +139,6 @@ laisse des traces en MLT. Paradigme a été très important, manipulation
 d'encodage pour mesurer le résultat où on donne de l'argent je crois je sais pas
 trop.
 
-<!-- FIX: diapo craik & tulving -->
-
 Il y a 20 ans, beaucoup d'études s'intéressaient à l'évolution de la mémoire.
 Méthodes simples et élégantes, mais pas les conclusions. Il y a phase
 d'encodage, mais au lieu de demander des taches comme "est-ce que ce mot rime
@@ -191,9 +180,9 @@ l'inverse, faut tout revoir.
 Contexte est donc important pour la mémoire épisodique : le chevauchement entre
 encodage et test favorise les performances.
 
-<!-- FIX: bien revoir derni`´re partie` -->
-
 <!-- source: 2_familiarite.md -->
+
+--------------------------------------------------------------------------------
 
 ## 1. La familiarité
 
@@ -337,8 +326,6 @@ plaisante.
 On se questionne de l'influence de la familiarité inconsciente sur les attitudes
 surtout dns dans la reconnaissance consciente.
 
-<!-- TODO: reprendre cette étude -->
-
 #### 1.3.2. Boucher-dans-le-bus
 
 Boucher-dans-le-bus est dû à rencontrer quelqu'un en dehors de son contexte, et
@@ -369,6 +356,9 @@ les âgées. Contexte différent ont familiairté plus forte chez les jeuens que
 chez personnes âgées qui perdent la notion de familiarité avec changement de
 contexte.
 
+Boucher dans le bus diminue avec lˆâge ce qui est étonnant sauf que familiarité
+aussi donc juste ils ont une mémoire ~~de merde~~ merdique.
+
 #### 1.3.3. Phénomène de déja-vu
 
 La **familiarité représentationnelle** est un résultat de match entre ce qu'on
@@ -379,7 +369,7 @@ phénoménologique de familiarité**, mais par exemple de préférence.
 
 Mais est-ce qu'on peut avoir l'un sans l'autre ? On peut manipuler sensation de
 fluence avec différentes tˆåches. On peut faire apprendre des listes de mots,
-puis ???. FIX:
+puis ???.
 
 Par exemple le changement de police peut jouer sur la familiarité à partir d'une
 différence perceptive. On peut interpréter à tord que police moins lisible = mot
@@ -396,8 +386,6 @@ present moment with an undefine past". Chris propose plutôt "the
 phenomenological e xperience of recognizing a current situation and the
 awareness that this feeling of recognition is inappropriate".
 
-FIX: oops j'ai pas écouté
-
 2 familles de théories explicant l'origine du déjà-vu : bottom-up et top-down.
 
 - Bottom-up : quelque chose matcherai vraiment dans l'environnemnet avec quelque
@@ -405,15 +393,9 @@ FIX: oops j'ai pas écouté
 - Top-down : rien dans l'environnement, mais juste des phénomènes neuronaux
   spontanés para-hippocampiques
 
-FIX: hopla j'écoute pas du tout
-
--## 4. Familiarité dans le contexte clinique
-
 --------------------------------------------------------------------------------
 
 <!-- source: 3_familiarite_suite.md -->
-
-partie test oùl les participants revoyaient des scènes et objets déjà vues, test
 
 ## 2. La récollection
 
@@ -651,6 +633,8 @@ l'hippocampe.
 
 <!-- source: 4_memoire_autobiographique.md -->
 
+--------------------------------------------------------------------------------
+
 ## 3. La mémoire autobiographique
 
 ### 3.1. L'empan de vie et le pic de réminiscence
@@ -789,6 +773,8 @@ de tout perdre.
 
 <!-- source: 5_process_haut_niveau.md -->
 
+--------------------------------------------------------------------------------
+
 ## 4. La métamémoire
 
 ### 4.1. Définitions
@@ -829,8 +815,6 @@ Pour mesurer ces processus dans le cadre de la reconnaissance :
   méta
 - Pour le **contrôle**, on va mesurer les capacités des individus à
   utiliser/modifier les stratégies mnésiques
-
-<!-- TODO: et dcp jol ou fok ? -->
 
 #### 4.2.1. Judgement of learning (JOL)
 
@@ -926,8 +910,6 @@ oublié.
 
 ![](/assets/fok_alzheimer.png)
 
-<!-- FIX: finir la ^ -->
-
 ::: {.callout-tip title="À retenir"}
 On fait le tour des processus dans la mémoire qui sont métacognitifs, soit pour
 faire un jugement sur paires de mots avec indices donnés, les processus utilisés
@@ -936,6 +918,8 @@ reconnaissance. C'es processus de haut niveau sont connaissancres et expérience
 basées sur la reconnaissance te processus mnésiques déjà existants. Les
 jugements métacognitifs utilisent des processus disponibles.
 :::
+
+--------------------------------------------------------------------------------
 
 ## 5. L'inhibition
 
@@ -966,8 +950,6 @@ items en mémoire.
 ### 5.3. Inhibition de la mémoire épisodique
 
 #### 5.3.1. Oubli induit par la récupération
-
-FIX: oublié de noter modèle théorique
 
 Oubli induit par la récupération (RIF) : paradigme montre que processus de
 récupération d'une chose inhibe récupération d'autres informations. On apprend
