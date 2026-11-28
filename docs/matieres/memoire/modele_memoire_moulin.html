@@ -475,7 +475,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#loubli" id="toc-loubli" class="nav-link" data-scroll-target="#loubli">5.1. L’oubli</a></li>
   <li><a href="#quest-ce-que-linhibition" id="toc-quest-ce-que-linhibition" class="nav-link" data-scroll-target="#quest-ce-que-linhibition">5.2. Qu’est-ce que l’inhibition</a></li>
-  <li><a href="#inhibition-de-la-mémoire-épisodique" id="toc-inhibition-de-la-mémoire-épisodique" class="nav-link" data-scroll-target="#inhibition-de-la-mémoire-épisodique">Inhibition de la mémoire épisodique</a></li>
+  <li><a href="#inhibition-de-la-mémoire-épisodique" id="toc-inhibition-de-la-mémoire-épisodique" class="nav-link" data-scroll-target="#inhibition-de-la-mémoire-épisodique">5.3. Inhibition de la mémoire épisodique</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -651,6 +651,35 @@ Note
 <p><img src="../../assets/familiarite_roc.png" class="img-fluid"></p>
 </div><div class="column" style="width:50%;">
 <p><img src="../../assets/recollection_roc.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Lecture du grahpique
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><em>Tout cette explication est faite par IA car on y comprenait rien désolé :(</em></p>
+<p><strong>Comment lire les deux graphes (ROC).</strong> Chaque courbe correspond à une expérience (Exp #1 à 11) et chaque point d’une courbe à un <strong>critère de réponse</strong> différent. Le critère est le seuil de preuve/confiance à partir duquel on répond « ancien » plutôt que « nouveau » : un critère conservateur fait dire « ancien » seulement quand on est très sûr (peu de réponses « ancien », vraies comme fausses) ; un critère libéral fait dire « ancien » dès qu’on ressent quelque chose (beaucoup de réponses « ancien », vraies comme fausses).</p>
+<p>Le critère n’est pas une propriété du stimulus ni d’un essai isolé : c’est une règle de décision propre au participant, qui peut varier chez la même personne selon la tâche, la consigne, les gains/pénalités, la fatigue ou le niveau de confiance. Il n’est pas observé directement : on l’infère à partir des hits et des fausses alarmes. Dans les graphes, chaque point correspond à un critère (souvent un niveau de confiance) ; l’axe x n’est pas le critère lui-même, mais le taux de fausses alarmes qu’il produit. Chaque courbe est une expérience agrégée sur plusieurs participants : les points sont des moyennes de groupe pour chaque critère.</p>
+<ul>
+<li><strong>Axe x</strong> : <code>P('yes'|new)</code>, le taux de fausses alarmes, c’est-à-dire la proportion d’items nouveaux jugés « ancien ». C’est l’indice du critère : plus il est élevé, plus le critère est libéral.</li>
+<li><strong>Axe y</strong> : la proportion de réponses relevant du processus considéré (familiarité à gauche, récollection à droite).</li>
+<li><strong>Graphe de gauche</strong> : familiarité. <strong>Graphe de droite</strong> : récollection.</li>
+</ul>
+<p><strong>Pourquoi ces formes ?</strong></p>
+<ul>
+<li><strong>Familiarité : courbe en arc (concave).</strong> La familiarité est un signal continu, gradué. Les items anciens et nouveaux ont des distributions de force qui se chevauchent. Quand on rend le critère plus libéral, on accepte des items de plus en plus faibles : on gagne des hits, mais on prend aussi des fausses alarmes. Le compromis n’est pas linéaire : au début on gagne surtout des hits, ensuite surtout des fausses alarmes. Pouvoir se déplacer le long d’une courbe continue = signature d’un processus gradué.</li>
+<li><strong>Récollection : courbe plate.</strong> La récollection est un seuil tout-ou-rien : on récupère ou on ne récupère pas. Changer le critère de réponse ne change pas la probabilité de récupérer ; ça ne fait varier que les réponses basées sur la familiarité ou le guessing. D’où une ligne plate : l’estimation de récollection est invariante au critère. C’est la signature d’un processus à seuil.</li>
+</ul>
+<p>Donc la forme n’est pas un détail : elle teste directement si le processus est gradué (familiarité) ou tout-ou-rien (récollection). Si la reconnaissance n’était qu’un seul signal de force, les deux graphes auraient la même forme.</p>
+</div>
 </div>
 </div>
 </section>
@@ -908,7 +937,7 @@ Note
 <p>On a une mémoire autobiographique qui serait une construction mentale très riche faite d’une combinaison de <strong>mémoire épisodique</strong> qui donne une image sensorielle très proche de ce qu’on a vécu, et du <strong>Self à Long Terme</strong>. Il y aurait un schéma d’organisation des mémoires autobiographiques, sur les périodes de vie (j’étais en thèse, en couple avec Tess…).</p>
 <p><img src="../../assets/Pasted image 20261121105824.png" class="img-fluid"></p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -917,7 +946,7 @@ Note
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><strong>Comment lire les deux figures</strong> : (même modèle, deux niveaux : l’architecture à gauche, la récupération à droite). /!\ j’ai utilisé de l’ia sinon impossible de comprendre lol désolé……. /!\</p>
 <p>Figure de gauche, la construction : un souvenir autobiographique n’est pas stocké d’un bloc, il est assemblé. Le système de mémoire épisodique fournit une image sensorielle proche du vécu ; cette image est indexée par le Self à long terme, qui contient les connaissances autobiographiques de base (schéma historique personnel, périodes de vie, événements généraux) et le self conceptuel (script personnel, self possible, croyance). Les doubles flèches = circulation dans les deux sens.</p>
@@ -1045,25 +1074,46 @@ Note
 <p>L’<strong>oubli induit par la récupération (RIF)</strong> est un phénomène montrant que la récupération d’une information peut supprimer ou bloquer temporairement la récupération d’autres informations liées. Cela montra la compétition entre des items en mémoire.</p>
 </section>
 <section id="inhibition-de-la-mémoire-épisodique" class="level3">
-<h3 class="anchored" data-anchor-id="inhibition-de-la-mémoire-épisodique">Inhibition de la mémoire épisodique</h3>
+<h3 class="anchored" data-anchor-id="inhibition-de-la-mémoire-épisodique">5.3. Inhibition de la mémoire épisodique</h3>
+<section id="oubli-induit-par-la-récupération" class="level4">
+<h4 class="anchored" data-anchor-id="oubli-induit-par-la-récupération">5.3.1. Oubli induit par la récupération</h4>
 <p>FIX: oublié de noter modèle théorique</p>
-<p>Oubli induit par la récupération (RIF) : paradigme montre que processus de récupération d’une chose inhibe récupération d’autres informations. On apprend des items de différentes catégories sémantique. On va rappeler en continu des informatiosn dans une liste, et pour assurer. J’ai écouté mais le but c’est juste de récupérer certaines informations.</p>
-<p>FIX: j’écoute pas la tâche demander à tess</p>
+<p>Oubli induit par la récupération (RIF) : paradigme montre que processus de récupération d’une chose inhibe récupération d’autres informations. On apprend des items de différentes catégories sémantique. On va rappeler en continu des informations dans une liste, et pour assurer. J’ai écouté mais le but c’est juste de récupérer certaines informations.</p>
+<p>Paradigme RIF :</p>
 <p><img src="../../assets/Pasted image 20261123092311.png" class="img-fluid"></p>
-<p>???????????////////////</p>
-<p>Plusieurs possiblités pour cet effet :</p>
+<p>Pendant le rappel indicé, il y a trois types d’items :</p>
 <ul>
-<li>Ce n’est pas de l’inhibition</li>
+<li>RP+ : items entrainés des catégories entraînés (pomme)</li>
+<li>RP- : des items non-entraînés des catégories entrainés (orange)</li>
+<li>U : items non-entraînés des catégories non-entrainés (argent)</li>
 </ul>
-<p>Modèle de suppression des caractéristiques : on trouve des chevauchements entre les catégories, qiu montre par exemple que tomate peut rentrer dans la catégorie “fruits” ou “choses rouges”. Sang et tomates étaient étudiés dans la phase d’encodage comme choses rouges. Dans la phase test, on doit générer tous les fruits qui étaient dans la liste initiale. On teste l’activation de tomate avec l’indice fruit (et non rouge qui été utilisé pour sang). On a une inhibition du rappel de tomate même avec l’autre indice.</p>
-<p>On trouve toujours une inhbition, donc on trouve otujours que le rappel est diminué pour tomate même si on utilise pas la catégorie originale (“rouge”).</p>
-<p>Sang et toamtes partagent certaines caractéristiques.</p>
-<p>Points noirs activés points clairs inhibés. Reestlats c’est que toamte et fraise sont inhibé au même niveau.</p>
+<p>Les résultats vont dans ce sens : <span class="math inline">\(\text{RP+} &gt; \text{U} &gt; \text{RP-}\)</span>, ce qui va dans le sens des hypothèse. En effet, on cherchait à montrer que les mots RP- seraient inhibés par les traces mnésiques plus forte des RP+, en raison de leur entrainemnet. Les mots U eux ne sont pas inhibés ou activés. Mais cette expérience ne montre pas forcément que cette inhibition est faite sur les représentations mnésqiues, car on teste le rappel grâce aux mêmes items que ceux sur lesquels on les a entraîné.</p>
+<p><strong>Modèle de suppression des caractéristiques</strong> : on trouve des chevauchements entre les catégories, qiu montre par exemple que tomate peut rentrer dans la catégorie “fruits” ou “choses rouges”. Sang et tomates étaient étudiés dans la phase d’encodage comme choses rouges. Dans la phase test, on doit générer tous les fruits qui étaient dans la liste initiale. On teste l’activation de tomate avec l’indice fruit (et non rouge qui été utilisé pour sang dans l’entraînement). On a une inhibition du rappel de tomate même avec l’autre indice. L’inhibition est donc propre à la représentation mnésique.</p>
+<p><img src="../../assets/suppression_caracteristiques.png" class="img-fluid"></p>
 <p>Donc l’inhbition eput travers les catégories, peu importe l’indice. C’est la représentation qui est inhibée, et ça va traverser les catégories elon els caractéristiques.</p>
-<p>Oubli dirigé est un paradigme où on fait genre qu’on a donné la mauvaise liste, donc on demande d’oublier, et on donne une autre liste. Puis on fiat test de mémorisation sur les 2. Le résultat n’est pas important pour la première liste, c’est qu’on a une meilleur performance pour la deuxième liste, il y a donc bien eu un oubli de la première liste.</p>
-<p>Conclusions : la métam</p>
+</section>
+<section id="oubli-dirigé" class="level4">
+<h4 class="anchored" data-anchor-id="oubli-dirigé">5.3.2. Oubli dirigé</h4>
+<p>Oubli dirigé est un paradigme (“oh shit paradigm”) où on fait genre qu’on a donné la mauvaise liste, donc on demande d’oublier, et on donne une autre liste. Puis on fiat test de mémorisation sur les 2. Le résultat n’est pas important pour la première liste, c’est qu’on a une meilleur performance pour la deuxième liste, il y a donc bien eu un oubli de la première liste.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Conclusion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>La métamémoire et l’inhibition sont deux exemlpes de processus de haut niveau intervenant dans la mémoire épisodique</li>
+<li>Il existe des modèles de ces processus, pertinents pour comprendre le fonctionnement de la mémoire épisode</li>
+</ul>
+</div>
+</div>
 
 
+</section>
 </section>
 </section>
 </section>
