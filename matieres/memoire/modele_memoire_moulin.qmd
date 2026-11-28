@@ -7,10 +7,6 @@ tags: []
 
 # Partie II - Mémoire Épisodique
 
-- [[i_chris_moulin]]
-- [[ii_chris_moulin]]
-- [[iii_chris_moulin]]
-
 Partie de l'examen où on regarde et explique les données d'une expérience, puis
 synthèse où on rédige quelque chose sur un thème. Exemples sur moodle.
 
@@ -21,7 +17,9 @@ Plan :
 3. Un point de départ : rappel et reconnaissance
 4. L'encodage et le contexte
 
-## 1. La mémoire épisodique : définitions
+## Introduction
+
+### i. La mémoire épisodique : définitions
 
 Important : l'organisation de la MLT qu'on connaît n'est pas un modèle, car ça
 ne fait pas de prédictions.
@@ -43,7 +41,7 @@ revient au test de mémoire indirect : dans un test explicite, on demande de
 rappeler des mots appris dans une phase précédente. Implicite on fait implicite
 quois.
 
-## 2. Quelques modèles
+### ii. Quelques modèles
 
 3 gros processus dans la mémoire :
 
@@ -94,7 +92,7 @@ modèle est malgré tout utile en clinique.
 
 <!-- FIX: j'ai rien compris faut demander à tessa -->
 
-## 3. Un point de départ : rappel et reconnaissance
+### iii. Un point de départ : rappel et reconnaissance
 
 La dyslexie à un profil très similaire : scores très bas en MCT chez certain
 patient, donc y'a pas qu'une question de stockage et registre. On observe bien
@@ -138,7 +136,7 @@ temporaire.
 
 ![](/assets/Pasted image 20261021144544.png){width=400}
 
-## 4. L'encodage et le contexte
+### iv. L'encodage et le contexte
 
 Pour Craik et Tulving, l'**apprentissage incident** se fait quand il n'y a pas
 de consigne explicite d'encoder. Plus il y a d'élaboration sémantique, plus on
@@ -195,25 +193,23 @@ encodage et test favorise les performances.
 
 <!-- FIX: bien revoir derni`´re partie` -->
 
---------------------------------------------------------------------------------
-
 <!-- source: 2_familiarite.md -->
 
-- [[i_familiarite]]
-- [[ii_familiarite]]
-- [[iii_familiarite]]
+## 1. La familiarité
 
-# CM2 Chris Moulin
+::: {.callout-note}
+Courbes ROC seront probablement à l'examen
+:::
 
-- Courbes ROC seront probablement à l'examen
+### 1.1. Contexte théorique
 
-## 1. Contexte théorique
+#### 1.1.1. Rappel théorique
 
 On va voir la familiarité, sur quoi on se base pour dire qu'on a déjà vu quelque
 chose. Il y a deux mécanismes principaux :
 
 - **Recollection** : récupération consciente d'un souvenir dans son contexte
-- **Familiaritee** : processus automatique qui permet la reconnaissance sans
+- **Familiarité** : processus automatique qui permet la reconnaissance sans
   récupération de détails contextuels associés
 
 Cette distinction est proposée pour la première fois par Adams (1967), qui
@@ -225,22 +221,81 @@ cherchait à parler de processus perceptuels et conceptuels :
   ascendant, de bas niveau, sans contexte.
 - Processus conceptuels : de haut niveau, conscient, raisonnement, etc.
 
-Yonelinas (2002) propose que la familiarité serait un processus auotmique,
-rapide et implicite, qui donne une sensation d'avoir vu quelque chose
-auparavant, sans contextes et apprentissages. Ça se base sur la **force (de la
-trace) mnésique**, qui est plus forte pour des mots appris que non appris. Quand
-on doit faire des jugements de familiarité, on se base donc sur les différences
-de force mnésique entre des mots familiers et non. Celle-ci peut varier et peut
-être augmentée de plusieurs manières.
+**Yonelinas** (2002) propose :
 
-Mais où est le critère nous permet de dire que c'est ancien ou nouveau ? On
-l'appèle critère de décision, qu'on pense arbitraire et variable selon la tâche
-et l'individu. Celle-ci fonctionne comme un curseur, alors que la recupération
-comme un interrupteur (booléen).
+- Que la **familiarité** est une sensation subjective d'avoir déjà vu le
+  stimulus, sans récupération explicite du contexte initial d'apprentissage.
+  Automatique, rapide, implicite, basé sur la force mnésique, et contient donc
+  des degrés de familiarité
+- Que la **récupération** est un rappel conscient et volontaire d'un évènement
+  passé et de son contexte d'apprentissage. Il est controlé, lent, détaillé, et
+  se base sur un seuil de récupération d'informations qualitatives /
+  associatives. On ne se souvient ou se souvient pas
+
+::: {.columns}
+::::: {.column width="50%"}
+![](/assets/familiarite_roc.png)
+:::::
+
+::::: {.column width="50%"}
+![](/assets/recollection_roc.png)
+:::::
+:::
+
+::: {.callout-tip collapse=true title="Lecture du grahpique"}
+*Tout cette explication est faite par IA car on y comprenait rien désolé :(*
+
+**Comment lire les deux graphes (ROC).** Chaque courbe correspond à une
+expérience (Exp #1 à 11) et chaque point d'une courbe à un **critère de
+réponse** différent. Le critère est le seuil de preuve/confiance à partir duquel
+on répond « ancien » plutôt que « nouveau » : un critère conservateur fait dire
+« ancien » seulement quand on est très sûr (peu de réponses « ancien », vraies
+comme fausses) ; un critère libéral fait dire « ancien » dès qu'on ressent
+quelque chose (beaucoup de réponses « ancien », vraies comme fausses).
+
+Le critère n'est pas une propriété du stimulus ni d'un essai isolé : c'est une
+règle de décision propre au participant, qui peut varier chez la même personne
+selon la tâche, la consigne, les gains/pénalités, la fatigue ou le niveau de
+confiance. Il n'est pas observé directement : on l'infère à partir des hits et
+des fausses alarmes. Dans les graphes, chaque point correspond à un critère
+(souvent un niveau de confiance) ; l'axe x n'est pas le critère lui-même, mais
+le taux de fausses alarmes qu'il produit. Chaque courbe est une expérience
+agrégée sur plusieurs participants : les points sont des moyennes de groupe pour
+chaque critère.
+
+- **Axe x** : `P('yes'|new)`, le taux de fausses alarmes, c'est-à-dire la
+  proportion d'items nouveaux jugés « ancien ». C'est l'indice du critère : plus
+  il est élevé, plus le critère est libéral.
+- **Axe y** : la proportion de réponses relevant du processus considéré
+  (familiarité à gauche, récollection à droite).
+- **Graphe de gauche** : familiarité. **Graphe de droite** : récollection.
+
+**Pourquoi ces formes ?**
+
+- **Familiarité : courbe en arc (concave).** La familiarité est un signal
+  continu, gradué. Les items anciens et nouveaux ont des distributions de force
+  qui se chevauchent. Quand on rend le critère plus libéral, on accepte des
+  items de plus en plus faibles : on gagne des hits, mais on prend aussi des
+  fausses alarmes. Le compromis n'est pas linéaire : au début on gagne surtout
+  des hits, ensuite surtout des fausses alarmes. Pouvoir se déplacer le long
+  d'une courbe continue = signature d'un processus gradué.
+- **Récollection : courbe plate.** La récollection est un seuil tout-ou-rien :
+  on récupère ou on ne récupère pas. Changer le critère de réponse ne change pas
+  la probabilité de récupérer ; ça ne fait varier que les réponses basées sur la
+  familiarité ou le guessing. D'où une ligne plate : l'estimation de
+  récollection est invariante au critère. C'est la signature d'un processus à
+  seuil.
+
+Donc la forme n'est pas un détail : elle teste directement si le processus est
+gradué (familiarité) ou tout-ou-rien (récollection). Si la reconnaissance
+n'était qu'un seul signal de force, les deux graphes auraient la même forme.
+:::
+
+#### 1.1.2. Modèle intégratif de la mémoire
 
 Modèle intégratif de la mémoire à 2 composants clé :
 
-- Système représentationnel :
+- Système **représentationnel** :
   - Stocke et reconstruit les traces mnésiques. Dommage de ce système =
     dégradation du contenu de la mémoire
   - contient les sous-systèmes "cœurs" qui encodent et stockent les
@@ -252,37 +307,43 @@ Modèle intégratif de la mémoire à 2 composants clé :
   - Permet la réalisation des jugements explicites et la subjectivité des
     expériences
 
-![[2_familiarite 2026-10-30 11.18.30.excalidraw]]
+![Bonne chance](/assets/modele_integratif_memoire.png)
 
-## 2. Corrélats neuronaux de al familiarité
+![](/assets/pomme_de_pin.png)
 
-**Familiarité** : système "cœur" des entités, alors que **recollection** :
-système "cœur" relationnel. La **fluence** est la facilité perçue de traitement
-de l'information.
+### 1.2. Corrélats neuronaux de la familiarité
 
-Le système "cœur" des entités (famliarité) : cortex périrhinal, cortex
-enthorinal antérolatéral. Ce réseau permet de relier toutes les entités
-complexes en une information unifiée.
+**Système cœur des entités** (familiarité) : cortex périrhinal, enthorinal
+antolatéral, occipito-temporal et temporal antérieur (réseau distribué). Ce
+système intègre les traces en une représentation compelxe et unique, se
+distinguant d'autres représentation stockées
 
-Pour le système relationnel : plutôt porté par hippocampe et structures
-limbiques environnantes, et nous permet de contextualiser et relier les
-informations.
+**Système "cœur" relationnel** (recollection) : centré dans l'hippocampe,
+subiculum, corps mamillaires et noyaux antérieurs du thalamus. Encodage rapide
+de représentations détaillée de l'item associé à l'information contextuelle.
 
-![[2_familiarite 2026-10-30 12.51.29.excalidraw]]
+### 1.3. Phénomènes quotidiens
 
-## 3. Phénomènes quotidiens
-
-### 3.1. Spécificité de l'encodage
+#### 1.3.1. Effet de simple exposition
 
 Les signaux de fluence arrivent à nous, et le **système de distribution** doit
-faire une décision. Parler deffet de **simple exposition** peut nous aider : la
+faire une décision. Parler d'effet de **simple exposition** peut nous aider : la
 simple présentation d'un stimulus peut provoquer une préférence accrue vers
-celui-ci. On fait l'hypothèse que cette préférence est attribuable à la fluence :
-faciliter la mémoire, peut être interprétée comme un préférence.
+celui-ci. Le modèle de **fluence perceptive** propose que la fluence est
+attribuée selon le contexte de la tâche ; et le modèle de **fluence hédonique**
+propose que l'expérience de fluence est considérée comme intrinsèquement
+plaisante.
+
+On se questionne de l'influence de la familiarité inconsciente sur les attitudes
+surtout dns dans la reconnaissance consciente.
+
+<!-- TODO: reprendre cette étude -->
+
+#### 1.3.2. Boucher-dans-le-bus
 
 Boucher-dans-le-bus est dû à rencontrer quelqu'un en dehors de son contexte, et
-retrouver le bon contexte est très très dûr. C'est une expression de la
-**spécificité de l'encodage**.
+retrouver le bon contexte est très dûr. C'est une expression de la **spécificité
+de l'encodage**.
 
 ![](/assets/Pasted image 20261110145513.png)
 
@@ -308,7 +369,7 @@ les âgées. Contexte différent ont familiairté plus forte chez les jeuens que
 chez personnes âgées qui perdent la notion de familiarité avec changement de
 contexte.
 
-### 3.2. Familiarité représentationnelle et phénoménologique
+#### 1.3.3. Phénomène de déja-vu
 
 La **familiarité représentationnelle** est un résultat de match entre ce qu'on
 est en train de percevoir et des représentations stockées en mémoire. Dans
@@ -346,43 +407,54 @@ FIX: oops j'ai pas écouté
 
 FIX: hopla j'écoute pas du tout
 
-## 4. Familiarité dans le contexte clinique
+-## 4. Familiarité dans le contexte clinique
 
 --------------------------------------------------------------------------------
 
 <!-- source: 3_familiarite_suite.md -->
 
-# familiarité suit
-
 partie test oùl les participants revoyaient des scènes et objets déjà vues, test
 
-## I. Contexte théorique
+## 2. La récollection
 
-### A. Rappel théorique
+### 2.1. Contexte théorique
 
-A/modèle de Yonelinas (2002): 2 processus derrière la reconnaissance diapo
-familiarité et récupération ce modèle dit pas ce qui faut pour dépasser le
-seuil, il décrit juste des observations comportementales
+#### 2.1.1. Modèle BIC
 
-B/Modèle BIC "Binding of item and context" : revue de 30 études en
-neuroimagerie: cherche corrélats neuronaux derrière fam et rec récollection:
-activité ++ hippocampique et parahippocampique where? encode infos contextuel de
-l'info familiarité: cortex perirhinal what? encodage informations spécifique de
-la cible
+Le modèle "Binding of item and context" vient d'une revue de 30 études en
+neuroimagerie, cherchant des corrélats neuronaux derrière familiarité et
+récollection :
 
-//
+- Récollection : activité forte dans l'hippocampe et gyrus parahippocampique
+  postérieur
+- Familiarité : activité forte dans le gyrus parahippocampique antérieur
+  (**cortex périrhinal**)
 
-Est-ce qu'ils ont trouvé les mêmes résultats que dans le modèle ? (diapo
-hippocampe). Sur les graphiques, les réponses de familiairité (sans souvneir du
-contexte particulier), et RA qui est une recollection complète. On peut voir que
-l'activité pour les RA est plus grande par rapport aux réposnes F. L'hippocampe
-serait donc impliqué dans les liens bidirectionnels entre l'item et le contexte.
+![](/assets/modele_bic.png)
 
-Le gyrus paraphippocampique est divisé en 3 parties, les RA sont plus grandes
-que l'activité pour les F quand on doit récupérer un contexte à partir de
-l'objet. Systématiquement, le coretx parahippocampique est actif.
+::: {.columns}
+::::: {.column width="50%"}
+On va tester ce modèle avec une étude où les participants doivent faire du
+rappel indicé d'associations objet-scène. Dans la phase test, pour chaque
+indice, faire un jugement parmis quatre : nouveau, familier, rappel remémoré,
+autres détails remémorés sans rappel de l'associé. Deux phases :
 
-//
+1. Apprentissage : 180 paires objets + scènes, 3.5 s par paires
+2. Test sous IRMf : 216 essais tests divisés en 6 blocs (indices : objets
+   anciens, scènes anciennes, objet nouveaux, scènes nouvelles)
+3. Post-test: 144 essais similaires
+:::::
+
+::::: {.column width="50%"}
+![](/assets/test_bic.png)
+:::::
+:::
+
+Résultats par région d'intérêt :
+
+![](/assets/hippocampe_bic.png)
+
+![](../../assets/parahippocampe_bic.png)
 
 On voit que chaque objet avait sa propre scène. Mais ça ne ressemble pas à la
 vraie vie : on se retrouve souvent dans les mêmes contextes et on doit retrouver
@@ -391,83 +463,170 @@ parking particulier. Donc comment on fait pour distinguer des souvenirs issus du
 même contexte ? Il peut se produire des interférences quand des souvenirs
 partagent des éléments de contextes.
 
-Il y a 2 grandes types d'interférences : rétroactives et proactives. Dans la
-première, une nouvelle interfère sur la précédente. //
+#### 2.1.2. Interférence et mémoire de source
 
-Qu'est-ce que rappel ou apprentissage par anticipation ? Dans un test de
-mémoire, on s'attend à des présentations des mots. Ici, on va devoir anticiper
-ce qu'il y aura par la suite : "est-ce que vous vous demandé du mot qu'on a
-appris ?", "non on n'a pas appris", "ok normal c chat", et on continue comme ça,
-et quand on refait un passage on sait répondre vu qu'on a appris normalement. Au
-début on n'a rien à anticiper, on a juste des trigrammes ("XCM", "KTQ"...). On
-fait 5 passage pour chaque liste.
+L'**interférence** est le fait que des souvenirs partagent les mêmes indicse de
+récupération se font concurrence au moment du rappel, ce qui produit l'oublie ou
+des confusions. Elles sont rétroactives (RI) ou proactives (PI).
 
-On avait des listes A et B soit similaires soit non similaires. // on veut voir
-comments les listes influences chacunes //
+On va utiliser une tâche de **rappel ou apprentissage par anticipation** : dans
+un test de mémoire, on s'attend à des présentations des mots. Ici, on va devoir
+anticiper ce qu'il y aura par la suite : "est-ce que vous vous souvenez du mot
+qu'on a appris ?", "non on n'a pas appris", "ok normal c chat", et on continue
+comme ça, et quand on refait un passage, on sait répondre vu qu'on a appris
+normalement. Au début, on n'a rien à anticiper, on a juste des trigrammes
+("XCM", "KTQ"...). On fait 5 passage pour chaque liste.
 
-<!-- FIX: mettre le tableau jaune et bleu pâle -->
+![](/assets/trigrammes.png)
 
-Pour retrouver la source du souvenir on doit retrouver le contexteg // On peut
-faire tâche de mémoire d'item puis tâche de mémoire de source. C'est pour ça
-qu'on dit souven tque la reconnaissance est plus dure que le rappel
+La similarité de deux types de listes apprises (A et B) est manipulée :
 
-//
+![Conditions d'interférences](/assets/conditions_trigrammes.png)
 
-Pour l'encodage, les représentations de souvenirs qu'on a sont distribuées.
-Chaque unité reçoit un agencement très unique. Chaque épisode est encodé
-indépendament des autres, ce qui aide à cette construction unique. Pour le
-rappel, à partir d'une information d'une aprtie de l'épisode on peut retrouver
-toutes les informatisin ??? qui permet de réativer l'épisode complet. Puis on
-décide si c'est pertinent, si on l'a imaginé ou vécu ou raconté. C'set comme ça
-qu'on distingue les souvenirs similaires.
+Résultats :
 
-Mais ce qu'on a vu avant dépend de caractéristiques visuo-spatiales. Mais
-comment est-ce qu'on sépare les souvenirs en termes de temps ? On touche ici aux
+- Effet du type d'interférence, plus élevé dans la condition rétroactive
+- Effet de la similarité des listes, plus élevé pour les listes similaires
+
+![](/assets/resultats_trigrammes.png){width=50%}
+
+On propose que pour retrouver la **source du souvenir**, on doit retrouver le
+contexte. On fait une tâche de mémoire d'items (reconnaissance, familiarité
+et/ou récollection) puis tâche de mémoire de source (ou quand et comment l'ai-je
+vu, surtout récollection).
+
+![](/assets/source_item.png){width=50%}
+
+#### 2.1.3. Modèle intégratif de la mémoire
+
+![](/assets/modele_integratif_memoire.png){width=70%}
+
+On peut donc distinguer dans ce modèle comment distinguer des souvenirs
+contextuellement similaires :
+
+- À l'encodage :
+  - Chaque entité reçoit une **représentation unique**, construite de façon
+    distribuée et hiérarchique
+  - Chaque épisode (même proche d'un autre) reçoit **sa propre trace** dans
+    l'hippocampe
+- Au rappel :
+  - Récollection : une partie de l'épisode peut suffire à réactiver l'épisode
+    complet
+  - Les détails de l'épisode sont ensuite relayés vers le système d'attribution
+  - Décision finale : le **système d'attribution** (cortex préfrontal) juge la
+    pertinence des détails récupérés
+
+Cependant ce qu'on a vu avant dépend de caractéristiques visuo-spatiales.
+Comment est-ce qu'on sépare les souvenirs en termes de temps ? On touche ici aux
 limites du modèle. On nous dit pas trop où est stocké le temps. Certains auteurs
 pensent qu'on a des régions spécifiques qui stockeraient le temps, d'autres
 pensent qu'il est distribué dans toutes les entités, qui permettrait de
 distinguer les souvenirs temporellement.
 
-## 2. Paradigmes expérimentaux
+### 2.2. Paradigmes expérimentaux
 
-### 2.1. Paradigme "remember/know" (Tulving, 1985; Gardiner, 1988)
+#### 2.2.1. Paradigme "remember/know" (Tulving, 1985; Gardiner, 1988)
 
-La familiarité suffit pour les jugements de "remember", pour le "know" on sait
-qu'on euhh jsp FIX: diapo
+On présente aux participants une liste de mots à mémoriser. Durant la phase de
+test, on leur demande d'identifier des items préalablement étudiés, parmis les
+distracteurs, selon deux types de jugements :
+
+1. "**Remember**" : indique que le participant se souvient du contexte
+2. "**Know**" : sentimenet de familiarité sans récupération explicite des
+   détails contextuels précis
 
 On va voir ce paradigme dans une étude de Davidson qui veut comparer les
-performances des familiarité entre participants sains et parkinson. Recollection
+performances de familiarité entre participants sains et Parkinson. On fait une
+phase d'apprentissage de mots, puis de test après 10 minutes, où ils
+auto-évaluent leur réponse remember/know/new aux mots présentés. Récollection
 pas de différence, mais familiarité les sains ont des meilleurs scores. Mais il
-y a un problème dans le fait de demander aux participant eux-mêmes de distinguer
-entre réponses "Remember" et "Know" ? //
+y a plusieurs problèmes avec cette étude, surtout avec le fait de faire une
+auto-évaluation des réponses :
 
-Dissociation de processus est une mesure un peu moins directe. On demande pas au
-participant s'il se souvient directement. On produit de contexte
-d'apprentissages différents, écrit ou verbalement. On fait une tâche d'inclusion :
-dire "ancien" pour tous les mots appris de la liste 1 et 2; ou tâche d'exclusion :
-dire "ancien" seulement pour les mots appris de la lsite 2. Donc quand on dit
-ancien pour tous les mots appris /////
+1. Classification subjective (mesure indirecte)
+2. Critères personnels variables
+3. Des patients cérébrolésés peuvent avoir des souvenirs très précis mais faux
+4. Suejts sains peuvent avoir des souvenirs vifs et détaillés qu'ils non jamais
+   vus
 
-Nos résultats sont donc assez robustes, avec 2 méthodes dfférnets on voit
+#### 2.2.2. Paradigme de "dissociation de processus" (Jacoby, 1991)
+
+Dissociation de processus est une mesure un peu moins directe. On produit de
+contexte d'apprentissages différents, écrit ou verbalement. On présente aux
+participants deux lisets de mots consécutives :
+
+- Phase d'encodage :
+  - Liste 1 : mots écrits présentés un par un
+  - Liste 2 : mots présentés verbalement
+- Phase de reconnaissance : liset 1, liste 2, mots nouveaux
+  - Tâche d'**inclusion** : dire "ancien" pour tous les mots appris de la liste
+    1 et 2
+  - Tâche d'**exclusion** : dire "ancien" seulement pour les mots appris de la
+    liste 2 (nécessite la récollection)
+
+Utilisation de familiarité / récollection en fonction de la tâche et de la
+justesse :
+
+![](/assets/jacoby_reponses.png){width=70%}
+
+À partir de ça on peut calculer la part de récupération et familiarité dans ce
+paradigme :
+
+![](/assets/calcul_part_familiarite.png)
+
+On va donc reprendre le but de la première étude avec ce paradigme. On a donc
+deux groupes de patients, sains et Parkinson. On comparer l'utilisation des deux
+mémoires : pas de différence pour la récollection, mais les patients Parkinson
+utilsent beaucoup moins la **familiarité** (en $d'$).
+
+### 2.3. Phénomènes quotidiens
+
+Nos résultats sont donc assez robustes, avec 2 méthodes dfférentes on voit
 différentes observations. C'est donc une méthode un peu plus objective, car ce
 n'est pas les personnes qui jugent mais nous qui déduisons à partir des
 personnes.//
 
-## 3. Phénomèmnes quotidiens
+#### 2.3.1. Faux souvenirs
 
-### 3.1. Faux souvenirs
+##### Shopping mall
 
-Expérience de shopping mall qui est une étude où on se demande si on peut
-implenter un souvenir qui n'a jamais existé. On est allé voir les familles des
+Expérience de "shopping mall" qui est une étude où on se demande si on peut
+implanter un souvenir qui n'a jamais existé. On est allé voir les familles des
 participants pour les interroger sur des épisodes de leur enfance, et pendant le
-test on rajoute un épisode faux, qui décrit un enfant en détressse qui s'est
+test, on rajoute un épisode faux, qui décrit un enfant en détresse qui s'est
 perdu dans un centre commercial.
 
-Est-ce que juste imaginer quelque chose peut produire un souvenir de cette chose
-? On appris des étudiants avec des questionnaires contenant 40 évènements dont
-des choses totalement improbables. Ils ont demandé pour chaque évènement sur une
-échelle de 1 à 8 la probabilté qu'il soit arrivé. On voit quand même une
-augmentation de certitude non négligeable pour ???
+La tâche est que les participants ont reçu des descriptions de 4 souvenirs issus
+de leur enfance (trois vrai un faux). Ils devaient écrire ce dont ils se
+souvenaient de chaque. Ils le faisaient lors de deux entretiens (avec ce rappel
+et une évaluation de la clarté de 1 à 10). 25% des participants y ont cru, mais
+les faux souvenirs restent moins détaillés.
+
+##### Imaginer un évènement puis s'en souvenir
+
+Autre expérience, "**inflation par l'imagination**", où on fait 2 séances
+espacées de 2 semaines :
+
+1. 40 événements, "est-ce que c'est arrivé y'a 10 ans ?" jugé de 1 à 8, dont 8
+   improbables
+2. Imaginer 4 événements jugés improbables, puis remplir à nouveau le
+   questionnaire (car le premier était "perdu")
+
+La certitude que l'évènement s'est déjà produit augmente plus souvent pour les
+événements imaginés. Comment ça pourrait marcher ? On propose qu'imaginer et se
+souvenir sont toutes des simulations construites à partir des mêmes éléments
+stockés (détails d'expériences passées, schémas). On pourrait donc faire une
+**confusion de source**. Une fausse récollection n'est pas équivalente à
+l'absencde du contenu en mémoire.
+
+##### Le paradigme DRM
+
+16 listes de 15 mots entendus, tous associés à un mot critique jamais présenté.
+Reconnaissance : "ancien ou nouveau ?", si ancien, remember/know. Résultat : le
+mot critique reçoit autant de réponses "remember" que les mots réellement
+entendus. Les mots de la liste activent le mot critique par association. Si le
+monitoring de sa source échoue, il est attribué à tort à la liste, soit une
+fausse récollection.
 
 On relie différents éléments en mémoire mais ce sont des situations probable, et
 imaginer des choses ferait des liens entre des éléments probables. Donc, plus on
@@ -475,82 +634,32 @@ répète ces expériences, on rajoute des détails, on juge un évènement plaus
 Donc plus c'est détaillé et probable plus on y fait confiance.
 
 Paradigme DRM qui montre qu'on peut avoir une sensation très forte de
-familiarité alors qu'on a pas vu un item. juste mettre la diapo
+familiarité alors qu'on a pas vu un item.
 
-### 3.2. Amnésie infantile
+#### 2.3.2. Amnésie infantile
 
-//
+L'amnésie infantile est l'incapacité à se souvenir des événements vécus dans les
+premières années la vie, il y a très peur de souvenirs avant 3 ans. Étude der
+Peterson montre que l'âge des premiers souvenirs d'enfance se décale vers une
+période plus tardive vers le temps, les souvenirs précoces des plus jeunes
+enfants sont instables et souvent vite oubliés, et les souvenir des enfants agés
+sont lpus conservés, reconnus et rappelés de façon cohérente.
 
-Maturation du cerveau fait que des zones se développent de mani`´re hétérogène`
-
-### B. Modèle intégratif de la mémoire
-
-## II. Corrélats neuronaux de la familiarité
-
-## III. Phénomènes quotidiens
-
-### A. Effet de simple exposition
-
-### B. Boucher dans le bus »
-
-### C. Phénomène du déjà-vu
-
-#### C. 1. Un peu d'histoire
-
-#### C.2. Contexte théorique
-
-#### C.3. Paradigmes expérimentaux
-
-## IV. Familiarité dans le contexte clinique
-
-### A. Déjà-vu épileptique
-
-### B. Vieillissement
-
-#### B.1. Vieillissement normal
-
-#### B.2. Vieillissement pathologique
-
-### C. Schizophrénie
-
-#### C.1. L'hypofamiliarité : Le syndrome de Capgras
-
-#### C.2. L'hyperfamiliarité : Le syndrome de Fregoli
-
---------------------------------------------------------------------------------
+L'hypothèse principale est que la maturation du cerveau fait que des zones se
+développent de manière hétérogène, surtout pour le cortex préfrontal et
+l'hippocampe.
 
 <!-- source: 4_memoire_autobiographique.md -->
 
-# CM4 familiarité
+## 3. La mémoire autobiographique
 
-<!--toc:start-->
+### 3.1. L'empan de vie et le pic de réminiscence
 
-- [CM4 familiarité](#cm4-familiarité)
-  - [1. La mémoire autobiographique](#1-la-mémoire-autobiographique)
-    - [1.1. L'empan de vie et le pic de
-      réminiscence](#11-lempan-de-vie-et-le-pic-de-réminiscence)
-  - [2. Le soi - The Self](#2-le-soi-the-self)
-    - [2.1. Effet de référence à soi](#21-effet-de-référence-à-soi)
-    - [2.2. SMS de Conway (système de mémore du
-      soi)](#22-sms-de-conway-système-de-mémore-du-soi)
-  - [3. Perturbations de la mémoire autobiographique et le
-    soi](#3-perturbations-de-la-mémoire-autobiographique-et-le-soi)
-    <!--toc:end-->
-
-Révisions :
-
-- [[i_4_familiarite_suite]]
-- [[ii_memoire_autobiographique]]
-
-## 1. La mémoire autobiographique
-
-### 1.1. L'empan de vie et le pic de réminiscence
-
-Modèle de la mémoire autobiographique qui prend en compte la mémoire sémantique
-ET épisodique. On va parler du pique de réminiscence pour expliquer la théorie
-d'organisation de mémoire autobiographique. Puis, on va parler du soi, et
-présenter le modèle central su **Self Memory System**, puis exemples concrets
-des troubles de la mémoire autobiographique.
+La mémoire autobiographique prend en compte la mémoire sémantique ET épisodique.
+On va parler du pic de réminiscence pour expliquer la théorie d'organisation de
+mémoire autobiographique. Puis, on va parler du soi, et présenter le modèle
+central su **Self Memory System**, puis exemples concrets des troubles de la
+mémoire autobiographique.
 
 La mémoire épisodique n'est pas la même chose qu'autobiographique. **C'est un
 système dynamique pour stocker les souvenirs personnels et connaissances dans un
@@ -590,12 +699,12 @@ Mais pourquoi ? 5 théories.
 Donc on fait une étude que je n'ai pas écoutée et on a un pic de réminiscence
 surtout d'évènements positifs, et à partir de 31 ans la vie est horrible.
 
-## 2. Le soi - The Self
+### 3.2. Le soi - The Self
 
-### 2.1. Effet de référence à soi
+#### 3.2.1. Effet de référence à soi
 
 Le "soi" à différentes définitions, et en recherche c'est plutôt une définition
-objective, de choses qui nous définissent. Il y a plusieurs manière de le
+objective, de choses qui nous définissent. Il y a plusieurs manières de le
 mesurer dans le contexte dans la mémoire.
 
 **Effet de référence à soi** : test où on encode les informations où on encode
@@ -607,38 +716,39 @@ yes/no). Les résultats yes/no ne sont pas importants, mais quelle catégorie
 d'information, on a le plus encodé. Et on se souvient donc beaucoup des choses
 encodées par rapport à soi.
 
-Pour chaque apsect de notre identité, on aurait une population de souvenirs
+Pour chaque aspect de notre identité, on aurait une population de souvenirs
 regroupée autour de ça. On a donc utilisé le TST (twenty-statements tests), fait
 par les sociologues pour mesurer l'identité, ou description de la personne. On a
 pris ces identités et demandé de récupérer les souvenirs liés aux aspects de
 l'identité.
 
-// C'est pas l'âge qui compte mais les relations entre évènemnts et identité.
-
+C'est pas l'âge qui compte mais les **relations entre évènemnts et identité**.
 Donc l'idée c'est que les souvenirs autobiographiques sont regorupés aux moments
 clés de la formation d'identité, quelque soit l'âge.
 
-### 2.2. SMS de Conway (système de mémore du soi)
+#### 3.2.2. SMS de Conway (système de mémore du soi)
 
-![](/assets/Pasted image 20261121110608.png)
+![](/assets/Pasted image 20261121110608.png){width=70%}
 
 **Modèle self-memory systeme de Conway** : on a une base de données
 autobiographiques, et le "soi de travail" en ref blague à Baddeley. Ça serait un
 soi temporaire. C'est un modèle constructiviste de la mémoire, mais c'est un
-problème car il y a des liens bidirectionnels donc le soi va impacter les
+problème, car il y a des liens bidirectionnels donc le soi va impacter les
 souvenirs stockées, et les souvenirs récupérés vont influencer le soi. C'est
 donc très difficile à tester.
 
-On a une mémoire autobiographique qui serait un construction mentale très riche
-faite d'une combinaison de mémoire épisodique qui donne une image sensorielle
-très proche de ce qu'on a vécu, et du Self à Long Terme. Il y aurait un schéma
-d'organisation des mémoires autobiographiques, sur les périodes de vie (j'étais
-en thèse, en couple avec Tess...).
+On a une mémoire autobiographique qui serait une construction mentale très riche
+faite d'une combinaison de **mémoire épisodique** qui donne une image
+sensorielle très proche de ce qu'on a vécu, et du **Self à Long Terme**. Il y
+aurait un schéma d'organisation des mémoires autobiographiques, sur les périodes
+de vie (j'étais en thèse, en couple avec Tess...).
 
 ![](/assets/Pasted image 20261121105824.png)
 
-**Comment lire les deux figures** (même modèle, deux niveaux : l'architecture à
-gauche, la récupération à droite).
+::: {.callout-tip title="Lecture des figures" collapse=true}
+**Comment lire les deux figures** : (même modèle, deux niveaux : l'architecture
+à gauche, la récupération à droite). /!\\ j'ai utilisé de l'ia sinon impossible
+de comprendre lol désolé....... /!\\
 
 Figure de gauche, la construction : un souvenir autobiographique n'est pas
 stocké d'un bloc, il est assemblé. Le système de mémoire épisodique fournit une
@@ -663,8 +773,9 @@ Figure de droite, la récupération, à lire par le bas :
 
 Les diapos ne légendent pas les flèches roses et rouges : le sens ci-dessus est
 une lecture de la figure, pas du cours.
+:::
 
-## 3. Perturbations de la mémoire autobiographique et le soi
+#### 3.2.3. Perturbations de la mémoire autobiographique et le soi
 
 - Confabulation : génération de faux souvenirs, pour combler trous de la mémoire
   ou identité
@@ -676,63 +787,57 @@ une lecture de la figure, pas du cours.
 Mais l'identité à une composante sémantique et épisodique, il est très très rare
 de tout perdre.
 
---------------------------------------------------------------------------------
-
 <!-- source: 5_process_haut_niveau.md -->
 
-# CM5 Chris Moulin
+## 4. La métamémoire
 
-## Métamémoire
-
-Plan :
-
-- Définitions
-- Comment mesurer la métamémoire ?
-  - JOL
-  - FOK
-- Théorie : Delayed JOLs
-- Théorie : Koriat - accessibilitee
-- Et alors ? Métamémoire dans la maladie d'alzheimer
+### 4.1. Définitions
 
 Bons exemples de métamémoire est le mot sur le bout de la lampe qui est deux
 choses : Échec de la récupération, mais avec une recherche de celle-ci. On
 utilise ce sentiment pour orienter la recherche en mémoire. C'est la petite voix
 de la **métamémoire**.
 
-### 1. Définitions
-
 La **métacognition** est le contrôle et évaluation de nos propres processus
-cognitifs. La métamémoire est la métacognition pour la mémoire. C'est très
+cognitifs. La **métamémoire** est la métacognition pour la mémoire. C'est très
 utilisé pour étudier la conscience, mais vient du développement dans les années
-80. Flavell, psychologue stadiste, propose qu'il y a des processus
+80. Flavell, psychologue stadiste, proposait qu'il y a des processus
 prédéterminant pour le développement, surtout fonction permettant la régulation
 et l'orchestration des processus cognitifs. Ça a soutenu les approches types
 "apprendre à apprendre".
 
-Il y a les connaissances métacognitives, qui sont les connaissances générales
-acquises, et les expériences métacognitive, qui sont les connaissances en
-rapport avec une tâche en cours. Ces dernières comprennent fluence, déjà-vu.
+Il y a les **connaissances métacognitives**, qui sont les connaissances
+générales acquises, et les **expériences métacognitive**, qui sont les
+connaissances en rapport avec une tâche en cours. Ces dernières comprennent
+fluence, déjà-vu.
 
 Modèle très connu de la métamémoire :
 
-![](/assets/Pasted image 20261123082300.png)
+![](/assets/Pasted image 20261123082300.png){width=70%}
 
-Entre les deux niveaux de mémoire, ce sont les processus représentants les flux
+Entre les deux niveaux de mémoire, ce sont les processus représentant les flux
 d'informations entre les niveaux de traitements. Cette boucle a donc la capacité
 d'optimiser les processus de mémorisation.
 
-<!-- FIX: il me manque quelques explications pour ^ -->
+### 4.2. Comment mesurer la métamémoire ?
 
-Pour le **monitoring**, on utilise estimation/prédictions pour rappel et la
-reconnaissance. On compare toujours celles-ci aux vraies performances : l'idée
-est que mesurer la performance est le niveau objet, et avoir une représentation
-de la performance est au niveau méta. Et pour le **contrôle**, on va mesurer les
-capacité des individus à utiliser/modifier les stratégies mnésiques.
+Pour mesurer ces processus dans le cadre de la reconnaissance :
+
+- Pour le **monitoring**, on utilise estimation/prédictions. On compare toujours
+  celles-ci aux vraies performances : l'idée est que mesurer la performance est
+  le niveau objet, et avoir une représentation de la performance est au niveau
+  méta
+- Pour le **contrôle**, on va mesurer les capacités des individus à
+  utiliser/modifier les stratégies mnésiques
+
+<!-- TODO: et dcp jol ou fok ? -->
+
+#### 4.2.1. Judgement of learning (JOL)
 
 Le **JOL** (Judgement of Learning) est la capacité à prédire le rappel d'un item
-lors de l'apprentissage. JOLs peuvent se faire immédiatement après l'encodage
-(Immediate JOLs) ou après un délai (delayed JOL). Généralement, on le fait item
-par item en paires de mots
+lors de l'apprentissage. Les JOLs peuvent se faire immédiatement après
+l'encodage (immediate JOLs) ou après un délai (delayed JOLs). Généralement, on
+le fait item par item en paires de mots
 
 ![](/assets/Pasted image 20261123082803.png)
 
@@ -746,10 +851,10 @@ score est bien plus haut après un délai.
 
 Comment ça fonctionne ? C'est évident : si on doit aller vite, l'information
 reste en MdT donc il est dur de savoir si on va la perdre ou pas, alors que le
-JOL différée se base uniquement sur la MLT. Le JOL est basé sur la récupération
-de l'information.
+JOL différée se base uniquement sur la MLT (plus précis). Le JOL est basé sur la
+récupération de l'information.
 
-#### 2.2. Feeling-of-Knowing (FOK)
+#### 4.2.2. Feeling of knowing (FOK)
 
 FOK est la prédiction de reconnaissance d'items non récupérés en mémoire. // Le
 mot sur le bout de la langue en est un cas extrême. Elle nous aide à orienter
@@ -765,126 +870,155 @@ personne par personne ???
 On peut faire exactement la même chose dans la mémoire sémantique (avant,
 épisodique). C'est un paradigme idéal.
 
-### 3. Mémoire et métamorphoe : maladie d'Alzheimer
+### 4.3. Théories des delayed JOL
 
-On a des prédictions très peu précises, un gamma même légèrement négatif. Mails
+#### 4.3.1. Théorie de l'accessibilité
+
+On a des prédictions très peu précises, un gamma même légèrement négatif. Mais
 il y a une différence entre mémoire sémantique et épisodique : uniquement la
 mémoire épisodique est altérée. Mais comment expliquer tout ça en termes de
 théories ?
 
 L'**approche d'accessibilité** de Koriat dit que pour les JOLs il y a plusieurs
-indices qu'on peut utiliser pour nos jugement métacognitifs. Certains sont plus
+indices qu'on peut utiliser pour nos jugements métacognitifs. Certains sont plus
 ou moins intéressants pour la mémoire et plus ou moins en lien avec les
-expéreinces métacognitives. On a des indices **intrinsèques** commes les
-caractéristiques des items. On peut donc pendant une phase d'encodage utiliser
-ces facteurs pour évaluer notre performance (c'est long, c'est en anglais, c'est
-un prénom...). Indices **extrinsèques** (est-ce qu'il y a du bruit, combien
-d'items j'ai à mémoriser...). Ces deux indices sont de la métacognition car
-c'est un contrôle de haut niveau mais moins cool cdar pas de rretour direct de
-la trace dans la mémoire. Les **indices mnémoniques** sont l'évaluation du
-niveau d'apprentissage des items, ressentis donné par la trace en direct.
+expériences métacognitives :
 
-2 possibilités pour son modèle. Impact des facteurs intrinsèques et extrinsèques
-sur les processus de la mémoire, et on utilise la mémoire pour JOL ou FOK; ou
-quelque chose de plus direct, on utilise les caractéristiques des mots
-directement pour JOL ou FOK. En vrai c'est un peu les deux. Pour disitnguer les
-deux, on a des jOL immédiats qui se basent surtout sur les petits facteusr, mais
-si on met du délai elle va réflechir ou jsp quoi et passer pa mnémonique. Le but
-c'est d'encourage les participants à utiliser les indices mnémoniques.
+- On a des indices **intrinsèques** comme les caractéristiques des items. On
+  peut donc pendant une phase d'encodage utiliser ces facteurs pour évaluer
+  notre performance (c'est long, c'est en anglais, c'est un prénom...)
+- Indices **extrinsèques** (est-ce qu'il y a du bruit, combien d'items j'ai à
+  mémoriser...)
 
-![](/assets/Pasted image 20261123084858.png)
+Ces deux indices sont de la métacognition car c'est un contrôle de haut niveau
+mais moins cool car pas de retour direct de la trace dans la mémoire. Les
+**indices mnémoniques** sont l'évaluation du niveau d'apprentissage des items,
+ressentis donnés par la trace en direct.
+
+Deux possibilités pour l'origine des JOL et FOK dans ce modèle. Il y aurait 3
+types d'indices sur lesquels on se base :
+
+1. Intrinsèques : caractéristiques des items
+2. Extrinsèques : caractéristiques de la tache
+3. Mnémoniques : évaluation du niveau d'apprentissage des items
+
+![](/assets/Pasted image 20261123084858.png){width=70%}
+
+Le modèle a 2 possibilités :
+
+1. Impact des facteurs intrinsèques et extrinsèques médiés par les indices
+   mnémoniques
+2. Impact des facteurs intrinsèques et extrinsèques par médiation des indices
+   mnémoniques, et direct
 
 Les indices mnémoniques :
 
-- La familiarité avec l'indice : dans une tentative de rappel où il faut faire
-  une préditions pour la suite, on va utiliser la familiarité pour faire une
-  prédiction du rappel de cette information
-- La facilité perçu d'encodage et de récupération (flutente : "encoding and
-  retrival fluency")
-- Informations partielles : même si on sait pas vraiment on peut relier quelque
-  chose de relié. Ça fait appel à la remémoration.
+- La **familiarité avec l'indice** : dans une tentative de rappel où il faut
+  faire une prédiction pour la suite, on va utiliser la familiarité pour faire
+  une prédiction du rappel de cette information. Permet une réponse rapide.
+- La **facilité perçue d'encodage et de récupération** (fluente : "encoding and
+  retrieval fluency")
+- **Informations partielles** : même si on sait pas vraiment, on peut relier
+  quelque chose de relié. Ça fait appel à la remémoration.
 
-L'indice qu'on voit aura des processus de reconnaissance. Quand on voit ce mot
-on va faire appel à tous les processus reconnaissance avec familiarité et
-remémoration et on va utiliser pour faire les préditions. On va regarder les
-JOLs qui sont fait rapidements, et on peut mˆ´me dans les FOK donner
-l'infomraiton de familiairité en présntant plusierus fois les mêmes
-informaitons, ce qui va manipuler les probabilités (de faire des prédictions ?).
+Patients d'alzheimer ne peuvent pas préidre la reconnaissance future d'un item
+oublié.
 
-Chose à retenir : on fait le tour des processus dans la mémoire qui sont
-métacognitifs, soit faire un jugement sur paires de mots avec indices donnés,
-les processus utilisés pour faire des prédictions sont les processus reliés à la
-mémoire et la reconnaissance. C'es processus de haut niveau sont connaissancres
-et expériences basées sur la reconnaissance te processus mnésiques déjà
-existants. Les jugements métacognitifs utilisent des processus disponibles.
+![](/assets/fok_alzheimer.png)
 
---------------------------------------------------------------------------------
+<!-- FIX: finir la ^ -->
 
-## L'inhibition
+::: {.callout-tip title="À retenir"}
+On fait le tour des processus dans la mémoire qui sont métacognitifs, soit pour
+faire un jugement sur paires de mots avec indices donnés, les processus utilisés
+pour faire des prédictions sont les processus reliés à la mémoire et la
+reconnaissance. C'es processus de haut niveau sont connaissancres et expériences
+basées sur la reconnaissance te processus mnésiques déjà existants. Les
+jugements métacognitifs utilisent des processus disponibles.
+:::
 
-### L'oubli
+## 5. L'inhibition
 
-Idées importantes sur l'oubli :
+### 5.1. L'oubli
+
+Idées importantes cherchant à exlpiquer l'oubli :
 
 1. La trace se dégrade avec le temps
 2. Perturbation de la récupération - disponibilité (car on peut pas être sûr
    qu'on "oublie" pour de vrai)
-3. L'oublie serait une interférenc
-4. Inhbition : processus actif de supression
+3. L'oubli serait une interférence
+4. Inhibition : processus actif de suppression
 
-### Qu'est-ce que l'inhibition
+### 5.2. Qu'est-ce que l'inhibition
 
 Ce n'est pas une perte passive, mais une suppression active. Il y a des
 processus qui existent pour diminuer l'activation des informations dans le
-système. L'inhibition serait un mécanisme actif de suppression des éléments
-distracteurs afin de laisser disponible l'efficacité des traitements pour la
+système. L'inhibition serait un mécanisme actif de **suppression des éléments
+distracteurs** afin de laisser disponible l'efficacité des traitements pour la
 cible. Elle serait également un phénomène adaptatif, car son effet sur les temps
 de réponse dépend de la pertinence de l'information portée par le stimulus.
 
-### Inhibition de la mémoire épisodique
+L'**oubli induit par la récupération (RIF)** est un phénomène montrant que la
+récupération d'une information peut supprimer ou bloquer temporairement la
+récupération d'autres informations liées. Cela montra la compétition entre des
+items en mémoire.
+
+### 5.3. Inhibition de la mémoire épisodique
+
+#### 5.3.1. Oubli induit par la récupération
 
 FIX: oublié de noter modèle théorique
 
 Oubli induit par la récupération (RIF) : paradigme montre que processus de
 récupération d'une chose inhibe récupération d'autres informations. On apprend
 des items de différentes catégories sémantique. On va rappeler en continu des
-informatiosn dans une liste, et pour assurer. J'ai écouté mais le but c'est
+informations dans une liste, et pour assurer. J'ai écouté mais le but c'est
 juste de récupérer certaines informations.
 
-FIX: j'écoute pas la tâche demander à tess
+Paradigme RIF :
 
 ![](/assets/Pasted image 20261123092311.png)
 
-???????????////////////
+Pendant le rappel indicé, il y a trois types d'items :
 
-Plusieurs possiblités pour cet effet :
+- RP+ : items entrainés des catégories entraînés (pomme)
+- RP- : des items non-entraînés des catégories entrainés (orange)
+- U : items non-entraînés des catégories non-entrainés (argent)
 
-- Ce n'est pas de l'inhibition
+Les résultats vont dans ce sens : $\text{RP+} > \text{U} > \text{RP-}$, ce qui
+va dans le sens des hypothèse. En effet, on cherchait à montrer que les mots RP-
+seraient inhibés par les traces mnésiques plus forte des RP+, en raison de leur
+entrainemnet. Les mots U eux ne sont pas inhibés ou activés. Mais cette
+expérience ne montre pas forcément que cette inhibition est faite sur les
+représentations mnésqiues, car on teste le rappel grâce aux mêmes items que ceux
+sur lesquels on les a entraîné.
 
-Modèle de suppression des caractéristiques : on trouve des chevauchements entre
-les catégories, qiu montre par exemple que tomate peut rentrer dans la catégorie
-"fruits" ou "choses rouges". Sang et tomates étaient étudiés dans la phase
-d'encodage comme choses rouges. Dans la phase test, on doit générer tous les
-fruits qui étaient dans la liste initiale. On teste l'activation de tomate avec
-l'indice fruit (et non rouge qui été utilisé pour sang). On a une inhibition du
-rappel de tomate même avec l'autre indice.
+**Modèle de suppression des caractéristiques** : on trouve des chevauchements
+entre les catégories, qiu montre par exemple que tomate peut rentrer dans la
+catégorie "fruits" ou "choses rouges". Sang et tomates étaient étudiés dans la
+phase d'encodage comme choses rouges. Dans la phase test, on doit générer tous
+les fruits qui étaient dans la liste initiale. On teste l'activation de tomate
+avec l'indice fruit (et non rouge qui été utilisé pour sang dans
+l'entraînement). On a une inhibition du rappel de tomate même avec l'autre
+indice. L'inhibition est donc propre à la représentation mnésique.
 
-On trouve toujours une inhbition, donc on trouve otujours que le rappel est
-diminué pour tomate même si on utilise pas la catégorie originale ("rouge").
-
-Sang et toamtes partagent certaines caractéristiques.
-
-Points noirs activés points clairs inhibés. Reestlats c'est que toamte et fraise
-sont inhibé au même niveau.
+![](/assets/suppression_caracteristiques.png)
 
 Donc l'inhbition eput travers les catégories, peu importe l'indice. C'est la
 représentation qui est inhibée, et ça va traverser les catégories elon els
 caractéristiques.
 
-Oubli dirigé est un paradigme où on fait genre qu'on a donné la mauvaise liste,
-donc on demande d'oublier, et on donne une autre liste. Puis on fiat test de
-mémorisation sur les 2. Le résultat n'est pas important pour la première liste,
-c'est qu'on a une meilleur performance pour la deuxième liste, il y a donc bien
-eu un oubli de la première liste.
+#### 5.3.2. Oubli dirigé
 
-Conclusions : la métam
+Oubli dirigé est un paradigme ("oh shit paradigm") où on fait genre qu'on a
+donné la mauvaise liste, donc on demande d'oublier, et on donne une autre liste.
+Puis on fiat test de mémorisation sur les 2. Le résultat n'est pas important
+pour la première liste, c'est qu'on a une meilleur performance pour la deuxième
+liste, il y a donc bien eu un oubli de la première liste.
+
+::: {.callout-note title="Conclusion"}
+- La métamémoire et l'inhibition sont deux exemlpes de processus de haut niveau
+  intervenant dans la mémoire épisodique
+- Il existe des modèles de ces processus, pertinents pour comprendre le
+  fonctionnement de la mémoire épisode
+:::
