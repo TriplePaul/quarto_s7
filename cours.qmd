@@ -1,5 +1,4 @@
 ---
-image: /assets/melenchon_1.png
 listing:
   id: notes-listing
   type: grid

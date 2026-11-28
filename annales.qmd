@@ -1,33 +1,516 @@
 ---
-image: assets/melenchon_2.png
+toc-depth: 3
 ---
 
 # Annales
 
-## Stats
+::: {.callout-note}
+Sujets d'examens retranscrits pour l'anonymat
+:::
 
-![](/assets/annales_stats_1.jpeg)
+## Traitement de données (2024-2025)
 
-![](/assets/annales_stats_2.jpeg)
+M1 -- Psychologie -- (tous parcours)\
+EXAMEN FINAL de Traitement de données\
+Année universitaire : 2024-2025\
+Date : 06/01/2025 (session 1)\
+Durée : 2h
 
-![](/assets/annales_stats_3.jpeg)
+*Matériel autorisé :* Aide mémoire fourni en annexe. Tout autre document
+interdit, calculatrice autorisée. Toute tentative de recherche ou communication
+via des équipements connectés est interdite.
 
-![](/assets/annales_stats_4.jpeg)
+Les formules mathématiques du cours fournies en annexe ne sont pas
+nécessairement utiles pour répondre. La copie du voisin ne vous aidera en
+revanche pas du tout, les réponses et questions étant aléatoirisées. Cet examen
+comprend 2 types de questions (**toutes les réponses étant à reporter sur la
+dernière feuille**) :
 
-![](/assets/annales_stats_5.jpeg)
+- **Choix multiple (1 point/question) :** Noircir la ou les cases choisies.
+  Plusieurs réponses peuvent être correctes (chacune rapportant une portion de
+  points), mais chaque mauvaise réponse sera pénalisante (enlevant une portion
+  de points). Il n'y a pas de report des points négatifs entre questions (note
+  minimale de 0 sur chaque question).
+- **Ouvertes (2 points/question) :** Ces questions vous permettront de vous
+  exprimer un peu plus librement, mais vous devrez respecter la **limite de
+  place** et les **graphiques** imposés, afin de répondre exclusivement à la
+  question posée.
 
---------------------------------------------------------------------------------
+Merci de **détacher délicatement la feuille de réponses** et de **tout rendre en
+fin d'examen** (formulaire, brouillon, sujet et feuille de réponses).
 
-## Cognition visuelle
+### Contexte
 
-![](/assets/annales_visu_1.jpeg)
+Dans cet examen, la majorité des questions vont porter sur les données décrites
+ci-dessous. On supposera que les conditions d'application sont respectées pour
+les analyses proposées, sauf si leur violation est explicitement indiquée.
+Chaque variable sera repérée par la lettre entre parenthèses dans le reste du
+sujet, et un aperçu des données est reproduit dans le tableau en bas de page.
 
-![](/assets/annales_visu_2.jpeg)
+On étudie l'influence de différents facteurs sur la dépense calorique
+d'individus adultes (que ce soit pour des préoccupations environnementales ou de
+santé publique). Pour un échantillon international (non représentatif de la
+population générale, mais permettant de tester les facteurs d'intérêt), on
+recueille l'(O)rigine (ici un code de pays, par exemple 250 pour la France), le
+(S)exe (codé 0 pour les femmes, 1 pour les hommes), l'(A)ge (en années), le
+(P)oids (en kg), l'Indice de Masse (C)orporelle (IMC), l'Indice de Masse
+(G)rasse (IMG, pourcentage de tissu adipeux dans le corps), le (N)iveau
+d'activité physique (NAP ; codé 1 = sédentaire, 2 = actif, 3 = sportif), ainsi
+que la (D)épense énergétique Journalière (DEJ ; en kcal). Attention donc, toutes
+les variables ont été codées par des valeurs entières, indépendamment du type
+d'échelle de mesure. Le tableau suivant correspond à un sous-échantillon des
+données étudiées.
 
-![](/assets/annales_visu_3.jpeg)
+  | Origine | Sexe | Age | Poids | IMC | IMG | NAP | DEJ  |
+  | ------: | ---: | --: | ----: | --: | --: | --: | ---: |
+  |     250 |    0 |  34 |    55 |  23 |  28 |   2 | 2000 |
+  |     250 |    1 |  23 |    74 |  22 |  19 |   2 | 2150 |
+  |     840 |    0 |  22 |    71 |  24 |  40 |   1 | 1900 |
 
---------------------------------------------------------------------------------
+### Partie 1 : Choix des tests statistiques
 
-## Développement
+**Question 1** --- On veut savoir si la dépense énergétique journalière (D)
+dépend du sexe (S). Quel(s) modèle(s)/test(s) statistique(s) semble(nt)
+adapté(s) ?
 
-![](/assets/annales_dev_1.jpeg)
+- **A** χ² d'indépendance
+- **B** ANOVA
+- **C** Modèle linéaire
+- **D** t-test
+- **E** χ² d'ajustement
+- **F** Aucune de ces réponses n'est correcte.
+
+**Question 2** --- On veut tester si le niveau d'activité physique (N) influence
+la dépense énergétique journalière (D). Quel(s) modèle(s)/test(s) statistique(s)
+semble(nt) adapté(s) ?
+
+- **A** χ² d'indépendance
+- **B** χ² d'ajustement
+- **C** ANOVA
+- **D** Corrélation de Pearson
+- **E** t-test
+- **F** Modèle linéaire
+
+**Question 3** --- On veut vérifier si l'IMC (C) est bien lié au poids (P).
+Quel(s) modèle(s)/test(s) statistique(s) semble(nt) adapté(s) ?
+
+- **A** ANOVA
+- **B** t-test
+- **C** χ² d'indépendance
+- **D** Régression linéaire
+- **E** Corrélation de Pearson
+- **F** Aucune de ces réponses n'est correcte.
+
+**Question 4** --- On veut tester simultanément l'influence de l'âge (A) et du
+sexe (S) sur l'indice de masse graisseuse (G). Quel(s) modèle(s)/test(s)
+statistique(s) semble(nt) adapté(s) ?
+
+- **A** Modèle linéaire multiple
+- **B** ANOVA
+- **C** Corrélation de Pearson
+- **D** t-test
+- **E** Régression linéaire simple
+- **F** Aucune de ces réponses n'est correcte.
+
+**Question 5** --- On souhaite contrôler si le niveau d'activité physique (N)
+est lié au sexe (S). Quel(s) modèle(s)/test(s) statistique(s) semble(nt)
+adapté(s) ?
+
+- **A** Régression linéaire
+- **B** t-test
+- **C** ANOVA
+- **D** χ² d'indépendance
+- **E** χ² d'ajustement
+- **F** Aucune de ces réponses n'est correcte.
+
+### Partie 2 : Statistiques de test et méta-analyse
+
+**Question 6** --- Parmi les statistiques suivantes, lesquelles sont
+inférentielles et non descriptives ?
+
+- **A** *d* de Cohen
+- **B** *p*-valeur
+- **C** *t* de Student
+- **D** Écart-type des résidus
+- **E** PRE (R²)
+- **F** *F* de Fisher
+
+**Question 7** --- On compare les résultats obtenus sur nos données à une étude
+de référence ayant trouvé que le taux de tissu adipeux (G) augmente avec l'âge
+(A). L'étude de référence (de 2005) comporte un nombre de participants (*n*)
+bien supérieur à la nôtre (de 2018), mais un échantillon exclusivement français.
+Relativement à notre étude, les auteurs trouvaient une corrélation plus faible,
+mais l'effet était bien plus significatif. Qu'est-ce qui peut expliquer ces
+différences ?
+
+- **A** Changement sociétal entre 2005 et 2018
+- **B** Incertitude plus forte sur l'étude de 2018
+- **C** Erreur type plus importante en 2018
+- **D** La corrélation étudiée dépend du pays
+- **E** Incertitude plus forte sur l'étude de 2005
+- **F** Population différente pour généraliser
+
+**Question 8** --- Parmi les propositions suivantes, lesquelles sont correctes
+et justifient l'usage du R² ajusté plutôt que R² pour des modèles linéaires
+multiples ?
+
+- **A** Le R² ajusté pénalise la complexité du modèle
+- **B** Le R² ne s'interprète correctement que dans le cas d'un modèle linéaire
+  simple
+- **C** Le R² ajusté peut devenir négatif si chaque prédicteur explique trop peu
+  de variance
+- **D** Le R² ne prend pas en compte la variance expliquée commune à plusieurs
+  prédicteurs
+- **E** Le R² ajusté fournit une valeur plus élevée, expliquant mieux la
+  variance
+- **F** Le R² ne diminue jamais lorsqu'on ajoute un prédicteur (quel qu'il soit)
+
+### Partie 3 : Modèles linéaires
+
+Les résultats de l'étude de 2018 sont reproduits ci-dessous. Le modèle linéaire
+considéré ci-dessous permet de prédire l'IMG (G) à partir de l'âge (A), du sexe
+du participant (S) et de leur interaction. Les variables ont été directement
+introduites telles que décrites dans l'introduction (sans être centrées).
+
+```text
+Residuals:
+    Min      1Q  Median      3Q     Max
+-23.62   -4.32   -1.19    5.53   14.19
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept)   25.8501     4.9342    5.24  <0.001 ***
+age            0.0952     0.1111    0.86   0.396
+sexe         -16.0693     7.0528   -2.28   0.027 *
+sexe:age       0.1357     0.1571    0.86   0.392
+
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Residual standard error: 8.01 on 46 degrees of freedom
+Multiple R-squared: 0.353, Adjusted R-squared: 0.31
+F-statistic: 8.35 on 3 and 46 DF, p-value: < 0.001
+```
+
+**Question 9** --- Sur la base des résultats de l'encadré et du codage des
+variables en introduction, quels sont les 2 calculs à réaliser séparément pour
+prédire l'IMG moyen (G) pour un homme de 30 ans, et pour une femme de 70 ans.
+
+- **A** 25.85 + 16.07 × 0.5 + (0.095 − 0.5 × 0.136) × 70
+- **B** 25.85 − 16.07 + 0.095 × 70
+- **C** 25.85 − 16.07 × 0.5 + (0.095 + 0.5 × 0.136) × 30
+- **D** 25.85 + 0.095 × 70
+- **E** 25.85 − 16.07 + (0.095 + 0.136) × 30
+- **F** 25.85 + 0.095 × 30
+
+**Question 10** --- Quelles paramètres ou éléments de l'encadré de résultats
+changeraient si on codait la variable sexe (S) par un contraste avec femme =
+−0.5 et homme = 0.5 ?
+
+- **A** sexe:age (interaction)
+- **B** age
+- **C** *F*
+- **D** R²
+- **E** (Intercept)
+- **F** sexe
+
+**Question 11** --- Interpréter les 4 paramètres du modèle de l'encadré. Pour
+chacun, indiquer uniquement à quoi l'estimation correspond (moyenne, différence,
+entre qui et qui, entre quoi et quoi...), en quoi elle est exprimée
+(pourcentage, par année...) et si elle a du sens (lien avec réalité). (4× 0.5
+point)
+
+**Question 12** --- Dessiner (approximativement) sur un seul graphique les 2
+droites correspondant aux résultats du modèle (dans l'encadré), une par sexe (en
+labélisant droites et axes). Pour faciliter le travail, on couvrira des âges de
+0 à 60 ans (même si on ne s'intéresse qu'aux adultes). (2 points)
+
+**Question 13** --- En interprétant les résultats de l'encadré, quelles
+affirmations sont correctes parmi les suivantes ?
+
+- **A** On observe une différence significative entre modalités de variable
+  nommée Intercept
+- **B** La *p*-valeur associée au *F* global indique la présence d'un effet
+  d'interaction
+- **C** Le modèle explique 35.3% de la variance totale de la VD
+- **D** La statistique *t* = −2.28 conduit à un effet significatif du sexe
+- **E** La taille de l'échantillon (*n*) employé pour cette analyse est égale à
+  49
+- **F** La taille de l'échantillon (*n*) employé pour cette analyse est égale à
+  50
+
+**Question 14** --- On considère le modèle permettant de prédire la dépense
+énergétique moyenne (D) à partir du niveau d'activité physique (N), tout en
+contrôlant pour le poids (P) et l'IMC (C), sans inclure les interactions. Quelle
+équation correspond à ce modèle ?
+
+- **A** D̂ = b₀N + b₁P + b₂C
+- **B** D̂ = b₀ + b₁N + b₂P × C
+- **C** D̂ = b₀ + b₁P + b₂C + b₃N
+- **D** D̂ = b₀C + b₁D + b₂N + b₃P
+
+**Question 15** --- En combinant plusieurs jeux de données issus de divers pays
+pour réaliser l'analyse de la question précédente, les résidus ne semblent plus
+indépendants, même en vérifiant que chaque participant n'a bien participé qu'à
+une seule étude. Fournir des **causes théoriques** possibles au problème (1
+point). Pourquoi rajouter dans les modèles le facteur origine (O) et les
+interactions associées serait **statistiquement inutile**, sachant que les
+données ont été recueillies dans 50 pays différents pour un total de 200
+participants (1 point) ? Quelle solution statistique envisager (bonus) ?
+
+### Partie 4 : Conditions d'application et valeurs extrêmes
+
+**Question 16** --- Uniquement sur la base des résultats de l'encadré (sur la
+page 3), quelle condition d'application ou caractéristique semble être violée
+lors de l'application du modèle sur les données ?
+
+- **A** Normalité des résidus
+- **B** Indépendance des résidus
+- **C** Absence de multicolinéarité
+- **D** Homoscédasticité des résidus
+
+**Question 17** --- Si on étudie la relation entre le poids (P) et la dépense
+énergétique (D) avec un modèle linéaire, sachant qu'une partie de l'échantillon
+est constituée de marathoniens et ultra-trailers, quelle(s) condition(s)
+d'application serai(en)t probablement violée(s) ?
+
+- **A** Absence de multicolinéarité
+- **B** Normalité des résidus
+- **C** Indépendance des résidus
+- **D** Homoscédasticité des résidus
+
+**Question 18** --- Quelle condition d'application serait violée avec un modèle
+linéaire simple (indépendamment de la VI et VD choisies) sur un jeu de données
+dans lequel chaque participant serait mesuré à de nombreuses reprises (pour voir
+l'évolution de son poids et de son activité à travers le temps) ?
+
+- **A** Absence de multicolinéarité
+- **B** Homoscédasticité des résidus
+- **C** Normalité des résidus
+- **D** Indépendance des résidus
+
+Dans le tableau ci-dessous, on reporte les statistiques d'intérêt pour 3
+observations possiblement problématiques. Le code du pays d'origine servira à
+identifier les observations dans les questions suivantes.
+
+  | Origine | NAP | Poids | DEJ  | Lever | Résidu | d de Cook |
+  | ------: | --: | ----: | ---: | ----: | -----: | --------: |
+  |     250 |   3 |    70 | 3600 |   0.0 |   1200 |       0.1 |
+  |     840 |   1 |   140 | 3900 |   0.7 |     20 |       0.0 |
+  |     706 |   2 |   5.5 | 2100 |   0.8 |    900 |       0.7 |
+
+**Question 19** --- Pour chaque observation du tableau ci-dessus, indiquer si sa
+présence (ou suppression) peut affecter le paramètre b₀ (ordonnée à l'origine)
+et/ou b₁ (pente associée à l'effet du poids sur la dépense énergétique), de
+manière non négligeable et sur un échantillon de taille réduite ?
+
+- **A** 706: b₁
+- **B** 840: b₁
+- **C** 706: b₀
+- **D** 840: b₀
+- **E** 250: b₀
+- **F** 250: b₁
+
+**Question 20** --- Indiquer quelle(s) observation(s) du tableau ci-dessus
+peu(ven)t être considérée(s) comme aberrantes (i.e. qu'on ne devrait pas pouvoir
+observer dans le jeu de données).
+
+- **A** 250
+- **B** 706
+- **C** 840
+- **D** Aucune de ces réponses n'est correcte.
+
+## Cognition visuelle (2025-2026)
+
+2025-2026 -- Master 1 de psychologie\
+EXAMEN FINAL session 1 de l'EC 7 -- Cognition Visuelle\
+Date : 15 décembre 2025\
+Durée : 1 heure\
+Matériel autorisé : aucun
+
+**SUJET (2 pages)**
+
+Les questions sont détaillées pour permettre une bonne compréhension, mais les
+réponses doivent être courtes et synthétiques (le nombre de lignes proposé
+représente réellement un maximum). Il est conseillé de respecter les indications
+de temps. **Vous devez toujours justifier vos réponses en fonction des
+connaissances vues en cours s'appliquant aux situations proposées.** La notation
+s'effectue en fonction de votre capacité à expliquer synthétiquement et
+clairement vos réponses en faisant référence aux connaissances vues en cours, de
+la manière la plus concrète possible.
+
+### Énoncé
+
+Voici les résultats d'une étude réalisée chez un groupe 10 patients adultes qui
+se sont fait opérer à l'âge adulte d'une cataracte développementale apparue
+entre 3 et 4 ans. L'étude a été menée 10 jours après l'opération. Cette étude
+inclue également un groupe contrôle d'adultes sains appariés en âge. L'ensemble
+des participants des deux groupes présentent une fonction rétinienne normale.
+
+Les deux groupes de cette étude réalisent une évaluation de la CSF mais
+également (1) un test de catégorisation de formes simples, (2) un test de
+catégorisation d'objets simples, (3) un test de catégorisation de mouvements
+simples et biologiques, (4) un test de catégorisation d'objets complexes. Pour
+les tests de catégorisation, les stimuli présentés aux sujets contrôles étaient
+filtrés avec un filtre passe-bas (cutoff à 6 c.p.d).
+
+1. Le test de catégorisation de formes simples consiste à identifier une forme
+   simple présentée sur un écran parmi 3 possibilités : un carré, un cercle, un
+   triangle.
+
+2. Le test de catégorisation d'objets simples consiste à identifier un objet
+   présenté sur un écran parmi 3 possibilités : un cube, une boule, une
+   pyramide.
+
+3. Le test de catégorisation de mouvements simples consiste à identifier si
+   parmi un ensemble de points aléatoires en mouvement, une partie d'entre eux
+   se déplacent dans une même direction (en haut ou en bas)
+
+   Le test de catégorisation de mouvements biologiques consiste à identifier si
+   un ensemble de points en mouvement décrit un mouvement biologique ou non.
+
+4. Le test de catégorisation d'objets complexes consiste à catégoriser chaque
+   objet présenté sur un écran comme étant « vivant » ou « non vivant ».
+   Différents objets non vivants de la vie courante (une table, une chaise, une
+   voiture, un marteau, etc.) ainsi que différents objets vivants (visage,
+   animaux, etc.) étaient présentés dans cette étude.
+
+Les résultats de l'évaluation de la CSF indiquent que la fréquence spatiale
+visible la plus élevée est de 6 c.p.d pour un contraste de 50% et de 8 c.p.d.
+pour un contraste de 100%. Les résultats des tests de catégorisation sont
+présentés dans le tableau ci-dessous.
+
+**Tableau 1.** Pourcentage de réponses correctes moyens aux différents tests de
+catégorisation en fonction du groupe de participants (pour simplifier les
+résultats, j'ai volontairement arrondi les valeurs indiquées dans le tableau).
+
+  | Test                              | Sujets sains | Patients |
+  | :-------------------------------- | :----------: | :------: |
+  | Formes simples                    |     100%     |   100%   |
+  | Objets simples                    |     100%     |  33,33%  |
+  | Mouvements simples et biologiques |     100%     |   100%   |
+  | Objets complexes                  |     100%     |   50%    |
+
+### Questions
+
+**Question 1** (5 minutes, 2-3 lignes). Qu'est-ce qu'une cataracte ? Comment
+traite-t-on ce type de pathologie ? Détaillez vos réponses en précisant où se
+situe l'atteinte au niveau de la hiérarchie du traitement du signal visuel dans
+cette pathologie.
+
+**Question 2** (5 minutes, 3-5 lignes). Pourquoi les auteurs ont-ils choisi ces
+tâches de catégorisation et pourquoi ont-ils choisi différentes tâches de
+catégorisation de formes et d'objets (ou différentes tâches de catégorisation de
+mouvements) ? Quelles grandes fonctions visuelles veulent-ils tester ? Justifiez
+clairement et le plus précisément vos réponses en précisant quelles sont les
+voies (ou régions) fonctionnelles et anatomiques impliquées dans ces différentes
+tâches (je ne vous demande pas d'indiquer quelles sont les aires précises
+impliquées dans ce type de tâches).
+
+**Question 3** (5-10 minutes, 5-7 lignes). Justifiez vos réponses
+
+**Question 3.1.** (3 lignes). En quoi consiste l'évaluation de la CSF ? Pourquoi
+ne pas avoir évalué l'acuité visuelle de Snellen chez les patients ? Pourquoi
+les stimuli des tests de catégorisation présentés aux sujets contrôles ont été
+filtrés avec un filtre passe-bas (cutoff à 6 c.p.d) ?
+
+**Question 3.2.** (2-3 lignes). Que signifie « la fréquence spatiale visible la
+plus élevée est de 8 c.p.d pour un contraste de 100% » ? L'acuité visuelle des
+patients après l'opération est-elle proche de la normalité ? **Question Bonus
+:** Sinon, est-ce corrigeable avec des verres correcteurs ?
+
+**Question 4** (5-10 minutes, 6-10 lignes). Décrivez les résultats obtenus
+(effets principaux et interaction) sans les interpréter. Justifiez clairement
+votre réponse sur la base des données expérimentales/empiriques.
+
+**Question 5** (10 minutes, 5-10 lignes). Proposez une interprétation de ces
+résultats du point de vue des processus et des voies/aires fonctionnelles et
+anatomiques visuel(le)s déficitaires chez ces patients et en indiquant à quel(s)
+niveau(x) de la hiérarchie du traitement visuel se situe éventuellement le
+déficit. En termes neuropsychologiques, déduisez-en la pathologie dont souffrent
+ces patients après l'opération. Justifiez clairement vos réponses.
+
+**Question 6** (5 minutes, 2-4 lignes). Quels résultats prédisez-vous sur un
+test de catégorisation d'objets simples en mouvement consistant à identifier un
+objet en mouvement présenté sur un écran parmi 3 possibilités : un cube, une
+boule, une pyramide. Justifiez clairement votre réponse.
+
+**Question 7 Bonus** (10 minutes, 3-5 lignes). Juste avant l'opération, un des
+patients de cette étude et un patient hémianopsique ont participé à une
+expérience dans laquelle on a appliqué des impulsions de stimulation magnétique
+transcrânienne (TMS) ciblant V5/MT à 100 % du seuil d'apparition des phosphènes.
+Quelle perception cette stimulation a-t-elle pu évoquer chez chacun de ces deux
+patients ? Justifiez clairement vos réponses en vous appuyant sur les
+connaissances vues en cours (en détaillant les voies visuelles impliquées et/ou
+le modèle auquel vous faites référence).
+
+## Développement cognitif et apprentissage (2025-2026)
+
+Année 2025-2026 -- Master 1 de Psychologie\
+EXAMEN FINAL de Développement cognitif et apprentissage\
+Date : 17 décembre 2025\
+Durée : 2h\
+Matériel autorisé : aucun
+
+**SUJET**
+
+Une expérience de Girard et al. (2025) s'intéresse au rôle que les familles
+pourraient avoir au niveau de la progression des enfants sur les compétences
+numériques. 117 enfants âgés de 4-5 ans ont participé à l'étude. Ils ont d'abord
+été évalués lors d'un prétest sur différentes épreuves. Ensuite, ils ont été
+répartis dans les deux conditions expérimentales suivantes.
+
+**Groupe Nombre :** on donne aux familles du matériel destiné à favoriser les
+interactions autour du nombre (jeu de dominos, jeu de cartes, jeu de plateaux).
+Ces jeux sont pratiqués à partir de différents codes (symboliques,
+non-symboliques et mixtes).
+
+**Groupe Langage :** on donne aux familles du matériel équivalent à celui de la
+condition Nombre mais sans contenu numérique.
+
+Dans les deux conditions, l'intervention a duré 6 semaines.
+
+Enfin, les enfants ont été évalués lors d'un post-test sur les mêmes épreuves
+que celles du prétest. Les épreuves sont les suivantes :
+
+**Tâche 1 :** les enfants doivent compter des séries de cailloux et dire combien
+il y en a (score max=8).
+
+**Tâche 2 :** les enfants doivent lire des nombres écrits en chiffres
+indo-arabes (score max=30).
+
+**Tâche 3 :** on place en ligne trois boites vides devant l'enfant. On place un
+nombre cible dans la boite du milieu (le nombre est dit à l'enfant) puis on
+demande à l'enfant quel nombre se trouve juste avant et quel nombre se trouve
+juste après le nombre cible (score max=16).
+
+**Arithmétique :** les enfants effectuent des petites additions et soustractions
+(score max=18).
+
+**Raisonnement non verbal :** épreuve Matrice du WISC (score max=29).
+
+Une partie des résultats figure dans le tableau 1.
+
+**Tableau 1.** Résultats de l'ANOVA à mesures répétées pour les effets
+d'interaction groupes x périodes pour les différentes mesures.
+
+  | Mesure                        | Groupe Nombre<br>Prétest M (SD)   | Groupe Nombre<br>Post-test M (SD)   | Groupe Langage<br>Prétest M (SD)   | Groupe Langage<br>Post-test M (SD)   | F(1,115)   | p       |
+  | :---------------------------- | :-------------------------------: | :---------------------------------: | :--------------------------------: | :----------------------------------: | ---------: | ------: |
+  | Tâche 1                       |            4.93 (2.36)            |             5.90 (2.14)             |            4.43 (2.31)             |             5.14 (2.13)              |       0.49 |   0.485 |
+  | Tâche 2                       |            7.61 (4.88)            |             9.76 (5.50)             |            7.53 (4.21)             |             8.21 (4.15)              |       5.67 |   0.019 |
+  | Tâche 3                       |            3.07 (3.17)            |             5.15 (4.48)             |            3.41 (3.02)             |             3.81 (3.56)              |      10.60 |   0.001 |
+  | Arithmétique                  |            1.90 (1.48)            |             3.34 (2.56)             |            1.71 (1.09)             |             2.57 (1.75)              |       2.13 |   0.147 |
+  | Raisonnement non verbal       |            9.20 (4.57)            |            11.54 (5.15)             |            9.64 (4.89)             |             12.07 (4.72)             |       0.01 |   0.909 |
+
+*Note.* M : moyenne. SD : écart-type.
+
+### Questions
+
+1) Selon vous, quel est l'objectif de l'étude ?
+2) Selon vous, pourquoi les auteurs évaluent-ils le raisonnement non verbal ?
+3) Sur le plan méthodologique, quel autre nom pourriez-vous donner au Groupe
+   Langage ? Quel est le rôle de ce groupe dans l'expérience ?
+4) Quelles compétences sont évaluées dans les tâches 1, 2 et 3 (préciser pour
+   chaque tâche) ?
+5) A partir du jeu de dominos, expliquez comment le jeu peut être décliné à
+   partir des différents codes (symboliques, non symboliques et mixtes), et sur
+   quel modèle théorique s'appuient ces codes.
+6) Commentez les résultats de l'expérience.
